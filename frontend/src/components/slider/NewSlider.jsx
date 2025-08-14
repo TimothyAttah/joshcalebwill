@@ -36,6 +36,11 @@ const CarouselInfo = styled(motion.div)`
 		width: 100%;
 
 		text-align: center;
+		font-size: 20px;
+
+		h2 {
+			font-size: 20px;
+		}
 	}
 `;
 
