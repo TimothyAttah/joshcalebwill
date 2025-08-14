@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 2000px;
     width: 100%;
     margin: auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     overflow-x: hidden;
     background-color: #0d1117;
     background-color: #e6edf3;
