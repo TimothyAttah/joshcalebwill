@@ -31,7 +31,7 @@ export const NavbarLinks = styled.ul`
 
       &:hover {
         color: #ff8a00;
-        color: #000;
+        /* color: #000; */
       }
     }
 

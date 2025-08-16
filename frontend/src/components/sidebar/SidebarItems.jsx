@@ -16,23 +16,28 @@ const SidebarItems = ({
 		<div>
 			<Styles.Header onClick={onClick}>
 				{item.navSubmenu ? (
-					<Link to={navPath} >
-						{itemName}
-						{itemContent && (
-							<Styles.HeaderIcon isActive={isActive}>
-								<FaChevronDown />
-							</Styles.HeaderIcon>
-						)}
-					</Link>
+					<>
+						<Link to={navPath}>
+							{itemName}
+							{itemContent && (
+								<Styles.HeaderIcon isActive={isActive}>
+									<FaChevronDown />
+								</Styles.HeaderIcon>
+							)}
+						</Link>
+						{/* <Link>Market Place</Link> */}
+					</>
 				) : (
-					<Link to={navPath} >
-						{itemName}
-						{itemContent && (
-							<Styles.HeaderIcon isActive={isActive}>
-								<FaChevronDown />
-							</Styles.HeaderIcon>
-						)}
-					</Link>
+					<>
+						<Link to={navPath}>
+							{itemName}
+							{itemContent && (
+								<Styles.HeaderIcon isActive={isActive}>
+									<FaChevronDown />
+								</Styles.HeaderIcon>
+							)}
+						</Link>
+					</>
 				)}
 			</Styles.Header>
 			<ul>

@@ -7,7 +7,7 @@ export const HeaderContainer = styled(motion.header)`
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: ${(props) => (props.activeBG ? '#ff8a00;' : 'transparent')};
+	background-color: ${(props) => (props.activeBG ? '#000;' : 'transparent')};
 	z-index: 999;
 	/* background-color: orange; */
 `;
@@ -18,15 +18,19 @@ export const HeaderWrapper = styled(motion.div)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 50px;
+	padding: 0px 50px;
 `;
 export const HeaderLogo = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 100px;
+	width: 80px;
 	img {
+		width: 100%;
+	}
+
+	a {
 		width: 100%;
 	}
 
@@ -35,7 +39,7 @@ export const HeaderLogo = styled(motion.div)`
 		font-size: 20px;
 	}
 
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 520px) {
 		width: 50px;
 	}
 `;
@@ -48,7 +52,13 @@ export const HeaderMenu = styled(motion.div)`
 		color: #fff;
 	}
 
-	@media screen and (max-width: 420px) {
+	svg {
+		color: #fff;
+		font-size: 27px;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 950px) {
 		a {
 			display: none;
 		}

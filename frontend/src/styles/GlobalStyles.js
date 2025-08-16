@@ -33,8 +33,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: auto;
     /* border: 2px solid red; */
     overflow-x: hidden;
-    background-color: #0d1117;
-    background-color: #e6edf3;
+    /* background-color: #0d1117; */
+    /* background-color: #e6edf3; */
     color: #e6edf3;
     color: #0d1117;
   }
@@ -58,6 +58,10 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  h1 {
+    color: var(--brown);
   }
 `;
 

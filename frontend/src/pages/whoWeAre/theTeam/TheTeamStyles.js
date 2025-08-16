@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const LeadersContainer = styled.div`
   /* padding: 100px; */
+	padding-top: 150px;
 	h1 {
 		text-align: center;
 		font-size: 40px;

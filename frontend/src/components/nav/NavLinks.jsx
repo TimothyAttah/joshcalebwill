@@ -12,7 +12,7 @@ const NavLinks = () => {
 						<Styles.NavbarLinksSubmenu>
 							{nav.navSubmenu &&
 								nav.navSubmenu.map((data, i) => (
-									<li>
+									<li key={i}>
 										<Link to={data.navPath}>{data.navTitle}</Link>
 									</li>
 								))}

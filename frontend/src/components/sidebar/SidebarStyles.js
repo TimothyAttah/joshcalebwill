@@ -99,6 +99,15 @@ export const Content = styled(motion.div)`
 	background-color: #0000;
 	color: #fff;
 	text-transform: capitalize;
+
+	a {
+		display: block;
+		width: 100%;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		margin: 10px;
+		font-size: 12px;
+	}
 `;
 
 export const CloseSidebar = styled.div`
@@ -108,4 +117,21 @@ export const CloseSidebar = styled.div`
 	color: #fff;
 	cursor: pointer;
 	font-size: 20px;
+`;
+
+export const OneLinkBox = styled.div`
+	width: 100%;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	/* gap: 50px; */
+	a {
+		color: #fff;
+		width: 100%;
+		/* height: 5rem; */
+		padding: 0 1rem;
+		font-size: 1rem;
+		text-align: left;
+		padding: 30px 16px;
+	}
 `;

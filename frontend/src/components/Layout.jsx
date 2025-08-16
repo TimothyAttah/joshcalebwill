@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const PaddingBox = styled.div`
-	padding-top: ${(props) => (props.addPadding ? '200px' : '0px')};
+	/* padding-top: ${(props) => (props.addPadding ? '100px' : '0px')}; */
 `;
 
 const Layout = () => {
