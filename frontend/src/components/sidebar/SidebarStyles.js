@@ -1,32 +1,28 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const SidebarContainer = styled(motion.div)`
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 350px;
-	height: 100vh;
+	height: 200vh;
 	background-color: var(--brown);
 	/* background-color: gold; */
-	z-index: 999;
+	z-index: 999999;
 
 	@media screen and (max-width: 420px) {
 		width: 100%;
 	}
 `;
 export const SidebarWrapper = styled(motion.div)`
-  padding: 20px 20px;
-  width: 100%;
+	padding: 20px 20px;
+	width: 100%;
 	margin-top: 50px;
-
-
 `;
 export const SidebarLinks = styled(motion.ul)`
 	display: flex;
 	flex-direction: column;
-
-
 `;
 export const SidebarLinksItem = styled(motion.li)`
 	width: 100%;
@@ -48,7 +44,6 @@ export const SidebarLinksItem = styled(motion.li)`
 		}
 	}
 `;
-
 
 export const Inner = styled(motion.div)`
 	position: absolute;
