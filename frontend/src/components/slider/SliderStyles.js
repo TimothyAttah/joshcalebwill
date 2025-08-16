@@ -5,6 +5,7 @@ export const SliderContainer = styled.div`
 	height: 71vh;
 	width: 100%;
 	background: rgb(255, 149, 0);
+	padding-top: 50px;
 `;
 export const SliderWrapper = styled.div`
 	width: 100%;
