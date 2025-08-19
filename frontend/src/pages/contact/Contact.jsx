@@ -167,6 +167,16 @@ const Contact = () => {
 					</form>
 				</Styles.ContactForm>
 			</Styles.ContactWrapper>
+			<div>
+				<iframe
+					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5709.180640965898!2d3.3524680766177375!3d6.660143021203511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b940e901f9283%3A0x98feb9694dbb3be0!2sUnited%20Estate%20%26%20Alagbole%20Rd%2C%20Ojodu%2C%20Ajuwon%2FAkute%20112107%2C%20Ogun%20State!5e0!3m2!1sen!2sng!4v1755579832780!5m2!1sen!2sng'
+					// width='800'
+					height='600'
+					style={{ border: '0', width: '100%' }}
+					allowfullscreen=''
+					loading='lazy'
+					referrerpolicy='no-referrer-when-downgrade'></iframe>
+			</div>
 		</Styles.ContactContainer>
 	);
 };

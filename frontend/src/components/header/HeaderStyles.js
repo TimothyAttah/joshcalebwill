@@ -7,9 +7,12 @@ export const HeaderContainer = styled(motion.header)`
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: ${(props) => (props.activeBG ? '#000;' : 'transparent')};
+	color: ${(props) => (props.activeBG ? '#fff' : 'transparent')};
+	color: var(--brown);
+	background-color: ${(props) =>
+		props.activeBG ? 'var(--brown)' : 'transparent'};
 	z-index: 999;
-	/* background-color: orange; */
+	background-color: transparent;
 `;
 
 export const HeaderWrapper = styled(motion.div)`
@@ -38,6 +41,8 @@ export const HeaderLogo = styled(motion.div)`
 		/* flex-direction: column; */
 		align-items: center;
 		justify-content: center;
+		color: var(--brown);
+		font-weight: bold;
 	}
 
 	h1 {
@@ -48,7 +53,7 @@ export const HeaderLogo = styled(motion.div)`
 		/* border: 2px solid #fff; */
 		text-align: center;
 		padding: 5px;
-	;
+		color: var(--brown);
 	}
 
 	h4 {
@@ -67,10 +72,13 @@ export const HeaderMenu = styled(motion.div)`
 
 	a {
 		color: #fff;
+		color: var(--brown);
+		font-weight: bold;
 	}
 
 	svg {
 		color: #fff;
+		color: var(--brown);
 		font-size: 27px;
 		cursor: pointer;
 	}

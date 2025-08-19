@@ -29,7 +29,7 @@ const Header = () => {
 	const [openSidebar, setOpenSidebar] = useState(false);
 	return (
 		<>
-			<Styles.HeaderContainer activeBG={openBG}>
+			<Styles.HeaderContainer>
 				<Styles.HeaderWrapper>
 					<FadeInAlways delay={0.1} direction='down'>
 						<Styles.HeaderLogo>

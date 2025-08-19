@@ -70,19 +70,19 @@ export const ContactSubLinks = styled.div`
 `;
 
 export const ContactWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  padding-top: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	padding: 50px 0;
 
-  @media screen  and (max-width: 650px){
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+	@media screen and (max-width: 650px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
 `;
 
 export const ContactInfo = styled.div`
