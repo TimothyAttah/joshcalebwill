@@ -8,7 +8,9 @@ import {
 	AnimatePresence,
 } from 'framer-motion';
 import styled from 'styled-components';
-import pix1 from '../../assets/hero1.jpg';
+import importPix from '../../assets/import1.jpg';
+import pix2 from '../../assets/oil1.jpg';
+
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 
 const CarouselWrapper = styled(motion.div)`
@@ -20,8 +22,13 @@ const CarouselWrapper = styled(motion.div)`
 	background-color: var(--brown);
 	color: #fff;
 	padding: 50px;
+	/* background-image: url(${pix2});
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 42%; */
 
-	@media screen  and (max-width: 920px){
+	@media screen and (max-width: 920px) {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -32,20 +39,25 @@ const CarouselWrapper = styled(motion.div)`
 const CarouselInfo = styled(motion.div)`
 	width: 500px;
 
+	h2 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
 	@media screen and (max-width: 920px) {
 		width: 100%;
 
 		text-align: center;
 		font-size: 20px;
-
-		h2 {
-			font-size: 20px;
-		}
 	}
 `;
 
 const CarouselImg = styled(motion.div)`
-	width: 500px;
+	width: 900px;
 	img {
 		width: 100%;
 	}
@@ -119,7 +131,7 @@ const NewSlider = () => {
 			div.style.position = 'absolute';
 			div.style.left = '0';
 			div.style.top = '0';
-			div.style.backgroundColor = 'red';
+			div.style.backgroundColor = '#fff';
 			div.style.zIndex = '22px';
 			div.id = 'progress';
 			div.style.animation = 'progress ' + duration / 1000 + 's linear';
@@ -150,7 +162,7 @@ const NewSlider = () => {
 		setTimeout(() => {
 			setShowImg(false);
 		}, 9000);
-	},[setShowImg]);
+	}, [setShowImg]);
 
 	return (
 		<Styles.SliderContainer>
@@ -174,12 +186,15 @@ const NewSlider = () => {
 									stiffness: 5,
 								}}>
 								<FadeInAlways direction='right' delay={0.1}>
-									<h2>
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-										Asperiores nesciunt atque impedit est corrupti quia! Nam
-										vitae fugiat omnis aspernatur mollitia deserunt quibusdam
-										nesciunt culpa, hic expedita fugit velit nihil?
-									</h2>
+									<h2>Powering Energy with Precision</h2>
+								</FadeInAlways>
+								<FadeInAlways direction='right' delay={0.3}>
+									<p>
+										At Joshcalebwill, we deliver reliable oil & gas rig
+										solutions built on safety, innovation, and efficiency. From
+										rig construction to maintenance, our expertise keeps energy
+										flowing sustainably.
+									</p>
 								</FadeInAlways>
 							</CarouselInfo>
 							<CarouselImg
@@ -206,7 +221,7 @@ const NewSlider = () => {
 									<AnimatePresence>
 										{showImg && (
 											<motion.img
-												src={pix1}
+												src={pix2}
 												alt=''
 												exit={{ y: '1000px', opacity: 0, scale: 0 }}
 												transition={{
@@ -223,7 +238,9 @@ const NewSlider = () => {
 						</CarouselWrapper>
 					</Styles.Item>
 					<Styles.Item className='item'>
-						<Styles.Img className='img' slider='slider2'></Styles.Img>
+						<Styles.Img className='img' slider='slider2'>
+							<img src={importPix} alt="" />
+						</Styles.Img>
 						<Styles.Caption className='caption'>
 							<Styles.Text className='text'>
 								<h1>Headline Goes Here</h1>

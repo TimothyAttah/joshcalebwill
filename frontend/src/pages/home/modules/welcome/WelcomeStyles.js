@@ -67,7 +67,7 @@ export const WelcomeImgBox = styled(motion.div)`
 		padding: 10px 0;
 		background: #df6512;
 		color: #ffffff;
-		width: 233px;
+		/* width: 233px; */
 		margin: auto;
 		font-size: 15px;
 	}
@@ -79,7 +79,7 @@ export const WelcomeImg = styled(motion.div)`
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		/* object-fit: contain; */
 	}
 `;
 

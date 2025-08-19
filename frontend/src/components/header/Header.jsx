@@ -1,5 +1,5 @@
 import * as Styles from './HeaderStyles';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.jpeg';
 import Navbar from '../nav/Navbar';
 import { FaBars } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
@@ -34,7 +34,8 @@ const Header = () => {
 					<FadeInAlways delay={0.1} direction='down'>
 						<Styles.HeaderLogo>
 							<Link to='/'>
-								<img src={logo} alt='' />
+								<img src={ logo } alt='' />
+								<h1>joshcalebwill <br /> petroleum limited</h1>
 							</Link>
 						</Styles.HeaderLogo>
 					</FadeInAlways>

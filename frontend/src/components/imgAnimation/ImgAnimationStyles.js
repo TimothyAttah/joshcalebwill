@@ -59,11 +59,12 @@ export const ImgAnimationBox = styled(motion.div)`
 `;
 
 export const Text = styled(motion.h1)`
-	font-size: 3.2rem;
+	font-size: 50px;
 	margin-bottom: 70px;
 	text-align: center;
 	color: #fff;
-	color: #0d1117;
+
+	/* color: #0d1117; */
 	@media screen and (max-width: 920px) {
 		/* height: auto; */
 		font-size: 2rem;

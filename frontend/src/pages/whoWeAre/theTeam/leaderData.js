@@ -58,7 +58,7 @@ export const leaderData = [
 	{
 		leaderName: 'MEET CHUKWUDI RAPHAEL OBIEFUNA',
 		leaderTitle: 'PROJECT DIRECTOR',
-		leaderPic: leaderPix4,
+		leaderPic: leaderPix5,
 		leaderInfo: ` A senior-level
     Construction and Project Management Practitioner with more than 20+
     years of experience managing simple and complex challenges for
@@ -78,7 +78,7 @@ export const leaderData = [
 	{
 		leaderName: 'MEET ANOSIKE GREGORY CHUKWUDI',
 		leaderTitle: 'EXECUTIVE DIRECTOR',
-		leaderPic: leaderPix5,
+		leaderPic: leaderPix4,
 		leaderInfo: `  Holds a Bachelors of Engineering degree in Electrical and
     Electronics Engineering from the Enugu State University of Science and
     Technology and a Masters of Engineering in Electrical and Electronics

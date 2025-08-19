@@ -19,7 +19,7 @@ const ImgAnimation = () => {
 			<Styles.ImgAnimationBoxItem>
 				<ImgSection1 scrollYProgress={scrollYProgress} />
 			</Styles.ImgAnimationBoxItem>
-			<Styles.ImgAnimationBoxItem>
+			{/* <Styles.ImgAnimationBoxItem>
 				<ImgSection2
 					scrollYProgress={scrollYProgress}
 					scrollXProgress={scrollXProgress}
@@ -30,7 +30,7 @@ const ImgAnimation = () => {
 					scrollYProgress={scrollYProgress}
 					scrollXProgress={scrollXProgress}
 				/>
-			</Styles.ImgAnimationBoxItem>
+			</Styles.ImgAnimationBoxItem> */}
 			<Styles.ImgAnimationBoxItem>
 				<ImgSection4
 					scrollYProgress={scrollYProgress}
@@ -50,7 +50,7 @@ const ImgSection1 = ({ scrollYProgress }) => {
 		<Styles.ImgAnimationBox style={{ scale, rotate }}>
 			<FadeInAlways delay={0.2} direction='right'>
 				<Styles.Text>
-					the oil sector needs requires prolific thinkers
+					The oil sector needs  prolific thinkers
 				</Styles.Text>
 			</FadeInAlways>
 			<FadeInAlways delay={0.4} direction='left'>
@@ -62,27 +62,27 @@ const ImgSection1 = ({ scrollYProgress }) => {
 	);
 };
 
-const ImgSection2 = ({ scrollYProgress }) => {
-	const scale = useTransform(scrollYProgress, [0.5, 0], [1, 0]);
-	const rotate = useTransform(scrollYProgress, [0.2, 3], [1, -6]);
-	return (
-		<Styles.ImgAnimationBox right='true' style={{ scale, rotate }}>
-			<img src={img2} alt='' />
-		</Styles.ImgAnimationBox>
-	);
-};
+// const ImgSection2 = ({ scrollYProgress }) => {
+// 	const scale = useTransform(scrollYProgress, [0.5, 0], [1, 0]);
+// 	const rotate = useTransform(scrollYProgress, [0.2, 3], [1, -6]);
+// 	return (
+// 		<Styles.ImgAnimationBox right='true' style={{ scale, rotate }}>
+// 			<img src={img2} alt='' />
+// 		</Styles.ImgAnimationBox>
+// 	);
+// };
 
-const ImgSection3 = ({ scrollYProgress, scrollXProgress }) => {
-	const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
-	const rotate = useTransform(scrollYProgress, [0, 1], [0, -7]);
-	return (
-		<Styles.ImgAnimationBox style={{ scale, rotate }}>
-			<FadeInAlways delay={0.5} direction='left'>
-				<img src={img3} alt='' />
-			</FadeInAlways>
-		</Styles.ImgAnimationBox>
-	);
-};
+// const ImgSection3 = ({ scrollYProgress, scrollXProgress }) => {
+// 	const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
+// 	const rotate = useTransform(scrollYProgress, [0, 1], [0, -7]);
+// 	return (
+// 		<Styles.ImgAnimationBox style={{ scale, rotate }}>
+// 			<FadeInAlways delay={0.5} direction='left'>
+// 				<img src={img3} alt='' />
+// 			</FadeInAlways>
+// 		</Styles.ImgAnimationBox>
+// 	);
+// };
 
 const ImgSection4 = ({ scrollYProgress, scrollXProgress }) => {
 	const scale = useTransform(scrollYProgress, [0.5, 0], [1, 0]);
@@ -97,7 +97,7 @@ const ImgSection4 = ({ scrollYProgress, scrollXProgress }) => {
 			</FadeInAlways>
 			<FadeInAlways delay={0.5} direction='left'>
 				<Styles.Text>
-					joshcalebwill petroleum is a global vision born for change in the oil
+					Joshcalebwill petroleum is a global vision born for change in the oil
 					& gas sector
 				</Styles.Text>
 			</FadeInAlways>

@@ -83,11 +83,14 @@ const Contact = () => {
 					<h2>Get in Touch</h2>
 					<Styles.ContactInfoList>
 						<h4>📍 Head Office:</h4>
-						<p>[Insert company address here]</p>
+						<p>
+							Plot 20B Close United Estate <br /> Alagbole, Ogun State
+						</p>
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📞 Phone:</h4>
-						<p>[Insert phone number here]</p>
+						<p>+2348023169986</p>
+						<p>+2348162073680</p>
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📧 Email:</h4>

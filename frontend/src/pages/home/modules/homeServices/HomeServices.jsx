@@ -1,8 +1,8 @@
 import * as Styles from './HomeServicesStyles';
 import { Link } from 'react-router-dom';
 import servicePic1 from '../../../../assets/service-1.jpg';
-import servicePic2 from '../../../../assets/service-2.jpg';
-import servicePic3 from '../../../../assets/service-3.jpg';
+import servicePic2 from '../../../../assets/oil2.jpg';
+import servicePic3 from '../../../../assets/petrol1.jpg';
 import servicePic4 from '../../../../assets/service-4.jpg';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
 import Gallery from '../../../../components/gallery/Gallery';
@@ -22,7 +22,7 @@ const HomeServices = () => {
 					</Styles.HomeServicesInfoTitle>
 					<Styles.HomeServicesInfoDesc>
 						<FadeInAlways delay={0.4} direction='down'>
-							<p>
+							{/* <p>
 								We offer one of the largest offshore liquid bulk terminals
 								(SPM/CBM) in Africa to provide efficient discharge of products
 								for operators, complemented by world class storage facilities
@@ -30,7 +30,7 @@ const HomeServices = () => {
 								Nigeria. We continually develop strategic infrastructure to
 								facilitate the operational efficiency of our integrated bouquet
 								of services.
-							</p>
+							</p> */}
 						</FadeInAlways>
 					</Styles.HomeServicesInfoDesc>
 				</Styles.HomeServicesInfo>
@@ -69,7 +69,7 @@ const HomeServices = () => {
 					</FadeInAlways>
 				</Styles.HomeServicesImgWrapper>
 			</Styles.HomeServicesWrapper>
-			<Gallery/>
+			{/* <Gallery/> */}
 		</Styles.HomeServicesContainer>
 	);
 };

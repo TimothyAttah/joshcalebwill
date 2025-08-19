@@ -24,14 +24,31 @@ export const HeaderLogo = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
-	width: 80px;
+	/* flex-direction: column; */
+	/* margin-top: 50px; */
+
+	/* width: 80px; */
 	img {
-		width: 100%;
+		width: 50px;
 	}
 
 	a {
 		width: 100%;
+		display: flex;
+		/* flex-direction: column; */
+		align-items: center;
+		justify-content: center;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 14px;
+		color: #fff;
+		/* color: gold; */
+		/* border: 2px solid #fff; */
+		text-align: center;
+		padding: 5px;
+	;
 	}
 
 	h4 {

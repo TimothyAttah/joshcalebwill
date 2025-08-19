@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     --brown: rgb(255, 115, 0);
     --green: rgb(81, 128, 11);
     --blue:rgb(40, 115, 208);
+    --black: #000;
 
     --first-color: hsl(220, 68%, 54%);
     --first-color-lighten: hsl(220, 68%, 97%);
@@ -24,7 +25,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Poppins", sans-serif;
   }
 
   body {
@@ -58,10 +60,6 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  h1 {
-    color: var(--brown);
   }
 `;
 

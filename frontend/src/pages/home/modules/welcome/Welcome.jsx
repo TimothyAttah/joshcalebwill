@@ -1,4 +1,4 @@
-import welcomePix1 from '../../../../assets/welcome-1.jpg';
+import welcomePix1 from '../../../../assets/import2.jpg';
 import welcomePix2 from '../../../../assets/welcome-2.jpg';
 import * as Styles from './WelcomeStyles';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
@@ -12,7 +12,7 @@ const Welcome = () => {
 						<h4>Welcome to JoshCalebWill Oil & Gas Ltd.</h4>
 					</FadeInAlways>
 					<FadeInAlways delay={0.2} direction='right'>
-						<h2>We are a Leading Downstream Oil & Gas Company in Nigeria</h2>
+						<h2>We are a Leading Petroluem Company in Nigeria</h2>
 					</FadeInAlways>
 					<FadeInAlways delay={0.4} direction='right'>
 						<p>

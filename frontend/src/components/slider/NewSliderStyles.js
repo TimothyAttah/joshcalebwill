@@ -64,7 +64,8 @@ export const Img = styled.div`
 	${(props) =>
 		props.slider === 'slider2' &&
 		css`
-			background-image: url(${pix2});
+			/* background-image: url(${pix2}); */
+			background-color: var(--green);
 		`}
      ${(props) =>
 		props.slider === 'slider3' &&
