@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Overlay from '../Overlay';
-import * as Styles from './ChatBotStyles'
+import * as Styles from './ChatBotStyles';
 import { BiBot, BiChevronDown, BiComment } from 'react-icons/bi';
 import ChatBotMessage from './ChatBotMessage';
 import { useRef, useState, useEffect } from 'react';
@@ -22,16 +22,16 @@ const ChatbotContainer = styled.div`
 `;
 
 const Chatbot = ({ close, setOpenChatbot }) => {
-  const [chatHistory, setChatHistory] = useState([
+	const [chatHistory, setChatHistory] = useState([
 		{
 			hideInChat: true,
 			role: 'model',
 			text: companyInfo,
 		},
-  ]);
-  const chatBodyRef = useRef();
+	]);
+	const chatBodyRef = useRef();
 
-  const generateBotResponse = async (history) => {
+	const generateBotResponse = async (history) => {
 		const updateHistory = (text, isError = false) => {
 			setChatHistory((prev) => [
 				...prev.filter((msg) => msg.text !== 'Thinking...'),
@@ -47,13 +47,14 @@ const Chatbot = ({ close, setOpenChatbot }) => {
 		const requestOptions = {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			// body: JSON.stringify({ contents: history }),
-			body: { contents: history },
+			body: JSON.stringify({ contents: history }),
+			// body: { contents: history },
 		};
 
 		try {
 			const response = await fetch(
-				import.meta.env.VITE_API_URL,
+				// import.meta.env.VITE_API_URL,
+				'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyC8TU9thxd2qIWZHEWuLa_m6aniQChn6BM',
 				requestOptions,
 			);
 			const data = await response.json();
@@ -69,15 +70,14 @@ const Chatbot = ({ close, setOpenChatbot }) => {
 			// console.log(err);
 			updateHistory(err.message, true);
 		}
-  };
+	};
 
-  useEffect(() => {
+	useEffect(() => {
 		chatBodyRef.current.scrollTo({
 			top: chatBodyRef.current.scrollHeight,
 			behavior: 'smooth',
 		});
 	}, [chatHistory]);
-
 
 	return (
 		<div>
