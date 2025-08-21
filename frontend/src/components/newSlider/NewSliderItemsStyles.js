@@ -6,6 +6,11 @@ export const Slider = styled(motion.div)`
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	transition: 0.5s;
+
+	@media screen and (max-width: 750px) {
+		height: 70vh;
+	}
 `;
 
 export const SliderItems = styled(motion.div)`
@@ -17,16 +22,22 @@ export const SliderItems = styled(motion.div)`
 	}
 `;
 
+export const SliderOverlay = styled.div`
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 0;
+`;
+
 export const Item = styled(motion.div)`
-  width: 100%;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* position: relative; */
 	display: none;
-	/* overflow: hidden; */
 
 	img {
 		width: 100%;
@@ -36,11 +47,20 @@ export const Item = styled(motion.div)`
 
 		@keyframes zoom {
 			0% {
-				transform: scale(1);
+				transform: scale(2);
 			}
 			100% {
 				transform: scale(1.05);
 			}
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		img {
+			width: 100%;
+			height: 100%;
+
+			animation: zoom 1s linear forwards;
 		}
 	}
 `;
@@ -50,56 +70,103 @@ export const NewSliderVideo = styled.video`
 	height: 100%;
 	position: absolute;
 	top: 0;
-	/* z-index: -1; */
+	z-index: -1;
 	object-fit: cover;
 	background-color: #000;
-	animation: zoom 1s linear forwards;
+	/* animation: zoom 1s linear forwards; */
 
-	@keyframes zoom {
+	/* @keyframes zoom {
 		0% {
 			transform: scale(1);
 		}
 		100% {
 			transform: scale(1.05);
 		}
-	}
+	} */
 `;
 
 export const SliderItemContentWrapper = styled(motion.div)`
-	max-width: 600px;
+	max-width: 750px;
 	width: 100%;
 	background-color: var(--brown);
 	color: #fff;
 	position: absolute;
 	left: 50%;
-	bottom: 50px;
+	bottom: 100px;
 	transform: translateX(-50%);
-	padding: 20px;
+	padding: 50px;
 	border-radius: 10px;
+	backdrop-filter: blur(40px) opacity(1);
+	-webkit-backdrop-filter: blur(10px) opacity(1);
+	border-radius: 12px 12px 0px 0px;
+	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
+		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
+		opacity: 0.8;
+
+	@media screen and (max-width: 750px) {
+		bottom: 100px;
+	}
 `;
 
 export const NewSliderItemContent = styled(motion.div)`
+	width: 100%;
+	/* height: auto; */
+	background-color: var(--brown);
+	color: #fff;
 
-  width: 100%;
-  height: auto;
-  background-color: var(--brown);
-  color: #fff;
 
-  div {
-    h1 {
-      padding-bottom: 5px;
-      font-size: 40px;
-    }
+	div {
+		text-align: center;
+		padding-bottom: 5px;
+		h1 {
+			/* padding-bottom: 5px; */
+			font-size: 40px;
+			text-transform: capitalize !important;
+			text-align: center;
+		}
 
-    h4 {
-      font-size: 22px;
-    }
-  }
+		h4 {
+			font-size: 22px;
+		}
+	}
 
-  p {
-    font-size: 14px;
-    padding-top: 10px;
-  }
+	p {
+		font-size: 14px;
+		line-height: 20px;
+		padding-top: 10px;
+	}
+
+	a {
+		background: #fff;
+		padding: 10px;
+		display: block;
+		width: 300px;
+		text-align: center;
+		margin-top: 10px;
+		text-transform: capitalize;
+		border-radius: 10px;
+	}
+
+	@media screen and (max-width: 450px) {
+		text-align: center;
+		div {
+			h1 {
+				padding-bottom: 5px;
+				font-size: 25px;
+				text-transform: capitalize;
+			}
+
+			h4 {
+				font-size: 18px;
+			}
+		}
+
+		p {
+			font-size: 10px;
+			padding-top: 11px;
+			line-height: 15px;
+		}
+	}
 `;
 
 export const Progress = styled(motion.div)`
@@ -118,6 +185,13 @@ export const Progress = styled(motion.div)`
 `;
 
 export const Controls = styled(motion.div)`
+	width: 400px;
+	z-index: 999990;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+
 	div {
 		position: absolute;
 		height: 40px;
@@ -126,7 +200,8 @@ export const Controls = styled(motion.div)`
 		color: #fff;
 		border-radius: 50%;
 		z-index: 11;
-		top: 50%;
+		/* top: 80%; */
+		bottom: 10px;
 		margin-top: 20px;
 		text-align: center;
 		line-height: 40px;
@@ -140,20 +215,22 @@ export const Controls = styled(motion.div)`
 	}
 
 	.prev {
-		left: 30px;
+		left: 20px;
 	}
 
 	.next {
-		right: 30px;
+		right: 20px;
 	}
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 420px) {
+		width: 100%;
+		bottom: 50px;
 		.prev {
-			left: 10px;
+			left: 30px;
 		}
 
 		.next {
-			right: 10px;
+			right: 30px;
 		}
 	}
 `;

@@ -3,6 +3,7 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import ChatBot from './chatBot/ChatBot';
 
 const PaddingBox = styled.div`
 	/* padding-top: ${(props) => (props.addPadding ? '100px' : '0px')}; */
@@ -23,6 +24,7 @@ const Layout = () => {
 	return (
 		<>
 			<Header />
+			{/* <ChatBot/> */}
 			<PaddingBox addPadding={addPadding}>
 				<Outlet />
 			</PaddingBox>

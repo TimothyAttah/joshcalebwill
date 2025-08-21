@@ -13,6 +13,7 @@ import Pipeline from './pages/whatWeDo/pipeline/Pipeline';
 import Gas from './pages/whatWeDo/gas/Gas';
 import Health from './pages/whatWeDo/health/Health';
 import Contact from './pages/contact/Contact';
+import Procurement from './pages/whatWeDo/procurement/Procurement';
 
 const App = () => {
 	return (
@@ -53,12 +54,16 @@ const App = () => {
 						path='/what-we-do/gas-compression-services'
 						element={<Gas />}
 					/>
-					<Route path='/what-we-do/health-and-safety' element={<Health />} />
+					<Route
+						path='/what-we-do/gas-compression-services'
+						element={<Gas />}
+					/>
+					<Route path='/what-we-do/procurement-solutions' element={<Procurement/>} />
 
 					<Route path='/contact' element={<Contact />} />
 				</Route>
 			</Routes>
-			<ToastContainer/>
+			<ToastContainer />
 		</>
 	);
 };

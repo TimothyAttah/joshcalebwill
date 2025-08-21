@@ -17,6 +17,10 @@ export const HomeServicesWrapper = styled.div`
 	@media screen and (max-width: 920px) {
 		width: 100%;
 	}
+
+	@media screen and (max-width: 450px) {
+		padding: 50px 10px;
+	}
 `;
 
 export const HomeServicesInfo = styled.div`
@@ -55,8 +59,8 @@ export const HomeServicesInfoTitle = styled.div`
 
 	@media screen and (max-width: 420px) {
 		h2 {
-			font-size: 80px;
-		
+			font-size: 50px;
+
 		}
 	}
 `;
@@ -106,6 +110,10 @@ export const HomeServicesImgBox = styled.div`
 		background: #121626;
 		background-color: var(--brown);
 		color: #ffffff;
+	}
+
+	@media screen and (max-width: 450px) {
+		width: 100%;
 	}
 `;
 export const HomeServicesImg = styled.div`

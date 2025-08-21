@@ -54,6 +54,10 @@ export const navData = [
 				navTitle: 'HEALTH SAFETY AND ENVIRONMENTAL ASSESSMENT CONSULTANCY',
 				navPath: '/what-we-do/health-and-safety',
 			},
+			{
+				navTitle: 'Procurement Solutions',
+				navPath: '/what-we-do/procurement-solutions',
+			},
 		],
 	},
 	{
@@ -62,7 +66,7 @@ export const navData = [
 		navSubmenu: [
 			{
 				navTitle: 'Quality Policy Statement',
-				navPath: 'Quality Policy Statement',
+				navPath: '/quality-policy-statement',
 			},
 			{
 				navTitle: 'Health Safety & Environment (HSE) Policy',

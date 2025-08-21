@@ -89,3 +89,18 @@ export const HeaderMenu = styled(motion.div)`
 		}
 	}
 `;
+
+export const ChatbotIcon = styled.div`
+	width: 50px;
+	height: 50px;
+	color: var(--brown);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	z-index: 9999999999999;
+`;
