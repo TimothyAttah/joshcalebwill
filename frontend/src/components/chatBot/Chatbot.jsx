@@ -47,7 +47,8 @@ const Chatbot = ({ close, setOpenChatbot }) => {
 		const requestOptions = {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ contents: history }),
+			// body: JSON.stringify({ contents: history }),
+			body: { contents: history },
 		};
 
 		try {
