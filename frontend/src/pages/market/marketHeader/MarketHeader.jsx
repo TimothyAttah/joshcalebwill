@@ -32,7 +32,7 @@ const MarketHeader = () => {
 	return (
 		<HeaderContainer>
 			<MarketHeaderBox>
-				<h4>Welcome to JoshCalebWill Market</h4>
+				<h4>Welcome to Joshcalebwill Market</h4>
 				<MarketHeaderNav>
 					<Link>
 						<BiCart /> <span>Cart</span>

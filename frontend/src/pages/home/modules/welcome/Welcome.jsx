@@ -9,14 +9,14 @@ const Welcome = () => {
 			<Styles.WelcomeWrapper>
 				<Styles.WelcomeInfo>
 					<FadeInAlways delay={0.1} direction='right'>
-						<h4>Welcome to JoshCalebWill Oil & Gas Ltd.</h4>
+						<h4>Welcome to Joshcalebwill Oil & Gas Ltd.</h4>
 					</FadeInAlways>
 					<FadeInAlways delay={0.2} direction='right'>
 						<h2>We are a Leading Petroluem Company in Nigeria</h2>
 					</FadeInAlways>
 					<FadeInAlways delay={0.4} direction='right'>
 						<p>
-							JoshCalebWill is an Indigenous Oil and Gas Company active across
+							Joshcalebwill is an Indigenous Oil and Gas Company active across
 							the entire downstream value chain, with emphasis on the petroleum
 							trading, marketing, distribution and retail segments of the
 							Nigerian Oil and Gas Sector.

@@ -1,6 +1,6 @@
 export const companyInfo = `
 Introduction:
-I'm your friendly JoshCalebWill chatbot, here to assist you with anything you need related to our company! Whether you're looking for infomation about us, business hours or address, I'm here to help.
+I'm your friendly Joshcalebwill chatbot, here to assist you with anything you need related to our company! Whether you're looking for infomation about us, business hours or address, I'm here to help.
 
 Details:
 JOSHCALEB WILL PETROLEUM LIMITED is a dynamic international energy
@@ -28,9 +28,9 @@ Stay connected with us through our vibrant social media community. Follow us for
 - Twitter: https://twitter.com/
 - LinkedIn: https://linkedin.com/
 
-For inquires, feel free to reach out via email at hello@joshcalebwill.com or call us at 	+2348023169986 or +2348162073680
+For inquires, feel free to reach out via email at hello@Joshcalebwill.com or call us at 	+2348023169986 or +2348162073680
 
-Our website, https://www.joshcalebwill.com offers a seamless shopping experience for petroleum, accessories, and info. Learn about us, explore our guides, what we do, who we are.
+Our website, https://www.Joshcalebwill.com offers a seamless shopping experience for petroleum, accessories, and info. Learn about us, explore our guides, what we do, who we are.
 
 JCW Petroleum Health Safety & Environment (HSE) Policy:
 'Provide excellent standards of services for our customers and clients. We aspire to lead the oil industry best practice in all our operations',

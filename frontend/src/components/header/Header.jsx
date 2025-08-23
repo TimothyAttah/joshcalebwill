@@ -9,8 +9,7 @@ import Sidebar from '../sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { Twirl as Hamburger } from 'hamburger-react';
 import Chatbot from '../chatBot/Chatbot';
-import AiPic from '../../assets/ai2.jpg'
-
+import AiPic from '../../assets/ai2.jpg';
 
 const Header = () => {
 	const location = useLocation();
@@ -41,7 +40,7 @@ const Header = () => {
 							<Link to='/'>
 								<img src={logo} alt='' />
 								<h1>
-									joshcalebwill <br /> petroleum limited
+									Joshcalebwill <br /> petroleum limited
 								</h1>
 							</Link>
 						</Styles.HeaderLogo>

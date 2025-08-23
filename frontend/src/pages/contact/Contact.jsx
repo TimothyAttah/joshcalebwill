@@ -24,10 +24,10 @@ const Contact = () => {
 				() => {
 					console.log('SUCCESS!');
 					toast.success('Message sent successfully');
-					setName('')
+					setName('');
 					sendEmail('');
-					setSubject('')
-					setMessage('')
+					setSubject('');
+					setMessage('');
 				},
 				(error) => {
 					console.log('FAILED...', error.text);

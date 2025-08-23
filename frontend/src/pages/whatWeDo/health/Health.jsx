@@ -10,8 +10,6 @@ import servicePix7 from '../../../assets/healthService7.jpg';
 import servicePix8 from '../../../assets/healthService8.jpg';
 import servicePix9 from '../../../assets/healthService9.jpg';
 
-
-
 import pix1 from '../../../assets/gas2.jpg';
 import pix2 from '../../../assets/gas3.jpeg';
 import pix3 from '../../../assets/gas4.png';
@@ -141,8 +139,6 @@ const HealthHeroSection = styled.div`
 			text-align: center;
 		}
 	}
-
-
 `;
 const HealthIntroSection = styled.div`
 	width: 100%;

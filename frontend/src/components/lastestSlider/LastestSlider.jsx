@@ -173,7 +173,6 @@ const LastestSlider = () => {
 						</Styles.Img>
 					</Styles.Item>
 
-
 					<Styles.Item className='item  '>
 						<Styles.Img className='img' slider='slider2'>
 							{/* <img src={pix1} alt='' /> */}
@@ -261,8 +260,6 @@ const LastestSlider = () => {
 							</Styles.CaptionImg>
 						</Styles.Img>
 					</Styles.Item>
-
-					
 
 					{/* <Styles.Item className='item '>
 						<Styles.Img className='img' slider='slider5'>

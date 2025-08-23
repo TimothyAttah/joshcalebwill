@@ -18,6 +18,7 @@ import Market from './pages/market/Market';
 import ProductItem from './pages/market/productItem/ProductItem';
 import QualityPolicy from './pages/sustainability/qualityPolicy/QualityPolicy';
 import HealthPolicy from './pages/sustainability/healthPolicy/HealthPolicy';
+import Haulage from './pages/whatWeDo/haulage/Haulage';
 
 const App = () => {
 	return (
@@ -63,6 +64,7 @@ const App = () => {
 						path='/what-we-do/procurement-solutions'
 						element={<Procurement />}
 					/>
+					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
 					<Route
 						path='/sustainability/quality-policy-statement'
 						element={<QualityPolicy />}

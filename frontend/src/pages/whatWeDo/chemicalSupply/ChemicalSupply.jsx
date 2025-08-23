@@ -5,9 +5,6 @@ import waterPix from '../../../assets/water2.jpg';
 import maintainPix from '../../../assets/maintain3.jpg';
 import agreePix from '../../../assets/agree2.jpg';
 
-
-
-
 import pix1 from '../../../assets/pix-4.jpg';
 
 const ChemicalSupplyContainer = styled.div``;

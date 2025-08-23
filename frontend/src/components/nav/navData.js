@@ -58,6 +58,10 @@ export const navData = [
 				navTitle: 'Procurement Solutions',
 				navPath: '/what-we-do/procurement-solutions',
 			},
+			{
+				navTitle: 'Haulage Services',
+				navPath: '/what-we-do/haulage-services',
+			},
 		],
 	},
 	{
@@ -95,8 +99,8 @@ export const navData = [
 				navPath: 'Events & Pictures Gallery',
 			},
 			{
-				navTitle: 'Vacancies & Career Opportunities',
-				navPath: 'Vacancies & Career Opportunities',
+				navTitle: ' Career Opportunities',
+				navPath: ' Career Opportunities',
 			},
 		],
 	},

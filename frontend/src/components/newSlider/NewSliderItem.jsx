@@ -1,5 +1,7 @@
 import sliderPix1 from '../../assets/heroImports.jpg';
-import sliderPix2 from '../../assets/heroTeamwork2.jpg';
+// import sliderPix2 from '../../assets/heroTeamwork2.jpg';
+import sliderPix2 from '../../assets/team.jpeg';
+
 import sliderPix3 from '../../assets/heroPipeline.jpg';
 import sliderPix4 from '../../assets/heroProcurement.jpg';
 import sliderPix5 from '../../assets/heroRig.mp4';

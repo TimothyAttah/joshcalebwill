@@ -25,7 +25,7 @@ export const SliderItems = styled(motion.div)`
 export const SliderOverlay = styled.div`
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.3);
 	position: absolute;
 	top: 0;
 `;
@@ -276,7 +276,7 @@ export const NewSliderItemContent = styled(motion.div)`
 	}
 
 	p {
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 20px;
 		padding-top: 10px;
 	}

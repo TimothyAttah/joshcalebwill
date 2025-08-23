@@ -3,7 +3,7 @@ import Character from './Character';
 import * as Styles from './TextAnimateStyles';
 
 const value = `
-The need for energy is universal. That's why JoshCalebWill  and
+The need for energy is universal. That's why Joshcalebwill  and
 				engineers are pioneering new research and pursuing new technologies to
 				reduce emissions while creating more efficient fuels. We're committed to
 				responsibly meeting the world's energy needs.

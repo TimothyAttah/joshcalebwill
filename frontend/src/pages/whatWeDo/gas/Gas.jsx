@@ -4,7 +4,6 @@ import pix1 from '../../../assets/gas2.jpg';
 import pix2 from '../../../assets/gas3.jpeg';
 import pix3 from '../../../assets/gas4.png';
 
-
 const GasContainer = styled.div``;
 const GasHeroSection = styled.div`
 	background: url(${pix});

@@ -1,23 +1,25 @@
 import * as Styles from './HealthPolicyStyles';
-import hse1 from '../../../assets/hse3.jpg'
-import { FaCheckCircle } from 'react-icons/fa'
+import hse1 from '../../../assets/hse3.jpg';
+import { FaCheckCircle } from 'react-icons/fa';
 import { healthPolicyData } from './healthPolicyData';
 import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
 
 const HealthPolicy = () => {
-  return (
+	return (
 		<Styles.HealthPolicyContainer>
 			<FadeInAlways delay={0.2} direction='down'>
 				<Styles.HealthPolicyTitle>
 					<Styles.TitleBox>
 						<FadeInAlways delay={0.3} direction='right'>
-							<h1>JCW Petroleum Health Safety & Environment (HSE) Policy.</h1>
+							<h1>
+								Joshcalebwill Petroleum Health Safety & Environment Policy.
+							</h1>
 						</FadeInAlways>
 						<FadeInAlways delay={0.4} direction='right'>
 							<p>
-								It is the policy of JCW to conduct its activities in a manner
-								that will protect safety, health and the environment. To this
-								end, the company will:
+								It is the policy of Joshcalebwill to conduct its activities in a
+								manner that will protect safety, health and the environment. To
+								this end, the company will:
 							</p>
 						</FadeInAlways>
 					</Styles.TitleBox>
@@ -50,6 +52,6 @@ const HealthPolicy = () => {
 			</Styles.HealthPolicyDesc>
 		</Styles.HealthPolicyContainer>
 	);
-}
+};
 
-export default HealthPolicy
+export default HealthPolicy;

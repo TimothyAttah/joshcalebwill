@@ -170,10 +170,6 @@ const ExploreIntroSectionText = styled.div`
 	}
 `;
 
-
-
-
-
 const ExploreExpertSection = styled.div`
 	width: 80%;
 	margin: auto;
@@ -278,8 +274,6 @@ const ExploreApproach = styled.div`
 		gap: 20px;
 		padding: 20px;
 		margin-top: 50px;
-
-
 	}
 `;
 

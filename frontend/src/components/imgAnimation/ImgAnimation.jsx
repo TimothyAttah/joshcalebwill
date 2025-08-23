@@ -49,9 +49,7 @@ const ImgSection1 = ({ scrollYProgress }) => {
 	return (
 		<Styles.ImgAnimationBox style={{ scale, rotate }}>
 			<FadeInAlways delay={0.2} direction='right'>
-				<Styles.Text>
-					The oil sector needs  prolific thinkers
-				</Styles.Text>
+				<Styles.Text>The oil sector needs prolific thinkers</Styles.Text>
 			</FadeInAlways>
 			<FadeInAlways delay={0.4} direction='left'>
 				<Styles.Text>

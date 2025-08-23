@@ -239,7 +239,7 @@ const NewSlider = () => {
 					</Styles.Item>
 					<Styles.Item className='item'>
 						<Styles.Img className='img' slider='slider2'>
-							<img src={importPix} alt="" />
+							<img src={importPix} alt='' />
 						</Styles.Img>
 						<Styles.Caption className='caption'>
 							<Styles.Text className='text'>
