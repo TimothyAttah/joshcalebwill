@@ -35,23 +35,23 @@ export const navData = [
 		navPath: '#',
 		navSubmenu: [
 			{
-				navTitle: 'EXPLORATION',
+				navTitle: 'Exploration',
 				navPath: '/what-we-do/exploration',
 			},
 			{
-				navTitle: 'CHEMICAL SUPPLY AND TREATMENTS',
+				navTitle: ' Chemical supply and treatments',
 				navPath: '/what-we-do/chemical-supply&treatments',
 			},
 			{
-				navTitle: 'PIPELINE CONSTRUCTION AND MAINTENANCE',
+				navTitle: 'Pipeline construction and maintainance',
 				navPath: '/what-we-do/pipeline-construction-and-maintenance',
 			},
 			{
-				navTitle: 'GAS COMPRESSION SERVICES',
+				navTitle: 'Gas compression services',
 				navPath: '/what-we-do/gas-compression-services',
 			},
 			{
-				navTitle: 'HEALTH SAFETY AND ENVIRONMENTAL ASSESSMENT CONSULTANCY',
+				navTitle: 'Health safety and enviromental assessment consultancy',
 				navPath: '/what-we-do/health-and-safety',
 			},
 			{
@@ -69,7 +69,7 @@ export const navData = [
 		navPath: '#',
 		navSubmenu: [
 			{
-				navTitle: 'Quality Policy Statement',
+				navTitle: ' Quality policy statement',
 				navPath: '/sustainability/quality-policy-statement',
 			},
 			{
