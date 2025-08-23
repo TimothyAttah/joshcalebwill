@@ -119,6 +119,10 @@ export const VissionBox = styled.div`
 		font-size: 1.1rem;
 		line-height: 1.5rem;
 	}
+
+	@media screen and (max-width: 450px){
+		width: 100%;
+	}
 `;
 
 export const WhoWeAreCoreContainer = styled.div`
@@ -131,21 +135,33 @@ export const WhoWeAreCoreContainer = styled.div`
 	background-size: cover;
 	padding-top: 40.2%;
 	position: relative;
-	margin-bottom: 50px;
+	/* margin-bottom: 50px; */
 
-	@media screen and (max-width: 720px) {
+	@media screen and (max-width: 1120px) {
 		padding-top: 50.2%;
 	}
 
-	@media screen and (max-width: 440px) {
+	@media screen and (max-width: 900px) {
+		padding-top: 60.2%;
+	}
+
+	@media screen and (max-width: 590px) {
 		padding-top: 70.2%;
+	}
+
+	@media screen and (max-width: 420px) {
+		padding-top: 90.2%;
 	}
 `;
 export const CoreContainer = styled.div`
-	width: 250px;
+	max-width: 500px;
+	width: 100%;
 	position: absolute;
-	top: -50px;
-	right: 100px;
+	/* top: -50px; */
+	/* right: 100px; */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 	h2 {
 		background-color: var(--brown);
@@ -153,19 +169,22 @@ export const CoreContainer = styled.div`
 		padding: 10px 30px;
 		text-transform: capitalize;
 		font-weight: normal;
+		font-size: 18px;
 
 		span {
-			font-size: 3rem;
+			display: block;
+			font-size: 50px !important;
 			font-weight: bold;
 		}
 	}
 
 	ul {
+		width: 100%;
 		background-color: #fff;
-    color: #000;
+		color: #000;
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 30px;
 		padding: 20px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
@@ -175,6 +194,7 @@ export const CoreContainer = styled.div`
 			align-items: center;
 			gap: 10px;
 			text-transform: capitalize;
+			font-size: 20px;
 
 			&:nth-child(1) svg {
 				color: var(--color-light-blue);
@@ -197,33 +217,33 @@ export const CoreContainer = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 540px) {
-		width: 200px;
-		top: -70px;
-		right: 50px;
+	@media screen and (max-width: 900px) {
+		max-width: 300px;
 	}
 
-	h2 {
-		span {
-			font-size: 2rem;
+	@media screen and (max-width: 750px) {
+		ul {
+			gap: 10px;
 		}
 	}
 
-	@media screen and (max-width: 340px) {
-		width: 200px;
-		top: -100px;
-		right: 20px;
-	}
+	@media screen and (max-width: 590px) {
+		h2 {
 
-	h2 {
-		span {
-			font-size: 2rem;
+			font-size: 18px;
+
+			span {
+
+				font-size: 30px !important;
+
+			}
 		}
-	}
 
-	ul {
-		gap: 5px;
-		padding: 15px;
+		ul {
+			li {
+				font-size: 16px;
+			}
+		}
 	}
 `;
 // export const WhoWeAreContainer = styled.div``;

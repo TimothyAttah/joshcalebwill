@@ -74,12 +74,10 @@ const HomeAbout = () => {
 							<FadeInAlways delay={0.7} direction='left'>
 								<h4>Our mission</h4>
 								<p>
-									To always deliver competent and credible information
-									technology services to our clients, at best cost effective
-									rates, and to meet our clients’ quality expectation & delivery
-									to ensure their projects succeed regardless the challenges
-									encountered, while ensuring health, safety and environmental
-									best practices.
+									Building long lasting relationships with clients by providing
+									the best Engineering Services through the creation of the
+									Stystems and Models which ensures Quality Assurance, Safety
+									and Satisfaction for our Clients at all times.
 								</p>
 							</FadeInAlways>
 						</div>
@@ -87,10 +85,8 @@ const HomeAbout = () => {
 							<FadeInAlways delay={0.8} direction='left'>
 								<h4>Our Vision</h4>
 								<p>
-									To provide clients with quality goods and service delivered
-									consistently on time, in safety and in accordance with
-									industry best practices and thus become the preferred vendor
-									of goods ad services in our chosen fields.
+									To be the first Choice in the Services we offer in the Oil &
+									Gas Industry
 								</p>
 							</FadeInAlways>
 						</div>
