@@ -3,7 +3,7 @@ import { useScroll, motion, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 const Paragrapgh = styled.p`
-	font-size: 50px;
+	font-size: 40px;
 	max-width: 1000px;
 	margin: auto;
 	text-align: center;

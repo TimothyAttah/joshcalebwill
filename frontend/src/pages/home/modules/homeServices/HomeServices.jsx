@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import servicePic1 from '../../../../assets/service-1.jpg';
 import servicePic2 from '../../../../assets/oil2.jpg';
 import servicePic3 from '../../../../assets/petrol1.jpg';
-import servicePic4 from '../../../../assets/service-4.jpg';
+import servicePic4 from '../../../../assets/haulage1.jpg';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
 import Gallery from '../../../../components/gallery/Gallery';
 

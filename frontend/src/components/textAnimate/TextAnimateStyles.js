@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TextAnimateContainer = styled.div`
 	background-color: var(--brown);
 	width: 100%;
-	height: 190vh;
+	height: 150vh;
 
 	@media screen and (max-width: 720px) {
 		height: 120vh;

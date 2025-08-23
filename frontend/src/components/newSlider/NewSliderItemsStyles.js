@@ -25,7 +25,7 @@ export const SliderItems = styled(motion.div)`
 export const SliderOverlay = styled.div`
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.2);
 	position: absolute;
 	top: 0;
 `;
@@ -232,7 +232,7 @@ export const NewSliderVideo = styled.video`
 `;
 
 export const SliderItemContentWrapper = styled(motion.div)`
-	max-width: 750px;
+	max-width: 800px;
 	width: 100%;
 	background-color: var(--brown);
 	color: #fff;
@@ -265,20 +265,21 @@ export const NewSliderItemContent = styled(motion.div)`
 		padding-bottom: 5px;
 		h1 {
 			/* padding-bottom: 5px; */
-			font-size: 40px;
+			font-size: 44px;
 			text-transform: capitalize !important;
 			text-align: center;
 		}
 
 		h4 {
-			font-size: 22px;
+			font-size: 25px;
 		}
 	}
 
 	p {
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 22px;
+		line-height: 29px;
 		padding-top: 10px;
+		font-weight: bold;
 	}
 
 	a {

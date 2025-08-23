@@ -45,8 +45,8 @@ const HealthPolicy = () => {
 						policies, procedures, best practices and laws to their assigned
 						duties and responsibilities. <br /> All employees must report any
 						dangerous, unsafe or environmentally damaging acts, events,
-						procedures, omission and equipment that are directly related to JCW
-						property or activities
+						procedures, omission and equipment that are directly related to
+						Joshcalebwill property or activities
 					</p>
 				</FadeInAlways>
 			</Styles.HealthPolicyDesc>

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 export const HomeAboutParentContainer = styled.div`
 	width: 100%;
-	border: 2px solid red;
 	padding: 50px;
 
 	@media screen and (max-width: 980px) {
