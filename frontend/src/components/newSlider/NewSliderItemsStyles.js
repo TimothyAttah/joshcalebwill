@@ -16,7 +16,7 @@ export const Slider = styled(motion.div)`
 export const SliderItems = styled(motion.div)`
 	height: 100%;
 	width: 100%;
-  overflow: hidden;
+	overflow: hidden;
 	.active {
 		display: flex;
 	}
@@ -65,6 +65,152 @@ export const Item = styled(motion.div)`
 	}
 `;
 
+export const ItemBox = styled.div`
+	height: 100%;
+	width: 100%;
+	background: var(--brown);
+	display: flex;
+
+	/* margin-top: 100px; */
+`;
+
+export const ItemInfoBox = styled.div`
+	max-width: 500px;
+	width: 100%;
+	height: 400px;
+	background-color: #fff;
+	background: var(--brown);
+	color: #fff;
+	position: absolute;
+	left: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	div {
+		h1 {
+			font-size: 40px;
+			padding-bottom: 5px;
+		}
+
+		h4 {
+			font-size: 20px;
+			padding-bottom: 5px;
+		}
+
+		p {
+			font-size: 17px;
+			line-height: 1.5;
+			padding-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 1120px) {
+		max-width: 400px;
+	}
+
+	@media screen and (max-width: 1020px) {
+		max-width: 300px;
+	}
+
+	@media screen and (max-width: 920px) {
+		max-width: 90%;
+		top: 250px;
+	}
+
+	@media screen and (max-width: 750px) {
+		max-width: 80%;
+		top: 200px;
+		text-align: center;
+
+		div {
+			h1 {
+				font-size: 22px;
+			}
+
+			h4 {
+				font-size: 16px;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 1.2;
+				padding-top: 5px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 350px) {
+		max-width: 80%;
+		top: 200px;
+		text-align: center;
+		padding-right: 20px;
+
+		div {
+			h1 {
+				font-size: 18px;
+			}
+
+			h4 {
+				font-size: 14px;
+			}
+
+			p {
+				font-size: 12px;
+				line-height: 1.2;
+				padding-top: 5px;
+			}
+		}
+	}
+`;
+
+export const ItemImgBox = styled.div`
+	max-width: 800px;
+	width: 100%;
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	@media screen and (max-width: 1420px) {
+		max-width: 700px;
+	}
+
+	@media screen and (max-width: 1330px) {
+		max-width: 600px;
+	}
+
+	@media screen and (max-width: 1230px) {
+		max-width: 500px;
+	}
+	@media screen and (max-width: 920px) {
+		max-width: 90%;
+		bottom: 400px;
+	}
+	@media screen and (max-width: 750px) {
+		max-width: 50%;
+		bottom: 400px;
+		margin: auto;
+		transform: translateX(-35%);
+	}
+
+	@media screen and (max-width: 480px) {
+		max-width: 79%;
+		/* bottom: -429px; */
+		margin: auto;
+		transform: translateX(4%);
+		bottom: 0;
+		top: 330px;
+	}
+`;
+
 export const NewSliderVideo = styled.video`
 	width: 100%;
 	height: 100%;
@@ -101,7 +247,7 @@ export const SliderItemContentWrapper = styled(motion.div)`
 	border-radius: 12px 12px 0px 0px;
 	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
 		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
-		opacity: 0.8;
+	opacity: 0.8;
 
 	@media screen and (max-width: 750px) {
 		bottom: 100px;
@@ -113,7 +259,6 @@ export const NewSliderItemContent = styled(motion.div)`
 	/* height: auto; */
 	background-color: var(--brown);
 	color: #fff;
-
 
 	div {
 		text-align: center;

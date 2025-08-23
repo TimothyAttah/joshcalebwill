@@ -9,6 +9,8 @@ import Sidebar from '../sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { Twirl as Hamburger } from 'hamburger-react';
 import Chatbot from '../chatBot/Chatbot';
+import AiPic from '../../assets/ai2.jpg'
+
 
 const Header = () => {
 	const location = useLocation();
@@ -32,7 +34,7 @@ const Header = () => {
 
 	return (
 		<>
-			<Styles.HeaderContainer>
+			<Styles.HeaderContainer activeBG={openBG}>
 				<Styles.HeaderWrapper>
 					<FadeInAlways delay={0.1} direction='down'>
 						<Styles.HeaderLogo>
@@ -51,7 +53,7 @@ const Header = () => {
 
 					<FadeInAlways delay={0.5} direction='down'>
 						<Styles.HeaderMenu>
-							<Link>Market Place</Link>
+							<Link to='market'>Market Place</Link>
 							<FaBars onClick={() => setOpenSidebar(!openSidebar)} />
 							{/* <Hamburger
 								size='25'
@@ -62,7 +64,8 @@ const Header = () => {
 						</Styles.HeaderMenu>
 					</FadeInAlways>
 					<Styles.ChatbotIcon onClick={() => setOpenChatbot((prev) => !prev)}>
-						<FaComment />
+						{/* <FaComment /> */}
+						<img src={AiPic} alt='' />
 					</Styles.ChatbotIcon>
 				</Styles.HeaderWrapper>
 			</Styles.HeaderContainer>

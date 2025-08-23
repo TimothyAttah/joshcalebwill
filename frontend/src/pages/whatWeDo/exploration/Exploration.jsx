@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import pix from '../../../assets/explore1.jpg';
+import pix from '../../../assets/explore5.jpg';
 import pix1 from '../../../assets/explore2.jpg';
 import pix2 from '../../../assets/explore4.jpg';
 

@@ -5,14 +5,14 @@ export const navData = [
 	},
 	{
 		navTitle: 'who we are',
-		navPath: '/who-we-are',
+		navPath: '#',
 		navSubmenu: [
 			{
 				navTitle: 'values belief & culture',
 				navPath: '/who-we-are/values-belief&culture',
 			},
 			{
-				navTitle: 'meet the prolific team',
+				navTitle: 'the board of directors',
 				navPath: '/who-we-are/meet-the-prolific-team',
 			},
 			{
@@ -32,7 +32,7 @@ export const navData = [
 
 	{
 		navTitle: 'what we do',
-		navPath: '/what-we-do',
+		navPath: '#',
 		navSubmenu: [
 			{
 				navTitle: 'EXPLORATION',
@@ -62,15 +62,15 @@ export const navData = [
 	},
 	{
 		navTitle: 'sustainability',
-		navPath: '/sustainability',
+		navPath: '#',
 		navSubmenu: [
 			{
 				navTitle: 'Quality Policy Statement',
-				navPath: '/quality-policy-statement',
+				navPath: '/sustainability/quality-policy-statement',
 			},
 			{
 				navTitle: 'Health Safety & Environment (HSE) Policy',
-				navPath: 'Health Safety & Environment (HSE) Policy',
+				navPath: '/sustainability/health-safety-environment-hse-policy',
 			},
 			{
 				navTitle: 'Nigerian Content Execution Strategy',
@@ -84,7 +84,7 @@ export const navData = [
 	},
 	{
 		navTitle: 'media',
-		navPath: '/media',
+		navPath: '#',
 		navSubmenu: [
 			{
 				navTitle: 'News Blog & Articles',

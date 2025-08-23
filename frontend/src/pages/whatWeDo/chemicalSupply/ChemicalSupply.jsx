@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import pix from '../../../assets/chemical6.jpg';
+import pix from '../../../assets/chemical7.jpg';
 import pix2 from '../../../assets/chemical2.jpg';
 import waterPix from '../../../assets/water2.jpg';
 import maintainPix from '../../../assets/maintain3.jpg';
@@ -20,6 +20,7 @@ const ChemicalSupplyHeroSection = styled.div`
 	padding-top: 40.2%;
 	position: relative;
 	color: #fff;
+	color: var(--brown);
 
 	div {
 		max-width: 900px;

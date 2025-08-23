@@ -6,6 +6,7 @@ import ChatBotMessage from './ChatBotMessage';
 import { useRef, useState, useEffect } from 'react';
 import { companyInfo } from './companyInfo';
 import ChatBotForm from './ChatBotForm';
+import AiPic from '../../assets/ai2.jpg'
 
 const ChatbotContainer = styled.div`
 	width: 420px;
@@ -85,7 +86,9 @@ const Chatbot = ({ close, setOpenChatbot }) => {
 			<ChatbotContainer>
 				<Styles.ChatBotHeader className='chat-header'>
 					<Styles.ChatBotInfo className='header-info'>
-						<BiBot />
+						<Styles.ChatbotIcon>
+							<img src={AiPic} alt='' />
+						</Styles.ChatbotIcon>
 						<Styles.ChatBotLogoText className='logo-text'>
 							Chatbot
 						</Styles.ChatBotLogoText>
@@ -98,7 +101,10 @@ const Chatbot = ({ close, setOpenChatbot }) => {
 					<Styles.ChatBotMessage
 						botMessage='true'
 						className='message bot-message'>
-						<BiBot />
+						{/* <BiBot /> */}
+						<Styles.ChatbotIcon>
+							<img src={AiPic} alt='' />
+						</Styles.ChatbotIcon>
 						<Styles.ChatBotMessageText className='message-text'>
 							Hey there <br /> How can I help you today?
 						</Styles.ChatBotMessageText>

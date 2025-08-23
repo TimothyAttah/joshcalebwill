@@ -13,6 +13,7 @@
 	cursor: pointer;
 	border-radius: 50%;
 	background: #6d4fc2;
+	background: var(--brown);
 	align-items: center;
 	justify-content: center;
 	transition: all 0.2s ease ;
@@ -78,6 +79,7 @@
 	align-items: center;
 	justify-content: space-between;
 	background: #6d4fc2;
+	background: var(--brown);
 }
 
 .chat-header .header-info {
@@ -176,6 +178,7 @@
 .chat-body .user-message .message-text {
   color: #fff;
   background: #6d4fc2;
+	background: var(--brown);
   border-radius: 13px 13px 3px 13px;
 }
 

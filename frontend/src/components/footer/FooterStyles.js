@@ -13,14 +13,21 @@ export const FooterWrapper = styled.div`
 	gap: 50px;
 	padding: 50px;
 	flex-wrap: wrap;
+
+	@media screen and (max-width: 420px){
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 `;
 export const FooterLists = styled.div`
 	width: 300px;
 
 	h4 {
-		padding-bottom: 20px;
+		padding-bottom: 24px;
     color: #fff;
     font-weight: bolder;
+		font-size: 22px;
 	}
 
 	@media screen and (max-width: 420px) {
@@ -32,10 +39,11 @@ export const FooterListsItem = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 15px;
 
 	a {
-		text-transform: capitalize;
+		text-transform: capitalize !important;
     color: #fff;
+		font-size: 15px;
 	}
 `;

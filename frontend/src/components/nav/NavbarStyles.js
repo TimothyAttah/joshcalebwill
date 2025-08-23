@@ -28,7 +28,7 @@ export const NavbarLinks = styled.ul`
 			text-transform: capitalize;
 			font-weight: bold;
 			font-size: 17px;
-			color: var(--brown);
+			/* color: var(--brown); */
 			font-weight: bold;
 
 			&:hover {

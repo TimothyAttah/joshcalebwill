@@ -14,6 +14,10 @@ import Gas from './pages/whatWeDo/gas/Gas';
 import Health from './pages/whatWeDo/health/Health';
 import Contact from './pages/contact/Contact';
 import Procurement from './pages/whatWeDo/procurement/Procurement';
+import Market from './pages/market/Market';
+import ProductItem from './pages/market/productItem/ProductItem';
+import QualityPolicy from './pages/sustainability/qualityPolicy/QualityPolicy';
+import HealthPolicy from './pages/sustainability/healthPolicy/HealthPolicy';
 
 const App = () => {
 	return (
@@ -54,13 +58,23 @@ const App = () => {
 						path='/what-we-do/gas-compression-services'
 						element={<Gas />}
 					/>
+					<Route path='/what-we-do/health-and-safety' element={<Health />} />
 					<Route
-						path='/what-we-do/gas-compression-services'
-						element={<Gas />}
+						path='/what-we-do/procurement-solutions'
+						element={<Procurement />}
 					/>
-					<Route path='/what-we-do/procurement-solutions' element={<Procurement/>} />
+					<Route
+						path='/sustainability/quality-policy-statement'
+						element={<QualityPolicy />}
+					/>
+					<Route
+						path='/sustainability/health-safety-environment-hse-policy'
+						element={<HealthPolicy />}
+					/>
 
 					<Route path='/contact' element={<Contact />} />
+					<Route path='/market' element={<Market />} />
+					<Route path='/product/:id' element={<ProductItem />} />
 				</Route>
 			</Routes>
 			<ToastContainer />

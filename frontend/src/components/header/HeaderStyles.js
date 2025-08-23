@@ -12,7 +12,7 @@ export const HeaderContainer = styled(motion.header)`
 	background-color: ${(props) =>
 		props.activeBG ? 'var(--brown)' : 'transparent'};
 	z-index: 999;
-	background-color: transparent;
+	/* background-color: transparent; */
 `;
 
 export const HeaderWrapper = styled(motion.div)`
@@ -53,7 +53,7 @@ export const HeaderLogo = styled(motion.div)`
 		/* border: 2px solid #fff; */
 		text-align: center;
 		padding: 5px;
-		color: var(--brown);
+		/* color: var(--brown); */
 	}
 
 	h4 {
@@ -72,13 +72,13 @@ export const HeaderMenu = styled(motion.div)`
 
 	a {
 		color: #fff;
-		color: var(--brown);
+		/* color: var(--brown); */
 		font-weight: bold;
 	}
 
 	svg {
 		color: #fff;
-		color: var(--brown);
+		/* color: var(--brown); */
 		font-size: 27px;
 		cursor: pointer;
 	}
@@ -91,16 +91,35 @@ export const HeaderMenu = styled(motion.div)`
 `;
 
 export const ChatbotIcon = styled.div`
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	color: var(--brown);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 35px;
+	/* font-size: 35px; */
 	cursor: pointer;
 	position: fixed;
 	bottom: 50px;
 	right: 50px;
 	z-index: 9999999999999;
+	border-radius: 50%;
+	overflow: hidden;
+	animation: topBounce 3s ease-in-out infinite;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@keyframes topBounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(25px);
+		}
+	}
 `;

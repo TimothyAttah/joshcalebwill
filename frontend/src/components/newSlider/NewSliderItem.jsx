@@ -4,6 +4,7 @@ import sliderPix3 from '../../assets/heroPipeline.jpg';
 import sliderPix4 from '../../assets/heroProcurement.jpg';
 import sliderPix5 from '../../assets/heroRig.mp4';
 import sliderPix6 from '../../assets/procurement6.mp4';
+import sliderPix7 from '../../assets/slide2.jpg';
 
 import * as Styles from './NewSliderItemsStyles';
 import { AnimatePresence } from 'framer-motion';
@@ -89,9 +90,38 @@ const NewSliderItem = () => {
 		<Styles.Slider className='slider'>
 			<Styles.SliderItems className='slider-items'>
 				<Styles.Item className='item active'>
-					<Styles.NewSliderVideo src={sliderPix5} autoPlay muted loop />
-					<Styles.SliderOverlay />
-					<Styles.SliderItemContentWrapper>
+					{/* <Styles.NewSliderVideo src={sliderPix5} autoPlay muted loop /> */}
+					{/* <Styles.SliderOverlay /> */}
+					<Styles.ItemBox>
+						<Styles.ItemInfoBox>
+							<div>
+								<FadeInAlways delay={0.2} direction='right'>
+									<h1>Offshore Oil & Gas Rig</h1>
+								</FadeInAlways>
+								<FadeInAlways delay={0.4} direction='right'>
+									<h4>Safe.Reliable.Sustainable</h4>
+								</FadeInAlways>
+							</div>
+							<FadeInAlways delay={0.6} direction='right'>
+								<p>
+									At Joshcalebwill, we specialize in supporting offshore oil and
+									gas operations with safe, efficient, and reliable services.
+									Our expertise spans from rig setup and maintenance to supply
+									chain support and safety management. With a commitment to
+									innovation and global best practices, we ensure that offshore
+									projects are executed with precision, minimizing downtime and
+									maximizing productivity.
+								</p>
+							</FadeInAlways>
+						</Styles.ItemInfoBox>
+
+						<Styles.ItemImgBox>
+							<FadeInAlways delay={0.6} direction='left'>
+								<img src={sliderPix7} alt='' loading='lazy' />
+							</FadeInAlways>
+						</Styles.ItemImgBox>
+					</Styles.ItemBox>
+					{/* <Styles.SliderItemContentWrapper>
 						<FadeInAlways delay={0.2} direction='up'>
 							<Styles.NewSliderItemContent>
 								<div>
@@ -115,7 +145,7 @@ const NewSliderItem = () => {
 								</FadeInAlways>
 							</Styles.NewSliderItemContent>
 						</FadeInAlways>
-					</Styles.SliderItemContentWrapper>
+					</Styles.SliderItemContentWrapper> */}
 				</Styles.Item>
 
 				<Styles.Item className='item'>

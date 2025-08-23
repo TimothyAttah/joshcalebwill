@@ -31,4 +31,15 @@ Stay connected with us through our vibrant social media community. Follow us for
 For inquires, feel free to reach out via email at hello@joshcalebwill.com or call us at 	+2348023169986 or +2348162073680
 
 Our website, https://www.joshcalebwill.com offers a seamless shopping experience for petroleum, accessories, and info. Learn about us, explore our guides, what we do, who we are.
+
+JCW Petroleum Health Safety & Environment (HSE) Policy:
+'Provide excellent standards of services for our customers and clients. We aspire to lead the oil industry best practice in all our operations',
+	'Providing a safe and healthy working environment for our employees and ensuring the safety of others affected by our activities',
+	'Apply a risk-based approach to setting HSE objectives, with a view to the prevention of injury and ill health and to continual improvement in both Safety Management Systems and HSE performance ensuring overall improvement, prevention of injuries & ill health',
+	'Provide safe places of work at our sites, safe equipment’s and safe systems of work',
+	'Develop Safety Management System in accordance with international standards which are audited regularly to ensure compliance with these standards, legal and other requirements and maintenance of the management system',
+	'Eliminate or minimize risks to employees and take environmental impacts into account in planning, and executing our projects',
+	'Invest in HSE awareness through the provision of trainings, instructions and information to all our staff',
+	'Audit and monitor conformance with stated policies and implement improvements when required',
+	'All personnel, project and site engineers are empowered to actively promote and facilitate the content of this policy to employees.',
 `;
