@@ -66,7 +66,7 @@ const Haulage = () => {
 						Online ordering and auto-invoicing providing error-free back-office
 						processes Wetstock management, allowing us to remotely monitor and
 						manage fuel stocks at customers sites and ensure our customers never
-						stock out Independence. We don't own or operate any forecourts, so
+						stock out. We don't own or operate any forecourts, so
 						we're able to put the interests of our customers first - 100% of the
 						time.
 					</p>

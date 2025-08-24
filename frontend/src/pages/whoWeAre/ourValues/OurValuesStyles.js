@@ -51,8 +51,8 @@ export const MissionVissionBox = styled.div`
 	flex-wrap: wrap;
 `;
 export const MissionBox = styled.div`
-	width: 400px;
-	height: 220px;
+	width: 420px;
+	/* height: 220px; */
 	/* border: 2px solid red; */
 	box-shadow: 1px 3px 10px var(--color-dark-blue);
 	padding: 10px;
@@ -78,8 +78,8 @@ export const MissionBox = styled.div`
 	p {
 		color: #fff;
 		color:#000;
-		font-size: 1.1rem;
-		line-height: 1.5rem;
+		font-size: 1.5rem;
+		line-height: 1.9rem;
 	}
 
 	@media screen and (max-width: 450px) {
@@ -88,8 +88,8 @@ export const MissionBox = styled.div`
 	}
 `;
 export const VissionBox = styled.div`
-	width: 400px;
-	height: 220px;
+	width: 420px;
+	height: 300px;
 	/* border: 2px solid red; */
 	box-shadow: 1px 3px 10px var(--crimson);
 	padding: 10px;
@@ -116,8 +116,8 @@ export const VissionBox = styled.div`
 	p {
 		color: #fff;
 		color: #000;
-		font-size: 1.1rem;
-		line-height: 1.5rem;
+		font-size: 1.5rem;
+		line-height: 1.9rem;
 	}
 
 	@media screen and (max-width: 450px){

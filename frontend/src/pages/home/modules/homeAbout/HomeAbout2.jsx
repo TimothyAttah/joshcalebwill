@@ -32,7 +32,7 @@ const HomeAbout = () => {
 							<h4>Welcome to</h4>
 						</FadeInAlways>
 						<FadeInAlways delay={0.4} direction='down'>
-							<h1>Joshcalebwill Oil & Gas Petroleum Limited</h1>
+							<h1>JoshcalebwillPetroleum Limited</h1>
 						</FadeInAlways>
 					</Styles.HomeAboutInfoTitleContainer>
 					<Styles.HomeAboutDetails>

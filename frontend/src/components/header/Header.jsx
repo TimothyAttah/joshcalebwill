@@ -1,7 +1,7 @@
 import * as Styles from './HeaderStyles';
 import logo from '../../assets/logo.jpeg';
 import Navbar from '../nav/Navbar';
-import { FaBars, FaComment } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 import { AnimatePresence } from 'framer-motion';
@@ -64,6 +64,7 @@ const Header = () => {
 					</FadeInAlways>
 					<Styles.ChatbotIcon onClick={() => setOpenChatbot((prev) => !prev)}>
 						{/* <FaComment /> */}
+						{/* {openChatbot ? <img src={AiPic} alt='' /> : <FaTimes />} */}
 						<img src={AiPic} alt='' />
 					</Styles.ChatbotIcon>
 				</Styles.HeaderWrapper>

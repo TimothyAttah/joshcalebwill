@@ -9,7 +9,7 @@ const Welcome = () => {
 			<Styles.WelcomeWrapper>
 				<Styles.WelcomeInfo>
 					<FadeInAlways delay={0.1} direction='right'>
-						<h4>Welcome to Joshcalebwill Oil & Gas Ltd.</h4>
+						<h4>Welcome to JoshcalebwillLtd.</h4>
 					</FadeInAlways>
 					<FadeInAlways delay={0.2} direction='right'>
 						<h2>We are a Leading Petroluem Company in Nigeria</h2>

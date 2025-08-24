@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import servicePic1 from '../../../../assets/service-1.jpg';
 import servicePic2 from '../../../../assets/oil2.jpg';
 import servicePic3 from '../../../../assets/petrol1.jpg';
-import servicePic4 from '../../../../assets/haulage1.jpg';
+import servicePic4 from '../../../../assets/haulage2.jpg';
+import servicePic5 from '../../../../assets/haulage5.jpg';
+
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
 import Gallery from '../../../../components/gallery/Gallery';
 
@@ -17,7 +19,10 @@ const HomeServices = () => {
 							<h4>what we do</h4>
 						</FadeInAlways>
 						<FadeInAlways delay={0.3} direction='down'>
-							<h2> energy that fuels <br /> the world</h2>
+							<h2>
+								{' '}
+								energy that fuels <br /> the world
+							</h2>
 						</FadeInAlways>
 					</Styles.HomeServicesInfoTitle>
 					<Styles.HomeServicesInfoDesc>
@@ -65,6 +70,14 @@ const HomeServices = () => {
 								<img src={servicePic4} alt='' />
 							</Styles.HomeServicesImg>
 							<Link>Logistics & Haulage Services</Link>
+						</Styles.HomeServicesImgBox>
+					</FadeInAlways>
+					<FadeInAlways delay={0.8} direction='right'>
+						<Styles.HomeServicesImgBox>
+							<Styles.HomeServicesImg>
+								<img src={servicePic5} alt='' />
+							</Styles.HomeServicesImg>
+							<Link>LPG gas station</Link>
 						</Styles.HomeServicesImgBox>
 					</FadeInAlways>
 				</Styles.HomeServicesImgWrapper>
