@@ -6,10 +6,10 @@ const Paragrapgh = styled.p`
 	font-size: 40px;
 	max-width: 1000px;
 	margin: auto;
-	text-align: center;
+	/* text-align: center; */
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center;
+	align-items: center; */
 	flex-wrap: wrap;
 	line-height: 1.1;
 	font-weight: bold;

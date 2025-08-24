@@ -1,6 +1,9 @@
 import pix1 from '../../../../assets/Picture4.png';
 import pix2 from '../../../../assets/Picture1.png';
 import pix3 from '../../../../assets/Picture3.png';
+import pix5 from '../../../../assets/Picture5.png';
+import pix6 from '../../../../assets/Picture6.png';
+
 import welcomePix1 from '../../../../assets/import2.jpg';
 import welcomePix2 from '../../../../assets/welcome-2.jpg';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
@@ -11,24 +14,39 @@ const HomeAbout = () => {
 		<Styles.HomeAboutParentContainer>
 			<Styles.HomeAboutChildrenWrapper>
 				<div>
-					<Styles.HomeAboutImgWrapper>
+					{/* <Styles.HomeAboutImgWrapper>
 						<FadeInAlways delay={0.2} direction='down'>
 							<img src={pix1} alt='' />
 						</FadeInAlways>
-					</Styles.HomeAboutImgWrapper>
-					<Styles.HomeAboutImgWrapper2>
-						<FadeInAlways delay={0.2} direction='right'>
-							<img src={pix2} alt='' />
+					</Styles.HomeAboutImgWrapper> */}
+					<div>
+						<Styles.HomeAboutImgWrapper2>
+							<FadeInAlways delay={0.2} direction='right'>
+								<img src={pix1} alt='' />
+							</FadeInAlways>
+							<FadeInAlways delay={0.3} direction='right'>
+								<img src={pix2} alt='' />
+							</FadeInAlways>
+						</Styles.HomeAboutImgWrapper2>
+						<FadeInAlways delay={0.5} direction='right'>
+							<Styles.Details>
+								Rehabilitation of production facility
+							</Styles.Details>
 						</FadeInAlways>
-						<FadeInAlways delay={0.3} direction='right'>
-							<img src={pix3} alt='' />
+					</div>
+					<div style={{marginTop: '20px'}}>
+						<Styles.HomeAboutImgWrapper2>
+							<FadeInAlways delay={0.2} direction='right'>
+								<img src={pix5} alt='' />
+							</FadeInAlways>
+							<FadeInAlways delay={0.3} direction='right'>
+								<img src={pix6} alt='' />
+							</FadeInAlways>
+						</Styles.HomeAboutImgWrapper2>
+						<FadeInAlways delay={0.5} direction='right'>
+							<Styles.Details>Ongoing construction of Buoy</Styles.Details>
 						</FadeInAlways>
-					</Styles.HomeAboutImgWrapper2>
-					<FadeInAlways delay={0.5} direction='right'>
-						<Styles.Details>
-							REHABILITATION OF PRODUCTION FACILITY
-						</Styles.Details>
-					</FadeInAlways>
+					</div>
 				</div>
 
 				<Styles.HomeAboutDetailsWrapper>
