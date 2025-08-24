@@ -24,6 +24,11 @@ const HomeAbout = () => {
 							<img src={pix3} alt='' />
 						</FadeInAlways>
 					</Styles.HomeAboutImgWrapper2>
+					<FadeInAlways delay={0.5} direction='right'>
+						<Styles.Details>
+							REHABILITATION OF PRODUCTION FACILITY
+						</Styles.Details>
+					</FadeInAlways>
 				</div>
 
 				<Styles.HomeAboutDetailsWrapper>
@@ -32,13 +37,13 @@ const HomeAbout = () => {
 							<h4>Welcome to</h4>
 						</FadeInAlways>
 						<FadeInAlways delay={0.4} direction='down'>
-							<h1>JoshcalebwillPetroleum Limited</h1>
+							<h1>Joshcalebwill Petroleum Limited</h1>
 						</FadeInAlways>
 					</Styles.HomeAboutInfoTitleContainer>
 					<Styles.HomeAboutDetails>
 						<FadeInAlways delay={0.4} direction='left'>
 							<p>
-								JOSHCALEB WILL PETROLEUM LIMITED is a dynamic international
+								JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international
 								energy company focused on delivering a strong commitment to
 								excellence in service delivery and consistently help the Oil &
 								Gas sector achieve success across the entire production and

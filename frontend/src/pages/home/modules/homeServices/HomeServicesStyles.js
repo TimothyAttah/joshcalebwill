@@ -84,7 +84,7 @@ export const HomeServicesInfoDesc = styled.div`
 export const HomeServicesImgWrapper = styled.div`
 	display: flex;
 	justify-content: space-evenly;
-	gap: 20px;
+	gap: 50px;
 	padding: 50px 0;
 	flex-wrap: wrap;
 	align-items: center;

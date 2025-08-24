@@ -70,6 +70,18 @@ export const HomeAboutImgWrapper2 = styled.div`
 	}
 `;
 
+export const Details = styled.p`
+	max-width: 600px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--green);
+	color: #fff;
+	margin-top: 0px;
+	font-weight: bold;
+`
+
 export const HomeAboutDetailsWrapper = styled.div`
 	max-width: 800px;
 	width: 100%;
