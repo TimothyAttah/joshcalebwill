@@ -5,6 +5,9 @@ export const IntroContainer = styled(motion.div)`
 	width: 100%;
 	padding: 100px 0;
 	background-color: #f7f9fa;
+	/* background-color: #ff9b44ad; */
+	/* background-color: skyblue; */
+	/* background-color: #000; */
 `;
 
 export const IntroInfoContainer = styled(motion.div)``;
@@ -22,6 +25,8 @@ export const IntroTitleBox = styled(motion.div)`
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		color: #ee0900;
+		/* color: #fff; */
+		/* color: #0b2d71; */
 
 		/* span {
 			color: var(--crimson);
@@ -29,7 +34,10 @@ export const IntroTitleBox = styled(motion.div)`
 	}
 
 	small {
-		color: var(--brown-primary);
+		color: var(--brown);
+		/* color: #fff; */
+		/* color: #0b2d71; */
+
 		font-size: 18px;
 		padding-bottom: 12px;
 		display: block;
@@ -40,6 +48,8 @@ export const IntroTitleBox = styled(motion.div)`
 		font-size: 20px;
 		padding: 20px 0;
 		font-weight: bold;
+		/* color: #fff; */
+		/* color: #0b2d71; */
 	}
 `;
 
@@ -51,14 +61,16 @@ export const IntroVisionMissionContainer = styled(motion.div)`
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-justify-content: center;
-align-items: center;
+	justify-content: center;
+	align-items: center;
 	gap: 20px;
 
 	div {
 		max-width: 600px;
 		h4 {
 			color: var(--brown);
+			/* color: #fff; */
+
 			font-size: 18px;
 			padding-bottom: 5px;
 		}
@@ -66,6 +78,9 @@ align-items: center;
 		p {
 			font-size: 20px;
 			line-height: 28px;
+			color: var(--brown);
+			/* color: #0b2d71; */
+			color: #000;
 		}
 	}
 `;

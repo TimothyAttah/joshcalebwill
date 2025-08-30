@@ -12,6 +12,12 @@ export const ServicesMainContainer = styled.section`
   padding: 20px 0 80px 0;
 `;
 
+export const ServicesOverlay = styled.div`
+	height: 100%;
+	width: 100%;
+	background-color: red;
+`
+
 export const ServicesTitle = styled.div`
   margin: 40px 0;
 `;
