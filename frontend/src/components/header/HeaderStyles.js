@@ -1,125 +1,99 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled(motion.header)`
-	width: 100%;
+	background: transparent;
 	/* height: 80px; */
-	position: absolute;
+	font-size: 1.2rem;
+	position: sticky;
 	top: 0;
-	left: 0;
-	color: ${(props) => (props.activeBG ? '#fff' : 'transparent')};
-	color: var(--brown);
-	background-color: ${(props) =>
-		props.activeBG ? 'var(--brown)' : 'transparent'};
 	z-index: 999;
-	/* background-color: transparent; */
-`;
-
-export const HeaderWrapper = styled(motion.div)`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0px 50px;
-`;
-export const HeaderLogo = styled(motion.div)`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* flex-direction: column; */
-	/* margin-top: 50px; */
-
-	/* width: 80px; */
-	img {
-		width: 50px;
-	}
+	/* border: 2px solid red; */
+	background: var(--brown);
+	color: #fff;
 
 	a {
-		width: 100%;
-		display: flex;
-		/* flex-direction: column; */
-		align-items: center;
-		justify-content: center;
-		color: var(--brown);
-		font-weight: bold;
-	}
-
-	h1 {
-		text-transform: uppercase;
-		font-size: 14px;
 		color: #fff;
-		/* color: gold; */
-		/* border: 2px solid #fff; */
-		text-align: center;
-		padding: 5px;
-		/* color: var(--brown); */
+	}
+`;
+export const HeaderWrapper = styled(motion.div)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+`;
+export const HeaderLogo = styled(motion.div)`
+	a {
+		display: flex;
+    flex-direction: column;
+		align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h4 {
+      font-size: 14px;
+    }
 	}
 
-	h4 {
-		text-transform: uppercase;
-		font-size: 20px;
+	img {
+		width: 40px;
 	}
+`;
 
-	@media screen and (max-width: 520px) {
-		width: 50px;
+export const HeaderMenuWrapper = styled.div`
+	position: relative;
+	width: 200px;
+	/* height: 100%; */
+	/* border: 2px solid green; */
+	/* border: 3px dashed green; */
+
+	@media screen and (max-width: 1120px) {
+		width: 150px;
+		padding-right: 170px;
 	}
 `;
 export const HeaderMenu = styled(motion.div)`
 	display: flex;
-	gap: 20px;
 	align-items: center;
+	gap: 20px;
+	/* height: 70px; */
+	margin-top: -16px;
+	padding-right: 50px;
 
 	a {
-		color: #fff;
-		/* color: var(--brown); */
-		font-weight: bold;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 25px;
+
 	}
 
-	svg {
-		color: #fff;
-		/* color: var(--brown); */
-		font-size: 27px;
-		cursor: pointer;
-	}
-
-	@media screen and (max-width: 950px) {
-		a {
-			display: none;
-		}
+	@media screen and (max-width: 995px) {
+		display: none;
 	}
 `;
 
-export const ChatbotIcon = styled.div`
-	width: 60px;
-	height: 60px;
-	color: var(--brown);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* font-size: 35px; */
-	cursor: pointer;
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	z-index: 9999999999999;
-	border-radius: 50%;
-	overflow: hidden;
-	animation: topBounce 3s ease-in-out infinite;
+export const HeaderSidebarContainer = styled.div`
+	position: absolute;
+	right: 20px;
+	top: -20px;
+	z-index: 999999999;
+	/* border: 3px dashed green; */
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	@media screen and (max-width: 1120px) {
+		right: 0px;
 	}
 
-	@keyframes topBounce {
-		0%,
-		100% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(25px);
-		}
+	@media screen and (max-width: 995px) {
+		display: none;
 	}
 `;
+
+export const HeaderSubmenu = styled.div`
+	display: none;
+	@media screen and (max-width: 995px) {
+		display: block;
+	}
+`;
+// export const HeaderContainer = styled(motion.div)``;
+

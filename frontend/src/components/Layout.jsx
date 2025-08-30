@@ -1,33 +1,14 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import ChatBot from './chatBot/ChatBot';
 
-const PaddingBox = styled.div`
-	/* padding-top: ${(props) => (props.addPadding ? '100px' : '0px')}; */
-`;
 
 const Layout = () => {
-	const location = useLocation();
 
-	const [addPadding, setAddPadding] = useState(false);
-
-	useEffect(() => {
-		if (location.pathname !== '/') {
-			setAddPadding(true);
-		} else {
-			setAddPadding(false);
-		}
-	});
 	return (
 		<>
 			<Header />
-			{/* <ChatBot/> */}
-			<PaddingBox addPadding={addPadding}>
-				<Outlet />
-			</PaddingBox>
+			<Outlet />
 			<Footer />
 		</>
 	);

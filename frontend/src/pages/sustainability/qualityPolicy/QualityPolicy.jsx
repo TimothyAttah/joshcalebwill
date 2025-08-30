@@ -114,7 +114,7 @@ const QualityPolicy = () => {
 							communicated across all levels of the organization to ensure full
 							understanding and commitment. By upholding these principles,
 							Joshcalebwill ensures sustainable growth, client satisfaction, and
-							global competitiveness in the oil and gas industry.
+							global competitiveness in the petroluem industry.
 						</p>
 					</Styles.QualityPolicyDesc>
 				</FadeInAlways>

@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --crimson: rgb(220, 20, 60);
     --brown: rgb(255, 115, 0);
+    --brown-primary: rgb(129 59 1);
     --green: rgb(81, 128, 11);
     --blue:rgb(40, 115, 208);
     --black: #000;

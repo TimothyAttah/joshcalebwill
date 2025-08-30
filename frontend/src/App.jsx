@@ -31,7 +31,7 @@ const App = () => {
 						element={<OurValues />}
 					/>
 					<Route
-						path='/who-we-are/meet-the-prolific-team'
+						path='/who-we-are/directors'
 						element={<TheTeam />}
 					/>
 					<Route
@@ -39,7 +39,7 @@ const App = () => {
 						element={<RecentAndPast />}
 					/>
 					<Route
-						path='/who-we-are/why-were-always-the-first-choice'
+						path='/who-we-are/first-choice'
 						element={<FirstChoice />}
 					/>
 					<Route

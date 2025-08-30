@@ -1,26 +1,17 @@
-import React from 'react';
-import NewSlider from '../../components/newSlider/NewSliderItem';
-import Welcome from './modules/welcome/Welcome';
-import ImgAnimation from '../../components/imgAnimation/ImgAnimation';
-import HomeServices from './modules/homeServices/HomeServices';
-import Gallery from '../../components/gallery/Gallery';
-import LastestSlider from '../../components/lastestSlider/LastestSlider';
-import HomeAbout from './modules/homeAbout/HomeAbout2';
-import TextAnimate from '../../components/textAnimate/TextAnimate';
+import React from 'react'
+import HeroSlider from '../../components/heroSlider/HeroSlider';
+import Slider from '../../components/heroSlider/Slider';
+import Intro from './intro/Intro';
+import Services from './services/Services';
 
 const Home = () => {
-	return (
-		<div>
-			<NewSlider />
-			{/* <LastestSlider/> */}
-			{/* <Welcome /> */}
-			<HomeAbout />
-			<TextAnimate />
-			{/* <ImgAnimation /> */}
-			<HomeServices />
-			{/* <Gallery/> */}
-		</div>
+  return (
+		<>
+			<Slider />
+			<Intro />
+			<Services/>
+		</>
 	);
-};
+}
 
-export default Home;
+export default Home

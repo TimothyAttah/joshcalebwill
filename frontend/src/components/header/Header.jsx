@@ -1,85 +1,71 @@
-import * as Styles from './HeaderStyles';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.jpeg';
-import Navbar from '../nav/Navbar';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
-import { FadeInAlways } from '../fadeIn/FadeInAlways';
-import { AnimatePresence } from 'framer-motion';
-import Sidebar from '../sidebar/Sidebar';
-import { useEffect, useState } from 'react';
+import { ShoppingBag, ShoppingBasket } from 'lucide-react';
+import DesktopNav from '../navs/DesktopNav';
+import * as Styles from './HeaderStyles';
 import { Twirl as Hamburger } from 'hamburger-react';
-import Chatbot from '../chatBot/Chatbot';
-import AiPic from '../../assets/ai2.jpg';
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import MobileNav from '../navs/MobileNav';
+import { Menus } from '../../utils/navItem';
+import HeaderSidebar from './HeaderSidebar';
+import { FadeInAlways } from '../fadeIn/FadeInAlways';
 
 const Header = () => {
-	const location = useLocation();
+	const [navbar, setNavbar] = useState(false);
+	const changeBackground = () => {
+		if (window.scrollY >= 80) {
+			setNavbar(true);
+		} else {
+			setNavbar(false);
+		}
+	};
 
-	const [openBG, setOpenBG] = useState(false);
-
-	useEffect(() => {
-		const handleBg = () => {
-			if (location.pathname !== '/') {
-				setOpenBG(true);
-			} else {
-				setOpenBG(false);
-			}
-		};
-
-		handleBg();
-	});
-
-	const [openSidebar, setOpenSidebar] = useState(false);
-	const [openChatbot, setOpenChatbot] = useState(false);
-
+	window.addEventListener('scroll', changeBackground);
 	return (
 		<>
-			<Styles.HeaderContainer activeBG={openBG}>
+			<Styles.HeaderContainer className={navbar ? 'activeHeader' : ''}>
 				<Styles.HeaderWrapper>
-					<FadeInAlways delay={0.1} direction='down'>
+					<FadeInAlways delay={0.1} direction='right'>
 						<Styles.HeaderLogo>
 							<Link to='/'>
 								<img src={logo} alt='' />
-								<h1>
+								<h4>
 									Joshcalebwill <br /> petroleum limited
-								</h1>
+								</h4>
 							</Link>
 						</Styles.HeaderLogo>
 					</FadeInAlways>
 
 					<FadeInAlways delay={0.3} direction='down'>
-						<Navbar />
+						<nav>
+							<DesktopNav />
+						</nav>
 					</FadeInAlways>
+					<Styles.HeaderMenuWrapper>
+						<FadeInAlways delay={0.5} direction='left'>
+							<Styles.HeaderMenu>
+								<Link to='/market'>
+									<ShoppingBasket />
+									<h6>Market</h6>
+								</Link>
+							</Styles.HeaderMenu>
+						</FadeInAlways>
 
-					<FadeInAlways delay={0.5} direction='down'>
-						<Styles.HeaderMenu>
-							<Link to='market'>Market Place</Link>
-							<FaBars onClick={() => setOpenSidebar(!openSidebar)} />
-							{/* <Hamburger
-								size='25'
-								rounded
-								toggled={openSidebar}
-								toggle={() => setOpenSidebar(!openSidebar)}
-							/> */}
-						</Styles.HeaderMenu>
-					</FadeInAlways>
-					<Styles.ChatbotIcon onClick={() => setOpenChatbot((prev) => !prev)}>
-						{/* <FaComment /> */}
-						{/* {openChatbot ? <img src={AiPic} alt='' /> : <FaTimes />} */}
-						<img src={AiPic} alt='' />
-					</Styles.ChatbotIcon>
+						<Styles.HeaderSidebarContainer>
+							<FadeInAlways delay={0.7} direction='left'>
+								<HeaderSidebar />
+							</FadeInAlways>
+						</Styles.HeaderSidebarContainer>
+					</Styles.HeaderMenuWrapper>
+
+					<AnimatePresence>
+						<Styles.HeaderSubmenu>
+							<MobileNav menus={Menus} />
+						</Styles.HeaderSubmenu>
+					</AnimatePresence>
 				</Styles.HeaderWrapper>
 			</Styles.HeaderContainer>
-			<AnimatePresence>
-				{openSidebar && <Sidebar close={() => setOpenSidebar(false)} />}
-			</AnimatePresence>
-			<AnimatePresence>
-				{openChatbot && (
-					<Chatbot
-						close={() => setOpenChatbot(false)}
-						setOpenChatbot={setOpenChatbot}
-					/>
-				)}
-			</AnimatePresence>
 		</>
 	);
 };
