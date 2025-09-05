@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import pix from '../../../assets/gas1.jpg';
-import pix1 from '../../../assets/gas2.jpg';
-import pix2 from '../../../assets/gas3.jpeg';
+import pix1 from '../../../assets/gas1.png';
+import pix2 from '../../../assets/gas3.png';
 import pix3 from '../../../assets/gas4.png';
 
 const GasContainer = styled.div``;

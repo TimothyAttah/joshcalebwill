@@ -28,6 +28,14 @@ export const GlobalStyles = createGlobalStyle`
     --color-light-blue: #009dd9;
     --color-medium-blue: #0066b2;
     --color-dark-blue: #0b2d71;
+
+    --main-color: #ff7300;
+    --primary-color: #c18500;
+    --secondary-color: #7c8b00;
+    --color1: #248900;
+    --color2: #008132;
+    --color3: #00765e;
+    --color4: #032c6eff;
   }
 
   * {
@@ -81,4 +89,16 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     }
   }
+
+  .embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  width: 100%;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
 `;

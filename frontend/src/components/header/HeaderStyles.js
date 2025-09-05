@@ -2,13 +2,11 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled(motion.header)`
-	background: transparent;
 	/* height: 80px; */
 	font-size: 1.2rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
-	/* border: 2px solid red; */
 	background: var(--brown);
 	color: #fff;
 
@@ -20,7 +18,7 @@ export const HeaderWrapper = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 `;
 export const HeaderLogo = styled(motion.div)`
 	a {

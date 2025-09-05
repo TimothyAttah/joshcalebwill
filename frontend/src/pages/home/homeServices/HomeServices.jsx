@@ -1,13 +1,13 @@
 import * as Styles from './HomeServicesStyles';
 import { Link } from 'react-router-dom';
-import servicePic1 from '../../../../assets/service-1.jpg';
-import servicePic2 from '../../../../assets/oil2.jpg';
-import servicePic3 from '../../../../assets/petrol1.jpg';
-import servicePic4 from '../../../../assets/haulage2.jpg';
-import servicePic5 from '../../../../assets/haulage5.jpg';
+import servicePic1 from '../../../assets/service-1.jpg';
+import servicePic2 from '../../../assets/oil2.jpg';
+import servicePic3 from '../../../assets/petrol1.jpg';
+import servicePic4 from '../../../assets/haulage2.jpg';
+import servicePic5 from '../../../assets/haulage5.jpg';
 
-import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
-import Gallery from '../../../../components/gallery/Gallery';
+import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
+import Gallery from '../../../components/gallery/Gallery';
 
 const HomeServices = () => {
 	return (

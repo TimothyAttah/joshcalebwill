@@ -6,6 +6,7 @@ import * as Styles from './ServicesStyles';
 const Services = () => {
 	return (
 		<Styles.ServicesMainContainer id='services'>
+			<Styles.ServicesOverlay/>
 			<Styles.ServicesTitle className='title'>
 				<Styles.ServicesTitleText className='title-text'>
 					<h1>Our Services</h1>
@@ -17,7 +18,7 @@ const Services = () => {
 
 				<Styles.ServicesItem black className='service-item service-item-black'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1>Exploration</h1>
 					</Styles.FrontText>
 
@@ -36,7 +37,7 @@ const Services = () => {
 
 				<Styles.ServicesItem white className='service-item service-item-white'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1> Chemical supply and treatments</h1>
 					</Styles.FrontText>
 
@@ -55,7 +56,7 @@ const Services = () => {
 
 				<Styles.ServicesItem black className='service-item service-item-black'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1>Pipeline Construction and Maintenance</h1>
 					</Styles.FrontText>
 
@@ -76,7 +77,7 @@ const Services = () => {
 
 				<Styles.ServicesItem white className='service-item service-item-white'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1> Gas Compression Services</h1>
 					</Styles.FrontText>
 
@@ -95,7 +96,7 @@ const Services = () => {
 
 				<Styles.ServicesItem black className='service-item service-item-white'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1>Health, Safety, and Environmental Assessment Consultancy</h1>
 					</Styles.FrontText>
 
@@ -114,7 +115,7 @@ const Services = () => {
 
 				<Styles.ServicesItem white className='service-item service-item-white'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1>Procurement Solutions</h1>
 					</Styles.FrontText>
 
@@ -134,7 +135,7 @@ const Services = () => {
 
 				<Styles.ServicesItem black className='service-item service-item-white'>
 					<Styles.FrontText className='front-text'>
-						<FaStreetView />
+						{/* <FaStreetView /> */}
 						<h1>Haulage Services</h1>
 					</Styles.FrontText>
 

@@ -59,7 +59,7 @@ const Intro = () => {
 				</Styles.IntroVisionMissionContainer>
 			</Styles.IntroInfoContainer>
 
-			<div>
+			<Styles.IntroImgContainer>
 				<Styles.IntroImgInfoBoxWrapper>
 					<FadeInAlways delay={0.3} direction='left'>
 						<Styles.IntroImgBoxWrapper>
@@ -95,7 +95,7 @@ const Intro = () => {
 						</Styles.IntroImgInfoTitle>
 					</FadeInAlways>
 				</Styles.IntroImgInfoBoxWrapper>
-			</div>
+			</Styles.IntroImgContainer>
 		</Styles.IntroContainer>
 	);
 };

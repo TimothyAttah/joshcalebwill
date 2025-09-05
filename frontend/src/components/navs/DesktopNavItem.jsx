@@ -50,11 +50,11 @@ const DesktopNavItem = ({ menu }) => {
 									<Styles.SubMenuWrapper>
 										<Link to={subMenu.path}>
 											<Styles.SubMenuIcon>
-												{subMenu?.icon && <subMenu.icon />}
+												{/* {subMenu?.icon && <subMenu.icon />} */}
 											</Styles.SubMenuIcon>
 											<Styles.SubMenuText>
 												<h4>{subMenu?.name}</h4>
-												<p>{subMenu?.desc}</p>
+												{/* <p>{subMenu?.desc}</p> */}
 											</Styles.SubMenuText>
 										</Link>
 									</Styles.SubMenuWrapper>
