@@ -25,14 +25,15 @@ export const ContentTitle = styled.div`
 
 	h2 {
 		font-size: 60px !important;
-		font-weight: bold;
-		color: var(--color2);
+		font-weight: 900!important;
+
+		color:#fff;
 	}
 
 	p {
 		font-size: 24px !important;
 		padding-top: 10px;
-		color: var(--color2);
+		color:#fff;
 	}
 
 	@media screen and (max-width: 790px) {
@@ -66,7 +67,7 @@ export const IntroContent = styled.div`
 	padding: 10px;
 
 	h4 {
-		color: var(--color2);
+		color: #fff;
 		/* text-align: center; */
 		font-size: 30px !important;
 		padding-bottom: 30px;
@@ -80,8 +81,8 @@ export const IntroContent = styled.div`
 	}
 
 	ul {
-    margin: 0;
-    padding: 0;
+		margin: 0;
+		padding: 0;
 		padding-top: 20px !important;
 
 		li {

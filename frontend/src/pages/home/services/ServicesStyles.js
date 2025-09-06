@@ -92,6 +92,7 @@ export const ServicesItem = styled.article`
 
 		.back-text {
 			bottom: 0;
+			color: #fff;
 		}
 	}
 
@@ -100,6 +101,8 @@ export const ServicesItem = styled.article`
 		css`
 			z-index: 999 !important;
 			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+			background: var(--main-color);
+			color: #fff;
 		`}
 
 	${(props) =>
@@ -110,13 +113,17 @@ export const ServicesItem = styled.article`
 				rgba(206, 208, 206, 0.6),
 				rgba(206, 208, 206, 0.6)
 			);
+			background: var(--color2);
+
 			color: #191716;
+			color: #fff;
 
 			button {
 				background: #e6af2e !important;
 
 				a {
 					color: #191716 !important;
+					color: #fff !important;
 				}
 
 				&:hover {
@@ -182,6 +189,7 @@ export const FrontText = styled.div`
 
 	h1 {
 		color: var(--main-color);
+		color: #fff;
 		font-size: 18px;
 	}
 `;
@@ -199,10 +207,12 @@ export const BackText = styled.div`
 		margin-bottom: 10px;
 		font-size: 15px;
 		color: var(--main-color);
+		color: #fff;
 	}
 
 	p {
 		font-size: 12px;
+		color: #fff;
 	}
 
 	button {
@@ -214,10 +224,12 @@ export const BackText = styled.div`
 
 		a {
 			color: #e6af2e;
+			color: #fff;
 		}
 
 		&:hover {
 			background-color: #e6af2e;
+			color: #fff;
 
 			a {
 				color: #191716;
