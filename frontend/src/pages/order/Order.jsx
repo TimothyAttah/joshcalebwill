@@ -30,7 +30,7 @@ const Order = () => {
 	useEffect(() => {
 		const addPayPalScript = async () => {
 			const { data: clientId } = await axios.get(
-				'http://localhost:5000/api/config/paypal',
+				'https://joshcalebwill-jehi.vercel.app/api/config/paypal',
 			);
 
 			const script = document.createElement('script');

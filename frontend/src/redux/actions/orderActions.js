@@ -2,7 +2,7 @@ import { ORDER_TYPES } from '../types';
 import axios from 'axios';
 
 const API = axios.create({
-	baseURL: 'https://smartsmith-backend.vercel.app/api',
+	baseURL: 'https://joshcalebwill-jehi.vercel.app/api',
 });
 
 API.interceptors.request.use((req) => {

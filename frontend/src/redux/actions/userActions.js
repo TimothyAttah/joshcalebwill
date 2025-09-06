@@ -1,7 +1,9 @@
 import { USER_TYPES } from '../types';
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://smartsmith-backend.vercel.app/api/auth' });
+const API = axios.create({
+	baseURL: 'https://joshcalebwill-jehi.vercel.app/api/auth',
+});
 
 API.interceptors.request.use((req) => {
 	if (localStorage.getItem('jwt')) {
@@ -24,7 +26,7 @@ export const login = (email, password) => async (dispatch) => {
 		};
 
 		const { data } = await axios.post(
-			'https://smartsmith-backend.vercel.app/api/auth/login',
+			'https://joshcalebwill-jehi.vercel.app/api/auth/login',
 			{ email, password },
 			config,
 		);
@@ -67,7 +69,7 @@ export const register = (name, email, password) => async (dispatch) => {
 		};
 
 		const { data } = await axios.post(
-			'https://smartsmith-backend.vercel.app/api/auth/register',
+			'https://joshcalebwill-jehi.vercel.app/api/auth/register',
 			{ name, email, password },
 			config,
 		);
@@ -95,8 +97,6 @@ export const register = (name, email, password) => async (dispatch) => {
 		});
 	}
 };
-
-
 
 export const getUserDetails = (id) => async (dispatch, getState) => {
 	try {
@@ -156,7 +156,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 		console.log('user profile update>>>', data);
 
 		dispatch({
-      type: USER_TYPES.USER_UPDATE_PROFILE_SUCCESS,
+			type: USER_TYPES.USER_UPDATE_PROFILE_SUCCESS,
 			payload: data.data,
 		});
 	} catch (err) {
