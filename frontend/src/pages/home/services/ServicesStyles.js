@@ -12,6 +12,8 @@ export const ServicesMainContainer = styled.section`
   padding: 20px 0 80px 0;
 	position: relative;
 	z-index: 1;
+
+
 `;
 
 export const ServicesOverlay = styled.div`
@@ -36,11 +38,17 @@ export const ServicesTitleText = styled.div`
 	font-style: italic;
 	text-transform: uppercase;
 	z-index: 999 !important;
+
+	h1 {
+		color: var(--color2);
+	}
 `;
 export const ServicesTitleUnderline = styled.div`
-  width: 200px;
-  border: 3px solid #e6af2e;
-  margin: 0 auto;
+	width: 200px;
+	/* border: 3px solid #e6af2e; */
+	border: 3px solid var(--color1);
+
+	margin: 0 auto;
 `;
 
 
@@ -61,7 +69,7 @@ export const ServicesItem = styled.article`
 	position: relative;
 	/* padding: 60px; */
 	border: 1px solid #fff;
-	height: 250px;
+	height: 270px;
 	z-index: 999 !important;
 	text-align: center;
 	display: flex;
@@ -73,6 +81,7 @@ export const ServicesItem = styled.article`
 		font-size: 60px;
 		margin-bottom: 30px;
 		color: #e6af2e;
+		display: none;
 	}
 
 	&:hover {
@@ -170,6 +179,11 @@ export const FrontText = styled.div`
 	text-align: center;
 	transition: transform 2s;
 	z-index: 999 !important;
+
+	h1 {
+		color: var(--main-color);
+		font-size: 18px;
+	}
 `;
 export const BackText = styled.div`
 	position: absolute;
@@ -182,7 +196,13 @@ export const BackText = styled.div`
 	z-index: 999 !important;
 
 	h1 {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+		font-size: 15px;
+		color: var(--main-color);
+	}
+
+	p {
+		font-size: 12px;
 	}
 
 	button {

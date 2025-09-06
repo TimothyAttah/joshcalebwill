@@ -19,32 +19,31 @@ export const ContentTitle = styled.div`
 	padding-top: 100px;
 	text-align: center;
 	small {
-		font-size: 18px;
+		font-size: 18px !important;
 		color: #fff;
 	}
 
 	h2 {
-		font-size: 60px;
+		font-size: 60px !important;
 		font-weight: bold;
 		color: var(--color2);
 	}
 
 	p {
-		font-size: 24px;
+		font-size: 24px !important;
 		padding-top: 10px;
 		color: var(--color2);
 	}
 
 	@media screen and (max-width: 790px) {
-		padding: 20px;
+		padding: 20px !important;
 
 		h2 {
-			font-size: 40px;
+			font-size: 40px !important;
 		}
 
 		p {
-			font-size: 20px;
-
+			font-size: 20px !important;
 		}
 	}
 `;
@@ -69,22 +68,24 @@ export const IntroContent = styled.div`
 	h4 {
 		color: var(--color2);
 		/* text-align: center; */
-		font-size: 30px;
+		font-size: 30px !important;
 		padding-bottom: 30px;
 	}
 
 	p {
 		color: #fff;
-		font-size: 18px;
+		font-size: 18px !important;
 		padding-top: 20px;
 		line-height: 1.4;
 	}
 
 	ul {
-		padding-top: 20px;
+    margin: 0;
+    padding: 0;
+		padding-top: 20px !important;
 
 		li {
-			padding: 5px 0;
+			padding: 5px 0 !important;
 			color: #fff;
 		}
 	}

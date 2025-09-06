@@ -15,10 +15,18 @@ import Health from './pages/whatWeDo/health/Health';
 import Contact from './pages/contact/Contact';
 import Procurement from './pages/whatWeDo/procurement/Procurement';
 import Market from './pages/market/Market';
-import ProductItem from './pages/market/productItem/ProductItem';
+import ProductItem from './pages/products/ProductItem';
 import QualityPolicy from './pages/sustainability/qualityPolicy/QualityPolicy';
 import HealthPolicy from './pages/sustainability/healthPolicy/HealthPolicy';
 import Haulage from './pages/whatWeDo/haulage/Haulage';
+import Cart from './pages/cart/Cart';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Profile from './pages/profile/Profile';
+import Shipping from './pages/shipping/Shipping';
+import Payment from './pages/payment/Payment';
+import PlaceOrder from './pages/placeOrder/PlaceOrder';
+import Order from './pages/order/Order';
 
 const App = () => {
 	return (
@@ -30,18 +38,12 @@ const App = () => {
 						path='/who-we-are/values-belief&culture'
 						element={<OurValues />}
 					/>
-					<Route
-						path='/who-we-are/directors'
-						element={<TheTeam />}
-					/>
+					<Route path='/who-we-are/directors' element={<TheTeam />} />
 					<Route
 						path='/who-we-are/recent-and-past-involvement'
 						element={<RecentAndPast />}
 					/>
-					<Route
-						path='/who-we-are/first-choice'
-						element={<FirstChoice />}
-					/>
+					<Route path='/who-we-are/first-choice' element={<FirstChoice />} />
 					<Route
 						path="/who-we-are/today's-article&careerse"
 						element={<TodayArticle />}
@@ -77,6 +79,14 @@ const App = () => {
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/market' element={<Market />} />
 					<Route path='/product/:id' element={<ProductItem />} />
+					<Route path='/cart/:id?' element={<Cart />} />
+					<Route path='/login' element={<Login />} />
+					<Route path='/register' element={<Register />} />
+					<Route path='/profile' element={<Profile />} />
+					<Route path='/login/shipping' element={<Shipping />} />
+					<Route path='/payment' element={<Payment />} />
+					<Route path='/placeorder' element={<PlaceOrder />} />
+					<Route path='/order/:id' element={<Order />} />
 				</Route>
 			</Routes>
 			<ToastContainer />

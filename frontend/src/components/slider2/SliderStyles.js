@@ -75,12 +75,14 @@ export const SlideContent = styled.div`
 	h1 {
 		font-size: 40px;
 		font-weight: bold;
+		color: #fff;
 	}
 
 	p {
 		font-size: 20px;
 		line-height: 1.5;
 		padding-top: 15px;
+		color: #fff;
 	}
 
 	div a {
@@ -121,7 +123,6 @@ export const SlideContent = styled.div`
 		text-align: center;
 
 		div a {
-
 			height: 30px;
 			margin: 10px auto;
 		}

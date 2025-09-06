@@ -40,7 +40,7 @@ const HomeServices = () => {
 					</Styles.HomeServicesInfoDesc>
 				</Styles.HomeServicesInfo>
 				<Styles.HomeServicesImgWrapper>
-					<FadeInAlways delay={0.3} direction='right'>
+					<FadeInAlways delay={0.3} direction='down'>
 						<Styles.HomeServicesImgBox>
 							<Styles.HomeServicesImg>
 								<img src={servicePic1} alt='' />
@@ -48,7 +48,7 @@ const HomeServices = () => {
 							<Link>Offshore Intake/Offtake Facilities</Link>
 						</Styles.HomeServicesImgBox>
 					</FadeInAlways>
-					<FadeInAlways delay={0.4} direction='right'>
+					<FadeInAlways delay={0.4} direction='down'>
 						<Styles.HomeServicesImgBox>
 							<Styles.HomeServicesImg>
 								<img src={servicePic2} alt='' />
@@ -56,7 +56,7 @@ const HomeServices = () => {
 							<Link>Storage Facilities</Link>
 						</Styles.HomeServicesImgBox>
 					</FadeInAlways>
-					<FadeInAlways delay={0.5} direction='right'>
+					<FadeInAlways delay={0.5} direction='down'>
 						<Styles.HomeServicesImgBox>
 							<Styles.HomeServicesImg>
 								<img src={servicePic3} alt='' />
@@ -64,7 +64,7 @@ const HomeServices = () => {
 							<Link>Petroleum Service Stations</Link>
 						</Styles.HomeServicesImgBox>
 					</FadeInAlways>
-					<FadeInAlways delay={0.6} direction='right'>
+					<FadeInAlways delay={0.6} direction='down'>
 						<Styles.HomeServicesImgBox>
 							<Styles.HomeServicesImg>
 								<img src={servicePic4} alt='' />
@@ -72,7 +72,7 @@ const HomeServices = () => {
 							<Link>Logistics & Haulage Services</Link>
 						</Styles.HomeServicesImgBox>
 					</FadeInAlways>
-					<FadeInAlways delay={0.8} direction='right'>
+					<FadeInAlways delay={0.8} direction='down'>
 						<Styles.HomeServicesImgBox>
 							<Styles.HomeServicesImg>
 								<img src={servicePic5} alt='' />

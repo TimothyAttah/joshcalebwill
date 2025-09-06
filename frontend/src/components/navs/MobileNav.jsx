@@ -35,7 +35,7 @@ const MobileNav = ({ menus }) => {
 			{isOpen && <Overlay onClick={() => setIsOpen(false)} />}
 
 			<Styles.MobileNavContainer>
-				<FadeInAlways delay={0.3} direction='left'>
+				<>
 					<Styles.MobileMenuButton>
 						<Hamburger
 							size='25'
@@ -44,7 +44,7 @@ const MobileNav = ({ menus }) => {
 							toggle={toggleSidebar}
 						/>
 					</Styles.MobileMenuButton>
-				</FadeInAlways>
+				</>
 
 				<Styles.MobileNavWrapper
 					initial={{ x: '-100vw' }}

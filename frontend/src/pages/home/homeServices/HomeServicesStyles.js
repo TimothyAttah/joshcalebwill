@@ -40,12 +40,12 @@ export const HomeServicesInfoTitle = styled.div`
 	/* width: 400px; */
 
 	h4 {
-		font-size: 18px;
+		font-size: 18px !important;
 		color: #e85c00;
 	}
 
 	h2 {
-		font-size: 100px;
+		font-size: 100px !important;
 		color: #fff;
 		color: #e85c00;
 
@@ -57,9 +57,9 @@ export const HomeServicesInfoTitle = styled.div`
 		text-align: center;
 	}
 
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 450px) {
 		h2 {
-			font-size: 50px;
+			font-size: 50px !important;
 
 		}
 	}

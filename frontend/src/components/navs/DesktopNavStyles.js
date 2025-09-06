@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
-	gap: 30px;
+	gap: 0px;
 
 	@media screen and (max-width: 995px) {
 		display: none;
@@ -21,7 +21,7 @@ export const NavMenuList = styled(motion.li)`
 
 	a {
 		display: flex;
-		gap: 5px;
+		/* gap: 5px; */
 		height: 100%;
 		font-size: 18px;
 	}

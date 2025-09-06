@@ -11,7 +11,7 @@ export const HeaderContainer = styled(motion.header)`
 	color: #fff;
 
 	a {
-		color: #fff;
+		color: #fff !important;
 	}
 `;
 export const HeaderWrapper = styled(motion.div)`
@@ -29,7 +29,10 @@ export const HeaderLogo = styled(motion.div)`
     text-align: center;
 
     h4 {
-      font-size: 14px;
+      font-size: 12px;
+			text-transform: lowercase;
+			letter-spacing: 0;
+			color: #fff;
     }
 	}
 
@@ -54,16 +57,23 @@ export const HeaderMenu = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	/* height: 70px; */
 	margin-top: -16px;
 	padding-right: 50px;
 
 	a {
 		display: flex;
-		align-items: center;
+		align-items: center !important;
+		justify-content: center;
 		gap: 10px;
-		font-size: 25px;
 
+		h6, svg {
+			color: var(--color2);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 	@media screen and (max-width: 995px) {

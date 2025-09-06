@@ -53,9 +53,9 @@ const Header = () => {
 						</FadeInAlways>
 
 						<Styles.HeaderSidebarContainer>
-							<FadeInAlways delay={0.7} direction='left'>
+							<>
 								<HeaderSidebar />
-							</FadeInAlways>
+							</>
 						</Styles.HeaderSidebarContainer>
 					</Styles.HeaderMenuWrapper>
 

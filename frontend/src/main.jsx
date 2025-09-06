@@ -5,12 +5,18 @@ import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './index.css';
+import './bootstrap.min.css';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
 		<GlobalStyles />
 		<BrowserRouter>
-			<App />
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</BrowserRouter>
 	</StrictMode>,
 );
