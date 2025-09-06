@@ -3,13 +3,15 @@ import * as Styles from './HaulageStyles';
 const Haulage = () => {
 	return (
 		<Styles.HaulageServiceContainer>
-			<Styles.HaulageServiceTitle>
+			<Styles.HaulageServiceHero>
+				<Styles.HaulageServiceTitle>
 				<h1>Haulage Services</h1>
-				<p>
-					We provide haulage services especially in the area of Diesel, Petrol,
-					Kerosene, CNG, and other petroleum products.
-				</p>
-			</Styles.HaulageServiceTitle>
+					<p>
+						We provide haulage services especially in the area of Diesel,
+						Petrol, Kerosene, CNG, and other petroleum products.
+					</p>
+				</Styles.HaulageServiceTitle>
+			</Styles.HaulageServiceHero>
 
 			<Styles.HaulageServiceListsWrapper>
 				<Styles.HaulageServiceList>
@@ -66,9 +68,8 @@ const Haulage = () => {
 						Online ordering and auto-invoicing providing error-free back-office
 						processes Wetstock management, allowing us to remotely monitor and
 						manage fuel stocks at customers sites and ensure our customers never
-						stock out. We don't own or operate any forecourts, so
-						we're able to put the interests of our customers first - 100% of the
-						time.
+						stock out. We don't own or operate any forecourts, so we're able to
+						put the interests of our customers first - 100% of the time.
 					</p>
 				</Styles.HaulageServiceList>
 				<Styles.HaulageServiceList>

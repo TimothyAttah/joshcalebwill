@@ -7,12 +7,12 @@ const LeaderList = ({ item }) => {
 	return (
 		<>
 			<Styles.LeadersListItem onClick={() => setOpenLeaderModel(true)}>
-				<Styles.LeadersListName leaderColor={item.leaderColor}>
-					{item.leaderName}
-				</Styles.LeadersListName>
 				<Styles.LeadersListImg>
 					<img src={item.leaderPic} alt='' lazy />
 				</Styles.LeadersListImg>
+				<Styles.LeadersListName leaderColor={item.leaderColor}>
+					{item.leaderName}
+				</Styles.LeadersListName>
 				<Styles.LeadersListInfo leaderColor={item.leaderColor}>
 					<p>{item.leaderTitle}</p>
 				</Styles.LeadersListInfo>

@@ -14,7 +14,7 @@ const OurValues = () => {
 
 			<Styles.MissionVissionWrapper>
 				<Styles.MissionVissionBox>
-					<FadeInAlways delay={0.2} direction='right'>
+					<FadeInAlways delay={0.2} direction='down'>
 						<Styles.MissionBox>
 							<h4>Mission</h4>
 							<p>
@@ -25,7 +25,7 @@ const OurValues = () => {
 							</p>
 						</Styles.MissionBox>
 					</FadeInAlways>
-					<FadeInAlways delay={0.4} direction='left'>
+					<FadeInAlways delay={0.4} direction='down'>
 						<Styles.VissionBox>
 							<h4>vission</h4>
 							<p>
@@ -37,39 +37,51 @@ const OurValues = () => {
 				</Styles.MissionVissionBox>
 
 				<Styles.WhoWeAreCoreContainer>
-					<>
+					<FadeInAlways delay={0.6} direction='up'>
 						<Styles.CoreContainer>
 							<h2>
 								Our core <br />
 								<span>Values</span>
 							</h2>
 							<ul>
-								<li>
-									<FaCircle /> Professionalism
-								</li>
-								<li>
-									<FaCircle />
-									integrity
-								</li>
-								<li>
-									<FaCircle />
-									quality
-								</li>
-								<li>
-									<FaCircle />
-									safety
-								</li>
-								<li>
-									<FaCircle />
-									service excellence
-								</li>
-								<li>
-									<FaCircle />
-									team work
-								</li>
+								<FadeInAlways delay={0.2} direction='left'>
+									<li>
+										<FaCircle /> Professionalism
+									</li>
+								</FadeInAlways>
+								<FadeInAlways delay={0.3} direction='left'>
+									<li>
+										<FaCircle />
+										integrity
+									</li>
+								</FadeInAlways>
+								<FadeInAlways delay={0.4} direction='left'>
+									<li>
+										<FaCircle />
+										quality
+									</li>
+								</FadeInAlways>
+								<FadeInAlways delay={0.5} direction='left'>
+									<li>
+										<FaCircle />
+										safety
+									</li>
+								</FadeInAlways>
+								<FadeInAlways delay={0.6} direction='left'>
+									<li>
+										<FaCircle />
+										service excellence
+									</li>
+								</FadeInAlways>
+								<FadeInAlways delay={0.7} direction='left'>
+									<li>
+										<FaCircle />
+										team work
+									</li>
+								</FadeInAlways>
 							</ul>
 						</Styles.CoreContainer>
-					</>
+					</FadeInAlways>
 				</Styles.WhoWeAreCoreContainer>
 			</Styles.MissionVissionWrapper>
 		</>

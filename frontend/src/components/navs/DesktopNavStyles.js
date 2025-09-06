@@ -30,7 +30,7 @@ export const NavMenuList = styled(motion.li)`
 		content: '';
 		width: 0%;
 		height: 5px;
-		background: var(--brown-primary);
+		background: var(--color2);
 		position: absolute;
 		bottom: 0;
 		left: 0px;
@@ -70,7 +70,7 @@ export const SubMenu = styled(motion.div)`
 	padding: 15px;
 	transform-origin: 50% - 170px;
 	border-radius: 10px;
-	background: var(--brown-primary);
+	background: var(--color2);
 	min-width: 600px !important;
 	width: 100%;
 	height: 600px;
@@ -124,7 +124,7 @@ export const SubMenuIcon = styled.div`
 	width: 32px;
 	height: 32px;
 	padding: 5px;
-	background-color: rgb(129 59 1);
+	background-color: var(--color2);
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
