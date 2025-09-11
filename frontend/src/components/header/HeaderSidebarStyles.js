@@ -7,7 +7,7 @@ export const HeaderSidebarMenuButton = styled(motion.div)`
 	z-index: 9999999;
 	/* position: relative; */
 	position: absolute;
-	right: 20px;
+	right: 30px;
 	top: -5px;
 	background-color: rgb(129 59 1);
 	background: var(--color2);
@@ -24,6 +24,8 @@ export const HeaderSidebarMenuButton = styled(motion.div)`
 `;
 export const HeaderSidebarNavWrapper = styled(motion.div)`
 	position: fixed;
+	/* position: absolute; */
+
 	right: 0;
 	top: 0;
 	overflow-y: auto;

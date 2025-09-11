@@ -53,8 +53,8 @@ const MobileNav = ({ menus, scrollToTop }) => {
 				</>
 
 				<Styles.MobileNavWrapper
-					initial={{ x: '-100vw' }}
-					animate={{ x: isOpen ? '0%' : '-100vw' }}>
+					initial={{ x: '-120vw' }}
+					animate={{ x: isOpen ? '0%' : '-120vw' }}>
 					<ul>
 						<li>
 							<Link to='/who-we-are' onClick={() => setIsOpen(false)}>

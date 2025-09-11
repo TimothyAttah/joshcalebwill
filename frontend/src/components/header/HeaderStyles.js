@@ -12,8 +12,8 @@ export const HeaderContainer = styled(motion.header)`
 	background: var(--brown);
 	background: transparent;
 	color: #fff;
-	max-width: 2000px;
-	width: 100%;
+	max-width: 2000px !important;
+	width: 100% !important;
 	transition: 0.5s ease-in-out all;
 
 	a {

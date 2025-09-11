@@ -10,7 +10,7 @@ export const MobileMenuButton = styled(motion.div)`
 	z-index: 100004;
 	position: relative;
 	position: absolute;
-	right: 20px;
+	right: 30px;
 	top: 20px;
 	/* background-color: rgb(129 59 1); */
 	background: var(--color2) !important;
@@ -26,6 +26,7 @@ export const MobileMenuButton = styled(motion.div)`
 `;
 export const MobileNavWrapper = styled(motion.div)`
 	position: fixed;
+	/* position: absolute; */
 	right: 0;
 	top: 0;
 	overflow-y: auto;
@@ -34,12 +35,12 @@ export const MobileNavWrapper = styled(motion.div)`
 	width: 100%;
 	background-color: var(--brown);
 	color: #fff;
-  padding-top: 120px;
-  z-index: 99999;
+	padding-top: 120px;
+	z-index: 99;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	/* &::-webkit-scrollbar {
+		display: none;
+	} */
 `;
 export const MobileSubMenuListItem = styled(motion.li)`
 	a {

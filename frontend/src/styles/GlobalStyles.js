@@ -92,6 +92,8 @@ export const GlobalStyles = createGlobalStyle`
 
   .activeHeader {
     background: var(--main-color);
+    max-width: 2000px !important;
+	width: 100% !important;
   }
 
   .embla {

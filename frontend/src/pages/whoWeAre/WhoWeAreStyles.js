@@ -37,7 +37,7 @@ export const WhoWeAreHeroContainer = styled.div`
 	} */
 
 	@media screen and (max-width: 570px) {
-	height: 60vh;
+	height: 80vh;
 	}
 `;
 export const WhoWeAreHeroOverlay = styled.div`
