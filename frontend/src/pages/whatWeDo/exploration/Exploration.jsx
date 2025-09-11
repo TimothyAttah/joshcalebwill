@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import pix from '../../../assets/explore5.jpg';
+import pix from '../../../assets/explore6.png';
 import pix1 from '../../../assets/explore2.jpg';
-import pix2 from '../../../assets/explore4.jpg';
+import pix2 from '../../../assets/explore5.png';
 
 const ExploreContainer = styled.div``;
 const ExploreHeroSection = styled.div`
@@ -25,12 +25,13 @@ const ExploreHeroSection = styled.div`
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 50px !important;
 		padding-bottom: 10px;
+		color: #fff;
 	}
 
-	h4 {
-		font-size: 18px;
+	p {
+		font-size: 22px !important;
 	}
 
 	@media screen and (max-width: 960px) {

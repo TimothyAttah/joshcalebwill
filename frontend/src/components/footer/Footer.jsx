@@ -1,20 +1,28 @@
 import { footerData } from './footerData';
 import { Link } from 'react-router-dom';
 import * as Styles from './FooterStyles';
+import { FadeInAlways } from '../fadeIn/FadeInAlways';
 
 const Footer = () => {
 	return (
 		<Styles.FooterContainer>
 			<Styles.FooterWrapper>
 				{footerData.map((data, i) => (
-					<Styles.FooterLists>
-						<h4>{data.footerTitle}</h4>
-						<Styles.FooterListsItem key={i}>
-							{data.navSubmenu.map((item, i) => (
-								<Link to={item.navPath}>{item.navTitle}</Link>
-							))}
-						</Styles.FooterListsItem>
-					</Styles.FooterLists>
+					<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
+						<Styles.FooterLists>
+							<h4>{data.footerTitle}</h4>
+							<Styles.FooterListsItem>
+								{data.navSubmenu.map((item, i) => (
+									<FadeInAlways key={i} delay={0.1 * i + 1} direction='left'>
+										<Link to={item.navPath}>
+											{item.navTitle}
+											{item.navIcon && <item.navIcon />}
+										</Link>
+									</FadeInAlways>
+								))}
+							</Styles.FooterListsItem>
+						</Styles.FooterLists>
+					</FadeInAlways>
 				))}
 			</Styles.FooterWrapper>
 		</Styles.FooterContainer>

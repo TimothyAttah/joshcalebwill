@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 
-const DesktopNavItem = ({ menu }) => {
+const DesktopNavItem = ({ menu, scrollToTop }) => {
   const hasSubMenu = menu?.subMenu?.length > 0;
   const [isHover, setIsHover] = useState(false);
 
@@ -35,7 +35,7 @@ const DesktopNavItem = ({ menu }) => {
 			onHoverStart={toggleHoverMenu}
 			onHoverEnd={toggleHoverMenu}>
 			<Styles.NavMenuList>
-				<Link to={menu.path}>
+				<Link to={menu.path} onClick={scrollToTop}>
 					{menu.name} {hasSubMenu && <ChevronDown />}
 				</Link>
 				{hasSubMenu && (
@@ -44,11 +44,11 @@ const DesktopNavItem = ({ menu }) => {
 						animate={isHover ? 'enter' : 'exit'}
 						variants={subMenuAnimate}
 						>
-						<Styles.SubMenuGridBox gridCols={menu.gridCols}>
+						<Styles.SubMenuGridBox>
 							{menu.subMenu?.map((subMenu, i) => (
 								<div key={i}>
 									<Styles.SubMenuWrapper>
-										<Link to={subMenu.path}>
+										<Link to={subMenu.path} onClick={scrollToTop}>
 											<Styles.SubMenuIcon>
 												{/* {subMenu?.icon && <subMenu.icon />} */}
 											</Styles.SubMenuIcon>

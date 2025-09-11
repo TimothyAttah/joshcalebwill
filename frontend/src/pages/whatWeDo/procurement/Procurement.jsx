@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import pix from '../../../assets/procurement3.jpg';
-import pix1 from '../../../assets/procurement2.jpg';
-import pix2 from '../../../assets/procurement4.jpg';
+import pix1 from '../../../assets/procurement6.png';
+import pix2 from '../../../assets/procurement5.png';
 import pix3 from '../../../assets/procurement5.jpg';
 import { Link } from 'react-router-dom';
 
@@ -27,12 +27,19 @@ const GasHeroSection = styled.div`
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 50px !important;
 		padding-bottom: 10px;
+		color: #fff;
+	}
+
+	p {
+		font-size: 22px;
+		color: #fff;
 	}
 
 	h4 {
 		font-size: 18px;
+		color: #fff;
 	}
 
 	${(props) =>

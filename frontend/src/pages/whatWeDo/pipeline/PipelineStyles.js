@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import pix from '../../../assets/pipe1.jpeg';
 import pix1 from '../../../assets/pipe2.jpg';
 
-import pix5 from '../../../assets/pipe6.jpg';
+import pix5 from '../../../assets/pipe6.png';
 
 export const PipeContainer = styled.div``;
 export const PipeHeroSection = styled.div`
@@ -26,7 +26,8 @@ export const PipeHeroSection = styled.div`
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 40px !important;
+		color: #fff;
 		padding-bottom: 10px;
 	}
 

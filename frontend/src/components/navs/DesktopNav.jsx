@@ -1,15 +1,15 @@
 import { Menus } from '../../utils/navItem';
-import { FadeInAlways } from '../fadeIn/FadeInAlways';
+import { FadeInCommon } from '../fadeIn/FadeInCommon';
 import DesktopNavItem from './DesktopNavItem';
 import * as Styles from './DesktopNavStyles';
 
-const DesktopNav = () => {
+const DesktopNav = ({ scrollToTop }) => {
 	return (
 		<Styles.NavContainer>
 			{Menus.map((menu, i) => (
-				<FadeInAlways key={i} delay={(0.2 * i) + 0.2} direction='down'>
-					<DesktopNavItem menu={menu} />
-				</FadeInAlways>
+				<FadeInCommon key={i} delay={(0.1 * i) + 1} direction='down'>
+					<DesktopNavItem menu={menu} scrollToTop={scrollToTop}/>
+				</FadeInCommon>
 			))}
 		</Styles.NavContainer>
 	);

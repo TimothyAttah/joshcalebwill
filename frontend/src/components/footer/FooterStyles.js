@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-	background-color: var(--brown);
+	background-color: var(--color2);
 	width: 100%;
-	/* position: absolute;
-  bottom: 0;
-  left: 0; */
 `;
 export const FooterWrapper = styled.div`
 	display: flex;
@@ -45,5 +42,12 @@ export const FooterListsItem = styled.div`
 		text-transform: capitalize !important;
     color: #fff;
 		font-size: 15px;
+
+		display: flex;
+		align-items: center;
+
+		svg {
+			font-size: 30px;
+		}
 	}
 `;

@@ -10,10 +10,11 @@ const LeaderList = ({ item }) => {
 				<Styles.LeadersListImg>
 					<img src={item.leaderPic} alt='' lazy />
 				</Styles.LeadersListImg>
-				<Styles.LeadersListName leaderColor={item.leaderColor}>
+				{/* <Styles.LeadersListName leaderColor={item.leaderColor}>
 					{item.leaderName}
-				</Styles.LeadersListName>
+				</Styles.LeadersListName> */}
 				<Styles.LeadersListInfo leaderColor={item.leaderColor}>
+					<h4> {item.leaderName}</h4>
 					<p>{item.leaderTitle}</p>
 				</Styles.LeadersListInfo>
 			</Styles.LeadersListItem>

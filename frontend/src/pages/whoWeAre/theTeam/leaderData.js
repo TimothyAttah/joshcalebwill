@@ -8,7 +8,7 @@ import leaderPix5 from '../../../assets/leader5.png';
 
 export const leaderData = [
 	{
-		leaderName: 'MEET WILLIAM CHUKWUNWUDE (Chem. Engr.)',
+		leaderName: ' WILLIAM CHUKWUNWUDE (Chem. Engr.)',
 		leaderTitle: 'Managing Director',
 		leaderPic: leaderPix1,
 		leaderInfo: `He holds a Bachelors of Engineering
@@ -25,7 +25,7 @@ export const leaderData = [
 		leaderColor: 'green',
 	},
 	{
-		leaderName: 'MEET FERGUSON CHUKWUEMEKA NOH',
+		leaderName: ' FERGUSON CHUKWUEMEKA NOH',
 		leaderTitle: 'Director, engineering services',
 		leaderPic: leaderPix2,
 		leaderInfo: ` Ferguson holds a B. Eng. in
@@ -43,7 +43,7 @@ export const leaderData = [
 		leaderColor: 'crimson',
 	},
 	{
-		leaderName: 'MEET SUNNY EKWEALOR',
+		leaderName: ' SUNNY EKWEALOR',
 		leaderTitle: 'Director of finance & admin',
 		leaderPic: leaderPix3,
 		leaderInfo: ` A dynamic qualified
@@ -56,7 +56,7 @@ export const leaderData = [
 		leaderColor: '#0066b2;',
 	},
 	{
-		leaderName: 'MEET CHUKWUDI RAPHAEL OBIEFUNA',
+		leaderName: ' CHUKWUDI RAPHAEL OBIEFUNA',
 		leaderTitle: 'PROJECT DIRECTOR',
 		leaderPic: leaderPix5,
 		leaderInfo: ` A senior-level
@@ -76,7 +76,7 @@ export const leaderData = [
 		leaderColor: '#0b2d71',
 	},
 	{
-		leaderName: 'MEET ANOSIKE GREGORY CHUKWUDI',
+		leaderName: ' ANOSIKE GREGORY CHUKWUDI',
 		leaderTitle: 'EXECUTIVE DIRECTOR',
 		leaderPic: leaderPix4,
 		leaderInfo: `  Holds a Bachelors of Engineering degree in Electrical and

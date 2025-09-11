@@ -1,15 +1,111 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as Styles from './Intro2Styles';
 import valuePix from '../../../assets/value.png';
-import missionPix from '../../../assets/mission.png';
-import visionPix from '../../../assets/vision.png';
+import missionPix from '../../../assets/oil1.png';
+import visionPix from '../../../assets/oil2.png';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from 'gsap/SplitText';
+import { useGSAP } from '@gsap/react';
 
 const Intro2 = () => {
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.fromTo(
+			'.text1',
+			{
+				x: 3000,
+				opacity: 0,
+			},
+			{
+				x: -100,
+				opacity: 1,
+				duration: 2,
+				delay: 1,
+				scrollTrigger: {
+					trigger: '.text-wrap',
+					start: 0,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
+				},
+			},
+		);
+
+		gsap.fromTo(
+			'.text2',
+			{
+				x: -3000,
+				opacity: 0,
+			},
+			{
+				x: 100,
+				opacity: 1,
+				duration: 2,
+				delay: 3,
+				scrollTrigger: {
+					trigger: '.text-wrap',
+					start: 0,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
+				},
+			},
+		);
+		gsap.fromTo(
+			'.text3',
+			{
+				x: 3000,
+				opacity: 0,
+			},
+			{
+				x: -100,
+				opacity: 1,
+				duration: 5,
+				delay: 10,
+				scrollTrigger: {
+					trigger: '.text-wrap',
+					start: 0,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
+				},
+			},
+		);
+
+		gsap.fromTo(
+			'.title',
+			{
+				// y: 0,
+				opacity: 0,
+				zoom: 0,
+			},
+			{
+				// y: 100,
+				zoom: 1.2,
+				opacity: 1,
+				ease: 'power2.inOut',
+				duration: 5,
+				delay: 10,
+				scrollTrigger: {
+					trigger: '.title',
+					start: 0,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
+				},
+			},
+		);
+	});
+
+
 	return (
 		<Styles.IntroContainer>
 			<Styles.IntroContainer>
 				<Styles.ContentTitle>
 					<small>Welcome to Joshcalebwill Petroluem Limited</small>
+					<Styles.TextWrap className='text-wrap'>
+						<Styles.Text1 className='text1'>critical thinkers</Styles.Text1>
+						<Styles.Text2 className='text2'>collaborators</Styles.Text2>
+						<Styles.Text3 className='text3'>innovators</Styles.Text3>
+					</Styles.TextWrap>
 					<h2>
 						We are a global integrated energy company that produces and markets
 						energies
@@ -20,49 +116,10 @@ const Intro2 = () => {
 						possible.
 					</p>
 				</Styles.ContentTitle>
-
-				<Styles.IntroContentWrapper>
-					<Styles.IntroContent>
-						<h4>Our Vision</h4>
-						<div>
-							<img src={visionPix} alt='' loading='lazy' />
-						</div>
-						<p>
-							To be the first Choice in the Services we offer in the Oil & Gas
-							Industry
-						</p>
-					</Styles.IntroContent>
-					<Styles.IntroContent>
-						<h4>Our Mission</h4>
-						<div>
-							<img src={missionPix} alt='' loading='lazy' />
-						</div>
-						<p>
-							Building long lasting relationships with clients by providing the
-							best Engineering Services through the creation of the Stystems and
-							Models which ensures Quality Assurance, Safety and Satisfaction
-							for our Clients at all times.
-						</p>
-					</Styles.IntroContent>
-					<Styles.IntroContent>
-						<h4>Our Values</h4>
-						<div>
-							<img src={valuePix} alt='' loading='lazy' />
-						</div>
-
-						<ul>
-							<li>Professionalism</li>
-							<li>integrity</li>
-							<li>quality</li>
-							<li>safety</li>
-							<li>service excellence</li>
-							<li>team work</li>
-						</ul>
-					</Styles.IntroContent>
-				</Styles.IntroContentWrapper>
 			</Styles.IntroContainer>
 		</Styles.IntroContainer>
 	);
 };
 
 export default Intro2;
+

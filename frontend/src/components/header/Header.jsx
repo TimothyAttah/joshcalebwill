@@ -11,6 +11,14 @@ import { Menus } from '../../utils/navItem';
 import HeaderSidebar from './HeaderSidebar';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 
+export const scrollToTop = () => {
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: 'smooth',
+	});
+}
+
 const Header = () => {
 	const [navbar, setNavbar] = useState(false);
 	const changeBackground = () => {
@@ -21,6 +29,8 @@ const Header = () => {
 		}
 	};
 
+
+
 	window.addEventListener('scroll', changeBackground);
 	return (
 		<>
@@ -28,7 +38,7 @@ const Header = () => {
 				<Styles.HeaderWrapper>
 					<FadeInAlways delay={0.1} direction='right'>
 						<Styles.HeaderLogo>
-							<Link to='/'>
+							<Link to='/' onClick={scrollToTop}>
 								<img src={logo} alt='' />
 								<h4>
 									Joshcalebwill <br /> petroleum limited
@@ -37,20 +47,20 @@ const Header = () => {
 						</Styles.HeaderLogo>
 					</FadeInAlways>
 
-					<FadeInAlways delay={0.3} direction='down'>
+					<>
 						<nav>
-							<DesktopNav />
+							<DesktopNav scrollToTop={scrollToTop} />
 						</nav>
-					</FadeInAlways>
+					</>
 					<Styles.HeaderMenuWrapper>
-						<FadeInAlways delay={0.5} direction='left'>
+						<>
 							<Styles.HeaderMenu>
-								<Link to='/market'>
+								<Link to='/market' onClick={scrollToTop}>
 									<ShoppingBasket />
 									<h6>Market</h6>
 								</Link>
 							</Styles.HeaderMenu>
-						</FadeInAlways>
+						</>
 
 						<Styles.HeaderSidebarContainer>
 							<>
@@ -61,7 +71,7 @@ const Header = () => {
 
 					<AnimatePresence>
 						<Styles.HeaderSubmenu>
-							<MobileNav menus={Menus} />
+							<MobileNav menus={Menus} scrollToTop={scrollToTop} />
 						</Styles.HeaderSubmenu>
 					</AnimatePresence>
 				</Styles.HeaderWrapper>

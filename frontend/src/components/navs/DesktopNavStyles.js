@@ -5,6 +5,7 @@ export const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	gap: 0px;
+	z-index: 999999;
 
 	@media screen and (max-width: 995px) {
 		display: none;
@@ -13,11 +14,13 @@ export const NavContainer = styled.nav`
 
 export const NavMenuWrapper = styled(motion.ul)`
 	position: relative;
+	z-index: 999999;
 `;
 export const NavMenuList = styled(motion.li)`
 	height: 40px;
 	position: relative;
 	transition: all 1s;
+	z-index: 999999;
 
 	a {
 		display: flex;
@@ -64,22 +67,23 @@ export const NavSubMenuList = styled(motion.div)`
 `;
 
 export const SubMenu = styled(motion.div)`
-	position: absolute;
+	position: absolute !important;
 	top: 4rem;
 	left: -200px;
 	padding: 15px;
 	transform-origin: 50% - 170px;
 	border-radius: 10px;
-	background: var(--color2);
+	background: var(--color2) !important;
 	min-width: 600px !important;
 	width: 100%;
-	height: 600px;
+	/* height: 600px; */
 	padding-top: 50px;
+	z-index: 999999;
 
-	@media screen and (max-width: 970px) {
+	/* @media screen and (max-width: 970px) {
 		min-width: auto;
 		left: -300px;
-	}
+	} */
 `;
 
 export const SubMenuGridBox = styled.div`
@@ -97,7 +101,6 @@ export const SubMenuContainer = styled.div`
 
 export const SubMenuWrapper = styled.div`
 	display: flex;
-
 	width: 250px;
 
 	a {
@@ -137,17 +140,18 @@ export const SubMenuIcon = styled.div`
 		transform: rotate(0deg) !important;
 	}
 
-	svg {
-	}
+
 `;
 export const SubMenuText = styled.div`
 	h4 {
-		font-weight: bold;
+		font-weight: 200;
 		color: green;
 		color: #fff;
 		text-transform: capitalize;
-		padding-bottom: 5px;
+		/* padding-bottom: 5px; */
 		transition: all 1s;
+		font-size: 16px;
+		letter-spacing: 0;
 	}
 
 	p {

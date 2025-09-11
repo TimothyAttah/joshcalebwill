@@ -10,6 +10,7 @@ const FadeInStyle = styled(motion.div)`
 	justify-content: center;
 	padding-left: 0px;
 	padding-right: 0px;
+	overflow: hidden;
 
 	${(props) =>
 		props.fullWidth &&
@@ -26,6 +27,7 @@ const FadeInStyle = styled(motion.div)`
 
 const FadeInMotionStyle = styled(motion.div)`
 	width: 100%;
+	/* overflow: hidden; */
 	/* display: flex;
   align-items: center;
   justify-content: ${(props) => (props.center ? 'center' : '')}; */

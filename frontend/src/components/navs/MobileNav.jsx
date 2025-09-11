@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Overlay from '../Overlay';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 
-const MobileNav = ({ menus }) => {
+const MobileNav = ({ menus, scrollToTop }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [clicked, setClicked] = useState(null);
 
@@ -26,9 +26,15 @@ const MobileNav = ({ menus }) => {
 		},
 	};
 
-	const closeSidebar = (i) => {
-
-	}
+	const closeSidebar = (i, isClicked) => {
+		setClicked(isClicked ? null : i);
+		// menus.map((menu) => {
+		// 	if (!menu.subMenu) {
+		// 		setIsOpen(false);
+		// 	}
+		// });
+		scrollToTop();
+	};
 
 	return (
 		<>
@@ -50,14 +56,17 @@ const MobileNav = ({ menus }) => {
 					initial={{ x: '-100vw' }}
 					animate={{ x: isOpen ? '0%' : '-100vw' }}>
 					<ul>
-						{menus?.map(({ name, subMenu }, i) => {
+						{menus?.map(({ name, path, subMenu }, i) => {
 							const hasSubMenu = subMenu?.length > 0;
 							const isClicked = clicked === i;
 
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSubMenuListItem clicked={isClicked}>
-										<Link onClick={() => setClicked(isClicked ? null : i)}>
+										{/* <Link onClick={() => setClicked(isClicked ? null : i)}>
+											{name} {hasSubMenu && <ChevronDown />}
+										</Link> */}
+										<Link onClick={() => closeSidebar(i, isClicked)} to={path}>
 											{name} {hasSubMenu && <ChevronDown />}
 										</Link>
 										{hasSubMenu && (
@@ -71,7 +80,7 @@ const MobileNav = ({ menus }) => {
 														delay={0.1 * i + 0.1}
 														direction='down'>
 														<Styles.MobileSubMenuList>
-															<Link to={path} onClick={()=> setIsOpen(false)}>
+															<Link to={path} onClick={() => setIsOpen(false)}>
 																<span>
 																	<Icon />
 																</span>

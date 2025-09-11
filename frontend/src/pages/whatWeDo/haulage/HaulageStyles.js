@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bgPix from '../../../assets/newSlide3.png';
+import bgPix from '../../../assets/haulage5.png';
 import bgColor from '../../../assets/bg.jpg'
 
 export const HaulageServiceHero = styled.div`
@@ -31,31 +31,38 @@ export const HaulageServiceContainer = styled.div`
 
 export const HaulageServiceTitle = styled.div`
 	text-align: center;
-	max-width: 500px;
+	max-width: 900px;
 	width: 100%;
 	margin: auto;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	color: #fff;
+	/* top: 50%; */
+	transform: translateX(-50%);
+	top: 20px;
+	/* color: #fff; */
+	background-color: var(--color2);
+	/* background: #00813299; */
+	background: #00813266;
+	padding: 20px;
 
 	h1 {
 		font-size: 50px !important;
 		padding-bottom: 5px;
 		color: #fff;
+		/* color: var(--color2);
+		color: var(--primary-color); */
 	}
 
 	p {
 		font-size: 20px;
 		line-height: 1.5;
 		color: #fff;
+		/* color: var(--primary-color); */
 	}
 
 	@media screen and (max-width: 450px) {
 		h1 {
 			font-size: 26px !important;
-
 		}
 
 		p {

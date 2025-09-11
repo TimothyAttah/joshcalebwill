@@ -78,7 +78,7 @@ export const LeadersListItemWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	gap: 50px;
+	gap: 80px;
 
 	@media screen and (max-width: 550px) {
 		width: 100%;
@@ -89,12 +89,18 @@ export const LeadersListItemWrapper = styled.div`
 	}
 `;
 export const LeadersListItem = styled.div`
-	width: 320px;
+	width: 400px;
 	/* padding: 20px 0; */
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 	position: relative;
 	cursor: pointer;
 	position: relative;
+	overflow: hidden;
+	transition: all .5s ease-in-out;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 
 	/* h4 {
 		text-align: center;
@@ -147,13 +153,15 @@ export const LeadersListName = styled.h4`
 	text-align: center;
 	padding: 10px 10px;
 	/* height: 40px; */
-	color: ${(props) => props.leaderColor};
+	/* color: ${(props) => props.leaderColor}; */
+	background-color: ${(props) => props.leaderColor};
 	font-size: 15px;
 `;
 export const LeadersListImg = styled.div`
 	width: 100%;
-	height: 320px;
+	height: 380px;
 	background-color: #555;
+	overflow: hidden;
 	img {
 		width: 100%;
 		height: 100%;
@@ -161,17 +169,17 @@ export const LeadersListImg = styled.div`
 `;
 export const LeadersListInfo = styled.div`
 	width: 100%;
-	height: 50px;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
 	text-align: center;
 	background-color: green;
 	background-color: ${(props) => props.leaderColor};
 	color: #fff;
-	padding-top: 10px;
-	p {
+	padding: 10px;
 
+	h4 {
+		color: #fff;
+	}
+
+	p {
 	}
 	/* position: absolute; */
 	/* bottom: 0; */

@@ -27,6 +27,7 @@ import Shipping from './pages/shipping/Shipping';
 import Payment from './pages/payment/Payment';
 import PlaceOrder from './pages/placeOrder/PlaceOrder';
 import Order from './pages/order/Order';
+import WhoWeAre from './pages/whoWeAre/WhoWeAre';
 
 const App = () => {
 	return (
@@ -34,6 +35,7 @@ const App = () => {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
+					<Route path='/who-we-are' element={<WhoWeAre />} />
 					<Route
 						path='/who-we-are/values-belief&culture'
 						element={<OurValues />}

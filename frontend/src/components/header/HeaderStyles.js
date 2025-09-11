@@ -2,13 +2,19 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled(motion.header)`
-	/* height: 80px; */
+	height: 80px;
 	font-size: 1.2rem;
 	position: sticky;
+	position: fixed;
+	/* position: absolute; */
 	top: 0;
 	z-index: 999;
 	background: var(--brown);
+	background: transparent;
 	color: #fff;
+	max-width: 2000px;
+	width: 100%;
+	transition: 0.5s ease-in-out all;
 
 	a {
 		color: #fff !important;
@@ -44,7 +50,7 @@ export const HeaderLogo = styled(motion.div)`
 export const HeaderMenuWrapper = styled.div`
 	position: relative;
 	width: 200px;
-	/* height: 100%; */
+	height: 100%;
 	/* border: 2px solid green; */
 	/* border: 3px dashed green; */
 
@@ -57,14 +63,17 @@ export const HeaderMenu = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	height: 100%;
 	margin-top: -16px;
 	padding-right: 50px;
+	/* border: 2px solid red; */
 
 	a {
 		display: flex;
 		align-items: center !important;
 		justify-content: center;
 		gap: 10px;
+		font-weight: bold;
 
 		h6, svg {
 			color: var(--color2);

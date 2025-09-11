@@ -52,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     margin: auto;
     /* border: 2px solid red; */
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     /* background-color: #0d1117; */
     /* background-color: #e6edf3; */
     color: #e6edf3;
@@ -90,15 +90,29 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .activeHeader {
+    background: var(--main-color);
+  }
+
   .embla {
   overflow: hidden;
+  position: relative;
+  height: 100vh;
+
 }
 .embla__container {
   display: flex;
   width: 100%;
+  height: 100%;
 }
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+.line {
+  transform: translateY(100%);
+  will-change: transform;
+
 }
 `;

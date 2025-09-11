@@ -1,5 +1,5 @@
 import pix2 from '../../../assets/pipe3.jpg';
-import pix3 from '../../../assets/pipe4.jpg';
+import pix3 from '../../../assets/pipe5.png';
 import pix4 from '../../../assets/pipe5.jpg';
 import * as Styles from './PipelineStyles';
 

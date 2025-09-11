@@ -1,26 +1,49 @@
+import {FaFacebook, FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
+
 export const footerData = [
+	// {
+	// 	footerTitle: 'Who we are',
+	// 	navSubmenu: [
+	// 		{
+	// 			navTitle: 'values belief & culture',
+	// 			navPath: '/who-we-are/values-belief&culture',
+	// 		},
+	// 		{
+	// 			navTitle: 'meet the prolific team',
+	// 			navPath: '/who-we-are/meet-the-prolific-team',
+	// 		},
+	// 		{
+	// 			navTitle: 'recent and past involvement',
+	// 			navPath: '/who-we-are/recent-and-past-involvement',
+	// 		},
+	// 		{
+	// 			navTitle: 'why were always the first choice',
+	// 			navPath: '/who-we-are/why-were-always-the-first-choice',
+	// 		},
+	// 		{
+	// 			navTitle: "today's article/careers",
+	// 			navPath: "/who-we-are/today's-article&careers",
+	// 		},
+	// 	],
+	// },
 	{
-		footerTitle: 'Who we are',
+		footerTitle: 'Follow us',
 		navSubmenu: [
 			{
-				navTitle: 'values belief & culture',
-				navPath: '/who-we-are/values-belief&culture',
+				navIcon: FaFacebook,
+				navPath: '/contact',
 			},
 			{
-				navTitle: 'meet the prolific team',
-				navPath: '/who-we-are/meet-the-prolific-team',
+				navIcon: FaInstagram,
+				navPath: '/contact',
 			},
 			{
-				navTitle: 'recent and past involvement',
-				navPath: '/who-we-are/recent-and-past-involvement',
+				navIcon: FaLinkedin,
+				navPath: '/contact',
 			},
 			{
-				navTitle: 'why were always the first choice',
-				navPath: '/who-we-are/why-were-always-the-first-choice',
-			},
-			{
-				navTitle: "today's article/careers",
-				navPath: "/who-we-are/today's-article&careers",
+				navIcon: FaTwitter,
+				navPath: '/contact',
 			},
 		],
 	},
@@ -46,6 +69,14 @@ export const footerData = [
 			{
 				navTitle: 'Health safety and environmental consultancy ',
 				navPath: '/what-we-do/health-and-safety',
+			},
+			{
+				navTitle: 'Haulage Services ',
+				navPath: '/what-we-do/haulage-services',
+			},
+			{
+				navTitle: 'Procurement Solutions',
+				navPath: '/what-we-do/procurement-solutions',
 			},
 		],
 	},
