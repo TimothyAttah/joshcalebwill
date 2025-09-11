@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import * as Styles from './Services2Styles';
 import { services } from './servicesData';
+import {scrollToTop} from '../../../components/header/Header'
 
 const Services2 = () => {
 	return (
@@ -29,13 +31,15 @@ const Services2 = () => {
 							<Styles.ServiceItemImg>
 								<img src={item.pix} alt='' loading='lazy' />
 							</Styles.ServiceItemImg>
-              <h4>{ item.title }</h4>
+							<h4>{item.title}</h4>
 
-              <Styles.ServiceItemDropdown>
-                <h2>{ item.title }</h2>
-                <p>{ item.desc }</p>
-                <button>Read more</button>
-              </Styles.ServiceItemDropdown>
+							<Link to={item.path } onClick={scrollToTop}>
+								<Styles.ServiceItemDropdown>
+									<h2>{item.title}</h2>
+									<p>{item.desc}</p>
+									<button>Read more</button>
+								</Styles.ServiceItemDropdown>
+							</Link>
 						</Styles.ServicesListItems>
 					))}
 				</Styles.ServicesListContainer>

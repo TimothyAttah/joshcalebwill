@@ -14,21 +14,21 @@ import { AnimatedCopy } from '../../../components/AnimatedCopy';
 import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
 
 const SecondServices = () => {
-	gsap.registerPlugin(ScrollTrigger);
+	// gsap.registerPlugin(ScrollTrigger);
 
-	useGSAP(() => {
-		gsap.from('.img-1', {
-			x: 1200,
-			stagger: {
-				amount: 0.4,
-			},
-			scrollTrigger: {
-				trigger: '.imgs-container',
-				// start: 0,
-				scrub: true,
-			},
-		});
-	});
+	// useGSAP(() => {
+	// 	gsap.from('.img-1', {
+	// 		x: 1200,
+	// 		stagger: {
+	// 			amount: 0.4,
+	// 		},
+	// 		scrollTrigger: {
+	// 			trigger: '.imgs-container',
+	// 			// start: 0,
+	// 			scrub: true,
+	// 		},
+	// 	});
+	// });
 	return (
 		<Styles.SecondServiceContainer>
 			<Styles.SecondServiceWrapper>
@@ -94,14 +94,16 @@ const SecondServices = () => {
 							<h1> Rehabilitation of production facility</h1>
 						</FadeInAlways>
 					</Styles.SecondServiceGalleyDetailWrapper>
+
 					<Styles.SecondServiceGalleyImgContainer>
 						<FadeInAlways delay={0.7} direction='right'>
-							<img src={pix1} alt='' loading='lazy' />
+							<img src={pix1} alt=''  />
 						</FadeInAlways>
 						<FadeInAlways delay={0.8} direction='right'>
-							<img src={pix2} alt='' loading='lazy' />
+							<img src={pix2} alt=''  />
 						</FadeInAlways>
 					</Styles.SecondServiceGalleyImgContainer>
+
 				</Styles.SecondServiceGalleyImgWrapper>
 				<Styles.SecondServiceGalleyImgWrapper primary='true'>
 					<Styles.SecondServiceGalleyDetailWrapper>
@@ -109,6 +111,7 @@ const SecondServices = () => {
 							<h1> Ongoing construction of Buoy</h1>
 						</FadeInAlways>
 					</Styles.SecondServiceGalleyDetailWrapper>
+
 					<Styles.SecondServiceGalleyImgContainer>
 						<FadeInAlways delay={0.7} direction='left'>
 							<img src={pix3} alt='' />

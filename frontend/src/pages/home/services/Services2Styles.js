@@ -8,27 +8,41 @@ export const ServicesWrapper = styled.div`
 	padding: 100px 0;
 `;
 export const ServicesTitleBox = styled.div`
-  display: flex;
-  justify-content: space-around;
-  gap:20px;
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+
+	@media screen and (max-width: 920px) {
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	@media screen and (max-width: 520px) {
+		text-align: center;
+	}
 `;
 export const ServicesTitle = styled.div`
-  max-width: 300px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	max-width: 300px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 
-  small {
-    color: var(--main-color);
-    text-transform: capitalize;
-    font-weight: bold;
-  }
+	small {
+		color: var(--main-color);
+		text-transform: capitalize;
+		font-weight: bold;
+	}
 
-  h2 {
-    color: var(--color2);
-    font-size: 30px !important;
-  }
+	h2 {
+		color: var(--color2);
+		font-size: 30px !important;
+	}
+
+	@media screen and (max-width: 520px) {
+		text-align: center;
+    max-width: 100%;
+	}
 `;
 export const ServicesDesc = styled.div`
   max-width: 1200px;
@@ -53,7 +67,7 @@ export const ServicesListItems = styled.div`
   overflow:hidden;
   position: relative;
 
-  &:hover > div {
+  &:hover > a  div{
     top: 0;
   }
 

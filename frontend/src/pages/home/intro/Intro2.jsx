@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import * as Styles from './Intro2Styles';
-import valuePix from '../../../assets/value.png';
-import missionPix from '../../../assets/oil1.png';
-import visionPix from '../../../assets/oil2.png';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
+import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
 
 const Intro2 = () => {
 	useEffect(() => {
@@ -95,26 +94,31 @@ const Intro2 = () => {
 		);
 	});
 
-
 	return (
 		<Styles.IntroContainer>
 			<Styles.IntroContainer>
 				<Styles.ContentTitle>
-					<small>Welcome to Joshcalebwill Petroluem Limited</small>
-					<Styles.TextWrap className='text-wrap'>
+					<FadeInAlways delay={0.2} direction='down'>
+						<small>Welcome to Joshcalebwill Petroluem Limited</small>
+					</FadeInAlways>
+					{/* <Styles.TextWrap className='text-wrap'>
 						<Styles.Text1 className='text1'>critical thinkers</Styles.Text1>
 						<Styles.Text2 className='text2'>collaborators</Styles.Text2>
 						<Styles.Text3 className='text3'>innovators</Styles.Text3>
-					</Styles.TextWrap>
-					<h2>
-						We are a global integrated energy company that produces and markets
-						energies
-					</h2>
-					<p>
-						We provide the energy the world needs: ever more affordable, more
-						sustainable, more reliable and accessible to as many people as
-						possible.
-					</p>
+					</Styles.TextWrap> */}
+					<FadeInAlways delay={0.4} direction='down'>
+						<h2>
+							We are a global integrated energy company that produces and
+							markets energies
+						</h2>
+					</FadeInAlways>
+					<FadeInAlways delay={0.6} direction='down'>
+						<p>
+							We provide the energy the world needs: ever more affordable, more
+							sustainable, more reliable and accessible to as many people as
+							possible.
+						</p>
+					</FadeInAlways>
 				</Styles.ContentTitle>
 			</Styles.IntroContainer>
 		</Styles.IntroContainer>
@@ -122,4 +126,3 @@ const Intro2 = () => {
 };
 
 export default Intro2;
-
