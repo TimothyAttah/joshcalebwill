@@ -14,6 +14,7 @@ export const IntroContainer = styled.div`
 	/* background-attachment: fixed; */
 	position: relative;
 	padding: 20px 0;
+	overflow: hidden !important;
 `;
 
 export const ContentTitle = styled.div`
@@ -22,6 +23,7 @@ export const ContentTitle = styled.div`
 	margin: 0px auto;
 	padding-top: 100px;
 	text-align: center;
+	overflow: hidden !important;
 	small {
 		font-size: 18px !important;
 		color: #fff;
@@ -123,7 +125,7 @@ export const Text1 = styled.h1`
 	color: var(--primary-color);
 	/* position: absolute;
 	left: 0; */
-	margin-bottom: 20px;
+	margin: 20px 0;
 	@media screen and (max-width: 420px) {
 		h1 {
 			font-size: 3rem !important;
@@ -136,7 +138,9 @@ export const Text2 = styled.h1`
 	color: var(--color2);
 	/* position: absolute;
 	right: 0; */
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
+	margin: 20px 0;
+
 	@media screen and (max-width: 420px) {
 		h1 {
 			font-size: 3rem !important;
@@ -149,7 +153,9 @@ export const Text3 = styled.h1`
 	color: var(--color3);
 	/* position: absolute;
 	left: 50px; */
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
+	margin: 20px 0;
+
 	@media screen and (max-width: 420px) {
 		h1 {
 			font-size: 3rem !important ;
