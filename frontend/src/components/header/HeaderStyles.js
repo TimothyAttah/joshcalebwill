@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled(motion.header)`
-	height: 80px;
+	height: 85px;
 	font-size: 1.2rem;
 	position: sticky;
 	position: fixed;

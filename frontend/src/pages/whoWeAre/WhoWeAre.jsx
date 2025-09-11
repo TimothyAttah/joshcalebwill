@@ -20,13 +20,13 @@ const WhoWeAre = () => {
 					<img src={picBg} alt='' loading='lazy' />
 
 					<Styles.ContentContent>
-						<FadeInCommon delay={0.5} direction='down'>
+						<FadeInAlways delay={0.5} direction='down'>
 							<h2>Who we are</h2>
-						</FadeInCommon>
+						</FadeInAlways>
 					</Styles.ContentContent>
 				</Styles.WhoWeAreHeroContainer>
 
-				<FadeInCommon delay={0.5} direction='down'>
+				<FadeInAlways delay={0.5} direction='down'>
 					<Styles.WhoWeAreTitle>
 						{/* JOSHCALEB WILL PETROLEUM LIMITED is a dynamic global energy company
 with businesses and operations across the entire spectrum of the
@@ -38,14 +38,14 @@ energy value chain. */}
 						upstream to the downstream, midstream and the gas sub-sector of the
 						oil and gas industry.
 					</Styles.WhoWeAreTitle>
-				</FadeInCommon>
+				</FadeInAlways>
 
 				<Styles.WhoWeAreValuesContainer>
-					<FadeInCommon delay={0.5} direction='down'>
+					<FadeInAlways delay={0.5} direction='down'>
 						<Styles.WhoWeAreValuesPic>
 							<img src={visionLogo} alt='' loading='lazy' />
 						</Styles.WhoWeAreValuesPic>
-					</FadeInCommon>
+					</FadeInAlways>
 
 					<Styles.WhoWeAreValuesBox>
 						<FadeInAlways delay={0.5} direction='right'>

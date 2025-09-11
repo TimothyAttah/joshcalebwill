@@ -6,6 +6,7 @@ export const WhoWeAreHeroContainer = styled.div`
 	height: 100vh;
 	position: relative;
 
+
 	img {
 		width: 100%;
 		height: 100%;
@@ -39,6 +40,7 @@ export const WhoWeAreHeroContainer = styled.div`
 	}
 `;
 export const WhoWeAreHeroOverlay = styled.div`
+	
 	width: 100%;
 	height: 100vh;
 	position: absolute;

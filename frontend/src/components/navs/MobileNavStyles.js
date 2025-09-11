@@ -10,7 +10,7 @@ export const MobileMenuButton = styled(motion.div)`
 	position: relative;
 	position: absolute;
 	right: 20px;
-	top: 30px;
+	top: 20px;
 	/* background-color: rgb(129 59 1); */
 	background: var(--color2) !important;
 	color: #fff;
