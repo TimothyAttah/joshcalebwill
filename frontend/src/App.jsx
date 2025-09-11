@@ -28,6 +28,7 @@ import Payment from './pages/payment/Payment';
 import PlaceOrder from './pages/placeOrder/PlaceOrder';
 import Order from './pages/order/Order';
 import WhoWeAre from './pages/whoWeAre/WhoWeAre';
+import Sustainability from './pages/sustainability/Sustainability';
 
 const App = () => {
 	return (
@@ -36,7 +37,7 @@ const App = () => {
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
 					<Route path='/who-we-are' element={<WhoWeAre />} />
-					<Route
+					{/* <Route
 						path='/who-we-are/values-belief&culture'
 						element={<OurValues />}
 					/>
@@ -49,7 +50,8 @@ const App = () => {
 					<Route
 						path="/who-we-are/today's-article&careerse"
 						element={<TodayArticle />}
-					/>
+					/> */}
+
 					<Route path='/what-we-do/exploration' element={<Exploration />} />
 					<Route
 						path='/what-we-do/chemical-supply&treatments'
@@ -69,14 +71,15 @@ const App = () => {
 						element={<Procurement />}
 					/>
 					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
-					<Route
+					<Route path='/sustainability' element={<Sustainability />} />
+					{/* <Route
 						path='/sustainability/quality-policy-statement'
 						element={<QualityPolicy />}
 					/>
 					<Route
 						path='/sustainability/health-safety-environment-hse-policy'
 						element={<HealthPolicy />}
-					/>
+					/> */}
 
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/market' element={<Market />} />

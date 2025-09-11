@@ -100,6 +100,8 @@ export const Menus = [
 	},
 	{
 		name: 'sustainability',
+		path: '/sustainability',
+
 		subMenuHeadeing: '',
 		// subMenu: [
 		// 	{
@@ -270,5 +272,5 @@ export const MenusMobile = [
 	// 	],
 	// 	gridCols: 2,
 	// },
-	
+
 ];

@@ -31,7 +31,7 @@ const WhoWeAre = () => {
 						{/* JOSHCALEB WILL PETROLEUM LIMITED is a dynamic global energy company
 with businesses and operations across the entire spectrum of the
 energy value chain. */}
-						JOSHCALEB WILL PETROLEUM LIMITED is a dynamic international energy
+						JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
 						company focused on delivering a strong commitment to excellence in
 						service delivery and consistently help the Oil & Gas sector achieve
 						success across the entire production and value chain from the
