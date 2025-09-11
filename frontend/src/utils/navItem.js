@@ -216,37 +216,37 @@ export const MenusMobile = [
 		// ],
 		gridCols: 3,
 	},
-	{
-		name: 'sustainability',
-		subMenuHeadeing: '',
-		// subMenu: [
-		// 	{
-		// 		name: 'Quality policy statement',
-		// 		desc: 'our quality policy',
-		// 		icon: Waves,
-		// 		path: '/sustainability/quality-policy-statement',
-		// 	},
-		// 	{
-		// 		name: 'Health Safety & Environment (HSE) Policy',
-		// 		desc: 'health policy',
-		// 		icon: Waves,
-		// 		path: '/sustainability/health-safety-environment-hse-policy',
-		// 	},
-		// 	{
-		// 		name: 'Nigerian Content Execution Strategy',
-		// 		desc: 'news nigeia',
-		// 		icon: Waves,
-		// 		path: 'Nigerian Content Execution Strategy',
-		// 	},
-		// 	{
-		// 		name: 'Our Sustainability Policys',
-		// 		desc: 'sustainability policy',
-		// 		icon: Waves,
-		// 		path: 'Our Sustainability Policys',
-		// 	},
-		// ],
-		gridCols: 2,
-	},
+	// {
+	// 	name: 'sustainability',
+	// 	subMenuHeadeing: '',
+	// 	// subMenu: [
+	// 	// 	{
+	// 	// 		name: 'Quality policy statement',
+	// 	// 		desc: 'our quality policy',
+	// 	// 		icon: Waves,
+	// 	// 		path: '/sustainability/quality-policy-statement',
+	// 	// 	},
+	// 	// 	{
+	// 	// 		name: 'Health Safety & Environment (HSE) Policy',
+	// 	// 		desc: 'health policy',
+	// 	// 		icon: Waves,
+	// 	// 		path: '/sustainability/health-safety-environment-hse-policy',
+	// 	// 	},
+	// 	// 	{
+	// 	// 		name: 'Nigerian Content Execution Strategy',
+	// 	// 		desc: 'news nigeia',
+	// 	// 		icon: Waves,
+	// 	// 		path: 'Nigerian Content Execution Strategy',
+	// 	// 	},
+	// 	// 	{
+	// 	// 		name: 'Our Sustainability Policys',
+	// 	// 		desc: 'sustainability policy',
+	// 	// 		icon: Waves,
+	// 	// 		path: 'Our Sustainability Policys',
+	// 	// 	},
+	// 	// ],
+	// 	gridCols: 2,
+	// },
 	// {
 	// 	name: 'media',
 	// 	subMenuHeadeing: '',

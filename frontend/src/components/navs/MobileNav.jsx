@@ -56,11 +56,12 @@ const MobileNav = ({ menus, scrollToTop }) => {
 					initial={{ x: '-120vw' }}
 					animate={{ x: isOpen ? '0%' : '-120vw' }}>
 					<ul>
-						<li>
+						<li style={{ padding: '10px' }}>
 							<Link to='/who-we-are' onClick={() => setIsOpen(false)}>
 								Who we are
 							</Link>
 						</li>
+
 						{menus?.map(({ name, path, subMenu }, i) => {
 							const hasSubMenu = subMenu?.length > 0;
 							const isClicked = clicked === i;
@@ -100,7 +101,12 @@ const MobileNav = ({ menus, scrollToTop }) => {
 								</FadeInAlways>
 							);
 						})}
-						<li>
+						<li style={{ padding: '10px' }}>
+							<Link to='/sustainability' onClick={() => setIsOpen(false)}>
+								Sustainability
+							</Link>
+						</li>
+						<li style={{ padding: '10px' }}>
 							<Link to='/contact' onClick={() => setIsOpen(false)}>
 								contact
 							</Link>

@@ -19,11 +19,10 @@ const WhoWeAre = () => {
 					<Styles.WhoWeAreHeroOverlay />
 					<img src={picBg} alt='' loading='lazy' />
 
-					<Styles.ContentContent>
 						<FadeInAlways delay={0.5} direction='down'>
-							<h2>Who we are</h2>
+							<h1>Who we are</h1>
 						</FadeInAlways>
-					</Styles.ContentContent>
+
 				</Styles.WhoWeAreHeroContainer>
 
 				<FadeInAlways delay={0.5} direction='down'>

@@ -7,11 +7,57 @@ export const WhoWeAreHeroContainer = styled.div`
 	position: relative;
 	overflow: hidden !important;
 
-
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	h1 {
+		position: absolute !important;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 1000px;
+		width: 100%;
+		color: #fff;
+		z-index: 99;
+		/* backdrop-filter: blur(40px) opacity(1);
+		-webkit-backdrop-filter: blur(10px) opacity(1); */
+		text-align: center;
+		font-size: 8rem !important;
+		border-radius: 20px;
+		padding: 20px;
+	}
+
+	@media screen and (max-width: 1020px) {
+		h1 {
+			font-size: 6rem !important;
+		}
+	}
+
+	@media screen and (max-width: 770px) {
+		h1 {
+			font-size: 4rem !important;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		h1 {
+			font-size: 3rem !important;
+		}
+	}
+
+	@media screen and (max-width: 430px) {
+		h1 {
+			font-size: 2rem !important;
+		}
+	}
+
+	@media screen and (max-width: 310px) {
+		h1 {
+			font-size: 1.5rem !important;
+		}
 	}
 
 	/* h1 {
@@ -36,9 +82,9 @@ export const WhoWeAreHeroContainer = styled.div`
 		}
 	} */
 
-	@media screen and (max-width: 570px) {
-	height: 80vh;
-	}
+	/* @media screen and (max-width: 570px) {
+		height: 80vh;
+	} */
 `;
 export const WhoWeAreHeroOverlay = styled.div`
 	width: 100%;
@@ -53,9 +99,9 @@ export const WhoWeAreHeroOverlay = styled.div`
 	z-index: 9;
 	overflow: hidden !important;
 
-	@media screen and (max-width: 570px) {
+	/* @media screen and (max-width: 570px) {
 		height: 80vh;
-	}
+	} */
 `;
 export const WhoWeAreTitle = styled.div`
 	font-size: 45px;
