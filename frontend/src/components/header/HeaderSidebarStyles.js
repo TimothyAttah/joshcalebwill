@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 export const HeaderSidebarContainer = styled.div`
 `;
 export const HeaderSidebarMenuButton = styled(motion.div)`
-	z-index: 99999;
+	z-index: 9999999;
 	/* position: relative; */
 	position: absolute;
 	right: 20px;
@@ -35,7 +35,7 @@ export const HeaderSidebarNavWrapper = styled(motion.div)`
 	color: #fff;
 	color: #000;
 	padding-top: 120px;
-	z-index: 9;
+	z-index: 999999;
 	padding: 20px;
 	padding-top: 150px;
 	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);

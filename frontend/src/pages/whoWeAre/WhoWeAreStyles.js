@@ -40,7 +40,7 @@ export const WhoWeAreHeroContainer = styled.div`
 	}
 `;
 export const WhoWeAreHeroOverlay = styled.div`
-	
+
 	width: 100%;
 	height: 100vh;
 	position: absolute;
@@ -86,7 +86,7 @@ export const ContentContent = styled.div`
 	max-width: 1000px;
 	width: 100%;
 	color: #fff;
-	z-index: 999999;
+	z-index: 99;
 
 	padding: 48px 40px 40px;
 	border-radius: 16px;

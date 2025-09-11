@@ -7,6 +7,7 @@ export const MobileNavContainer = styled.div`
 `;
 export const MobileMenuButton = styled(motion.div)`
 	z-index: 99999;
+	z-index: 100004;
 	position: relative;
 	position: absolute;
 	right: 20px;
@@ -34,7 +35,7 @@ export const MobileNavWrapper = styled(motion.div)`
 	background-color: var(--brown);
 	color: #fff;
   padding-top: 120px;
-  z-index: 999;
+  z-index: 99999;
 
   &::-webkit-scrollbar {
     display: none;

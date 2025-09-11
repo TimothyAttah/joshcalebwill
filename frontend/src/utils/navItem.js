@@ -159,3 +159,116 @@ export const Menus = [
 		path: '/contact',
 	},
 ];
+
+
+export const MenusMobile = [
+
+	{
+		name: 'what we do',
+		subMenuHeadeing: '',
+		// subMenu: [
+		// 	{
+		// 		name: 'exploration',
+		// 		desc: 'exploration',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/exploration',
+		// 	},
+		// 	{
+		// 		name: 'Haulage Services',
+		// 		desc: 'haulage',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/haulage-services',
+		// 	},
+		// 	{
+		// 		name: 'Procurement Solutions',
+		// 		desc: 'procurement',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/procurement-solutions',
+		// 	},
+		// 	{
+		// 		name: 'Chemical supply and treatments',
+		// 		desc: `we deliver high-quality chemical products and
+		// 		treatment solutions that keep industries running smoothly, safely,
+		// 		and sustainably.`,
+		// 		icon: Pin,
+		// 		path: '/what-we-do/chemical-supply&treatments',
+		// 	},
+		// 	{
+		// 		name: 'Pipeline construction and maintainance',
+		// 		desc: 'pipeline',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/pipeline-construction-and-maintenance',
+		// 	},
+		// 	{
+		// 		name: 'Gas compression services',
+		// 		desc: 'gas',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/gas-compression-services',
+		// 	},
+		// 	{
+		// 		name: 'Health safety and enviromental assessment consultancy',
+		// 		desc: 'health',
+		// 		icon: Pin,
+		// 		path: '/what-we-do/health-and-safety',
+		// 	},
+		// ],
+		gridCols: 3,
+	},
+	{
+		name: 'sustainability',
+		subMenuHeadeing: '',
+		// subMenu: [
+		// 	{
+		// 		name: 'Quality policy statement',
+		// 		desc: 'our quality policy',
+		// 		icon: Waves,
+		// 		path: '/sustainability/quality-policy-statement',
+		// 	},
+		// 	{
+		// 		name: 'Health Safety & Environment (HSE) Policy',
+		// 		desc: 'health policy',
+		// 		icon: Waves,
+		// 		path: '/sustainability/health-safety-environment-hse-policy',
+		// 	},
+		// 	{
+		// 		name: 'Nigerian Content Execution Strategy',
+		// 		desc: 'news nigeia',
+		// 		icon: Waves,
+		// 		path: 'Nigerian Content Execution Strategy',
+		// 	},
+		// 	{
+		// 		name: 'Our Sustainability Policys',
+		// 		desc: 'sustainability policy',
+		// 		icon: Waves,
+		// 		path: 'Our Sustainability Policys',
+		// 	},
+		// ],
+		gridCols: 2,
+	},
+	// {
+	// 	name: 'media',
+	// 	subMenuHeadeing: '',
+	// 	subMenu: [
+	// 		{
+	// 			name: 'News Blog & Articles',
+	// 			desc: 'News Blog & Articles',
+	// 			icon: Clapperboard,
+	// 			path: '/News Blog & Articles',
+	// 		},
+	// 		{
+	// 			name: 'Events & Pictures Gallery',
+	// 			desc: 'Events & Pictures Gallery',
+	// 			icon: Clapperboard,
+	// 			path: '/Events & Pictures Gallery',
+	// 		},
+	// 		{
+	// 			name: 'Career Opportunities',
+	// 			desc: 'Career Opportunities',
+	// 			icon: Clapperboard,
+	// 			path: '/Career Opportunities',
+	// 		},
+	// 	],
+	// 	gridCols: 2,
+	// },
+	
+];
