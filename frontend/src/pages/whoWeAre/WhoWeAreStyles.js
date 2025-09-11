@@ -5,6 +5,7 @@ export const WhoWeAreHeroContainer = styled.div`
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	overflow: hidden !important;
 
 
 	img {
@@ -40,7 +41,6 @@ export const WhoWeAreHeroContainer = styled.div`
 	}
 `;
 export const WhoWeAreHeroOverlay = styled.div`
-
 	width: 100%;
 	height: 100vh;
 	position: absolute;
@@ -51,9 +51,10 @@ export const WhoWeAreHeroOverlay = styled.div`
 	/* background: rgba(0, 0, 0, 0.7); */
 	background: #05050540;
 	z-index: 9;
+	overflow: hidden !important;
 
 	@media screen and (max-width: 570px) {
-		height: 60vh;
+		height: 80vh;
 	}
 `;
 export const WhoWeAreTitle = styled.div`
@@ -66,6 +67,7 @@ export const WhoWeAreTitle = styled.div`
 	max-width: 1093px;
 	width: 90%;
 	padding-top: 99px;
+	overflow: hidden !important;
 
 	@media screen and (max-width: 570px) {
 		font-size: 30px;
@@ -104,6 +106,7 @@ export const ContentContent = styled.div`
 		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
 	/* opacity: 0.7; */
 	/* backdrop-filter: 60px; */
+	overflow: hidden !important;
 
 	h2 {
 		font-weight: bold;
@@ -133,7 +136,6 @@ export const ContentContent = styled.div`
 			line-height: 3.4rem !important;
 			letter-spacing: -0.013em !important;
 		}
-
 	}
 `;
 
@@ -146,6 +148,7 @@ export const WhoWeAreValuesPic = styled.div`
 	width: 100%;
 	margin: auto;
 	animation: rotate 20s linear infinite;
+	overflow: hidden !important;
 
 	img {
 		width: 100%;
@@ -182,6 +185,7 @@ export const WhoWeAreValuesItem = styled.div`
 	border-radius: 10px;
 	border: 1px solid #ccc;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+	overflow: hidden !important;
 
 	h4 {
 		color: var(--color1);
@@ -253,20 +257,15 @@ export const WhoWeAreValuesItem = styled.div`
 		}
 
 		ul {
-
-
 			div {
 				height: 50px;
 				padding: 10px;
-
-
 			}
 		}
 	}
 `;
 
 export const WhoWeAreValueImg = styled.div`
-
 		width: 100%;
 		height: 300px;
 		img {
