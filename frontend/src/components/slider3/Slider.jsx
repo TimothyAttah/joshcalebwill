@@ -7,6 +7,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import * as Styles from './SliderStyles';
 import { Link } from 'react-router-dom';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
+import { FadeInCommon } from '../fadeIn/FadeInCommon';
 
 const EmblaCarousel = () => {
 	const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
@@ -43,33 +44,56 @@ const EmblaCarousel = () => {
 			<div className='embla' ref={viewportRef}>
 				<div className='embla__container'>
 					{slides.map((slide, index) => (
-						<Styles.Slide className='embla__slide' key={ index }>
-							<Styles.SliderOverlay/>
-							<video src={slide.vic} autoPlay muted loop playsInline />
+						<Styles.Slide className='embla__slide' key={index}>
+							<Styles.SliderOverlay />
+							{slide.srcType === 'image' ? (
+								<img src={slide.vic} alt='' />
+							) : (
+								<video src={slide.vic} autoPlay muted loop playsInline />
+							)}
+
 							<Styles.SlideContent>
-								<FadeInAlways
-									delay={0.4}
-									direction={
-										slide.slidePosition === 'slide1'
-											? 'down'
-											: slide.slidePosition === 'slide3'
-											? 'up'
-											: 'right'
-									}>
-									<FadeInAlways delay={0.2} direction='left'>
+								<FadeInCommon delay={0.6} direction='right' fullWidth='tru'>
+									<Styles.SlideContentWrapper>
 										<h2>{slide.title}</h2>
-									</FadeInAlways>
-									<FadeInAlways delay={0.4} direction='left'>
+										<FadeInAlways delay={0.2} direction='left'></FadeInAlways>
+
+										<FadeInAlways delay={0.6} direction='left'>
+											<p>{slide.desc}</p>
+										</FadeInAlways>
+										<FadeInAlways delay={0.8} direction='left'>
+											<Link>Who we are</Link>
+										</FadeInAlways>
+									</Styles.SlideContentWrapper>
+								</FadeInCommon>
+							</Styles.SlideContent>
+
+							{/* <FadeInAlways delay={0.4} direction='right'>
+								<Styles.SlideContent>
+									<FadeInAlways
+										delay={0.4}
+										direction={
+											slide.slidePosition === 'slide1'
+												? 'down'
+												: slide.slidePosition === 'slide3'
+												? 'up'
+												: 'right'
+										}>
+										<FadeInAlways delay={0.2} direction='left'>
+											<h2>{slide.title}</h2>
+										</FadeInAlways>
+										<FadeInAlways delay={0.4} direction='left'>
 										<h5>{slide.subtitle}</h5>
 									</FadeInAlways>
-									<FadeInAlways delay={0.6} direction='left'>
-										<p>{slide.desc}</p>
+										<FadeInAlways delay={0.6} direction='left'>
+											<p>{slide.desc}</p>
+										</FadeInAlways>
+										<FadeInAlways delay={0.8} direction='left'>
+											<Link>Who we are</Link>
+										</FadeInAlways>
 									</FadeInAlways>
-									<FadeInAlways delay={0.8} direction='left'>
-										<Link>Who we are</Link>
-									</FadeInAlways>
-								</FadeInAlways>
-							</Styles.SlideContent>
+								</Styles.SlideContent>
+							</FadeInAlways> */}
 						</Styles.Slide>
 					))}
 				</div>

@@ -72,6 +72,50 @@ export const SustainabilityHeroOverlay = styled.div`
 	z-index: 9;
 	overflow: hidden !important;
 `;
+
+export const SustainabilityIntroSection = styled.div`
+	/* max-width: 1000px; */
+	width: 100%;
+	margin: 0px auto;
+	/* margin-top: 90px; */
+	padding: 100px;
+	text-align: center;
+	background-color: #ddd;
+
+	h4,
+	h3 {
+		color: var(--color2);
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+
+	h3 {
+		display: none;
+	}
+
+	p {
+		font-size: 22px;
+		color: #463636;
+	}
+
+	@media screen and (max-width: 570px) {
+		text-align: center;
+		padding: 100px 20px;
+
+		h4 {
+			display: none;
+		}
+
+		h3 {
+			font-size: 22px;
+			display: block;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+`;
 export const SustainabilityContentsContainer = styled.div``;
 export const SustainabilityFirstSection = styled.div`
 	display: flex;
@@ -344,3 +388,86 @@ export const SustainabilityFourthListItem = styled.div`
 	}
 `;
 // export const SustainabilityContainer = styled.div``;
+export const SustainabilityListWrapper = styled.div`
+	max-width: 1400px;
+	width: 100%;
+	margin: 50px auto;
+`;
+export const SustainabilityListItem = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	padding: 50px 10px;
+
+	${(props) =>
+		props.primary &&
+		css`
+			flex-direction: row-reverse;
+		`}
+
+	@media screen and (max-width: 900px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+`;
+export const SustainabilityListItemImgBox = styled.div`
+	max-width: 600px;
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+	@media screen and (max-width: 420px) {
+		max-width: 100%;
+	}
+`;
+
+export const SustainabilityListItemImg = styled.div`
+	width: 100%;
+	height: 350px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+`;
+export const SustainabilityListItemContent = styled.div`
+	max-width: 700px;
+	width: 100%;
+
+	h4 {
+		color: var(--color2);
+		font-size: 28px;
+		padding-bottom: 10px;
+		letter-spacing: 0;
+	}
+
+	p {
+		font-size: 22px;
+		color: #463636;
+	}
+
+	ul {
+		padding: 0;
+		li {
+			padding: 5px 0;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		h4,
+		p {
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: 420px) {
+		max-width: 100%;
+	}
+`;

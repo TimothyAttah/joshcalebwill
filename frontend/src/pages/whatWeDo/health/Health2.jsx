@@ -29,7 +29,7 @@ const Health2 = () => {
 			<Styles.HealthIntroSection>
 				<h4>HEALTH SAFETY AND ENVIRONMENTAL ASSESSMENT CONSULTANCY:</h4>
 				<p>
-					The oil and gas environment is a very volatile one, hence the need for
+					The petroluem environment is a very volatile one, hence the need for
 					consultancy services for organizations in the areas of Environment,
 					Health and Safety for Workers and the Environment. We establish
 					systems and policies that help in the safety and maintenance of oil
@@ -123,7 +123,7 @@ const Health2 = () => {
 							<span>
 								<FaDotCircle />
 							</span>
-							Reduces the risk of costly accidents, penalties, and reputational
+							Reduces the risk of accidents, penalties, and reputational
 							damage.
 						</li>
 						<li>

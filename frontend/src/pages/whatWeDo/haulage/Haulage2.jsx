@@ -82,9 +82,11 @@ const Haulage2 = () => {
 					<h2>We offer:</h2>
 					<h4>Competitive pricing</h4>
 					<p>
-						An extensive range of fuel products including petrol, diesel,
+						An extensive range of fuel petroluem products including petrol, diesel,
+						gasoil, marine gasoil and kerosene.
+						{/*
 						biodiesel as B100 and also as B20 and B30 blends, bioethanol,
-						ultra-low sulphur gasoil, marine gasoil and kerosene.
+						ultra-low sulphur */}
 					</p>
 				</Styles.HaulageService>
 				<Styles.HaulageService>

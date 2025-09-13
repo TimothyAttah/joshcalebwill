@@ -19,7 +19,7 @@ const History = () => {
 				<Styles.HistoryContentContainer>
 					<FadeInAlways delay={0.4} direction='right'>
 						<p>
-							JOSHCALEB WILL PETROLEUM LIMITED is a dynamic international energy
+							JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
 							company focused on delivering a strong commitment to excellence in
 							service delivery and consistently help the Oil & Gas sector
 							achieve success across the entire production and value chain from
@@ -33,7 +33,7 @@ const History = () => {
 							quality service using the latest technologies and innovations in
 							delivering optimum service excellence to our clients. With our
 							experienced professionals and strategic global partners,
-							JOSHCALEBWIL PETROLEUM LIMITED is committed to client satisfaction
+							JOSHCALEBWILL PETROLEUM LIMITED is committed to client satisfaction
 							and quality performance which guarantees our clients’ confidence
 							in the oil and gas business every step of the way.
 						</p>
@@ -43,7 +43,7 @@ const History = () => {
 						<p>
 							Though the Company was incorporated on the 4th of September 2014,
 							it commenced operation in 2019. The wealth of the Management team
-							and staff of JOSHCALEBWIL who offer value driven services to
+							and staff of JOSHCALEBWILL who offer value driven services to
 							clients has made us stand out in our approach and expertise. We
 							offer our clients a wide range of quality services in the oil and
 							gas industry. Our team of highly skilled professionals and
@@ -55,7 +55,7 @@ const History = () => {
 
 					<FadeInAlways delay={0.6} direction='right'>
 						<p>
-							JoshCalebWil Petroleum Limited has an array of well experienced
+							Joshcalebwill Petroleum Limited has an array of well experienced
 							and reputable engineers and allied professionals who combine to
 							bring their considerable talents to engineering studies, planning,
 							design, procurement and project management to bear on all our
@@ -78,7 +78,7 @@ const History = () => {
 
 					<FadeInAlways delay={0.8} direction='right'>
 						<p>
-							JoshCalebWil Petroleum Limited was incorporated with Corporate
+							Joshcalebwill Petroleum Limited was incorporated with Corporate
 							Affairs Commission (CAC) to carry on business as an Oil & Gas
 							Company. Our capacity resides in our staff. Each staff member is
 							highly skilled, talented, dedicated and qualified by education,

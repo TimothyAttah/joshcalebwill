@@ -19,13 +19,13 @@ export const Slide = styled.div`
 	position: relative;
 	overflow: hidden !important;
 
-
-
-	img, video {
+	img,
+	video {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		z-index: -1;
+		transition: 0.5s ease all;
 
 		/* animation: zoom 10s linear forwards infinite !important; */
 		/* animation: zoom 15s linear both infinite !important; */
@@ -38,6 +38,22 @@ export const Slide = styled.div`
 				transform: scale(1);
 			}
 		} */
+	}
+
+	img {
+		animation: zoom 15s linear forwards infinite !important;
+		/* animation: rotate 20s linear infinite; */
+		transition: 0.5s ease all;
+		transition-delay: 1;
+
+		@keyframes zoom {
+			0% {
+				transform: scale(0.5);
+			}
+			100% {
+				transform: scale(1.2);
+			}
+		}
 	}
 
 	${(props) =>
@@ -84,6 +100,13 @@ export const Slide = styled.div`
 			background-repeat: no-repeat;
 			background-position: center;
 		`}
+
+		div {
+		div {
+			/* opacity: 1 !important; */
+			/* transform: translateX(-100) !important; */
+		}
+	}
 `;
 
 export const SliderOverlay = styled.div`
@@ -98,39 +121,28 @@ export const SliderOverlay = styled.div`
 	z-index: 9;
 `;
 
+export const SlideContentBox = styled.div``
+
 export const SlideContent = styled.div`
 	position: absolute !important;
-	bottom: 50px;
+	bottom: 100px;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 1000px;
-	width: 100%;
-	color: #fff;
-	z-index: 999999;
+	/* max-width: 800px; */
 
-	padding: 48px 40px 40px;
-	border-radius: 16px;
-	backdrop-filter: blur(40px) opacity(1);
-	-webkit-backdrop-filter: blur(10px) opacity(1);
 
-	/* transform: translateX(0); */
-	background-color: #0b2d7180;
-	background: #00813299;
-	/* background: var(--main-color); */
-	opacity: 1;
-	/* z-index: 3; */
-	pointer-events: all;
-	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
-		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
-	/* opacity: 0.7; */
-	/* backdrop-filter: 60px; */
 
 	h2 {
 		font-weight: bold;
 		color: #fff;
 		text-align: center;
 		font-size: 6.4rem !important;
+		font-size: 4.4rem !important;
+
 		line-height: 6.8rem !important;
+		line-height: 5.8rem !important;
+
 		letter-spacing: -0.013em !important;
 		text-transform: lowercase;
 		animation: text 1s ease forwards;
@@ -144,23 +156,25 @@ export const SlideContent = styled.div`
 	}
 
 	p {
-		font-size: 16px;
-		line-height: 1.4;
+		font-size: 22px;
+		line-height: 1.5;
 		padding-top: 10px;
 		font-weight: bold;
 		color: #fff;
+		text-align: center;
 		animation: text 3s ease forwards;
 	}
 
 	div a {
 		width: 200px;
 		height: 50px;
+		margin: auto;
 		background-color: #fff;
 		color: var(--primary-color);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 20px 0;
+		margin: 20px auto;
 		text-transform: uppercase;
 		font-weight: bold;
 		border-radius: 10px;
@@ -220,21 +234,33 @@ export const SlideContent = styled.div`
 			height: 40px;
 			font-size: 12px;
 			margin: 20px 0;
-      margin: auto;
+			margin: auto;
 		}
 	}
 `;
 
 export const SlideContentWrapper = styled.div`
-	display: flex;
-	gap: 50px;
-	align-items: center;
-	justify-content: center;
-	z-index: 999;
 	width: 100%;
-	position: absolute;
-	width: 100%;
-	top: 50px;
+	color: #fff;
+	z-index: 999999;
+
+	padding: 48px 40px 40px;
+	padding: 10px;
+	border-radius: 16px;
+	backdrop-filter: blur(40px) opacity(1);
+	-webkit-backdrop-filter: blur(10px) opacity(1);
+
+	/* transform: translateX(0); */
+	background-color: #0b2d7180;
+	background: #00813299;
+	/* background: var(--main-color); */
+	opacity: 1;
+	/* z-index: 3; */
+	pointer-events: all;
+	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
+		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
+	/* opacity: 0.7; */
+	/* backdrop-filter: 60px; */
 `;
 
 export const SlideContentImg = styled.div`

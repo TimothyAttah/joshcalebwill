@@ -89,8 +89,8 @@ const Contact = () => {
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📞 Phone:</h4>
-						<p>+2348023169986</p>
-						<p>+2348162073680</p>
+						<p>+2347077077529</p>
+						<p>+2349071209050</p>
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📧 Email:</h4>
