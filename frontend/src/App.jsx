@@ -7,18 +7,18 @@ import TheTeam from './pages/whoWeAre/theTeam/TheTeam';
 import RecentAndPast from './pages/whoWeAre/recentAndPast/RecentAndPast';
 import FirstChoice from './pages/whoWeAre/firstChoice/FirstChoice';
 import TodayArticle from './pages/whoWeAre/todayArticle/TodayArticle';
-import ChemicalSupply from './pages/whatWeDo/chemicalSupply/ChemicalSupply';
-import Exploration from './pages/whatWeDo/exploration/Exploration';
-import Pipeline from './pages/whatWeDo/pipeline/Pipeline';
-import Gas from './pages/whatWeDo/gas/Gas';
-import Health from './pages/whatWeDo/health/Health';
+import ChemicalSupply from './pages/whatWeDo/chemicalSupply/Chemical';
+import Exploration from './pages/whatWeDo/exploration/Exploration2';
+import Pipeline from './pages/whatWeDo/pipeline/Pipeline2';
+import Gas from './pages/whatWeDo/gas/Gas2';
+import Health from './pages/whatWeDo/health/Health2';
+import Haulage from './pages/whatWeDo/haulage/Haulage2';
 import Contact from './pages/contact/Contact';
-import Procurement from './pages/whatWeDo/procurement/Procurement';
+import Procurement from './pages/whatWeDo/procurement/Procurement2';
 import Market from './pages/market/Market';
 import ProductItem from './pages/products/ProductItem';
 import QualityPolicy from './pages/sustainability/qualityPolicy/QualityPolicy';
 import HealthPolicy from './pages/sustainability/healthPolicy/HealthPolicy';
-import Haulage from './pages/whatWeDo/haulage/Haulage';
 import Cart from './pages/cart/Cart';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
@@ -29,10 +29,12 @@ import PlaceOrder from './pages/placeOrder/PlaceOrder';
 import Order from './pages/order/Order';
 import WhoWeAre from './pages/whoWeAre/WhoWeAre';
 import Sustainability from './pages/sustainability/Sustainability';
+import Cookie from './components/Cookie';
 
 const App = () => {
 	return (
 		<>
+			{/* <Cookie/> */}
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HealthPolicyContainer = styled.div`
   width: 100%;
-  background: var(--color-dark-blue);
+  background: var(--color4);
   color: #fff;
   padding-top: 150px;
 `;
@@ -20,8 +20,8 @@ export const HealthPolicyTitle = styled.div`
 `;
 
 export const TitleBox = styled.div`
-	width: 500px;
-	background-color: gray;
+	width: 100%;
+	background-color: var(--color2);
 	padding: 20px;
 	text-align: center;
 	display: flex;
@@ -30,6 +30,8 @@ export const TitleBox = styled.div`
 
 	h1 {
 		padding-bottom: 10px;
+    color: #fff;
+    letter-spacing: 0;
 	}
 `;
 export const HealthPolicyItemWrapper = styled.div`

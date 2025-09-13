@@ -23,14 +23,14 @@ const HealthPolicy = () => {
 							</p>
 						</FadeInAlways>
 					</Styles.TitleBox>
-					<FadeInAlways delay={0.4} direction='left'>
+					{/* <FadeInAlways delay={0.4} direction='left'>
 						<img src={hse1} alt='' loading='lazy' />
-					</FadeInAlways>
+					</FadeInAlways> */}
 				</Styles.HealthPolicyTitle>
 			</FadeInAlways>
 			<Styles.HealthPolicyItemWrapper>
 				{healthPolicyData.map((item, i) => (
-					<FadeInAlways delay={0.1 * i + 1} direction='right'>
+					<FadeInAlways key={i} delay={0.1 * i + 1} direction='right'>
 						<Styles.HealthPolicyItem>
 							<FaCheckCircle />
 							<p>{item}</p>

@@ -50,52 +50,52 @@ export const Menus = [
 	{
 		name: 'what we do',
 		subMenuHeadeing: '',
-		// subMenu: [
-		// 	{
-		// 		name: 'exploration',
-		// 		desc: 'exploration',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/exploration',
-		// 	},
-		// 	{
-		// 		name: 'Haulage Services',
-		// 		desc: 'haulage',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/haulage-services',
-		// 	},
-		// 	{
-		// 		name: 'Procurement Solutions',
-		// 		desc: 'procurement',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/procurement-solutions',
-		// 	},
-		// 	{
-		// 		name: 'Chemical supply and treatments',
-		// 		desc: `we deliver high-quality chemical products and
-		// 		treatment solutions that keep industries running smoothly, safely,
-		// 		and sustainably.`,
-		// 		icon: Pin,
-		// 		path: '/what-we-do/chemical-supply&treatments',
-		// 	},
-		// 	{
-		// 		name: 'Pipeline construction and maintainance',
-		// 		desc: 'pipeline',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/pipeline-construction-and-maintenance',
-		// 	},
-		// 	{
-		// 		name: 'Gas compression services',
-		// 		desc: 'gas',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/gas-compression-services',
-		// 	},
-		// 	{
-		// 		name: 'Health safety and enviromental assessment consultancy',
-		// 		desc: 'health',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/health-and-safety',
-		// 	},
-		// ],
+		subMenu: [
+			{
+				name: 'exploration',
+				desc: 'exploration',
+				icon: Pin,
+				path: '/what-we-do/exploration',
+			},
+			{
+				name: 'Haulage Services',
+				desc: 'haulage',
+				icon: Pin,
+				path: '/what-we-do/haulage-services',
+			},
+			{
+				name: 'Procurement Solutions',
+				desc: 'procurement',
+				icon: Pin,
+				path: '/what-we-do/procurement-solutions',
+			},
+			{
+				name: 'Chemical supply and treatments',
+				desc: `we deliver high-quality chemical products and
+				treatment solutions that keep industries running smoothly, safely,
+				and sustainably.`,
+				icon: Pin,
+				path: '/what-we-do/chemical-supply&treatments',
+			},
+			{
+				name: 'Pipeline construction and maintainance',
+				desc: 'pipeline',
+				icon: Pin,
+				path: '/what-we-do/pipeline-construction-and-maintenance',
+			},
+			{
+				name: 'Gas compression services',
+				desc: 'gas',
+				icon: Pin,
+				path: '/what-we-do/gas-compression-services',
+			},
+			{
+				name: 'Health safety and enviromental assessment consultancy',
+				desc: 'health',
+				icon: Pin,
+				path: '/what-we-do/health-and-safety',
+			},
+		],
 		gridCols: 3,
 	},
 	{
@@ -168,52 +168,52 @@ export const MenusMobile = [
 	{
 		name: 'what we do',
 		subMenuHeadeing: '',
-		// subMenu: [
-		// 	{
-		// 		name: 'exploration',
-		// 		desc: 'exploration',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/exploration',
-		// 	},
-		// 	{
-		// 		name: 'Haulage Services',
-		// 		desc: 'haulage',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/haulage-services',
-		// 	},
-		// 	{
-		// 		name: 'Procurement Solutions',
-		// 		desc: 'procurement',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/procurement-solutions',
-		// 	},
-		// 	{
-		// 		name: 'Chemical supply and treatments',
-		// 		desc: `we deliver high-quality chemical products and
-		// 		treatment solutions that keep industries running smoothly, safely,
-		// 		and sustainably.`,
-		// 		icon: Pin,
-		// 		path: '/what-we-do/chemical-supply&treatments',
-		// 	},
-		// 	{
-		// 		name: 'Pipeline construction and maintainance',
-		// 		desc: 'pipeline',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/pipeline-construction-and-maintenance',
-		// 	},
-		// 	{
-		// 		name: 'Gas compression services',
-		// 		desc: 'gas',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/gas-compression-services',
-		// 	},
-		// 	{
-		// 		name: 'Health safety and enviromental assessment consultancy',
-		// 		desc: 'health',
-		// 		icon: Pin,
-		// 		path: '/what-we-do/health-and-safety',
-		// 	},
-		// ],
+		subMenu: [
+			{
+				name: 'exploration',
+				desc: 'exploration',
+				icon: Pin,
+				path: '/what-we-do/exploration',
+			},
+			{
+				name: 'Haulage Services',
+				desc: 'haulage',
+				icon: Pin,
+				path: '/what-we-do/haulage-services',
+			},
+			{
+				name: 'Procurement Solutions',
+				desc: 'procurement',
+				icon: Pin,
+				path: '/what-we-do/procurement-solutions',
+			},
+			{
+				name: 'Chemical supply and treatments',
+				desc: `we deliver high-quality chemical products and
+				treatment solutions that keep industries running smoothly, safely,
+				and sustainably.`,
+				icon: Pin,
+				path: '/what-we-do/chemical-supply&treatments',
+			},
+			{
+				name: 'Pipeline construction and maintainance',
+				desc: 'pipeline',
+				icon: Pin,
+				path: '/what-we-do/pipeline-construction-and-maintenance',
+			},
+			{
+				name: 'Gas compression services',
+				desc: 'gas',
+				icon: Pin,
+				path: '/what-we-do/gas-compression-services',
+			},
+			{
+				name: 'Health safety and enviromental assessment consultancy',
+				desc: 'health',
+				icon: Pin,
+				path: '/what-we-do/health-and-safety',
+			},
+		],
 		gridCols: 3,
 	},
 	// {
