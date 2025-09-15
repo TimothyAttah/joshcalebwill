@@ -7,6 +7,10 @@ import pix4 from '../../assets/pipe5.jpg';
 import picHealth from '../../assets/newGas2.png';
 import vicHealth from '../../assets/vicHealth.webm';
 import vicHealth1 from '../../assets/vicHealth1.webm';
+import vicSlider1 from '../../assets/vicSlider1.mp4';
+import vicSlider2 from '../../assets/vicSlider2.mp4';
+
+
 
 import vicHaulage from '../../assets/vicHaulage1.webm';
 import vicGas from '../../assets/vicGas.webm';
@@ -19,7 +23,7 @@ export const slides = [
 		subtitle: 'Safe.Reliable.Sustainable',
 		desc: ' we specialize in supporting offshore oil and gas operations with safe, efficient, and reliable services.',
 		// src: pix1,
-		vic: vicOffshore,
+		vic: vicSlider1,
 		srcType: 'video',
 		slidePosition: 'slide1',
 	},
@@ -38,7 +42,7 @@ export const slides = [
 		desc: '	Our Gas Compression Services ensure optimal pressure levels for the safe and efficient transport of natural gas.',
 		src: pix3,
 		srcType: 'video',
-		vic: vicGas,
+		vic: vicSlider2,
 		slidePosition: 'slide3',
 	},
 	{

@@ -62,10 +62,10 @@ const Sustainability = () => {
 			</Styles.SustainabilityHeroContainer>
 
 			<Styles.SustainabilityIntroSection>
-				<h4>🌍 Sustainability at Joshcalebwill At Joshcalebwill</h4>
+				<h4>🌍 Sustainability at Joshcalebwill</h4>
 				<p>
 					<p>
-						At Joshcalebwill, we place strong emphasis on creating positive
+						We place strong emphasis on creating positive
 						impact in the environments where we operate. We are committed to
 						building and nurturing lasting relationships with communities,
 						acting as a responsible partner, and supporting initiatives that
