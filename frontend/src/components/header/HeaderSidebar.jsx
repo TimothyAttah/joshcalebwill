@@ -27,8 +27,8 @@ const HeaderSidebar = () => {
 		},
 	};
 	return (
-    <>
-      {isOpen && <Overlay onClick={()=> setIsOpen(false)}/>}
+		<>
+			{isOpen && <Overlay onClick={() => setIsOpen(false)} />}
 			<Styles.HeaderSidebarContainer>
 				<Styles.HeaderSidebarMenuButton>
 					<Hamburger
@@ -64,8 +64,8 @@ const HeaderSidebar = () => {
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>📞 Phone:</h4>
-							<p>+2348023169986</p>
-							<p>+2348162073680</p>
+							<p>+2347077077529</p>
+							<p>+2349071209050</p>
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>📧 Email:</h4>
