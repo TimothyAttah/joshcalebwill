@@ -19,6 +19,9 @@ const History = () => {
 				<Styles.HistoryContentContainer>
 					<FadeInAlways delay={0.4} direction='right'>
 						<p>
+							JOSHCALEBWILL PETROLEUM LIMITED is dynamic international energy{' '}
+						</p>
+						{/* <p>
 							JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
 							company focused on delivering a strong commitment to excellence in
 							service delivery and consistently help the Oil & Gas sector
@@ -33,15 +36,32 @@ const History = () => {
 							quality service using the latest technologies and innovations in
 							delivering optimum service excellence to our clients. With our
 							experienced professionals and strategic global partners,
-							JOSHCALEBWILL PETROLEUM LIMITED is committed to client satisfaction
-							and quality performance which guarantees our clients’ confidence
-							in the oil and gas business every step of the way.
+							JOSHCALEBWILL PETROLEUM LIMITED is committed to client
+							satisfaction and quality performance which guarantees our clients’
+							confidence in the oil and gas business every step of the way.
+						</p> */}
+						<p>
+							JOSHCALEBWILL PETROLEUM LIMITED is dynamic international energy
+							company founded on a strong commitment to excellence in service
+							delivery and consultancy within the Oil & Gas sector. We operate
+							as an integrated solutions provider, offering bespoke services
+							that span the full spectrum of the industry-from upstream
+							explorarion to infrastructure development and maintainance. Our
+							expertise covers oil and gas operations, pipeline construction,
+							petroluem engineering, equipment manufactoring, and environmental
+							consultancy, among others. Driven by innovation, safety, and
+							integrity, we are dedicated to meeting the complex demands of the
+							energy landscape through strategic solutions, advanced
+							technologies, and a deep understanding of industry standards. At
+							JOSHCALEBWILL PETROLEUM LIMITED, we don't just meet
+							expectations-we exceed them, ensuring our clients recieve
+							sustainable and value-driven outcomes every step of the way.
 						</p>
 					</FadeInAlways>
 
 					<FadeInAlways delay={0.5} direction='right'>
-						<p>
-							Though the Company was incorporated on the 4th of September 2014,
+						{/* <p>
+							Though the Company was incorporated on the 5th of September, 2014,
 							it commenced operation in 2019. The wealth of the Management team
 							and staff of JOSHCALEBWILL who offer value driven services to
 							clients has made us stand out in our approach and expertise. We
@@ -50,25 +70,24 @@ const History = () => {
 							engineers ensures that our clients' needs and satisfaction are
 							met. We approach all our operations and executions one client at a
 							time.
+						</p> */}
+						<p>
+							Though the Company was incorporated on the 5th of September, 2014, the combined relevant professional experience of the Management is over 100 years. At JOSHCALEBWILL, we offer a wide range of services that cut across the entire value Chain of the Oil and Gas Industry which are administered with dedication to high level of professioanl excellence. Our work disciplines are organized into projects. Highly experience Project managers head every project and operations are integrated via our state of environment.
 						</p>
 					</FadeInAlways>
 
 					<FadeInAlways delay={0.6} direction='right'>
 						<p>
-							Joshcalebwill Petroleum Limited has an array of well experienced
-							and reputable engineers and allied professionals who combine to
-							bring their considerable talents to engineering studies, planning,
-							design, procurement and project management to bear on all our
-							services.
+							Joshcalebwill Petroleum Limited has an array of well trained and experienced Engineers and allied Professionals hwo are poised to bring thier considerable experiences in projects studies, planning, design, construction, supervision and management to bear on any project we handle.
 						</p>
 					</FadeInAlways>
 
 					<FadeInAlways delay={0.7} direction='right'>
 						<p>
-							We adopt best practices, processes, systems and standards in our
+							We adopt global best practices, processes, systems and standards in our
 							Project execution to ensure that we deliver Project Scope on time
 							and within Budget. We use traditional, hybrid and computerized
-							methods in Feasibility Analysis, Design and
+							methods in Project Analysis, Design and
 							Execution/Construction. Our innovative approach to Project
 							execution derives from our dedication to continually strive
 							towards excellence and surpassing Client’s expectations as
@@ -83,8 +102,8 @@ const History = () => {
 							Company. Our capacity resides in our staff. Each staff member is
 							highly skilled, talented, dedicated and qualified by education,
 							training and experience. Our management is highly committed to
-							total Quality Control and provides same by continuously training
-							its staff in their area of identified training needs that align
+							total Quality Control and provides such by continuously training
+							its staff in their areas of identified training needs that align
 							with the Corporate goals and objectives.
 						</p>
 					</FadeInAlways>

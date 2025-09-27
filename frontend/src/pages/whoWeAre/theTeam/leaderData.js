@@ -47,7 +47,7 @@ export const leaderData = [
 		leaderTitle: 'Director of finance & admin',
 		leaderPic: leaderPix3,
 		leaderInfo: ` A dynamic qualified
-    ACCA Accountant who is well-focused and result-oriented with an
+    ICAN Accountant and an MBA from University of Nigeria who is well-focused and result-oriented with an
     impeccable track record of bookkeeping, Fund Accounting, Pension Fund
     Accounting and Financial statement production. He holds a Higher
     National Diploma in Accounting from the Institute of Management and

@@ -96,12 +96,7 @@ export const GlobalStyles = createGlobalStyle`
 	width: 100% !important;
   }
 
-  .embla {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
 
-}
 .embla__container {
   display: flex;
   width: 100%;
@@ -115,6 +110,5 @@ export const GlobalStyles = createGlobalStyle`
 .line {
   transform: translateY(100%);
   will-change: transform;
-
 }
 `;

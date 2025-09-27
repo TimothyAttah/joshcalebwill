@@ -2,6 +2,12 @@ import styled, {css} from 'styled-components';
 import {motion} from 'framer-motion'
 
 export const HeaderSidebarContainer = styled.div`
+	.embla {
+		overflow: hidden;
+		position: relative;
+		height: 300px;
+		/* height: 100vh; */
+	}
 `;
 export const HeaderSidebarMenuButton = styled(motion.div)`
 	z-index: 9999999;

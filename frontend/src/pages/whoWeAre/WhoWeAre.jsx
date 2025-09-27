@@ -19,10 +19,9 @@ const WhoWeAre = () => {
 					<Styles.WhoWeAreHeroOverlay />
 					<img src={picBg} alt='' loading='lazy' />
 
-						<FadeInAlways delay={0.5} direction='down'>
-							<h1>Who we are</h1>
-						</FadeInAlways>
-
+					<FadeInAlways delay={0.5} direction='down'>
+						<h1>Who we are</h1>
+					</FadeInAlways>
 				</Styles.WhoWeAreHeroContainer>
 
 				<FadeInAlways delay={0.5} direction='down'>
@@ -62,9 +61,9 @@ energy value chain. */}
 								<FadeInAlways delay={0.7} direction='up'>
 									<p>
 										Building long lasting relationships with clients by
-										providing the best Engineering Services through the creation
-										of the Stystems and Models which ensures Quality Assurance,
-										Safety and Satisfaction for our Clients at all times.
+										providing the best engineering service through the creation
+										of system and models which ensures quality assurance,
+										safety and satisfaction for our clients at all times.
 									</p>
 								</FadeInAlways>
 							</Styles.WhoWeAreValuesItem>

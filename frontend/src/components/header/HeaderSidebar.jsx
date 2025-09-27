@@ -1,11 +1,18 @@
 import { Twirl as Hamburger } from 'hamburger-react';
 import * as Styles from './HeaderSidebarStyles';
-import { useState } from 'react';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { useCallback, useState, useEffect } from 'react';
+import { Facebook, Twitter, X, Instagram, LucideX } from 'lucide-react';
+import { FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Overlay from '../Overlay';
-import pix from '../../assets/ai1.jpg';
+import pix1 from '../../assets/ai3.jpg';
+import pix2 from '../../assets/ai5.jpg';
+import pix3 from '../../assets/ai6.jpg';
+
 import logo from '../../assets/logo.jpeg';
+import useEmblaCarousel from 'embla-carousel-react';
+// import './embla.css';
+import Autoplay from 'embla-carousel-autoplay';
 
 const HeaderSidebar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +33,30 @@ const HeaderSidebar = () => {
 			overflow: 'hidden',
 		},
 	};
+
+	const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
+		Autoplay({ delay: 2000 }),
+	]);
+
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	const [scrollSnaps, setScrollSnaps] = useState([]);
+
+	const scrollTo = useCallback(
+		(index) => embla && embla.scrollTo(index),
+		[embla],
+	);
+
+	const onSelect = useCallback(() => {
+		if (!embla) return;
+		setSelectedIndex(embla.selectedScrollSnap());
+	}, [embla, setSelectedIndex]);
+
+	useEffect(() => {
+		if (!embla) return;
+		onSelect();
+		setScrollSnaps(embla.scrollSnapList());
+		embla.on('select', onSelect);
+	}, [embla, setScrollSnaps, onSelect]);
 	return (
 		<>
 			{isOpen && <Overlay onClick={() => setIsOpen(false)} />}
@@ -51,9 +82,19 @@ const HeaderSidebar = () => {
 							</h4>
 						</Link>
 					</Styles.SidebarLogo>
-					<Styles.ImgBox>
-						<img src={pix} alt='' loading='lazy' />
-					</Styles.ImgBox>
+					<div className='embla' ref={viewportRef}>
+						<div className='embla__container'>
+							<Styles.ImgBox className='embla__slide'>
+								<img src={pix1} alt='' loading='lazy' />
+							</Styles.ImgBox>
+							<Styles.ImgBox className='embla__slide'>
+								<img src={pix2} alt='' loading='lazy' />
+							</Styles.ImgBox>
+							<Styles.ImgBox className='embla__slide'>
+								<img src={pix3} alt='' loading='lazy' />
+							</Styles.ImgBox>
+						</div>
+					</div>
 
 					<Styles.InfoWrapper>
 						<Styles.InfoList>
@@ -69,7 +110,7 @@ const HeaderSidebar = () => {
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>📧 Email:</h4>
-							<p>[Insert phone number here]</p>
+							<p>joshcalebwillpetroleumlimited@gmail.com</p>
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>🕒 Office Hours:</h4>
@@ -85,7 +126,7 @@ const HeaderSidebar = () => {
 						</Styles.InfoSocialLink>
 						<Styles.InfoSocialLink>
 							<Link>
-								<Twitter />
+								<FaTwitter />
 							</Link>
 						</Styles.InfoSocialLink>
 						<Styles.InfoSocialLink>

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import * as Styles from './Services2Styles';
 import { services } from './servicesData';
-import {scrollToTop} from '../../../components/header/Header'
+import { scrollToTop } from '../../../components/header/Header';
+import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
 
 const Services2 = () => {
 	return (
@@ -27,20 +28,22 @@ const Services2 = () => {
 				</Styles.ServicesTitleBox>
 				<Styles.ServicesListContainer>
 					{services.map((item, i) => (
-						<Styles.ServicesListItems key={i}>
-							<Styles.ServiceItemImg>
-								<img src={item.pix} alt='' loading='lazy' />
-							</Styles.ServiceItemImg>
-							<h4>{item.title}</h4>
+						<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
+							<Styles.ServicesListItems>
+								<Styles.ServiceItemImg>
+									<img src={item.pix} alt='' loading='lazy' />
+								</Styles.ServiceItemImg>
+								<h4>{item.title}</h4>
 
-							<Link to={item.path } onClick={scrollToTop}>
-								<Styles.ServiceItemDropdown>
-									<h2>{item.title}</h2>
-									<p>{item.desc}</p>
-									<button>Read more</button>
-								</Styles.ServiceItemDropdown>
-							</Link>
-						</Styles.ServicesListItems>
+								<Link to={item.path} onClick={scrollToTop}>
+									<Styles.ServiceItemDropdown>
+										<h2>{item.title}</h2>
+										<p>{item.desc}</p>
+										<button>Read more</button>
+									</Styles.ServiceItemDropdown>
+								</Link>
+							</Styles.ServicesListItems>
+						</FadeInAlways>
 					))}
 				</Styles.ServicesListContainer>
 			</Styles.ServicesWrapper>

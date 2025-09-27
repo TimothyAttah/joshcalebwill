@@ -1,4 +1,10 @@
 
+.embla {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+
+}
 
 .embla__button {
   outline: 0;

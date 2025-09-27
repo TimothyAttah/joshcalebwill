@@ -41,19 +41,43 @@ export const Slide = styled.div`
 	}
 
 	img {
-		animation: zoom 15s linear forwards infinite !important;
+		/* animation: zoom 15s linear forwards infinite !important; */
 		/* animation: rotate 20s linear infinite; */
-		transition: 0.5s ease all;
-		transition-delay: 1;
+		animation: fadeInTop 10s ease-in-out infinite;
+		animation: leftBounce 5s ease-in-out infinite;
 
-		@keyframes zoom {
+		/* transition: 0.5s ease all; */
+		/* transition-delay: 1; */
+
+		@keyframes leftBounce {
+			0%,
+			100% {
+				transform: translateX(0);
+			}
+			50% {
+				transform: translateX(25px);
+			}
+		}
+
+		/* @keyframes fadeInTop {
+			0% {
+				opacity: 0;
+				transform: translateY(-25px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		} */
+
+		/* @keyframes zoom {
 			0% {
 				transform: scale(0.5);
 			}
 			100% {
 				transform: scale(1.2);
 			}
-		}
+		} */
 	}
 
 	${(props) =>
