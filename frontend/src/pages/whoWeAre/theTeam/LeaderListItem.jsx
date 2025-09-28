@@ -12,7 +12,9 @@ const LeaderListItem = ({ item, setOpenLeaderModel }) => {
 				<Styles.LeaderModelInfo>
 					<h2>{item.leaderName}</h2>
 					<h4>{item.leaderTitle}</h4>
-					<p>{item.leaderInfo}</p>
+					{item.leaderInfoData &&
+						item.leaderInfoData.map((text, i) => <p>{text}</p>)}
+					{/* <p>{item.leaderInfo}</p> */}
 				</Styles.LeaderModelInfo>
 			</Styles.LeaderModelWrapper>
 		</Styles.LeaderModelContainer>
