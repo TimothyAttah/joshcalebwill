@@ -14,10 +14,17 @@ const Footer = () => {
 							<Styles.FooterListsItem>
 								{data.navSubmenu.map((item, i) => (
 									<FadeInAlways key={i} delay={0.1 * i + 1} direction='left'>
-										<Link to={item.navPath}>
-											{item.navTitle}
-											{item.navIcon && <item.navIcon />}
-										</Link>
+										{item.target ? (
+											<Link to={item.navPath} target='_blank'>
+												{item.navTitle}
+												{item.navIcon && <item.navIcon />}
+											</Link>
+										) : (
+											<Link to={item.navPath}>
+												{item.navTitle}
+												{item.navIcon && <item.navIcon />}
+											</Link>
+										)}
 									</FadeInAlways>
 								))}
 							</Styles.FooterListsItem>

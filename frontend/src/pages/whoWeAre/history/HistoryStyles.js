@@ -16,6 +16,7 @@ export const HistoryTitleBox = styled.div`
 	small {
 		color: var(--main-color);
 		text-transform: capitalize;
+		font-size: 24px;
 	}
 
 	h2 {
@@ -37,6 +38,12 @@ export const HistoryContentContainer = styled.div`
 
 	h2 {
 		color: var(--main-color);
+	}
+
+	ul li {
+		padding: 10px 0;
+		text-transform: capitalize;
+		list-style-type: decimal-leading-zero;
 	}
 
 	@media screen and (max-width: 570px) {

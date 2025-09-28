@@ -32,18 +32,24 @@ export const footerData = [
 			{
 				navIcon: FaFacebook,
 				navPath: '/contact',
+				target: true,
 			},
 			{
 				navIcon: FaInstagram,
 				navPath: '/contact',
+				target: true,
 			},
 			{
 				navIcon: FaLinkedin,
 				navPath: '/contact',
+				target: true,
 			},
 			{
 				navIcon: FaWhatsapp,
-				navPath: '/contact',
+				// navPath: 'https://wa.link/rbr42a',
+				navPath:
+					'https://wa.me/2347077077529?text=Hello,%20welcome%20to%20Joshcalebwill',
+				target: true,
 			},
 		],
 	},

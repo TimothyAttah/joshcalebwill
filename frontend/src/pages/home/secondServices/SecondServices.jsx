@@ -36,10 +36,13 @@ const SecondServices = () => {
 					<Styles.SecondServiceContentsBox className='content-wrapper'>
 						<div className='title'>
 							<FadeInAlways delay={0.1} direction='down'>
-								<small>JOSHCALEB WILL PETROLEUM LIMITED</small>
+								<small>Joshcalebwill Petroluem Limited</small>
 							</FadeInAlways>
 							<FadeInAlways delay={0.2} direction='up'>
-								<h2>We are a Leading Petroluem Company in Nigeria</h2>
+								<h2>
+									We are a dynamic and forward-thinking international energy
+									company in Nigeria
+								</h2>
 							</FadeInAlways>
 						</div>
 						<div className='contents'>
@@ -53,7 +56,7 @@ const SecondServices = () => {
 							<FadeInAlways delay={0.4} direction='down'>
 								<p>
 									With our experienced professionals and strategic global
-									partners, JOSHCALEBWIL PETROLEUM LIMITED is committed to
+									partners, Joshcalebwill Petroluem Limited is committed to
 									client satisfaction and quality performance which guarantees
 									our clients’ confidence in the oil and gas business every step
 									of the way.
@@ -97,13 +100,12 @@ const SecondServices = () => {
 
 					<Styles.SecondServiceGalleyImgContainer>
 						<FadeInAlways delay={0.7} direction='right'>
-							<img src={pix1} alt=''  />
+							<img src={pix1} alt='' />
 						</FadeInAlways>
 						<FadeInAlways delay={0.8} direction='right'>
-							<img src={pix2} alt=''  />
+							<img src={pix2} alt='' />
 						</FadeInAlways>
 					</Styles.SecondServiceGalleyImgContainer>
-
 				</Styles.SecondServiceGalleyImgWrapper>
 				<Styles.SecondServiceGalleyImgWrapper primary='true'>
 					<Styles.SecondServiceGalleyDetailWrapper>

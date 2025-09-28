@@ -41,7 +41,7 @@ const WhoWeAre = () => {
 							<Styles.WhoWeAreTitle>
 								<FadeInAlways delay={0.3} direction='down'>
 									<p>
-										JOSHCALBWILL PETROLEUM LIMITED is a dynamic and
+										Joshcalebwill Petroluem Limited is a dynamic and
 										forward-thinking international energy company committed to
 										driving excellence across the global oil and gas industry.
 										With a steadfast dedication to innovation, reliability, and
@@ -67,8 +67,8 @@ const WhoWeAre = () => {
 
 								<FadeInAlways delay={0.5} direction='down'>
 									<p>
-										Our commitment goes beyond commercial success. JOSHCALBWILL
-										PETROLEUM LIMITED stands as a symbol of operational
+										Our commitment goes beyond commercial success. Joshcalebwill
+										Petroluem Limited stands as a symbol of operational
 										integrity, technological advancement, and industry
 										leadership. We are purpose-driven and solution-oriented,
 										working collaboratively with clients, governments, and
@@ -86,8 +86,8 @@ const WhoWeAre = () => {
 										growth and transformation of the energy sector. Whether
 										navigating the challenges of exploration and production,
 										optimizing logistics and infrastructure, or driving
-										innovation in gas utilization, JOSHCALBWILL PETROLEUM
-										LIMITED remains a trusted force committed to powering
+										innovation in gas utilization, Joshcalebwill Petroluem
+										Limited remains a trusted force committed to powering
 										progress—responsibly and efficiently.
 									</p>
 								</FadeInAlways>

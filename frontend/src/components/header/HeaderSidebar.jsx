@@ -39,7 +39,7 @@ const HeaderSidebar = () => {
 	};
 
 	const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
-		Autoplay({ delay: 2000 }),
+		Autoplay({ delay: 60000 }),
 	]);
 
 	const [selectedIndex, setSelectedIndex] = useState(0);

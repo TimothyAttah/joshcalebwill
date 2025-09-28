@@ -12,18 +12,18 @@ const History = () => {
 							<small>about us</small>
 						</FadeInAlways>
 						<FadeInAlways delay={0.4} direction='right'>
-							<h2>our history</h2>
+							{/* <h2>our history</h2> */}
 						</FadeInAlways>
 					</Styles.HistoryTitleBox>
 				</FadeInCommon>
 				<Styles.HistoryContentContainer>
 					<FadeInAlways delay={0.4} direction='right'>
-						<h2>History and Profile of JOSHCALEBWILL PETROLEUM LIMITED</h2>
+						{/* <h2>History and Profile of Joshcalebwill Petroluem Limited</h2> */}
 						{/* <p>
-							JOSHCALEBWILL PETROLEUM LIMITED is dynamic international energy{' '}
+							Joshcalebwill Petroluem Limited is dynamic international energy{' '}
 						</p> */}
 						{/* <p>
-							JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
+							Joshcalebwill Petroluem Limited is a dynamic international energy
 							company focused on delivering a strong commitment to excellence in
 							service delivery and consistently help the Oil & Gas sector
 							achieve success across the entire production and value chain from
@@ -37,12 +37,12 @@ const History = () => {
 							quality service using the latest technologies and innovations in
 							delivering optimum service excellence to our clients. With our
 							experienced professionals and strategic global partners,
-							JOSHCALEBWILL PETROLEUM LIMITED is committed to client
+							Joshcalebwill Petroluem Limited is committed to client
 							satisfaction and quality performance which guarantees our clients’
 							confidence in the oil and gas business every step of the way.
 						</p> */}
 						{/* <p>
-							JOSHCALEBWILL PETROLEUM LIMITED is dynamic international energy
+							Joshcalebwill Petroluem Limited is dynamic international energy
 							company founded on a strong commitment to excellence in service
 							delivery and consultancy within the Oil & Gas sector. We operate
 							as an integrated solutions provider, offering bespoke services
@@ -54,12 +54,12 @@ const History = () => {
 							integrity, we are dedicated to meeting the complex demands of the
 							energy landscape through strategic solutions, advanced
 							technologies, and a deep understanding of industry standards. At
-							JOSHCALEBWILL PETROLEUM LIMITED, we don't just meet
+							Joshcalebwill Petroluem Limited, we don't just meet
 							expectations-we exceed them, ensuring our clients recieve
 							sustainable and value-driven outcomes every step of the way.
 						</p> */}
 						<p>
-							JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
+							Joshcalebwill Petroluem Limited is a dynamic international energy
 							company founded with a steadfast commitment to excellence in
 							service delivery and consultancy within the Oil & Gas sector.
 							Incorporated on September 5, 2014, the company has since grown to
@@ -104,25 +104,32 @@ const History = () => {
 					<FadeInAlways delay={0.6} direction='right'>
 						<h2>Areas of Expertise and Services</h2>
 						{/* <p>
-							Joshcalebwill Petroleum Limited has an array of well trained and
+							Joshcalebwill Petroluem Limited has an array of well trained and
 							experienced Engineers and allied Professionals hwo are poised to
 							bring thier considerable experiences in projects studies,
 							planning, design, construction, supervision and management to bear
 							on any project we handle.
 						</p> */}
 						<p>
-							JOSHCALEBWILL PETROLEUM LIMITED specializes in a broad spectrum of
+							Joshcalebwill Petroluem Limited specializes in a broad spectrum of
 							services within the Oil & Gas industry, including but not limited
 							to:
 						</p>
 					</FadeInAlways>
 					<FadeInAlways>
 						<ul>
-							<li>Oil and Gas Operations</li>
+							<li>exploration</li>
+							<li>Haulage Services </li>
+							<li>Procurement Solutions</li>
+							<li>Chemical supply and treatments</li>
+							<li>Pipeline construction and maintainance</li>
+							<li>Gas compression services </li>
+							<li>Health safety and enviromental assessment consultancy</li>
+							{/* <li>Oil and Gas Operations</li>
 							<li>Pipeline Construction</li>
 							<li>Petroleum Engineering</li>
 							<li>Equipment Manufacturing</li>
-							<li>Environmental Consultancy</li>
+							<li>Environmental Consultancy</li> */}
 						</ul>
 					</FadeInAlways>
 					<FadeInAlways>
@@ -147,7 +154,7 @@ const History = () => {
 							encapsulated in our Core Values.
 						</p> */}
 						<p>
-							At the core of JOSHCALEBWILL PETROLEUM LIMITED’s operations is a
+							At the core of Joshcalebwill Petroluem Limited’s operations is a
 							dedication to:
 						</p>
 						<p>
@@ -170,7 +177,7 @@ const History = () => {
 					<FadeInAlways delay={0.8} direction='right'>
 						<h2>Workforce and Management</h2>
 						{/* <p>
-							Joshcalebwill Petroleum Limited was incorporated with Corporate
+							Joshcalebwill Petroluem Limited was incorporated with Corporate
 							Affairs Commission (CAC) to carry on business as an Oil & Gas
 							Company. Our capacity resides in our staff. Each staff member is
 							highly skilled, talented, dedicated and qualified by education,
@@ -180,7 +187,7 @@ const History = () => {
 							with the Corporate goals and objectives.
 						</p> */}
 						<p>
-							JOSHCALEBWILL PETROLEUM LIMITED’s greatest asset lies in its
+							Joshcalebwill Petroluem Limited’s greatest asset lies in its
 							people. The company boasts an array of well-trained and
 							experienced engineers and allied professionals. These experts
 							bring considerable experience in project studies, planning,
@@ -195,7 +202,7 @@ const History = () => {
 					<FadeInAlways delay={0.8} direction='right'>
 						<h2>Corporate Vision</h2>
 						{/* <p>
-							Joshcalebwill Petroleum Limited was incorporated with Corporate
+							Joshcalebwill Petroluem Limited was incorporated with Corporate
 							Affairs Commission (CAC) to carry on business as an Oil & Gas
 							Company. Our capacity resides in our staff. Each staff member is
 							highly skilled, talented, dedicated and qualified by education,
@@ -205,7 +212,7 @@ const History = () => {
 							with the Corporate goals and objectives.
 						</p> */}
 						<p>
-							JOSHCALEBWILL PETROLEUM LIMITED is not only committed to meeting
+							Joshcalebwill Petroluem Limited is not only committed to meeting
 							client expectations but consistently strives to exceed them by
 							delivering sustainable and value-driven outcomes at every stage of
 							the project lifecycle. Their approach is rooted in core values
@@ -218,7 +225,7 @@ const History = () => {
 
 						<p>
 							From its incorporation in 2014 to its present status as a
-							multifaceted energy company, JOSHCALEBWILL PETROLEUM LIMITED has
+							multifaceted energy company, Joshcalebwill Petroluem Limited has
 							established itself as a reliable and innovative player in the Oil
 							& Gas sector. With a highly experienced management team, a
 							dedicated workforce, and a commitment to quality and innovation,

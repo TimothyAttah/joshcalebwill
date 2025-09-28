@@ -4,10 +4,11 @@ import bg from '../../../assets/bg.jpg';
 export const IntroContainer = styled.div`
 	/* height: 100vh; */
 	width: 100%;
-	background: url(${bg});
+	/* background: url(${bg}); */
 	/* background: var(--primary-color);
 	background: rgb(9, 255, 0); */
 	/* background: #fff; */
+	background: var(--main-color);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -18,7 +19,7 @@ export const IntroContainer = styled.div`
 `;
 
 export const ContentTitle = styled.div`
-	max-width: 1000px;
+	max-width: 1500px;
 	width: 100%;
 	margin: 0px auto;
 	padding-top: 100px;
@@ -33,17 +34,18 @@ export const ContentTitle = styled.div`
 	h2 {
 		font-size: 60px !important;
 		font-weight: 900 !important;
+		text-transform: lowercase;
 
 		color: #fff;
 		/* color: var(--color-medium-blue); */
 	}
 
-	p {
+	/* p {
 		font-size: 24px !important;
 		padding-top: 10px;
 		color: #fff;
-		/* color: var(--color2); */
-	}
+		color: var(--color2);
+	} */
 
 	@media screen and (max-width: 790px) {
 		padding: 20px !important;
@@ -111,7 +113,7 @@ export const IntroContent = styled.div`
 `;
 
 export const TextWrap = styled.div`
-	padding: 100px 0;
+	padding: 50px 0;
 
 	@media screen and (max-width: 420px){
 		h1 {
@@ -126,6 +128,10 @@ export const Text1 = styled.h1`
 	/* position: absolute;
 	left: 0; */
 	margin: 20px 0;
+
+	font-size: 7.6rem !important;
+	line-height: 10rem;
+	letter-spacing: -0.02em;
 	@media screen and (max-width: 420px) {
 		h1 {
 			font-size: 3rem !important;
@@ -141,6 +147,10 @@ export const Text2 = styled.h1`
 	/* margin-bottom: 20px; */
 	margin: 20px 0;
 
+	font-size: 7.6rem !important;
+	line-height: 10rem;
+	letter-spacing: -0.02em;
+
 	@media screen and (max-width: 420px) {
 		h1 {
 			font-size: 3rem !important;
@@ -154,6 +164,9 @@ export const Text3 = styled.h1`
 	/* position: absolute;
 	left: 50px; */
 	/* margin-bottom: 20px; */
+	font-size: 7.6rem !important;
+	line-height: 10rem;
+	letter-spacing: -0.02em;
 	margin: 20px 0;
 
 	@media screen and (max-width: 420px) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TextAnimateContainer = styled.div`
-	background-color: var(--brown);
+	/* background-color: var(--brown);
 	width: 100%;
 	height: 150vh;
 
@@ -15,7 +15,7 @@ export const TextAnimateContainer = styled.div`
 
 	@media screen and (max-width: 350px) {
 		height: 120vh;
-	}
+	} */
 `;
 
 export const TextAnimateWrapper = styled.div``;
@@ -28,8 +28,9 @@ export const TextAnimateTitle = styled.h4`
 
 export const TextAnimateText = styled.div`
 	width: 100%;
-	background-color: var(--brown);
-	padding-top: 300px;
+	/* background-color: var(--brown); */
+	padding: 100px 0;
+	/* font-size: 50px; */
 
   @media screen and (max-width: 720px){
     padding-top: 100px;
