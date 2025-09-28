@@ -1,4 +1,4 @@
-import {FaFacebook, FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
+import {FaFacebook, FaInstagram, FaWhatsapp,  FaLinkedin} from 'react-icons/fa'
 
 export const footerData = [
 	// {
@@ -42,7 +42,7 @@ export const footerData = [
 				navPath: '/contact',
 			},
 			{
-				navIcon: FaTwitter,
+				navIcon: FaWhatsapp,
 				navPath: '/contact',
 			},
 		],

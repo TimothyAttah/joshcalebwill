@@ -56,11 +56,13 @@ const MobileNav = ({ menus, scrollToTop }) => {
 					initial={{ x: '-120vw' }}
 					animate={{ x: isOpen ? '0%' : '-120vw' }}>
 					<ul>
-						<li style={{ padding: '10px' }}>
-							<Link to='/who-we-are' onClick={() => setIsOpen(false)}>
-								Who we are
-							</Link>
-						</li>
+						<FadeInAlways delay={0.2} direction='down'>
+							<Styles.MobileSubMenuListItem >
+								<Link to='/who-we-are' onClick={() => setIsOpen(false)}>
+									Who we are
+								</Link>
+							</Styles.MobileSubMenuListItem>
+						</FadeInAlways>
 
 						{menus?.map(({ name, path, subMenu }, i) => {
 							const hasSubMenu = subMenu?.length > 0;
@@ -101,16 +103,29 @@ const MobileNav = ({ menus, scrollToTop }) => {
 								</FadeInAlways>
 							);
 						})}
-						<li style={{ padding: '10px' }}>
-							<Link to='/sustainability' onClick={() => setIsOpen(false)}>
-								Sustainability
-							</Link>
-						</li>
-						<li style={{ padding: '10px' }}>
-							<Link to='/contact' onClick={() => setIsOpen(false)}>
-								contact
-							</Link>
-						</li>
+						<FadeInAlways delay={0.3} direction='down'>
+							<Styles.MobileSubMenuListItem>
+								<Link to='/sustainability' onClick={() => setIsOpen(false)}>
+									Sustainability
+								</Link>
+							</Styles.MobileSubMenuListItem>
+						</FadeInAlways>
+
+						<FadeInAlways delay={0.4} direction='down'>
+							<Styles.MobileSubMenuListItem>
+								<Link to='/contact' onClick={() => setIsOpen(false)}>
+									contact
+								</Link>
+							</Styles.MobileSubMenuListItem>
+						</FadeInAlways>
+
+						<FadeInAlways delay={0.5} direction='down'>
+							<Styles.MobileSubMenuListItem>
+								<Link to='/market' onClick={() => setIsOpen(false)}>
+									market
+								</Link>
+							</Styles.MobileSubMenuListItem>
+						</FadeInAlways>
 					</ul>
 				</Styles.MobileNavWrapper>
 			</Styles.MobileNavContainer>

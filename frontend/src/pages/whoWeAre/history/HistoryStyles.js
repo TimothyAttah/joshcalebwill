@@ -35,6 +35,10 @@ export const HistoryContentContainer = styled.div`
 		font-size: 20px;
 	}
 
+	h2 {
+		color: var(--main-color);
+	}
+
 	@media screen and (max-width: 570px) {
 		opacity: 1 !important;
 

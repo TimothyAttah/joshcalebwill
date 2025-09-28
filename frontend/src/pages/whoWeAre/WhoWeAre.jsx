@@ -11,6 +11,8 @@ import TheTeam from './theTeam/TheTeam';
 import { FadeInAlways } from '../../components/fadeIn/FadeInAlways';
 import { FadeInCommon } from '../../components/fadeIn/FadeInCommon';
 
+import { AnimatedCopy2 } from '../../components/AnimatedCopy2';
+
 const WhoWeAre = () => {
 	return (
 		<>
@@ -24,19 +26,75 @@ const WhoWeAre = () => {
 					</FadeInAlways>
 				</Styles.WhoWeAreHeroContainer>
 
-				<FadeInAlways delay={0.5} direction='down'>
-					<Styles.WhoWeAreTitle>
-						{/* JOSHCALEB WILL PETROLEUM LIMITED is a dynamic global energy company
-with businesses and operations across the entire spectrum of the
-energy value chain. */}
-						JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international energy
-						company focused on delivering a strong commitment to excellence in
-						service delivery and consistently help the Oil & Gas sector achieve
-						success across the entire production and value chain from the
-						upstream to the downstream, midstream and the gas sub-sector of the
-						oil and gas industry.
-					</Styles.WhoWeAreTitle>
-				</FadeInAlways>
+				<>
+					<Styles.WhoWeAreTitleContainer>
+						<FadeInAlways delay={0.5} direction='down'>
+							{/* <Styles.WhoWeAreTitle>
+
+								JOSHCALEBWILL PETROLEUM LIMITED is a dynamic international
+								energy company focused on delivering a strong commitment to
+								excellence in service delivery and consistently help the Oil &
+								Gas sector achieve success across the entire production and
+								value chain from the upstream to the downstream, midstream and
+								the gas sub-sector of the oil and gas industry.
+							</Styles.WhoWeAreTitle> */}
+							<Styles.WhoWeAreTitle>
+								<FadeInAlways delay={0.3} direction='down'>
+									<p>
+										JOSHCALBWILL PETROLEUM LIMITED is a dynamic and
+										forward-thinking international energy company committed to
+										driving excellence across the global oil and gas industry.
+										With a steadfast dedication to innovation, reliability, and
+										superior service delivery, we play a pivotal role in
+										supporting the success and sustainability of the energy
+										sector across its entire value chain.
+									</p>
+								</FadeInAlways>
+
+								<FadeInAlways delay={0.4} direction='down'>
+									<p>
+										At the core of our operations lies a comprehensive and
+										integrated approach that spans the full spectrum of the oil
+										and gas industry—from upstream exploration and production,
+										through the midstream transportation and storage
+										infrastructure, to downstream refining, distribution, and
+										marketing. In addition, we bring specialized capabilities
+										and strategic focus to the gas sub-sector, reinforcing our
+										position as a versatile and dependable partner in the
+										evolving energy landscape.
+									</p>
+								</FadeInAlways>
+
+								<FadeInAlways delay={0.5} direction='down'>
+									<p>
+										Our commitment goes beyond commercial success. JOSHCALBWILL
+										PETROLEUM LIMITED stands as a symbol of operational
+										integrity, technological advancement, and industry
+										leadership. We are purpose-driven and solution-oriented,
+										working collaboratively with clients, governments, and
+										stakeholders to deliver value, enhance efficiency, and
+										ensure long-term sustainability in all aspects of our
+										engagements.
+									</p>
+								</FadeInAlways>
+
+								<FadeInAlways delay={0.6} direction='down'>
+									<p>
+										With a team of highly skilled professionals, cutting-edge
+										technology, and a global perspective, we continuously strive
+										to exceed expectations and contribute meaningfully to the
+										growth and transformation of the energy sector. Whether
+										navigating the challenges of exploration and production,
+										optimizing logistics and infrastructure, or driving
+										innovation in gas utilization, JOSHCALBWILL PETROLEUM
+										LIMITED remains a trusted force committed to powering
+										progress—responsibly and efficiently.
+									</p>
+								</FadeInAlways>
+							</Styles.WhoWeAreTitle>
+						</FadeInAlways>
+					</Styles.WhoWeAreTitleContainer>
+				</>
 
 				<Styles.WhoWeAreValuesContainer>
 					<FadeInAlways delay={0.5} direction='down'>
@@ -62,8 +120,8 @@ energy value chain. */}
 									<p>
 										Building long lasting relationships with clients by
 										providing the best engineering service through the creation
-										of system and models which ensures quality assurance,
-										safety and satisfaction for our clients at all times.
+										of system and models which ensures quality assurance, safety
+										and satisfaction for our clients at all times.
 									</p>
 								</FadeInAlways>
 							</Styles.WhoWeAreValuesItem>

@@ -74,6 +74,11 @@ const Sidebar = ({ close }) => {
 						Market Place
 					</Link>
 				</Styles.OneLinkBox>
+				<Styles.OneLinkBox>
+					<Link to='/' onClick={close}>
+						Home
+					</Link>
+				</Styles.OneLinkBox>
 			</Styles.SidebarWrapper>
 		</Styles.SidebarContainer>
 	);

@@ -1,8 +1,12 @@
 import { Twirl as Hamburger } from 'hamburger-react';
 import * as Styles from './HeaderSidebarStyles';
 import { useCallback, useState, useEffect } from 'react';
-import { Facebook, Twitter, X, Instagram, LucideX } from 'lucide-react';
-import { FaTwitter } from 'react-icons/fa';
+import {
+	FaFacebook,
+	FaInstagram,
+	FaWhatsapp,
+	FaLinkedin,
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Overlay from '../Overlay';
 import pix1 from '../../assets/ai3.jpg';
@@ -121,17 +125,22 @@ const HeaderSidebar = () => {
 					<Styles.InfoSocialLinksWrapper>
 						<Styles.InfoSocialLink>
 							<Link>
-								<Facebook />
+								<FaFacebook />
 							</Link>
 						</Styles.InfoSocialLink>
 						<Styles.InfoSocialLink>
 							<Link>
-								<FaTwitter />
+								<FaInstagram />
 							</Link>
 						</Styles.InfoSocialLink>
 						<Styles.InfoSocialLink>
 							<Link>
-								<Instagram />
+								<FaLinkedin />
+							</Link>
+						</Styles.InfoSocialLink>
+						<Styles.InfoSocialLink>
+							<Link to='https://wa.link/rbr42a' target='_blank'>
+								<FaWhatsapp />
 							</Link>
 						</Styles.InfoSocialLink>
 					</Styles.InfoSocialLinksWrapper>

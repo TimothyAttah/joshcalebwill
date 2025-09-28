@@ -44,8 +44,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* font-family: "Poppins", sans-serif; */
-    font-family: "EMprint", sans-serif;
-  }
+    font-family: "EMprint", sans-serif !important;
+  };
 
   body {
     max-width: 2000px;
@@ -57,16 +57,23 @@ export const GlobalStyles = createGlobalStyle`
     /* background-color: #e6edf3; */
     color: #e6edf3;
     color: #0d1117;
+    font-family: "EMprint", sans-serif !important;
+  };
+
+  html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    font-family: "EMprint", sans-serif !important;
   }
 
   a {
     text-decoration: none;
     color: #000;
+    font-family: "EMprint", sans-serif !important;
   }
 
   button {
     border: none;
     outline: none;
+    font-family: "EMprint", sans-serif !important;
     cursor: pointer;
     :focus {
       border: none;
@@ -83,6 +90,7 @@ export const GlobalStyles = createGlobalStyle`
   input {
     border: none;
     outline: none;
+    font-family: "EMprint", sans-serif !important;
 
     &:focus {
       border: none;
@@ -101,6 +109,8 @@ export const GlobalStyles = createGlobalStyle`
   display: flex;
   width: 100%;
   height: 100%;
+  font-family: "EMprint", sans-serif !important;
+
 }
 .embla__slide {
   flex: 0 0 100%;

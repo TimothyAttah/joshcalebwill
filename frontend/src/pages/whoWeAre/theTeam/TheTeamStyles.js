@@ -89,7 +89,7 @@ export const LeadersListItemWrapper = styled.div`
 	}
 `;
 export const LeadersListItem = styled.div`
-	width: 400px;
+	width: 300px;
 	/* padding: 20px 0; */
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 	position: relative;
@@ -159,7 +159,7 @@ export const LeadersListName = styled.h4`
 `;
 export const LeadersListImg = styled.div`
 	width: 100%;
-	height: 380px;
+	height: 280px;
 	background-color: #555;
 	overflow: hidden;
 	img {
@@ -177,6 +177,7 @@ export const LeadersListInfo = styled.div`
 
 	h4 {
 		color: #fff;
+		font-size: 14px;
 	}
 
 	p {
