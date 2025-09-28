@@ -114,7 +114,8 @@ const HeaderSidebar = () => {
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>📧 Email:</h4>
-							<p>joshcalebwillpetroleumlimited@gmail.com</p>
+							{/* <p>joshcalebwillpetroleumlimited@gmail.com</p> */}
+							<p>info@joshcalebwill.com</p>
 						</Styles.InfoList>
 						<Styles.InfoList>
 							<h4>🕒 Office Hours:</h4>
@@ -139,7 +140,9 @@ const HeaderSidebar = () => {
 							</Link>
 						</Styles.InfoSocialLink>
 						<Styles.InfoSocialLink>
-							<Link to='https://wa.link/rbr42a' target='_blank'>
+							<Link
+								to='https://wa.me/2347077077529?text=Hello,%20welcome%20to%20Joshcalebwill'
+								target='_blank'>
 								<FaWhatsapp />
 							</Link>
 						</Styles.InfoSocialLink>

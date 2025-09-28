@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import {
+	FaFacebook,
+	FaInstagram,
+	FaWhatsapp,
+	FaLinkedin,
+} from 'react-icons/fa';
 import * as Styles from './ContactStyles';
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
@@ -94,7 +99,7 @@ const Contact = () => {
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📧 Email:</h4>
-						<p>[Insert phone number here]</p>
+						<p>info@joshcalebwill.com</p>
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>🕒 Office Hours:</h4>
@@ -115,7 +120,12 @@ const Contact = () => {
 								<FaInstagram />
 							</Link>
 							<Link>
-								<FaTwitter />
+								<FaLinkedin />
+							</Link>
+							<Link
+								to='https://wa.me/2347077077529?text=Hello,%20welcome%20to%20Joshcalebwill'
+								target='_blank'>
+								<FaWhatsapp />
 							</Link>
 						</Styles.ContactInfoLinksWrapper>
 					</Styles.ContactInfoLinks>
