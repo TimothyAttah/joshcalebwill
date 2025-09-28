@@ -125,6 +125,8 @@ export const TextWrap = styled.div`
 export const Text1 = styled.h1`
 	font-size: 6rem !important;
 	color: var(--primary-color);
+
+	color:#cdcdcd;
 	/* position: absolute;
 	left: 0; */
 	margin: 20px 0;
@@ -142,6 +144,7 @@ export const Text1 = styled.h1`
 export const Text2 = styled.h1`
 	font-size: 6rem !important;
 	color: var(--color2);
+	color: #c6b6b6;
 	/* position: absolute;
 	right: 0; */
 	/* margin-bottom: 20px; */
@@ -161,6 +164,7 @@ export const Text2 = styled.h1`
 export const Text3 = styled.h1`
 	font-size: 6rem !important;
 	color: var(--color3);
+	color: #808080;
 	/* position: absolute;
 	left: 50px; */
 	/* margin-bottom: 20px; */

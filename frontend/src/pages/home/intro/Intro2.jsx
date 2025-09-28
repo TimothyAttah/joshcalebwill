@@ -103,7 +103,10 @@ const Intro2 = () => {
 						<small>Welcome to Joshcalebwill Petroluem Limited</small>
 					</FadeInAlways>
 					<Styles.TextWrap className='text-wrap'>
-						<Styles.Text1 className='text1'>critical thinkers</Styles.Text1>
+						{/* <Styles.Text1 className='text1'>critical thinkers</Styles.Text1> */}
+
+						<Styles.Text1 className='text1'>integrity</Styles.Text1>
+
 						<Styles.Text2 className='text2'>collaborators</Styles.Text2>
 						<Styles.Text3 className='text1'>innovators</Styles.Text3>
 					</Styles.TextWrap>
