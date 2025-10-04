@@ -16,7 +16,7 @@ export const HeaderSidebarMenuButton = styled(motion.div)`
 	right: 30px;
 	top: -5px;
 	background-color: rgb(129 59 1);
-	background: var(--color2);
+	background: inherit;
   /* background-color: #fff; */
 	color: #fff;
 	border-radius: 10px;

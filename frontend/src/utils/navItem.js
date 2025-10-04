@@ -95,6 +95,18 @@ export const Menus = [
 				icon: Pin,
 				path: '/what-we-do/health-and-safety',
 			},
+			{
+				name: 'lubricants',
+				desc: 'lubricants',
+				icon: Pin,
+				path: '/what-we-do/lubricants',
+			},
+			// {
+			// 	name: 'Health safety and enviromental assessment consultancy',
+			// 	desc: 'health',
+			// 	icon: Pin,
+			// 	path: '/what-we-do/health-and-safety',
+			// },
 		],
 		gridCols: 3,
 	},
@@ -164,7 +176,6 @@ export const Menus = [
 
 
 export const MenusMobile = [
-
 	{
 		name: 'what we do',
 		subMenuHeadeing: '',
@@ -212,6 +223,12 @@ export const MenusMobile = [
 				desc: 'health',
 				icon: Pin,
 				path: '/what-we-do/health-and-safety',
+			},
+			{
+				name: 'lubricants',
+				desc: 'lubricants',
+				icon: Pin,
+				path: '/what-we-do/lubricants',
 			},
 		],
 		gridCols: 3,
@@ -272,5 +289,4 @@ export const MenusMobile = [
 	// 	],
 	// 	gridCols: 2,
 	// },
-
 ];

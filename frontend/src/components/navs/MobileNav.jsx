@@ -53,7 +53,7 @@ const MobileNav = ({ menus, scrollToTop }) => {
 				</>
 
 				<Styles.MobileNavWrapper
-					initial={{ x: '-120vw' }}
+					initial={{ x: '-120vw', }}
 					animate={{ x: isOpen ? '0%' : '-120vw' }}>
 					<ul>
 						<FadeInAlways delay={0.2} direction='down'>

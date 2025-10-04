@@ -42,14 +42,16 @@ export const Slide = styled.div`
 
 	img {
 		/* animation: zoom 15s linear forwards infinite !important; */
-		/* animation: rotate 20s linear infinite; */
-		animation: fadeInTop 10s ease-in-out infinite;
+		/* animation: rotate 20s linear infinite;
+		/* animation: fadeInTop 10s ease-in-out linear;
+		animation: leftBounce 5s ease-in-out infinite; */
+
 		animation: leftBounce 5s ease-in-out infinite;
 
 		/* transition: 0.5s ease all; */
 		/* transition-delay: 1; */
 
-		@keyframes leftBounce {
+		/* @keyframes leftBounce {
 			0%,
 			100% {
 				transform: translateX(0);
@@ -57,7 +59,7 @@ export const Slide = styled.div`
 			50% {
 				transform: translateX(25px);
 			}
-		}
+		} */
 
 		/* @keyframes fadeInTop {
 			0% {
@@ -155,8 +157,6 @@ export const SlideContent = styled.div`
 	max-width: 1000px;
 	/* max-width: 800px; */
 
-
-
 	h2 {
 		font-weight: bold;
 		color: #fff;
@@ -195,6 +195,7 @@ export const SlideContent = styled.div`
 		margin: auto;
 		background-color: #fff;
 		color: var(--primary-color);
+		color: #00813299;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -238,8 +239,10 @@ export const SlideContent = styled.div`
 	}
 
 	@media screen and (max-width: 570px) {
-		bottom: 50px;
+		bottom: 40px;
 		text-align: center;
+		max-width: 100% !important;
+		width: 100%;
 
 		h2 {
 			font-size: 3rem !important;
@@ -248,9 +251,9 @@ export const SlideContent = styled.div`
 		}
 
 		p {
-			font-size: 14px;
-			line-height: 1.1;
-			padding-top: 10px;
+			font-size: 20px;
+			line-height: 1.2;
+			/* padding-top: 10px; */
 		}
 
 		div a {
@@ -269,7 +272,7 @@ export const SlideContentWrapper = styled.div`
 	z-index: 999999;
 
 	padding: 48px 40px 40px;
-	padding: 10px;
+	/* padding: 10px; */
 	border-radius: 16px;
 	backdrop-filter: blur(40px) opacity(1);
 	-webkit-backdrop-filter: blur(10px) opacity(1);
@@ -285,6 +288,15 @@ export const SlideContentWrapper = styled.div`
 		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
 	/* opacity: 0.7; */
 	/* backdrop-filter: 60px; */
+
+	@media screen and (max-width: 570px){
+		/* padding:  20px 10px; */
+		height: 390px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 `;
 
 export const SlideContentImg = styled.div`
@@ -328,5 +340,11 @@ export const SlideContentText = styled.div`
 		text-transform: uppercase;
 		font-weight: bold;
 		border-radius: 10px;
+	}
+
+	@media screen and (max-width: 570px) {
+		p {
+			font-size: 25px !important;
+		}
 	}
 `;

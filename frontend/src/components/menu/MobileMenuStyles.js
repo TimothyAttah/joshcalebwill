@@ -16,6 +16,15 @@ export const MobileSubMenuContainer = styled(motion.div)`
   background-color: #18181a;
   color:#fff;
   padding: 15px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `;
 
 export const MobileSubMenuListItem = styled(motion.li)`
@@ -43,7 +52,7 @@ export const MobileSubMenuListItem = styled(motion.li)`
 `;
 
 export const MobileSubMenuListWrapper = styled(motion.ul)`
-	
+	padding: 0;
 `;
 export const MobileSubMenuList = styled(motion.li)`
   display: flex;

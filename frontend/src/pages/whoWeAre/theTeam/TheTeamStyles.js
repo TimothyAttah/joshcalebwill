@@ -2,12 +2,13 @@ import styled, { css } from 'styled-components';
 
 export const LeaderHeroContainer = styled.div`
 	width: 100%;
-	height: 50vh;
+	/* height: 50vh; */
 	background: var(--color2);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 20px;
 
 	h1 {
 		font-size: 80px !important;
@@ -15,9 +16,8 @@ export const LeaderHeroContainer = styled.div`
 	}
 
 	@media screen and (max-width: 790px) {
-		height: 30vh;
+		/* height: 30vh; */
 
-		padding: 20px;
 		text-align: center;
 		h1 {
 			font-size: 40px !important;
@@ -26,8 +26,6 @@ export const LeaderHeroContainer = styled.div`
 	}
 
 	@media screen and (max-width: 320px) {
-
-
 		h1 {
 			font-size: 30px !important;
 		}
@@ -71,6 +69,10 @@ export const LeaderTitle = styled.div`
 			font-size: 25px;
 			color: var(--color1);
 		}
+	}
+
+	@media screen and (max-width: 450px) {
+		padding: 20px 5px;
 	}
 `;
 export const LeadersListItemWrapper = styled.div`

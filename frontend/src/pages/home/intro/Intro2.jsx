@@ -19,7 +19,7 @@ const Intro2 = () => {
 				opacity: 0,
 			},
 			{
-				x: -1000,
+				x: -900,
 				opacity: 1,
 				duration: 10,
 				delay: 1,
@@ -39,12 +39,31 @@ const Intro2 = () => {
 				opacity: 0,
 			},
 			{
-				x: 1000,
+				x: 1500,
 				opacity: 1,
 				duration: 10,
 				delay: 1,
 				scrollTrigger: {
 					trigger: '.text2',
+					start: 0,
+					toggleActions: 'restart none restart none',
+					scrub: 1,
+				},
+			},
+		);
+		gsap.fromTo(
+			'.text2b',
+			{
+				x: -5000,
+				opacity: 0,
+			},
+			{
+				x: 2000,
+				opacity: 1,
+				duration: 10,
+				delay: 1,
+				scrollTrigger: {
+					trigger: '.text2b',
 					start: 0,
 					toggleActions: 'restart none restart none',
 					scrub: 1,
@@ -105,10 +124,15 @@ const Intro2 = () => {
 					<Styles.TextWrap className='text-wrap'>
 						{/* <Styles.Text1 className='text1'>critical thinkers</Styles.Text1> */}
 
-						<Styles.Text1 className='text1'>integrity</Styles.Text1>
+						<Styles.Text1 className='text1'>Professionalism</Styles.Text1>
 
-						<Styles.Text2 className='text2'>collaborators</Styles.Text2>
-						<Styles.Text3 className='text1'>innovators</Styles.Text3>
+						{/* <Styles.Text2 className='text2'>collaborators</Styles.Text2> */}
+						<Styles.Text2 className='text2'>integrity</Styles.Text2>
+						<Styles.Text3 className='text1'>quality</Styles.Text3>
+						{/* <Styles.Text2 className='text2b'>safety</Styles.Text2>
+						<Styles.Text1 className='text1'>service excellence</Styles.Text1>
+						<Styles.Text2 className='text2'>team work</Styles.Text2> */}
+						{/* <Styles.Text3 className='text1'>innovators</Styles.Text3> */}
 					</Styles.TextWrap>
 					<FadeInAlways delay={0.4} direction='down'>
 						{/* <h2>

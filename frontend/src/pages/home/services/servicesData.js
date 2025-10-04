@@ -5,6 +5,8 @@ import pipe from '../../../assets/heroPipeline.jpg';
 import health from '../../../assets/hse2.jpeg';
 import procurement from '../../../assets/oil1.jpg';
 import haulage from '../../../assets/haulage6.png';
+import lubricants from '../../../assets/lub1.png';
+
 
 export const services = [
 	{
@@ -47,5 +49,11 @@ export const services = [
 		desc: 'At Joshcalebwill, we deliver high-quality chemical products and treatment solutions that keep industries running smoothly, safely, and sustainably.',
 		pix: chemical,
 		path: '/what-we-do/chemical-supply&treatments',
+	},
+	{
+		title: 'Lubricants',
+		desc: 'From motor oil for the family car to lubricants for heavy duty transportation and industrial equipment, we deliver premium products that help improve fuel economy and extend the period between oil changes.',
+		pix: lubricants,
+		path: '/what-we-do/lubricants',
 	},
 ];

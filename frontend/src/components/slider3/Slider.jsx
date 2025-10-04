@@ -8,6 +8,9 @@ import * as Styles from './SliderStyles';
 import { Link } from 'react-router-dom';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 import { FadeInCommon } from '../fadeIn/FadeInCommon';
+import { FadeInSlider } from '../fadeIn/FadeInSlider';
+import {motion} from 'framer-motion'
+
 
 const EmblaCarousel = () => {
 	const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
@@ -39,6 +42,29 @@ const EmblaCarousel = () => {
 		embla.on('select', onSelect);
 	}, [embla, setScrollSnaps, onSelect]);
 
+	const showAnimation = {
+		hidden: {
+			opacity: 0,
+			x: -100,
+			transition: {
+				duration: 1.25,
+				type: 'tween',
+				delay: 0.2,
+				ease: [0.25, 0.25, 0.25, 0.75],
+			},
+		},
+		show: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 1.25,
+				type: 'tween',
+				delay: 0.2,
+				ease: [0.25, 0.25, 0.25, 0.75],
+			},
+		},
+	};
+
 	return (
 		<>
 			<div className='embla' ref={viewportRef}>
@@ -46,26 +72,33 @@ const EmblaCarousel = () => {
 					{slides.map((slide, index) => (
 						<Styles.Slide className='embla__slide' key={index}>
 							<Styles.SliderOverlay />
+
 							{slide.srcType === 'image' ? (
-								<img src={slide.vic} alt='' />
+								<motion.img src={slide.vic} alt='' />
 							) : (
-								<video src={slide.vic} autoPlay muted loop playsInline />
+								<motion.video src={slide.vic} autoPlay muted loop playsInline />
 							)}
 
 							<Styles.SlideContent>
-								<FadeInCommon delay={0.6} direction='right' fullWidth='tru'>
+								<FadeInSlider
+									delay={1}
+									direction={
+										slide.slidePosition === 'slide1'
+											? 'right'
+											: slide.slidePosition === 'slide3'
+											? 'up'
+											: 'left'
+									}
+									fullWidth='true'
+								>
 									<Styles.SlideContentWrapper>
 										<h2>{slide.title}</h2>
-										<FadeInAlways delay={0.2} direction='left'></FadeInAlways>
-
-										<FadeInAlways delay={0.6} direction='left'>
-											<p>{slide.desc}</p>
-										</FadeInAlways>
-										<FadeInAlways delay={0.8} direction='left'>
-											<Link>Who we are</Link>
-										</FadeInAlways>
+										<p>{slide.desc}</p>
+										<Link>Who we are</Link>
+										{/* <FadeInAlways delay={0.6} direction='up'></FadeInAlways>
+										<FadeInAlways delay={0.8} direction='up'></FadeInAlways> */}
 									</Styles.SlideContentWrapper>
-								</FadeInCommon>
+								</FadeInSlider>
 							</Styles.SlideContent>
 
 							{/* <FadeInAlways delay={0.4} direction='right'>

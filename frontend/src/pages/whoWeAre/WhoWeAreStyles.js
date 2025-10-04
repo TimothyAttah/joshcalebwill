@@ -109,15 +109,20 @@ export const WhoWeAreHeroOverlay = styled.div`
 export const WhoWeAreTitleContainer = styled.div`
 	width: 100%;
 	/* height: 100vh; */
-	background: url(${bgPix});
+	/* background: url(${bgPix});
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed; */
+	background-color: #ea5c2f;
 	/* position: absolute;
 	top: 0;
 	left: 0; */
 	margin-bottom: 50px;
+
+	div {
+		opacity: 1 !important;
+	}
 `;
 export const WhoWeAreTitle = styled.div`
 	margin-left: auto;
@@ -139,10 +144,25 @@ export const WhoWeAreTitle = styled.div`
 		/* font-size: 30px; */
 		text-align: center;
 		/* padding-top: 59px; */
+
+		/* div {
+			div {
+				div {
+					opacity: 1 !important;
+				}
+			}
+		} */
+
+		div {
+			opacity: 1 !important;
+		}
 	}
 
 	@media screen and (max-width: 370px) {
-		font-size: 20px;
+		p {
+			font-size: 15px;
+			line-height: 22px;
+		}
 	}
 `;
 
@@ -155,7 +175,6 @@ export const ContentContent = styled.div`
 	width: 100%;
 	color: #fff;
 	z-index: 99;
-
 	padding: 48px 40px 40px;
 	border-radius: 16px;
 	backdrop-filter: blur(40px) opacity(1);

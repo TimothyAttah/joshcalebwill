@@ -30,6 +30,7 @@ import Order from './pages/order/Order';
 import WhoWeAre from './pages/whoWeAre/WhoWeAre';
 import Sustainability from './pages/sustainability/Sustainability';
 import Cookie from './components/Cookie';
+import Lubricants from './pages/whatWeDo/lubricants/Lubricants';
 
 const App = () => {
 	return (
@@ -73,7 +74,10 @@ const App = () => {
 						element={<Procurement />}
 					/>
 					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
+					<Route path='/what-we-do/lubricants' element={<Lubricants />} />
+
 					<Route path='/sustainability' element={<Sustainability />} />
+
 					{/* <Route
 						path='/sustainability/quality-policy-statement'
 						element={<QualityPolicy />}

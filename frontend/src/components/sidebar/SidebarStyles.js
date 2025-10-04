@@ -23,9 +23,11 @@ export const SidebarWrapper = styled(motion.div)`
 export const SidebarLinks = styled(motion.ul)`
 	display: flex;
 	flex-direction: column;
+	padding: 0 !important;
 `;
 export const SidebarLinksItem = styled(motion.li)`
 	width: 100%;
+	padding: 0 !important;
 
 	a {
 		width: 100%;
@@ -100,7 +102,7 @@ export const Content = styled(motion.div)`
 		width: 100%;
 		color: #fff;
 		border-bottom: 1px solid #fff;
-		margin: 10px;
+		margin: 10px 0;
 		font-size: 12px;
 	}
 `;

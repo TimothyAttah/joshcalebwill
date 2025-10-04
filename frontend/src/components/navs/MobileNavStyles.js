@@ -13,7 +13,7 @@ export const MobileMenuButton = styled(motion.div)`
 	right: 30px;
 	top: 20px;
 	/* background-color: rgb(129 59 1); */
-	background: var(--color2) !important;
+	background: inherit!important;
 	color: #fff;
 	border-radius: 10px;
 	width: 50px;
@@ -38,9 +38,9 @@ export const MobileNavWrapper = styled(motion.div)`
 	padding-top: 120px;
 	z-index: 99;
 
-	/* &::-webkit-scrollbar {
+	&::-webkit-scrollbar {
 		display: none;
-	} */
+	}
 `;
 export const MobileSubMenuListItem = styled(motion.li)`
 	a {
@@ -69,7 +69,9 @@ export const MobileSubMenuListItem = styled(motion.li)`
 	}
 `;
 
-export const MobileSubMenuListWrapper = styled(motion.ul)``;
+export const MobileSubMenuListWrapper = styled(motion.ul)`
+	padding: 0;
+`;
 export const MobileSubMenuList = styled(motion.li)`
 	background-color: rgb(129 59 1);
 	background-color: #444;
@@ -86,8 +88,8 @@ export const MobileSubMenuList = styled(motion.li)`
 
 		span:first-child {
 			display: block;
-			width: 35px;
-			height: 35px;
+			width: 25px;
+			height: 25px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -95,16 +97,21 @@ export const MobileSubMenuList = styled(motion.li)`
 			color: #000;
 			border-radius: 10px;
 			transition: all 0.3s;
+
+			svg {
+				width: 15px;
+				height: 15px;
+			}
 		}
 
 		svg {
 			transform: rotate(0deg) !important;
+			/* font-size: 20px; */
 		}
 
 		&:hover {
 			background-color: #444;
 			background-color: rgb(129 59 1);
-
 			padding-left: 25px;
 
 			span:first-child {

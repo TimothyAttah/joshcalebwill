@@ -64,8 +64,8 @@ export const HeaderMenu = styled(motion.div)`
 	align-items: center;
 	gap: 20px;
 	height: 100%;
-	margin-top: -16px;
-	padding-right: 50px;
+	margin-top: -10px;
+	padding-right: 100px;
 	/* border: 2px solid red; */
 
 	a {
@@ -77,6 +77,7 @@ export const HeaderMenu = styled(motion.div)`
 
 		h6, svg {
 			color: var(--color2);
+			color: #fff;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -113,4 +114,3 @@ export const HeaderSubmenu = styled.div`
 	}
 `;
 // export const HeaderContainer = styled(motion.div)``;
-

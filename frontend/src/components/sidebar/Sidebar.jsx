@@ -16,7 +16,7 @@ const Sidebar = ({ close }) => {
 	const showAnimation = {
 		hidden: {
 			opacity: 0,
-			x: 100,
+			x: -100,
 			transition: {
 				duration: 1.25,
 				type: 'tween',
