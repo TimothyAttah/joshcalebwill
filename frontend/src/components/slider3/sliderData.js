@@ -7,13 +7,15 @@ import pix4 from '../../assets/pipe5.jpg';
 import picHealth from '../../assets/safety2.jpg';
 import vicHealth from '../../assets/vicHealth.webm';
 import vicHealth1 from '../../assets/vicHealth1.webm';
-import vicSlider1 from '../../assets/oilSlide.mp4';
+import vicSlider1 from '../../assets/oilRig1.mp4';
 import vicSlider2 from '../../assets/vicSlider2.mp4';
 
 import vicHaulage from '../../assets/haulageSlide.jpg';
 import vicGas from '../../assets/gasVid.mp4';
 import vicOffshore from '../../assets/vicOffshore.webm';
-import vicExplore from '../../assets/procurement6.mp4';
+// import vicExplore from '../../assets/procurement6.mp4';
+import vicExplore from '../../assets/oilSlide1.mp4';
+
 
 export const slides = [
 	{

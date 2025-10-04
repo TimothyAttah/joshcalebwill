@@ -63,7 +63,7 @@ const HeaderSidebar = () => {
 	}, [embla, setScrollSnaps, onSelect]);
 	return (
 		<>
-			{isOpen && <Overlay onClick={() => setIsOpen(false)} />}
+			{/* {isOpen && <Overlay onClick={() => setIsOpen(false)} />} */}
 			<Styles.HeaderSidebarContainer>
 				<Styles.HeaderSidebarMenuButton>
 					<Hamburger
