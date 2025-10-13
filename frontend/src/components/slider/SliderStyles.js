@@ -1,40 +1,173 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const SliderContainer = styled.div`
+export const Slide = styled(motion.div)`
+	width: 100%;
+	background-color: var(--base-color-green-neg);
 	position: relative;
-	height: 71vh;
-	width: 100%;
-	background: rgb(255, 149, 0);
-	padding-top: 50px;
-`;
-export const SliderWrapper = styled.div`
-	width: 100%;
-	position: absolute;
-	top: 90px;
-	left: 0px;
-	z-index: 0;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	transform: translate3d(0px, 0px, 0px);
-	visibility: inherit;
-	opacity: 1;
-`;
-export const SliderLists = styled.div`
-	width: 80%;
-	display: flex;
-  margin: auto;
-  justify-content: space-around;
-  padding-top: 50px;
-`;
-export const SliderListItem = styled.div``;
-export const SliderListItemContents = styled.div`
-	width: 500px;
-`;
-export const SliderListItemImg = styled.div`
-	width: 500px;
+	overflow: hidden !important;
+	/* margin-top: 50px; */
 
-	img {
+	img,
+	video {
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		transition: 0.5s ease all;
 	}
 `;
+export const SlideContainer = styled(motion.div)``;
+
+export const SlideContent = styled.div`
+	position: absolute !important;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 1000px;
+	/* max-width: 800px; */
+
+	h2 {
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		font-size: 6.4rem !important;
+		font-size: 4.4rem !important;
+
+		line-height: 6.8rem !important;
+		line-height: 5.8rem !important;
+
+		letter-spacing: -0.013em !important;
+		text-transform: lowercase;
+		animation: text 1s ease forwards;
+	}
+
+	h4 {
+		font-size: 18px;
+		font-weight: bold;
+		color: #fff;
+		animation: text 2s ease forwards;
+	}
+
+	p {
+		font-size: 22px;
+		line-height: 1.5;
+		padding-top: 10px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		animation: text 3s ease forwards;
+	}
+
+	div a {
+		width: 200px;
+		height: 50px;
+		margin: auto;
+		background-color: #fff;
+		color: var(--primary-color);
+		color: #00813299;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 20px auto;
+		text-transform: uppercase;
+		font-weight: bold;
+		border-radius: 10px;
+		animation: text 4s ease forwards;
+	}
+
+	/* @keyframes text {
+		0% {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	} */
+
+	@media screen and (max-width: 900px) {
+		h2 {
+			font-size: 4.4rem !important;
+			line-height: 4.8rem !important;
+			letter-spacing: -0.013em !important;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.1;
+			padding-top: 10px;
+		}
+
+		div a {
+			width: 120px;
+			height: 40px;
+			font-size: 12px;
+			margin: 20px 0;
+		}
+	}
+
+	@media screen and (max-width: 570px) {
+		bottom: 40px;
+		text-align: center;
+		max-width: 100% !important;
+		width: 100%;
+
+		h2 {
+			font-size: 3rem !important;
+			line-height: 3.4rem !important;
+			letter-spacing: -0.013em !important;
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 1.2;
+			/* padding-top: 10px; */
+		}
+
+		div a {
+			width: 120px;
+			height: 40px;
+			font-size: 12px;
+			margin: 20px 0;
+			margin: auto;
+		}
+	}
+`;
+
+export const SlideContentWrapper = styled.div`
+	width: 100%;
+	color: #fff;
+	z-index: 999999;
+
+	padding: 48px 40px 40px;
+	/* padding: 10px; */
+	border-radius: 16px;
+	backdrop-filter: blur(40px) opacity(1);
+	-webkit-backdrop-filter: blur(10px) opacity(1);
+
+	/* transform: translateX(0); */
+	background-color: #0b2d7180;
+	background: #00813299;
+	/* background: var(--main-color); */
+	opacity: 1;
+	/* z-index: 3; */
+	pointer-events: all;
+	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
+		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
+	/* opacity: 0.7; */
+	/* backdrop-filter: 60px; */
+
+	@media screen and (max-width: 570px) {
+		/* padding:  20px 10px; */
+		height: 390px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+`;
+// export const Slide = styled.div``;
+// export const Slide = styled.div``;
+// export const Slide = styled.div``;

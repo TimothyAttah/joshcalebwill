@@ -7,7 +7,7 @@ import { Twirl as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import MobileNav from '../navs/MobileNav';
-import { Menus, MenusMobile } from '../../utils/navItem';
+// import { Menus, MenusMobile } from '../../utils/navItem';
 import HeaderSidebar from './HeaderSidebar';
 import { FadeInAlways } from '../fadeIn/FadeInAlways';
 

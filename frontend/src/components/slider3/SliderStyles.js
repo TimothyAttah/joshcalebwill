@@ -44,7 +44,9 @@ export const Slide = styled.div`
 		/* animation: zoom 15s linear forwards infinite !important; */
 		/* animation: rotate 20s linear infinite;
 		/* animation: fadeInTop 10s ease-in-out linear;
-		animation: leftBounce 5s ease-in-out infinite; */
+		animation: lefwidth: 100%;
+	height: 100vh;
+	background-color: var(--base-color-gold);tBounce 5s ease-in-out infinite; */
 
 		animation: leftBounce 5s ease-in-out infinite;
 
@@ -151,7 +153,7 @@ export const SlideContentBox = styled.div``
 
 export const SlideContent = styled.div`
 	position: absolute !important;
-	bottom: 100px;
+	bottom: 200px;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 1000px;

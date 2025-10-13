@@ -1,25 +1,17 @@
-// import Slider from '../../components/heroSlider/Slider';
-// import Slider from '../../components/slider2/Slider';
-import Slider from '../../components/slider3/Slider';
-import TextAnimat1 from '../../components/textAnimate1/TextAnimat1';
-
-// import Slider from '../../components/lastestSlider/LastestSlider';
-// import Slider from '../../components/slider/NewSlider';
-
-import HomeServices from './homeServices/HomeServices';
-import Intro from './intro/Intro2';
-import SecondServices from './secondServices/SecondServices';
-import Services from './services/Services2';
+import Slider from '../../components/slider/Slider';
+import SplitText from '../../components/splitText/SplitText';
+import * as Styles from './HomeStyles';
+import Services from './services/Services';
+import Welcome from './welcome/Welcome';
 
 const Home = () => {
 	return (
-		<>
+		<Styles.HomeContainer>
 			<Slider />
-			<Intro />
-			<SecondServices />
+			<SplitText />
+			<Welcome />
 			<Services />
-			<HomeServices />
-		</>
+		</Styles.HomeContainer>
 	);
 };
 

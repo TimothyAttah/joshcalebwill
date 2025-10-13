@@ -1,0 +1,96 @@
+.section-container {
+	width: 100%;
+	background-color: var(--base-color-gold);
+}
+
+h1 {
+	font-size: 8rem !important;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.25rem;
+}
+
+.text1 {
+	color: hsl(35 90% 40%);
+}
+
+.text2 {
+	color: hsl(40 100% 60%);
+}
+
+.text3 {
+	color: hsl(50 100% 60%);
+}
+
+.text4 {
+	color: hsl(35 90% 75%);
+	color: hsl(35 90% 60%);
+
+}
+
+.text5 {
+	color: hsl(35 100% 80%);
+	color: hsl(60 90% 40%);
+
+}
+
+.text6 {
+	color: hsl(35 100% 90%);
+	color: hsl(35 100% 70%);
+
+}
+
+.text7 {
+	color: hsl(35 100% 100%);
+	color: hsl(30 100% 30%);
+
+}
+
+section {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.intro {
+	height: 20svh;
+	text-align: center;
+	align-content: center;
+}
+
+.outro {
+	height: 100svh;
+	text-align: center;
+	/* align-content: center; */
+  /* padding-bottom: 550px; */
+}
+
+.title {
+	height: 85svh;
+	height: 30svh;
+
+	display: flex;
+	align-items: center;
+}
+
+.title-container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	will-change: transform;
+}
+
+.char {
+	position: relative;
+	display: inline-block;
+	will-change: transform;
+}
+
+@media (max-width: 1000px) {
+	h1 {
+		font-size: 3rem !important;
+		letter-spacing: 0;
+	}
+}

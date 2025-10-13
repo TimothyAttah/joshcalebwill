@@ -1,157 +1,140 @@
-import React from 'react';
-import { FaStreetView } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import ParticleBackground from '../../../components/particleBackground/ParticleBackground';
 import * as Styles from './ServicesStyles';
+import wg1 from '../../../assets/wg11.png';
+import wg2 from '../../../assets/wg10.png';
+import textImg from '../../../assets/text.svg';
 
-const Services = () => {
+
+import gsap from 'gsap';
+import { SplitText } from 'gsap/SplitText';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
+import { useEffect } from 'react';
+import './services.css';
+
+const Services = () =>
+{
+	gsap.registerPlugin(ScrollTrigger);
+	const lenis = new Lenis();
+
+	useEffect(() =>
+	{
+		lenis.on('scroll', ScrollTrigger.update);
+		gsap.ticker.add((time) =>
+		{
+			lenis.raf(time * 1000);
+		});
+
+		gsap.ticker.lagSmoothing(0);
+
+		document.querySelectorAll('.animate-text').forEach((textElement) =>
+		{
+			textElement.setAttribute('data-text', textElement.textContent.trim());
+
+			ScrollTrigger.create({
+				trigger: textElement,
+				start: "top 50%",
+				end: 'bottom 50%',
+				scrub: 1,
+				onUpdate: (self) =>
+				{
+					const clipValue = Math.max(0, 100 - self.progress * 100);
+					textElement.style.setProperty("--clip-value", `${ clipValue}%`);
+				}
+			});
+		});
+
+		ScrollTrigger.create({
+			trigger: ".services",
+			start: "top bottom",
+			end: 'top top',
+			scrub: 1,
+			onUpdate: (self) =>
+			{
+				const headers = document.querySelectorAll('.services-header');
+				gsap.set(headers[0], { x: `${ 100 - self.progress * 100}%` });
+				gsap.set(headers[1], { x: `${ -100 + self.progress * 100}%` });
+				gsap.set(headers[2], { x: `${ 100 - self.progress * 100}%` });
+
+			}
+		});
+
+		ScrollTrigger.create({
+			trigger: '.services',
+			start: 'top top',
+			end: `+=${ window.innerHeight * 2 }`,
+			pin: true,
+			scrub: 1,
+			pinSpacing: false,
+			onUpdate: (self) =>
+			{
+				const headers = document.querySelectorAll('.services-header');
+
+				if (self.progress <= 0.5)
+				{
+					const yProgress = self.progress / 0.5;
+					gsap.set(headers[0], { y: `${ yProgress * 100 }%` });
+					gsap.set(headers[2], { y: `${ yProgress * -100 }%` });
+
+				} else
+				{
+					gsap.set(headers[0], { y: '100%' });
+					gsap.set(headers[2], { y: '-100%' });
+
+					const scaleProgress = (self.progress - 0.5) / 0.5;
+					const minScale = window.innerWidth <= 1000 ? 0.3 : 0.1;
+					const scale = 1 - scaleProgress * (1 - minScale);
+
+					headers.forEach((header) => gsap.set(header, { scale }));
+				}
+			}
+		});
+	});
+
 	return (
-		<Styles.ServicesMainContainer id='services'>
-			<Styles.ServicesOverlay/>
-			<Styles.ServicesTitle className='title'>
-				<Styles.ServicesTitleText className='title-text'>
-					<h1>Our Services</h1>
-				</Styles.ServicesTitleText>
-				<Styles.ServicesTitleUnderline className='title-underline'></Styles.ServicesTitleUnderline>
-			</Styles.ServicesTitle>
+		<Styles.Services>
+			{/* <ParticleBackground id='particles' /> */}
 
-			<Styles.ServicesContainer className='services-container'>
+			<section className='hero'>
+				<div className='hero-img'>
+					<img src={wg1} alt='' />
+				</div>
+			</section>
+			<section className='about'>
+				<h1 className='animate-text'>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit
+					quaerat fugiat nam, a sit, aperiam quam laborum sed provident,
+					laudantium optio aut soluta nesciunt ea voluptatum consequuntur ipsa
+					nobis.
+				</h1>
+			</section>
 
-				<Styles.ServicesItem black className='service-item service-item-black'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1>Exploration</h1>
-					</Styles.FrontText>
+			<section className='services'>
+				<div className='services-header'>
+					<img src={textImg} alt='' />
+				</div>
+				<div className='services-header'>
+					<img src={textImg} alt='' />
+				</div>
+				<div className='services-header'>
+					<img src={textImg} alt='' />
+				</div>
+			</section>
 
-					<Styles.BackText className='back-text'>
-						<h1>Exploration</h1>
-						<p>
-							We provide consultancy services in the area of upstream
-							exploration and operations in crude oil, gas and mineral
-							exploration and extraction and prospecting
-						</p>
-						<button>
-							<Link to='/what-we-do/exploration'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem white className='service-item service-item-white'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1> Chemical supply and treatments</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1> Chemical supply and treatments</h1>
-						<p>
-							At Joshcalebwill, we deliver high-quality chemical products and
-							treatment solutions that keep industries running smoothly, safely,
-							and sustainably.
-						</p>
-						<button>
-							<Link to='/what-we-do/chemical-supply&treatments'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem black className='service-item service-item-black'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1>Pipeline Construction and Maintenance</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1>Pipeline Construction and Maintenance</h1>
-						<p>
-							We provide corrosion-free oil, water and gas pipeline
-							construction, maintenance, fabrications and procurement services.
-							We do Well-head Valves maintenance services.
-						</p>
-						<button>
-							<Link to='/what-we-do/pipeline-construction-and-maintenance'>
-								Read More
-							</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem white className='service-item service-item-white'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1> Gas Compression Services</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1> Gas Compression Services</h1>
-						<p>
-							At Joshcalebwill, our Gas Compression Services ensure optimal
-							pressure levels for the safe and efficient transport of natural
-							gas.
-						</p>
-						<button>
-							<Link to='/what-we-do/gas-compression-services'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem black className='service-item service-item-white'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1>Health, Safety, and Environmental Assessment Consultancy</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1>Health, Safety, and Environmental Assessment Consultancy</h1>
-						<p>
-							The oil and gas environment is a very volatile one, hence the need
-							for consultancy services for organizations in the areas of
-							Environment, Health and Safety for Workers and the Environment.
-						</p>
-						<button>
-							<Link to='/what-we-do/health-and-safety'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem white className='service-item service-item-white'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1>Procurement Solutions</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1>Procurement Solutions</h1>
-						<p>
-							At Joshcalebwill, we streamline the procurement process for oil &
-							gas and industrial operations. From sourcing critical equipment to
-							delivering specialized materials, we ensure every step is
-							reliable, transparent, and cost-efficient.
-						</p>
-						<button>
-							<Link to='/what-we-do/procurement-solutions'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-
-				<Styles.ServicesItem black className='service-item service-item-white'>
-					<Styles.FrontText className='front-text'>
-						{/* <FaStreetView /> */}
-						<h1>Haulage Services</h1>
-					</Styles.FrontText>
-
-					<Styles.BackText className='back-text'>
-						<h1>Haulage Services</h1>
-						<p>
-							We provide haulage services especially in the area of Diesel,
-							Petrol, Kerosene, CNG, and other petroleum products.
-						</p>
-						<button>
-							<Link to='/what-we-do/haulage-services'>Read More</Link>
-						</button>
-					</Styles.BackText>
-				</Styles.ServicesItem>
-			</Styles.ServicesContainer>
-		</Styles.ServicesMainContainer>
+			<section className='services-copy'>
+				<h1 className='animate-text'>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+					sint odit sed iste culpa, tenetur earum vero, incidunt similique
+					corporis, ad quis cupiditate provident placeat aperiam? Ad qui
+					exercitationem commodi?
+				</h1>
+			</section>
+			<section className='outro'>
+				<div className='outro-img'>
+					<img src={wg2} alt='' />
+				</div>
+			</section>
+		</Styles.Services>
 	);
 };
 

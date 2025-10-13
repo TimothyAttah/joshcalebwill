@@ -13,6 +13,8 @@
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@redux-devtools/extension": "^3.3.0",
+    "@tsparticles/all": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "embla-carousel": "^8.6.0",
