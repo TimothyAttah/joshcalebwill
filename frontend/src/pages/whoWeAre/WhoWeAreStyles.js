@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import lead2 from '../../assets/lead2.png';
 
 
 export const WhoWeAre = styled.div``;
 
 export const WhoWeAreHero = styled.div`
-	height: 100vh;
 	width: 100%;
+	height: 100vh;
+	background: url(${lead2});
+	background-repeat: no-repeat;
 	background-size: cover;
-  position: relative;
 	img,
 	video {
 		width: 100%;
@@ -66,7 +68,8 @@ export const CultureInfo = styled.div`
 
 export const WhoWeAreContainer = styled.div`
   background-color: var(--base-color-green);
-  padding: 50px 0;
+  padding: 20px 0;
+	margin-top: 20px;
 `
 
 export const WhoWeAreInfoContainer = styled.div`
@@ -89,6 +92,18 @@ export const WhoWeAreInfoContainer = styled.div`
 		color: #fff;
 		/* text-align: center !important; */
 		padding-bottom: 10px;
+	}
+
+	@media screen and (max-width: 570px) {
+		padding: 10px;
+		h1 {
+			font-size: 4rem;
+		}
+
+		p {
+			font-size: 1rem;
+			text-align: center !important;
+		}
 	}
 `;
 

@@ -13,12 +13,10 @@ import pix3 from '../../assets/who4.png';
 import { FadeInAlways } from '../../components/fadeIn/FadeInAlways';
 import { FaCircle } from 'react-icons/fa';
 
-
 const WhoWeAre = () => {
 	return (
 		<div>
 			<Styles.WhoWeAreHero>
-				<video src={whoVic} autoPlay muted loop playsInline />
 				<Styles.BlendModeTitle>who we are</Styles.BlendModeTitle>
 			</Styles.WhoWeAreHero>
 			<Styles.CultureInfo>
