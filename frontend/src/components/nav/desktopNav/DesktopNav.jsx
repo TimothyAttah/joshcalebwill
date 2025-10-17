@@ -1,14 +1,15 @@
 import * as Styles from './DesktopNavStyles';
 import {
-	desktopNavWithSubmenuData,
-	desktopNavWithoutSubmenuData,
+	navWithSubmenuData,
+	navWithoutSubmenuData,
 } from '../../../utils/navData';
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Twirl as Hamburger } from 'hamburger-react';
 
-const DesktopNav = () => {
+const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 	const [selected, setSelected] = useState();
 	const [dir, setDir] = useState('l' | 'r');
 
@@ -28,14 +29,14 @@ const DesktopNav = () => {
 		<>
 			<Styles.DesktopNav>
 				<Styles.DesktopNavListWrapper onMouseLeave={() => handleSelected(null)}>
-					{desktopNavWithSubmenuData.map((nav, i) => (
+					{navWithSubmenuData.map((nav, i) => (
 						<Tab
 							key={nav.id}
 							selected={selected}
 							handleSelected={handleSelected}
 							tab={nav.id}
 						>
-							<NavLink>{nav.navTitle}</NavLink>
+							<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
 						</Tab>
 					))}
 					<AnimatePresence>
@@ -44,12 +45,20 @@ const DesktopNav = () => {
 				</Styles.DesktopNavListWrapper>
 
 				<Styles.DesktopNavList>
-					{desktopNavWithoutSubmenuData.map((nav, i) => (
+					{navWithoutSubmenuData.map((nav, i) => (
 						<li key={i}>
 							<NavLink>{nav.navTitle}</NavLink>
 						</li>
 					))}
 				</Styles.DesktopNavList>
+				<Styles.MenuBtn>
+					<Hamburger
+						size='25'
+						rounded
+						toggled={showMobileSidebar}
+						toggle={() => setShowMobileSidebar(!showMobileSidebar)}
+					/>
+				</Styles.MenuBtn>
 			</Styles.DesktopNav>
 		</>
 	);
@@ -82,7 +91,7 @@ export const Content = ({ selected, dir }) => {
 			<Bridge />
 			<Nub selected={selected} />
 
-			{desktopNavWithSubmenuData.map((nav) => (
+			{navWithSubmenuData.map((nav) => (
 				<Styles.Submenu key={nav.id}>
 					{selected === nav.id && (
 						<Styles.SubmenuList
@@ -95,7 +104,7 @@ export const Content = ({ selected, dir }) => {
 						>
 							{nav.subMenu.map((nav, i) => (
 								<Styles.SubmenuListItem key={i}>
-									<NavLink>{nav.navTitle}</NavLink>
+									<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
 								</Styles.SubmenuListItem>
 							))}
 						</Styles.SubmenuList>

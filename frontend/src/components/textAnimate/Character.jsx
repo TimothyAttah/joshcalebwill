@@ -26,12 +26,12 @@ const Paragrapgh = styled.p`
 	}
 
 	@media screen and (max-width: 720px) {
-		font-size: 30px;
+		font-size: 30px !important;
 		padding: 10px;
 	}
 
 	@media screen and (max-width: 450px) {
-		font-size: 20px;
+		font-size: 20px !important;
 	}
 `;
 

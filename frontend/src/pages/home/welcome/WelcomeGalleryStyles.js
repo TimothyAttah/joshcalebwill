@@ -37,7 +37,7 @@ export const GallerryPixWrapper = styled.div`
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			filter: brightness(0.5) grayscale(100);
+			/* filter: brightness(0.5) grayscale(100); */
 			transition: 0.3s ease-in all;
 		}
 

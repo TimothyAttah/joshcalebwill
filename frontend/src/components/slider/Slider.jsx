@@ -70,7 +70,7 @@ const Slider = () => {
 		<div className='embla' ref={viewportRef}>
 			<div className='embla__container'>
 				{slides.map((slide, i) => (
-					<Styles.Slide className='embla__slide'>
+					<Styles.Slide className='embla__slide' key={i}>
 						{slide.srcType === 'image' ? (
 							<motion.img src={slide.vic} alt='' />
 						) : (

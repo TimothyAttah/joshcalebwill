@@ -76,21 +76,10 @@ export const SlideContent = styled.div`
 		animation: text 4s ease forwards;
 	}
 
-	/* @keyframes text {
-		0% {
-			opacity: 0;
-			transform: translateX(-100px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateX(0px);
-		}
-	} */
-
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 950px) {
 		h2 {
-			font-size: 4.4rem !important;
-			line-height: 4.8rem !important;
+			font-size: 4rem !important;
+			line-height: 4.2rem !important;
 			letter-spacing: -0.013em !important;
 		}
 
@@ -118,11 +107,14 @@ export const SlideContent = styled.div`
 			font-size: 3rem !important;
 			line-height: 3.4rem !important;
 			letter-spacing: -0.013em !important;
+			text-align: center !important;
 		}
 
 		p {
 			font-size: 20px;
 			line-height: 1.2;
+			text-align: center !important;
+
 			/* padding-top: 10px; */
 		}
 
@@ -142,7 +134,6 @@ export const SlideContentWrapper = styled.div`
 	z-index: 999999;
 
 	padding: 48px 40px 40px;
-	/* padding: 10px; */
 	border-radius: 16px;
 	backdrop-filter: blur(40px) opacity(1);
 	-webkit-backdrop-filter: blur(10px) opacity(1);
@@ -150,22 +141,27 @@ export const SlideContentWrapper = styled.div`
 	/* transform: translateX(0); */
 	background-color: #0b2d7180;
 	background: #00813299;
-	/* background: var(--main-color); */
 	opacity: 1;
 	/* z-index: 3; */
 	pointer-events: all;
 	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
 		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
 	/* opacity: 0.7; */
-	/* backdrop-filter: 60px; */
+	backdrop-filter: 60px;
+
+	@media screen and (max-width: 950px) {
+		padding: 20px;
+	}
 
 	@media screen and (max-width: 570px) {
 		/* padding:  20px 10px; */
-		height: 390px;
+		/* height: 390px; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		gap: 20px;
+		text-align: center !important;
 	}
 `;
 // export const Slide = styled.div``;

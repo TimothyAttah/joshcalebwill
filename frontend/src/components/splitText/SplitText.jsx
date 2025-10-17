@@ -5,10 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import TextAnimate from '../textAnimate/TextAnimate';
+import {FadeInAlways} from '../fadeIn/FadeInAlways'
 
 const TextSpliting = () => {
 	gsap.registerPlugin(ScrollTrigger, SplitText);
 	const lenis = new Lenis();
+
 
 	useEffect(() => {
 		lenis.on('scroll', ScrollTrigger.update);
@@ -17,6 +19,8 @@ const TextSpliting = () => {
 		});
 
 		gsap.ticker.lagSmoothing(0);
+
+
 
 		const titleHeadings = gsap.utils.toArray('.title h1');
 		const splits = [];
@@ -29,7 +33,7 @@ const TextSpliting = () => {
 			splits.push(split);
 
 			split.chars.forEach((char, i) => {
-				const charInitialY = i % 1 === 0 ? -150 : 150;
+				const charInitialY = i % 1 === 0 ? -250 : 250;
 				gsap.set(char, { y: charInitialY });
 			});
 		});
@@ -87,12 +91,41 @@ const TextSpliting = () => {
 		});
 	});
 
+
+
+	// useEffect(() =>
+	// {
+	// 	gsap.fromTo(
+	// 		'.intro-title',
+	// 		{
+	// 			scale: 5.2,
+	// 			y: -180,
+	// 		},
+	// 		{
+	// 			scale: 1,
+	// 			y: 0,
+	// 			duration: 1,
+	// 			ease: 'expo.inOut',
+	// 			scrollTrigger: {
+	// 				trigger: '.intro-title',
+	// 				end: 'bottom top',
+	// 				// invalidateOnRefresh: true,
+	// 				scrub: 2,
+	// 			},
+	// 		},
+	// 	);
+	// })
+
 	return (
 		<div className='section-container'>
-			<section className='intro'>
-				<h6>who we are</h6>
+			<section className='split-section intro'>
+				<FadeInAlways delay={0.1} direction='down'>
+					<div className='intro-title'>
+						<h6>who we are</h6>
+					</div>
+				</FadeInAlways>
 			</section>
-			<section className='animated-titles'>
+			<section className='split-section animated-titles'>
 				<div className='title'>
 					<div className='title-container'>
 						<h1 className='text1'>Professionalism</h1>
@@ -135,8 +168,7 @@ const TextSpliting = () => {
 					</div>
 				</div>
 			</section>
-			<section className='outro'>
-				{/* <h1>End of motion</h1> */ }
+			<section className='split-section outro'>
 				<TextAnimate />
 			</section>
 		</div>

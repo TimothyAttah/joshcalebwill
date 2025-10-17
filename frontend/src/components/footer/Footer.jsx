@@ -6,7 +6,7 @@ import { FadeInAlways } from '../fadeIn/FadeInAlways';
 const Footer = () => {
 	return (
 		<Styles.FooterContainer>
-			<Styles.FooterWrapper>
+			{/* <Styles.FooterWrapper>
 				{footerData.map((data, i) => (
 					<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
 						<Styles.FooterLists>
@@ -31,7 +31,8 @@ const Footer = () => {
 						</Styles.FooterLists>
 					</FadeInAlways>
 				))}
-			</Styles.FooterWrapper>
+			</Styles.FooterWrapper> */}
+			<p>joshcalebwill &copy; 2025</p>
 		</Styles.FooterContainer>
 	);
 };

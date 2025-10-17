@@ -8,6 +8,10 @@ export const DesktopNav = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	/* border: 2px solid yellow; */
+
+	@media screen and (max-width: 950px) {
+		justify-content: end;
+	}
 `;
 
 export const DesktopNavListWrapper = styled.div`
@@ -32,6 +36,10 @@ export const DesktopNavListWrapper = styled.div`
 			transform: rotate(180deg);
 		}
 	}
+
+	@media screen and (max-width: 950px) {
+		display: none;
+	}
 `;
 
 export const DesktopNavList = styled.ul`
@@ -41,6 +49,10 @@ export const DesktopNavList = styled.ul`
 
 	li a {
 		color: #fff;
+	}
+
+	@media screen and (max-width: 950px) {
+		display: none;
 	}
 `;
 export const DesktopNavTab = styled.div``;
@@ -117,3 +129,12 @@ export const Nub = styled(motion.span)`
 	background-color: var(--base-color-green-neg);
 `;
 // export const DesktopNav = styled.div``;
+export const MenuBtn = styled.button`
+	background-color: transparent;
+	color: #fff;
+	z-index: 9999;
+
+	svg {
+		color: #fff;
+	}
+`;

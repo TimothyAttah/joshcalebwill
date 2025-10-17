@@ -2,6 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Layout from './components/Layout';
 import Home from './pages/home/Home';
+import Culture from './pages/whoWeAre/modules/culture/Culture';
+import Leaders from './pages/whoWeAre/modules/leaders/Leaders';
+import WhoWeAre from './pages/whoWeAre/WhoWeAre';
+import Contact from './pages/contact/Contact';
 // import OurValues from './pages/whoWeAre/ourValues/OurValues';
 // import TheTeam from './pages/whoWeAre/theTeam/TheTeam';
 // import RecentAndPast from './pages/whoWeAre/recentAndPast/RecentAndPast';
@@ -39,6 +43,10 @@ const App = () => {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<Home />} />
+					<Route path='/who-we-are' element={<WhoWeAre />} />
+					<Route path='/who-we-are/our-culture' element={<Culture />} />
+					<Route path='/who-we-are/leadership' element={<Leaders />} />
+					<Route path='/who-we-are/contact-us' element={<Contact />} />
 					{/* <Route path='/who-we-are' element={<WhoWeAre />} /> */}
 					{/* <Route
 						path='/who-we-are/values-belief&culture'

@@ -1,15 +1,11 @@
-import { Link } from 'react-router-dom';
+import DesktopNav from '../nav/desktopNav/DesktopNav';
+
 import logo from '../../assets/logo.jpeg';
-import { ShoppingBag, ShoppingBasket } from 'lucide-react';
-import DesktopNav from '../navs/DesktopNav';
 import * as Styles from './HeaderStyles';
-import { Twirl as Hamburger } from 'hamburger-react';
+import MobileSidebar from '../sidebar/mobileSidebar/MobileSidebar';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import MobileNav from '../navs/MobileNav';
-// import { Menus, MenusMobile } from '../../utils/navItem';
-import HeaderSidebar from './HeaderSidebar';
-import { FadeInAlways } from '../fadeIn/FadeInAlways';
+import { Link } from 'react-router-dom';
 
 export const scrollToTop = () => {
 	window.scrollTo({
@@ -17,66 +13,49 @@ export const scrollToTop = () => {
 		left: 0,
 		behavior: 'smooth',
 	});
-}
+};
 
 const Header = () => {
-	const [navbar, setNavbar] = useState(false);
-	const changeBackground = () => {
-		if (window.scrollY >= 85) {
-			setNavbar(true);
-		} else {
-			setNavbar(false);
-		}
-	};
+	// const [showSidebar, setShowSidebar] = useState(false);
+	const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
+	 const [navbar, setNavbar] = useState(false);
+			const changeBackground = () => {
+				if (window.scrollY >= 85) {
+					setNavbar(true);
+				} else {
+					setNavbar(false);
+				}
+			};
 
+			window.addEventListener('scroll', changeBackground);
 
-	window.addEventListener('scroll', changeBackground);
 	return (
-		<>
-			<Styles.HeaderContainer className={navbar ? 'activeHeader' : ''}>
-				<Styles.HeaderWrapper>
-					<FadeInAlways delay={0.1} direction='right'>
-						<Styles.HeaderLogo>
-							<Link to='/' onClick={scrollToTop}>
-								<img src={logo} alt='' />
-								<h4>
-									Joshcalebwill <br /> petroleum limited
-								</h4>
-							</Link>
-						</Styles.HeaderLogo>
-					</FadeInAlways>
+		<Styles.Header className={navbar ? 'activeHeader' : ''}>
+			<Styles.HeaderContainer>
+				<Styles.HeaderLogo>
+					<Link to='/'>
+						<img src={logo} alt='' />
+						<h6>
+							joshcalebwill <br /> <span>petroleum</span> <span>limited</span>
+						</h6>
+					</Link>
+				</Styles.HeaderLogo>
 
-					<>
-						<nav>
-							<DesktopNav scrollToTop={scrollToTop} />
-						</nav>
-					</>
-					<Styles.HeaderMenuWrapper>
-						<>
-							<Styles.HeaderMenu>
-								<Link to='/market' onClick={scrollToTop}>
-									<ShoppingBasket />
-									<h6>Market</h6>
-								</Link>
-							</Styles.HeaderMenu>
-						</>
-
-						<Styles.HeaderSidebarContainer>
-							<>
-								<HeaderSidebar />
-							</>
-						</Styles.HeaderSidebarContainer>
-					</Styles.HeaderMenuWrapper>
-
-					<AnimatePresence>
-						<Styles.HeaderSubmenu>
-							<MobileNav menus={MenusMobile} scrollToTop={scrollToTop} />
-						</Styles.HeaderSubmenu>
-					</AnimatePresence>
-				</Styles.HeaderWrapper>
+				<DesktopNav
+					showMobileSidebar={showMobileSidebar}
+					setShowMobileSidebar={setShowMobileSidebar}
+				/>
 			</Styles.HeaderContainer>
-		</>
+			<AnimatePresence>
+				{showMobileSidebar && (
+					<MobileSidebar
+						showMobileSidebar={showMobileSidebar}
+						setShowMobileSidebar={setShowMobileSidebar}
+					/>
+				)}
+			</AnimatePresence>
+		</Styles.Header>
 	);
 };
 

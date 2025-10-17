@@ -1,7 +1,7 @@
 import Slider from '../../components/slider/Slider';
 import SplitText from '../../components/splitText/SplitText';
 import * as Styles from './HomeStyles';
-import Services from './services/Services';
+import HomeServices from './services/homeServices/HomeServices';
 import Welcome from './welcome/Welcome';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
 			<Slider />
 			<SplitText />
 			<Welcome />
-			<Services />
+			<HomeServices />
 		</Styles.HomeContainer>
 	);
 };

@@ -1,232 +1,199 @@
-import styled from "styled-components";
-import bgPix from '../../assets/bg2.jpg'
+import styled from 'styled-components';
 
 
-export const WhoWeAreContainer = styled.div``;
-export const WhoWeAreHeroContainer = styled.div`
-	width: 100%;
+export const WhoWeAre = styled.div``;
+
+export const WhoWeAreHero = styled.div`
 	height: 100vh;
-	position: relative;
-	overflow: hidden !important;
-
-	img {
+	width: 100%;
+	background-size: cover;
+  position: relative;
+	img,
+	video {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		z-index: -1;
+		transition: 0.5s ease all;
 	}
+`;
+
+
+export const BlendModeTitle = styled.h1`
+	font-size: 10rem;
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	position: absolute;
+	bottom: 0px;
+	text-align: center !important;
+	/* padding: 50px 0; */
+	mix-blend-mode: screen;
+	letter-spacing: -5px;
+	/* padding-top: 10px; */
+  padding-bottom: 50px;
+
+	@media screen and (max-width: 900px) {
+		font-size: 8rem !important;
+		letter-spacing: 0;
+	}
+
+	/* @media screen and (max-width: 590px) {
+		font-size: 4rem !important;
+		letter-spacing: 0;
+	}
+
+	@media screen and (max-width: 390px) {
+		font-size: 3rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	} */
+`;
+
+export const CultureInfo = styled.div`
+	background-color: #fff;
+	padding: 0px 0;
+
+	p {
+		max-width: 700px;
+		margin: auto;
+		font-size: 22px;
+		line-height: 30px;
+		color: #000;
+		text-align: center !important;
+	}
+`;
+
+export const WhoWeAreContainer = styled.div`
+  background-color: var(--base-color-green);
+  padding: 50px 0;
+`
+
+export const WhoWeAreInfoContainer = styled.div`
+	max-width: 1200px;
+	width: 100%;
+	margin: 100px auto;
 
 	h1 {
-		position: absolute !important;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		max-width: 1000px;
-		width: 100%;
+		font-size: 8rem;
 		color: #fff;
-		z-index: 99;
-		/* backdrop-filter: blur(40px) opacity(1);
-		-webkit-backdrop-filter: blur(10px) opacity(1); */
-		text-align: center;
-		font-size: 8rem !important;
+		text-align: center !important;
+		line-height: 1;
+		max-width: 900px;
+		margin: auto;
+		padding-bottom: 30px;
+	}
+
+	p {
+		font-size: 1.2rem;
+		color: #fff;
+		/* text-align: center !important; */
+		padding-bottom: 10px;
+	}
+`;
+
+export const WhoWeAreGallerryContainer = styled.div`
+	max-width: 1200px;
+	width: 100%;
+	margin: 50px auto;
+	z-index: 999999 !important;
+`;
+
+export const WhoWeAreGallerryPixWrapper = styled.div`
+	width: 100%;
+	position: relative;
+	height: 100%;
+	padding: 45px 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 2vh;
+	grid-auto-flow: dense;
+
+	.pix {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		/* width: 350px;
+		height: 350px; */
+		overflow: hidden !important;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
 		border-radius: 20px;
-		padding: 20px;
+
+		&:hover {
+			img {
+				filter: brightness(1) grayscale(0);
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			/* filter: brightness(0.5) grayscale(100); */
+			transition: 0.3s ease-in all;
+		}
+
+		&:nth-child(2n + 3) {
+			grid-row-start: span 2;
+		}
+
+		&:nth-child(4n + 5) {
+			grid-column-start: span 1;
+			grid-row-start: span 2;
+		}
+
+		&:nth-child(6n + 7) {
+			grid-column-start: span 2;
+			grid-row-start: span 2;
+		}
+
+		/*
+
+		&:nth-child(4n + 5) {
+			grid-column-start: span 2;
+			grid-row-start: span 2;
+		}
+
+		&:nth-child(6n + 7) {
+			grid-row-start: span 1;
+		}
+
+		&:nth-child(8n + 9) {
+			grid-column-start: span 1;
+			grid-row-start: span 1;
+		} */
 	}
 
-	@media screen and (max-width: 1020px) {
-		h1 {
-			font-size: 6rem !important;
-		}
+	.pix1 {
+		grid-column-start: span 1;
+		grid-row-start: span 2;
+		/* width: 600px;
+    height: 600px; */
 	}
 
-	@media screen and (max-width: 770px) {
-		h1 {
-			font-size: 4rem !important;
-		}
-	}
+	@media screen and (max-width: 768px) {
+		grid-template-columns: auto auto;
 
-	@media screen and (max-width: 550px) {
-		h1 {
-			font-size: 3rem !important;
-		}
+		/* .pix1 {
+      width: 300px;
+      height: 300px;
+    } */
 	}
 
 	@media screen and (max-width: 430px) {
-		h1 {
-			font-size: 2rem !important;
-		}
-	}
+		/* grid-template-columns: auto; */
+		display: block;
+		padding: 20px;
 
-	@media screen and (max-width: 310px) {
-		h1 {
-			font-size: 1.5rem !important;
-		}
-	}
-
-	/* h1 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 7rem !important;
-		color: var(--color1);
-    z-index: 99;
-
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			height: 10px;
-			width: 280px;
-      left: 50%;
-			background-color: var(--main-color);
-      transform: translateX(-50%);
-      border-radius: 10px;
-		}
-	} */
-
-	/* @media screen and (max-width: 570px) {
-		height: 80vh;
-	} */
-`;
-export const WhoWeAreHeroOverlay = styled.div`
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	/* background: rgba(0, 0, 0, 0.7); */
-	background: #05050540;
-	z-index: 9;
-	overflow: hidden !important;
-
-	/* @media screen and (max-width: 570px) {
-		height: 80vh;
-	} */
-`;
-
-export const WhoWeAreTitleContainer = styled.div`
-	width: 100%;
-	/* height: 100vh; */
-	/* background: url(${bgPix});
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed; */
-	background-color: #ea5c2f;
-	/* position: absolute;
-	top: 0;
-	left: 0; */
-	margin-bottom: 50px;
-
-	div {
-		opacity: 1 !important;
-	}
-`;
-export const WhoWeAreTitle = styled.div`
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	padding-top: 150px;
-	overflow: hidden !important;
-	padding: 150px 0;
-
-	p {
-		font-size: 25px;
-		line-height: 1.3;
-		font-weight: 700;
-		margin: 20px 0;
-		color: #fff;
-	}
-
-	@media screen and (max-width: 570px) {
-		/* font-size: 30px; */
-		text-align: center;
-		/* padding-top: 59px; */
-
-		/* div {
-			div {
-				div {
-					opacity: 1 !important;
-				}
-			}
-		} */
-
-		div {
-			opacity: 1 !important;
-		}
-	}
-
-	@media screen and (max-width: 370px) {
-		p {
-			font-size: 15px;
-			line-height: 22px;
+		.pix {
+			margin: 20px 0;
 		}
 	}
 `;
 
-export const ContentContent = styled.div`
-	position: absolute !important;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 1000px;
-	width: 100%;
-	color: #fff;
-	z-index: 99;
-	padding: 48px 40px 40px;
-	border-radius: 16px;
-	backdrop-filter: blur(40px) opacity(1);
-	-webkit-backdrop-filter: blur(10px) opacity(1);
-
-	/* transform: translateX(0); */
-	background-color: #0b2d7180;
-	background: #00813299;
-	/* background: var(--main-color); */
-	opacity: 1;
-	/* z-index: 3; */
-	pointer-events: all;
-	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
-		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
-	/* opacity: 0.7; */
-	/* backdrop-filter: 60px; */
-	overflow: hidden !important;
-
-	h2 {
-		font-weight: bold;
-		color: #fff;
-		text-align: center;
-		font-size: 6.4rem !important;
-		line-height: 6.8rem !important;
-		letter-spacing: -0.013em !important;
-		text-transform: lowercase;
-		animation: text 1s ease forwards;
-	}
-
-	@media screen and (max-width: 900px) {
-		h2 {
-			font-size: 4.4rem !important;
-			line-height: 4.8rem !important;
-			letter-spacing: -0.013em !important;
-		}
-	}
-
-	@media screen and (max-width: 570px) {
-		/* bottom: 50px; */
-		text-align: center;
-
-		h2 {
-			font-size: 3rem !important;
-			line-height: 3.4rem !important;
-			letter-spacing: -0.013em !important;
-		}
-	}
+export const WhoWeAreValuesContainer = styled.div`
+  margin-top: 50px;
 `;
-
-
-
-export const WhoWeAreValuesContainer = styled.div``;
 
 export const WhoWeAreValuesPic = styled.div`
 	max-width: 400px;
@@ -256,8 +223,6 @@ export const WhoWeAreValuesBox = styled.div`
 	flex-wrap: wrap;
 	padding-top: 50px;
 	gap: 20px;
-
-
 
 	.box {
 		background-color: red;
@@ -317,10 +282,10 @@ export const WhoWeAreValuesItem = styled.div`
 				color: var(--color-light-blue);
 			}
 			&:nth-child(2) svg {
-				color: var(--crimson);
+				color: crimson;
 			}
 			&:nth-child(3) svg {
-				color: var(--brown);
+				color: var(--base-color-gold);
 			}
 			&:nth-child(4) svg {
 				color: green;
@@ -329,7 +294,7 @@ export const WhoWeAreValuesItem = styled.div`
 				color: var(--color-light-blue);
 			}
 			&:nth-child(6) svg {
-				color: var(--crimson);
+				color: var(--base-color-gold-neg);
 			}
 		}
 	}
@@ -351,14 +316,11 @@ export const WhoWeAreValuesItem = styled.div`
 `;
 
 export const WhoWeAreValueImg = styled.div`
+	width: 100%;
+	height: 300px;
+	img {
 		width: 100%;
-		height: 300px;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-
+		height: 100%;
+		object-fit: cover;
+	}
 `;
-// export const WhoWeAreContainer = styled.div``;

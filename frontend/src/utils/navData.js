@@ -1,4 +1,4 @@
-export const desktopNavWithSubmenuData = [
+export const navWithSubmenuData = [
 	{
 		navTitle: 'who we are',
 		navPath: '/who-we-are',
@@ -7,23 +7,23 @@ export const desktopNavWithSubmenuData = [
 		subMenu: [
 			{
 				navTitle: 'our culture',
-				navPath: '/our-culture',
+				navPath: '/who-we-are/our-culture',
 			},
-			{
-				navTitle: 'our brands',
-				navPath: '/our-brands',
-			},
+			// {
+			// 	navTitle: 'our brands',
+			// 	navPath: '/who-we-are/our-brands',
+			// },
 			{
 				navTitle: 'our leadership',
-				navPath: '/our-leadership',
+				navPath: '/who-we-are/leadership',
 			},
 			{
 				navTitle: 'our history',
-				navPath: '/our-history',
+				navPath: '/who-we-are/our-history',
 			},
 			{
 				navTitle: 'contact us',
-				navPath: '/contact-us',
+				navPath: '/who-we-are/contact-us',
 			},
 		],
 	},
@@ -35,20 +35,16 @@ export const desktopNavWithSubmenuData = [
 		subMenu: [
 			{
 				navTitle: 'energy',
-				navPath: '/energy',
+				navPath: '/what-we-do/energy',
 			},
 			{
 				navTitle: 'technology and innovation',
-				navPath: '/technology-and-innovation',
+				navPath: '/what-we-do/technology-and-innovation',
 			},
-			{
-				navTitle: 'joshcalebwill around the world',
-				navPath: '/joshcalebwill-around-the-world',
-			},
-			{
-				navTitle: 'exploration',
-				navPath: '/what-we-do/exploration',
-			},
+			// {
+			// 	navTitle: 'joshcalebwill around the world',
+			// 	navPath: '/what-we-do/joshcalebwill-around-the-world',
+			// },
 			{
 				navTitle: 'exploration',
 				navPath: '/what-we-do/exploration',
@@ -86,45 +82,45 @@ export const desktopNavWithSubmenuData = [
 	},
 	{
 		navTitle: 'sustainability',
-		navPath: '/who-we-are',
+		navPath: '/sustainability',
 		id: 3,
 
 		subMenu: [
 			{
 				navTitle: 'climate',
-				navPath: '/climate',
+				navPath: '/sustainability/climate',
 			},
 			{
 				navTitle: 'environment',
-				navPath: '/environment',
+				navPath: '/sustainability/environment',
 			},
 			{
 				navTitle: 'social investment',
-				navPath: '/social-investment',
+				navPath: '/sustainability/social-investment',
 			},
 		],
 	},
 	{
 		navTitle: 'investors',
-		navPath: '/who-we-are',
+		navPath: '/investors',
 		id: 4,
 
 		subMenu: [
 			{
 				navTitle: 'events and presentations',
-				navPath: '/events-and-presentations',
+				navPath: '/investors/events-and-presentations',
 			},
 			{
 				navTitle: 'corporate-governance',
-				navPath: '/corporate-governance',
+				navPath: '/investors/corporate-governance',
 			},
 			{
 				navTitle: 'reports and filings',
-				navPath: '/reports-and-filings',
+				navPath: '/investors/reports-and-filings',
 			},
 			{
 				navTitle: 'stock and dividend',
-				navPath: '/stock-and-dividend',
+				navPath: '/investors/stock-and-dividend',
 			},
 			{
 				navTitle: 'contact us',
@@ -134,11 +130,11 @@ export const desktopNavWithSubmenuData = [
 	},
 ];
 
-export const desktopNavWithoutSubmenuData = [
-	{
-		navTitle: 'newsroom',
-		navPath: '/newsroom',
-	},
+export const navWithoutSubmenuData = [
+	// {
+	// 	navTitle: 'newsroom',
+	// 	navPath: '/newsroom',
+	// },
 	{
 		navTitle: 'careers',
 		navPath: '/careers',

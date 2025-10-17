@@ -10,6 +10,11 @@ export const GlobalStyles = createGlobalStyle`
   src: url('fonts/EMprint Semibold.woff2') format('woff2');
 
 }
+
+@font-face {
+  font-family: 'Gotham' ;
+  src: url('fonts/Gotham Black.otf') format('otf');
+}
   :root {
     --base-color-green: hsl(128, 47%, 26%);
     --base-color-green-neg: hsl(from var(--base-color-green) h s calc(l - 10));
@@ -50,6 +55,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "EMprint", sans-serif !important;
+    font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: normal;
 
   }
@@ -58,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 2000px;
     width: 100%;
     margin: 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -74,7 +80,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "EMprint", sans-serif !important;
-    font-weight: normal !important;
+    font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-weight: 900 !important;
+    text-align: left !important;
 }
 
 a {
@@ -122,7 +131,6 @@ button {
   height: 100%;
   width: 100%;
   position: absolute !important;
-
   width: 100% !important;
   height: 100% !important;
   margin: 0px !important;
@@ -153,6 +161,21 @@ button {
     pointer-events: none;
 	}
 
+  .cans {
+    z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 0px !important;
+  left: 0px !important;
+  pointer-events: none;
+  }
   .activeHeader {
     background: var( --base-color-green);
     max-width: 2000px !important;

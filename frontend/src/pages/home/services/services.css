@@ -4,13 +4,13 @@ img {
 	object-fit: cover;
 }
 
-h1 {
+/* h1 {
 	font-size: 4rem !important;
 	font-weight: 900;
 	letter-spacing: -0.15rem;
 	line-height: 1.125;
 	text-align: center;
-}
+} */
 
 .hero,
 .outro,
@@ -41,6 +41,7 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	border: 10px solid red;
 }
 
 .services-header {
@@ -93,10 +94,7 @@ h1 {
 }
 
 @media (max-width: 1000px) {
-	h1 {
-		font-size: 2rem;
-		letter-spacing: -0.05rem;
-	}
+
 
 	.animate-text {
 		width: 100%;
