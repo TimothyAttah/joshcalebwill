@@ -78,7 +78,10 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSidebarListItem>
-										<Link to={nav.navPath}>
+										<Link
+											to={nav.navPath}
+											onClick={() => setShowMobileSidebar(false)}
+										>
 											{nav.navTitle} {hasSubMenu && <ChevronDown />}
 										</Link>
 
@@ -91,7 +94,12 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 														direction='down'
 													>
 														<Styles.MobileSidebarSubMenuListItem>
-															<Link>{nav.navTitle}</Link>
+															<Link
+																to={nav.navPath}
+																onClick={() => setShowMobileSidebar(false)}
+															>
+																{nav.navTitle}
+															</Link>
 														</Styles.MobileSidebarSubMenuListItem>
 													</FadeInAlways>
 												))}
@@ -107,7 +115,10 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSidebarListItem>
-										<Link to={nav.navPath}>
+										<Link
+											to={nav.navPath}
+											onClick={() => setShowMobileSidebar(false)}
+										>
 											{nav.navTitle}
 										</Link>
 									</Styles.MobileSidebarListItem>
