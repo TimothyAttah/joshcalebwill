@@ -38,13 +38,31 @@ export const HomeServicesTitle = styled.div`
 		text-align: center !important;
 		color: var(--color-offwhite);
 	}
+
+	@media screen and (max-width: 900px) {
+		h1 {
+			font-size: 6rem;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		h1 {
+			font-size: 4rem;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
 `;
 
 export const ServicesListContainerWrapper = styled.div`
-  max-width: 1500px;
-  width: 100%;
-  margin: 80px auto;
-`
+	max-width: 1500px;
+	width: 100%;
+	margin: 80px auto;
+`;
 
 export const ServicesListContainer = styled.div`
 	width: 100%;
