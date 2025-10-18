@@ -20,7 +20,7 @@ const LastestSlider = () => {
 		const duration = 5000;
 
 		const slide = (direction) => {
-			progress();
+			// progress();
 			if (direction === 'next') {
 				if (index === totalSlides - 1) {
 					index = 0;
@@ -50,21 +50,21 @@ const LastestSlider = () => {
 
 		let width = 100 / totalSlides;
 
-		function progress() {
-			document.querySelector('.progress').innerHTML = '';
+		// function progress() {
+		// 	document.querySelector('.progress').innerHTML = '';
 
-			let div = document.createElement('div');
-			div.style.height = '5px';
-			div.style.width = '0px';
-			div.style.position = 'absolute';
-			div.style.left = '0';
-			div.style.top = '0';
-			div.style.backgroundColor = '#fff';
-			div.style.zIndex = '22px';
-			div.id = 'progress';
-			div.style.animation = 'progress ' + duration / 1000 + 's linear';
-			document.querySelector('.progress').appendChild(div);
-		}
+		// 	let div = document.createElement('div');
+		// 	div.style.height = '5px';
+		// 	div.style.width = '0px';
+		// 	div.style.position = 'absolute';
+		// 	div.style.left = '0';
+		// 	div.style.top = '0';
+		// 	div.style.backgroundColor = '#fff';
+		// 	div.style.zIndex = '22px';
+		// 	div.id = 'progress';
+		// 	div.style.animation = 'progress ' + duration / 1000 + 's linear';
+		// 	document.querySelector('.progress').appendChild(div);
+		// }
 
 		function autoSlide() {
 			slide('next');
@@ -72,7 +72,7 @@ const LastestSlider = () => {
 
 		let timer = setInterval(autoSlide, duration);
 
-		progress();
+		// progress();
 	}, []);
 
 	const firstImg = useRef(null);
@@ -94,7 +94,7 @@ const LastestSlider = () => {
 		// }, 3000);
 
 		ref = setInterval(() => {
-			s;
+			
 		}, 3000);
 
 		return () => clearInterval(ref);

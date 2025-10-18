@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-	background-color: var(--color2);
+	background-color: var(--base-color-gold-neg);
 	width: 100%;
 `;
 export const FooterWrapper = styled.div`
@@ -50,4 +50,13 @@ export const FooterListsItem = styled.div`
 			font-size: 30px;
 		}
 	}
+`;
+
+
+export const Josh = styled.small`
+	text-align: center !important;
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	padding-bottom: 20px;
 `;

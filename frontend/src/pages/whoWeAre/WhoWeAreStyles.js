@@ -67,10 +67,28 @@ export const CultureInfo = styled.div`
 `;
 
 export const WhoWeAreContainer = styled.div`
-  background-color: var(--base-color-green);
-  padding: 20px 0;
+	/* background-color: var(--color-light-red);
+	background-color: gold;
+	background-color: goldenrod;
+	background-color: orange;
+	background: #f07537;
+	background: linear-gradient(
+		184deg,
+		rgba(240, 117, 55, 1) 20%,
+		rgba(252, 176, 69, 1) 78%
+	); */
+
+	/* background: #f07537;
+	background: linear-gradient(
+		180deg,
+		rgba(240, 117, 55, 1) 49%,
+		rgba(69, 154, 252, 1) 77%
+	); */
+	background-color: rgba(69, 154, 252, 1);
+	background-color: #b76e79;
+	padding: 20px 0;
 	margin-top: 20px;
-`
+`;
 
 export const WhoWeAreInfoContainer = styled.div`
 	max-width: 1200px;

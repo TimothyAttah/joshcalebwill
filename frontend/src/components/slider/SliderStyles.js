@@ -66,6 +66,7 @@ export const SlideContent = styled.div`
 		background-color: #fff;
 		color: var(--primary-color);
 		color: #00813299;
+		color: var(--base-color-gold);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -141,12 +142,12 @@ export const SlideContentWrapper = styled.div`
 	/* transform: translateX(0); */
 	background-color: #0b2d7180;
 	background: #00813299;
+	background: var(--base-color-gold);
 	opacity: 1;
 	/* z-index: 3; */
 	pointer-events: all;
 	transition: transform 0.75s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s,
 		opacity 0.5s cubic-bezier(0.72, 0.05, 0.35, 1) 0.75s;
-	/* opacity: 0.7; */
 	backdrop-filter: 60px;
 
 	@media screen and (max-width: 950px) {

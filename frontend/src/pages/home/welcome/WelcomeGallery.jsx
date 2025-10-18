@@ -1,10 +1,10 @@
 import * as Styles from './WelcomeGalleryStyles';
-import wg1 from '../../../assets/wg1.png'
-import wg2 from '../../../assets/wg2.png';
+import wg1 from '../../../assets/lub4.png'
+import wg2 from '../../../assets/pix-3.jpg';
 import wg3 from '../../../assets/wg3.png';
-import wg4 from '../../../assets/wg4.png';
-import wg5 from '../../../assets/wg5.png';
-import wg6 from '../../../assets/wg6.png';
+import wg4 from '../../../assets/lub3.png';
+import wg5 from '../../../assets/who.jpg';
+import wg6 from '../../../assets/newHaulage1.png';
 import wg7 from '../../../assets/wg7.png';
 import wg8 from '../../../assets/wg8.png';
 import wg9 from '../../../assets/wg9.png';

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const HomeServicesContainer = styled.div`
-	padding-top: 80px;
+	padding: 80px 0;
 	background-color: hsl(128, 47%, 26%);
+	background-color: var(--main-color-p);
 	position: relative !important;
 `;
 export const HomeServicesTitle = styled.div`
@@ -71,7 +72,8 @@ export const ServicesListItems = styled.div`
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--base-color-gold);
+		background-color: var(--main-color-g);
+		color: #fff;
 		text-align: center !important;
 	}
 `;
@@ -88,6 +90,8 @@ export const ServiceItemImg = styled.div`
 
 export const ServiceItemDropdown = styled.div`
 	background-color: var(--base-color-gold);
+	background-color: var(--main-color-g);
+
 	color: #fff;
 	width: 100%;
 	height: 100%;
@@ -110,7 +114,7 @@ export const ServiceItemDropdown = styled.div`
 		font-size: 20px !important;
 		text-align: center !important;
 		margin-bottom: 10px;
-		border-bottom: 5px solid var(--base-color-gold-neg);
+		/* border-bottom: 5px solid var(--base-color-gold-neg); */
 	}
 
 	p {

@@ -1,8 +1,8 @@
 import * as Styles from './WhoWeAreStyles';
 import whoVic from '../../assets/who1.mp4';
-import wg1 from '../../assets/wg5.png';
-import wg2 from '../../assets/wg6.png';
-import wg3 from '../../assets/wg7.png';
+import wg1 from '../../assets/wg3.png';
+import wg2 from '../../assets/wg4.png';
+import wg3 from '../../assets/newSlide6.png';
 import wg4 from '../../assets/wg8.png';
 import wg5 from '../../assets/wg9.png';
 import wg6 from '../../assets/wg10.png';

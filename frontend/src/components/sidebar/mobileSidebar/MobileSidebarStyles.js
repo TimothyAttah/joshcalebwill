@@ -5,7 +5,7 @@ export const MobileSidebar = styled(motion.div)`
 	max-width: 500px;
 	width: 100%;
 	height: 100vh;
-	background-color: var(--base-color-green);
+	background-color: var(--base-color-gold);
 	color: #fff;
 	position: absolute;
 	right: 0;
@@ -40,14 +40,14 @@ export const MobileSidebarList = styled(motion.ul)`
   /* gap: 40px; */
 `;
 export const MobileSidebarListItem = styled(motion.li)`
-  height: 100%;
-  position: relative;
-  /* padding-bottom: 10px; */
+	height: 100%;
+	position: relative;
+	/* padding-bottom: 10px; */
 	a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding:  20px;
+		padding: 20px;
 		/* border-radius: 10px; */
 		position: relative;
 		color: #fff;
@@ -65,7 +65,9 @@ export const MobileSidebarListItem = styled(motion.li)`
 			`}
 
 		&:hover {
-			background-color: var(--base-color-green-plus);
+			background-color: transparent;
+			background-color: var(--base-color-gold-neg);
+
 			cursor: pointer;
 			/* border-radius: 10px; */
 			svg {
@@ -79,7 +81,7 @@ export const MobileSidebarListItem = styled(motion.li)`
 			display: flex;
 			flex-direction: column;
 			z-index: 99;
-      height: 100%;
+			height: 100%;
 		}
 	}
 `;
@@ -91,7 +93,7 @@ export const MobileSidebarSubMenuList = styled(motion.ul)`
 	display: flex;
 	flex-direction: column;
 	/* gap: 10px; */
-	background-color: var(--base-color-green-plus);
+	background-color: initial;
 `;
 export const MobileSidebarSubMenuListItem = styled.li`
 	a {
@@ -114,7 +116,7 @@ export const MobileSidebarSubMenuListItem = styled.li`
 			`}
 
 		&:hover {
-			background-color: var(--base-color-green);
+			background-color: var(--base-color-gold-neg);
 			cursor: pointer;
 			/* border-radius: 10px; */
 			svg {

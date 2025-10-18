@@ -6,6 +6,11 @@ import Culture from './pages/whoWeAre/modules/culture/Culture';
 import Leaders from './pages/whoWeAre/modules/leaders/Leaders';
 import WhoWeAre from './pages/whoWeAre/WhoWeAre';
 import Contact from './pages/contact/Contact';
+import Sustainability from './pages/sustainability/Sustainability';
+import Environment from './pages/sustainability/environment/Environment';
+import Climate from './pages/sustainability/climate/Climate';
+import Careers from './pages/careers/Careers';
+import Communities from './pages/sustainability/communities/Communities';
 // import OurValues from './pages/whoWeAre/ourValues/OurValues';
 // import TheTeam from './pages/whoWeAre/theTeam/TheTeam';
 // import RecentAndPast from './pages/whoWeAre/recentAndPast/RecentAndPast';
@@ -47,6 +52,11 @@ const App = () => {
 					<Route path='/who-we-are/our-culture' element={<Culture />} />
 					<Route path='/who-we-are/leadership' element={<Leaders />} />
 					<Route path='/who-we-are/contact-us' element={<Contact />} />
+					<Route path='/sustainability' element={<Sustainability />} />
+					<Route path='/sustainability/environment' element={<Environment />} />
+					<Route path='/sustainability/communities' element={<Communities />} />
+					<Route path='/who-we-are/jobs' element={<Careers />} />
+
 					{/* <Route path='/who-we-are' element={<WhoWeAre />} /> */}
 					{/* <Route
 						path='/who-we-are/values-belief&culture'

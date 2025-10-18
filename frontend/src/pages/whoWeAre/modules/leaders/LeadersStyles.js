@@ -103,7 +103,8 @@ export const CultureInfo = styled.div`
 `;
 
 export const LeadersContainer = styled.div`
-	background-color: var(--base-color-gold);
+	background-color: var(--base-color-gold-neg);
+	background-color: var(--main-color-p);
 	color: #fff;
   padding: 50px 0;
 `;

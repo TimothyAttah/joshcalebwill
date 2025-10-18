@@ -47,7 +47,7 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 				<Styles.DesktopNavList>
 					{navWithoutSubmenuData.map((nav, i) => (
 						<li key={i}>
-							<NavLink>{nav.navTitle}</NavLink>
+							<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
 						</li>
 					))}
 				</Styles.DesktopNavList>

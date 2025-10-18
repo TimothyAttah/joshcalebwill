@@ -24,7 +24,7 @@ export const DesktopNavListWrapper = styled.div`
 	/* border: 2px solid #fff; */
 
 	.tabBg {
-		background-color: var(--base-color-green-neg);
+		background-color: var(--base-color-gold-neg);
 		color: #fff;
 
 		a {
@@ -80,8 +80,8 @@ export const DesktopNavTabContent = styled(motion.div)`
 	top: calc(100% + -10px);
 	width: 35rem;
 	border-radius: 8px;
-	border: 1px solid var(--base-color-green-plus);
-	background-image: linear-gradient(to bottom, var(--base-color-green-neg));
+	border: 1px solid var(--base-color-gold-plus);
+	background-image: linear-gradient(to bottom, var(--base-color-gold-neg));
 	padding: 16px;
 `;
 
@@ -126,7 +126,7 @@ export const Nub = styled(motion.span)`
 	transform: rotate(45deg);
 	border-top-left-radius: 4px;
 	border-width: 1px;
-	background-color: var(--base-color-green-neg);
+	background-color: var(--base-color-gold-neg);
 `;
 // export const DesktopNav = styled.div``;
 export const MenuBtn = styled.button`

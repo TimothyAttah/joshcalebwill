@@ -5,9 +5,11 @@ export const Header = styled.header`
 	position: fixed;
 	top: 0;
 	height: 100px;
-	box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+	/* box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5); */
 	z-index: 99999;
 	/* background: var(--base-color-green); */
+	/* background: #f07537;
+	background: #fdb515; */
 `;
 
 export const HeaderContainer = styled.div`

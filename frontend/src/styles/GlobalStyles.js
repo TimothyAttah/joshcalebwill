@@ -16,6 +16,10 @@ export const GlobalStyles = createGlobalStyle`
   src: url('fonts/Gotham Black.otf') format('otf');
 }
   :root {
+    --main-color-p: #b76e79;
+    --main-color-g: #fdb515;
+    --main-color-o: #f07537;
+
     --base-color-green: hsl(128, 47%, 26%);
     --base-color-green-neg: hsl(from var(--base-color-green) h s calc(l - 10));
     --base-color-green-plus: hsl(from var(--base-color-green) h s calc(l + 10));
@@ -177,7 +181,7 @@ button {
   pointer-events: none;
   }
   .activeHeader {
-    background: var( --base-color-green);
+    background: var( --main-color-g);
     max-width: 2000px !important;
 	width: 100% !important;
   }

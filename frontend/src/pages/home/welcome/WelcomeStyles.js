@@ -11,15 +11,18 @@ export const WelcomeText = styled.div`
 
 	small {
 		color: var(--base-color-green-neg);
+		color: var(--main-color-o);
 		display: block;
 		padding-bottom: 5px;
 		font-size: 18px !important;
+		font-weight: bold;
 	}
 
 	h4 {
 		font-size: 34px !important;
 		color: var(--base-color-green-plus);
-		text-transform: uppercase;
+		color: var(--main-color-o);
+		text-transform: normal;
 		line-height: 50px;
 	}
 

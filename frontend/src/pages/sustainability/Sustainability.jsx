@@ -1,5 +1,5 @@
 import * as Styles from './SustainabilityStyles';
-import pixBg from '../../assets/sus1.png';
+import susVic from '../../assets/susVic.mp4';
 import susPix1 from '../../assets/sus3.png';
 import susPix2 from '../../assets/sus4.png';
 import susPix3 from '../../assets/sus5.png';
@@ -9,85 +9,68 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { useEffect } from 'react';
 
+const Sustainability = () =>
+{
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
 
+		gsap.fromTo(
+			'.imgBox1 .img1',
+			{
+				x: -300,
+				opacity: 0,
+			},
+			{
+				x: 0,
+				opacity: 1,
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.item1',
+					start: 200,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
+				},
+			},
+		);
 
-const Sustainability = () => {
-		useEffect(() => {
-			gsap.registerPlugin(ScrollTrigger);
-
-			gsap.fromTo(
-				'.imgBox1 .img1',
-				{
-					x: -300,
-					opacity: 0,
+		gsap.fromTo(
+			'.textBox1',
+			{
+				x: 300,
+				opacity: 0,
+			},
+			{
+				x: 0,
+				opacity: 1,
+				duration: 2,
+				scrollTrigger: {
+					trigger: '.item1',
+					start: 200,
+					toggleActions: 'restart none restart none',
+					scrub: 2,
 				},
-				{
-					x: 0,
-					opacity: 1,
-					duration: 1,
-					scrollTrigger: {
-						trigger: '.item1',
-						start: 200,
-						toggleActions: 'restart none restart none',
-						scrub: 2,
-					},
-				},
-			);
-
-			gsap.fromTo(
-				'.textBox1',
-				{
-					x: 300,
-					opacity: 0,
-				},
-				{
-					x: 0,
-					opacity: 1,
-					duration: 2,
-					scrollTrigger: {
-						trigger: '.item1',
-						start: 200,
-						toggleActions: 'restart none restart none',
-						scrub: 2,
-					},
-				},
-			);
-		});
+			},
+		);
+	});
 	return (
-		<Styles.SustainabilityContainer>
-			<Styles.SustainabilityHeroContainer>
-				<Styles.SustainabilityHeroOverlay />
-				<img src={pixBg} alt='' loading='lazy' />
-				<h1>Sustainability</h1>
-			</Styles.SustainabilityHeroContainer>
-
-			<Styles.SustainabilityIntroSection>
+		<div>
+			<Styles.SustainabilityHero>
+				<video src={susVic} autoPlay muted loop playsInline />
+				<Styles.BlendModeTitle>Sustainability</Styles.BlendModeTitle>
+			</Styles.SustainabilityHero>
+			<Styles.CultureInfo>
 				<h4>🌍 Sustainability at Joshcalebwill</h4>
 				<p>
-					<p>
-						We place strong emphasis on creating positive
-						impact in the environments where we operate. We are committed to
-						building and nurturing lasting relationships with communities,
-						acting as a responsible partner, and supporting initiatives that
-						drive sustainable development.
-					</p>
+					We place strong emphasis on creating positive impact in the
+					environments where we operate. We are committed to building and
+					nurturing lasting relationships with communities, acting as a
+					responsible partner, and supporting initiatives that drive sustainable
+					development.
 				</p>
-			</Styles.SustainabilityIntroSection>
-
-			{/* <div>
-				, we place strong emphasis on creating positive impact in the
-				environments where we operate.
-			</div> */}
-
-			<div>
-				{/* <p>
-					JOSHCALEBWILL PETROLEUM LIMITED is taking the lead with{' '}
-					<span> a clear focus on sustainability.</span>
-				</p> */}
-			</div>
-
-			<div></div>
-
+			</Styles.CultureInfo>
+			<Styles.SustainabilityTitle>
+				<h1>energy is essential to modern life</h1>
+			</Styles.SustainabilityTitle>
 			<Styles.SustainabilityListWrapper>
 				<Styles.SustainabilityListItem className='item1'>
 					<Styles.SustainabilityListItemImgBox className='imgBox1'>
@@ -156,7 +139,7 @@ const Sustainability = () => {
 					</Styles.SustainabilityListItemContent>
 				</Styles.SustainabilityListItem>
 			</Styles.SustainabilityListWrapper>
-		</Styles.SustainabilityContainer>
+		</div>
 	);
 };
 

@@ -93,9 +93,9 @@ export const LeadersListItemWrapper = styled.div`
 	}
 `;
 export const LeadersListItem = styled.div`
-	width: 300px;
+	width: 250px;
 	/* padding: 20px 0; */
-	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+	/* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); */
 	position: relative;
 	cursor: pointer;
 	position: relative;
@@ -156,26 +156,31 @@ export const LeadersListItem = styled.div`
 export const LeadersListName = styled.h4`
 	text-align: center;
 	padding: 10px 10px;
+
 	/* height: 40px; */
 	/* color: ${(props) => props.leaderColor}; */
-	background-color: ${(props) => props.leaderColor};
+	/* background-color: ${(props) => props.leaderColor}; */
 	font-size: 15px;
 `;
 export const LeadersListImg = styled.div`
 	width: 100%;
-	height: 280px;
+	height: 250px;
 	background-color: #555;
 	overflow: hidden;
+	border-radius: 50%;
+
 	img {
 		width: 100%;
 		height: 100%;
+		border-radius: 50%;
 	}
 `;
 export const LeadersListInfo = styled.div`
 	width: 100%;
 	text-align: center;
-	background-color: green;
-	background-color: ${(props) => props.leaderColor};
+	margin-top: 10px;
+	/* background-color: green; */
+	/* background-color: ${(props) => props.leaderColor}; */
 	color: #fff;
 	padding: 10px;
 

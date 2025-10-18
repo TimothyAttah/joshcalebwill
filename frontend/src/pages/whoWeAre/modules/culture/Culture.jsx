@@ -26,7 +26,7 @@ const Culture = () => {
 							<img src={cultPix1} alt='' />
 						</Styles.CultureOptionsListImg>
 						<Styles.CultureOptionsListInfo first>
-							<h4>our way is the chevron way</h4>
+							<h4>our way is the Joshcalebwill's way</h4>
 							<p>
 								We’re a global team united by what we believe. We believe human
 								ingenuity has the power to solve any challenge and overcome any
@@ -43,9 +43,9 @@ const Culture = () => {
 						<Styles.CultureOptionsListInfo second>
 							<h4>we strive for excellence in everything we do</h4>
 							<p>
-								Operational Excellence (OE) aims to put into action our Chevron
+								Operational Excellence (OE) aims to put into action our Joshcalebwill
 								Way, a set of values that helps protect people and the
-								environment and helps us achieve Chevron’s vision to be the
+								environment and helps us achieve Joshcalebwill’s vision to be the
 								global energy company most admired for its people, partnership
 								and performance.
 							</p>

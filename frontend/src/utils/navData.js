@@ -86,48 +86,48 @@ export const navWithSubmenuData = [
 		id: 3,
 
 		subMenu: [
-			{
-				navTitle: 'climate',
-				navPath: '/sustainability/climate',
-			},
+			// {
+			// 	navTitle: 'climate',
+			// 	navPath: '/sustainability/climate',
+			// },
 			{
 				navTitle: 'environment',
 				navPath: '/sustainability/environment',
 			},
 			{
-				navTitle: 'social investment',
-				navPath: '/sustainability/social-investment',
+				navTitle: 'communities',
+				navPath: '/sustainability/communities',
 			},
 		],
 	},
-	{
-		navTitle: 'investors',
-		navPath: '/investors',
-		id: 4,
+	// {
+	// 	navTitle: 'investors',
+	// 	navPath: '/investors',
+	// 	id: 4,
 
-		subMenu: [
-			{
-				navTitle: 'events and presentations',
-				navPath: '/investors/events-and-presentations',
-			},
-			{
-				navTitle: 'corporate-governance',
-				navPath: '/investors/corporate-governance',
-			},
-			{
-				navTitle: 'reports and filings',
-				navPath: '/investors/reports-and-filings',
-			},
-			{
-				navTitle: 'stock and dividend',
-				navPath: '/investors/stock-and-dividend',
-			},
-			{
-				navTitle: 'contact us',
-				navPath: '/who-we-are/contact-us',
-			},
-		],
-	},
+	// 	subMenu: [
+	// 		{
+	// 			navTitle: 'events and presentations',
+	// 			navPath: '/investors/events-and-presentations',
+	// 		},
+	// 		{
+	// 			navTitle: 'corporate-governance',
+	// 			navPath: '/investors/corporate-governance',
+	// 		},
+	// 		{
+	// 			navTitle: 'reports and filings',
+	// 			navPath: '/investors/reports-and-filings',
+	// 		},
+	// 		{
+	// 			navTitle: 'stock and dividend',
+	// 			navPath: '/investors/stock-and-dividend',
+	// 		},
+	// 		{
+	// 			navTitle: 'contact us',
+	// 			navPath: '/who-we-are/contact-us',
+	// 		},
+	// 	],
+	// },
 ];
 
 export const navWithoutSubmenuData = [
@@ -137,7 +137,7 @@ export const navWithoutSubmenuData = [
 	// },
 	{
 		navTitle: 'careers',
-		navPath: '/careers',
+		navPath: 'who-we-are/jobs',
 	},
 	{
 		navTitle: 'market',
