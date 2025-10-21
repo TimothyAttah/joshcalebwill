@@ -3,14 +3,8 @@ import pic2 from '../../../assets/welcome-2.jpg';
 import pic3 from '../../../assets/welcome-1.jpg';
 import pic4 from '../../../assets/haulage5.jpg';
 import pic5 from '../../../assets/haulage6.png';
-import pic6 from '../../../assets/haulage5.png';
+import pic6 from '../../../assets/hau1.png';
 import pic7 from '../../../assets/newHaulage1.png';
-
-
-
-
-
-
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
@@ -22,16 +16,18 @@ import { Link } from 'react-router-dom';
 const Haulage2 = () => {
 	return (
 		<Styles.HaulageContainer>
-			<Styles.HaulageHeroContainer>
-				<img src={pic1} alt='' loading='lazy' />
-				<h1>Haulage Services</h1>
-			</Styles.HaulageHeroContainer>
-			<Styles.HaulageIntroSection>
+			<Styles.HaulageHero>
+				<img src={pic1} alt='' />
+				<Styles.BlendModeTitle>Haulage</Styles.BlendModeTitle>
+			</Styles.HaulageHero>
+			<Styles.CultureInfo>
 				<small>A unique supply capability</small>
-				<h4>
+				<p>
 					We provide haulage services especially in the area of Diesel, Petrol,
 					Kerosene, CNG, and other petroleum products.
-				</h4>
+				</p>
+			</Styles.CultureInfo>
+			<Styles.HaulageIntroSection>
 				<p>
 					With our own import infrastructure in key demand locations and lifting
 					rights at inland locations, we have unique national supply capability.
@@ -82,8 +78,8 @@ const Haulage2 = () => {
 					<h2>We offer:</h2>
 					<h4>Competitive pricing</h4>
 					<p>
-						An extensive range of fuel petroluem products including petrol, diesel,
-						gasoil, marine gasoil and kerosene.
+						An extensive range of fuel petroluem products including petrol,
+						diesel, gasoil, marine gasoil and kerosene.
 						{/*
 						biodiesel as B100 and also as B20 and B30 blends, bioethanol,
 						ultra-low sulphur */}

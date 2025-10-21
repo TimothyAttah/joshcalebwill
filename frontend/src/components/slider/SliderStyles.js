@@ -32,13 +32,14 @@ export const SlideContent = styled.div`
 		color: #fff;
 		text-align: center;
 		font-size: 6.4rem !important;
-		font-size: 4.4rem !important;
+		font-size: 3.5rem !important;
 
 		line-height: 6.8rem !important;
-		line-height: 5.8rem !important;
+		line-height: 4rem !important;
 
 		letter-spacing: -0.013em !important;
 		text-transform: lowercase;
+		/* text-align: center !important; */
 		animation: text 1s ease forwards;
 	}
 
@@ -50,8 +51,8 @@ export const SlideContent = styled.div`
 	}
 
 	p {
-		font-size: 22px;
-		line-height: 1.5;
+		font-size: 18px !important;
+		line-height: 1.2;
 		padding-top: 10px;
 		font-weight: bold;
 		color: #fff;
@@ -60,8 +61,8 @@ export const SlideContent = styled.div`
 	}
 
 	div a {
-		width: 200px;
-		height: 50px;
+		width: 180px;
+		height: 40px;
 		margin: auto;
 		background-color: #fff;
 		color: var(--primary-color);
@@ -70,7 +71,7 @@ export const SlideContent = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 20px auto;
+		margin: 20px 0;
 		text-transform: uppercase;
 		font-weight: bold;
 		border-radius: 10px;
@@ -135,6 +136,7 @@ export const SlideContentWrapper = styled.div`
 	z-index: 999999;
 
 	padding: 48px 40px 40px;
+	padding: 10px 40px;
 	border-radius: 16px;
 	backdrop-filter: blur(40px) opacity(1);
 	-webkit-backdrop-filter: blur(10px) opacity(1);

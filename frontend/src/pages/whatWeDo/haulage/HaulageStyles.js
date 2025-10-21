@@ -1,113 +1,223 @@
-import styled from 'styled-components';
-import bgPix from '../../../assets/haulage5.png';
-import bgColor from '../../../assets/bg.jpg'
+import styled, { css } from 'styled-components';
 
-export const HaulageServiceHero = styled.div`
+export const Haulage = styled.div``;
+
+export const HaulageHero = styled.div`
 	width: 100%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	padding-top: 42%;
-	background: url(${bgPix});
-	background-position: center;
-	background-size: cover;
+	height: 100vh;
 	background-repeat: no-repeat;
-	position: relative;
-
-	@media screen and (max-width: 750px) {
-		padding-top: 62%;
-	}
-
-	@media screen and (max-width: 450px) {
-		padding-top: 82%;
+	background-size: cover;
+	img,
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		transition: 0.5s ease all;
 	}
 `;
 
-
-export const HaulageServiceContainer = styled.div`
-	/* padding-top: 100px; */
-`;
-
-export const HaulageServiceTitle = styled.div`
-	text-align: center;
-	max-width: 900px;
+export const BlendModeTitle = styled.h1`
+	font-size: 10rem;
 	width: 100%;
-	margin: auto;
+	background-color: #fff;
+	color: #000;
 	position: absolute;
-	left: 50%;
-	/* top: 50%; */
-	transform: translateX(-50%);
-	top: 20px;
-	/* color: #fff; */
-	background-color: var(--color2);
-	/* background: #00813299; */
-	background: #00813266;
-	padding: 20px;
+	bottom: 0px;
+	text-align: center !important;
+	/* padding: 50px 0; */
+	mix-blend-mode: screen;
+	letter-spacing: -5px;
+	/* padding-top: 10px; */
+	padding-bottom: 50px;
 
-	h1 {
-		font-size: 50px !important;
-		padding-bottom: 5px;
-		color: #fff;
-		/* color: var(--color2);
-		color: var(--primary-color); */
+	@media screen and (max-width: 900px) {
+		font-size: 8rem !important;
+		letter-spacing: 0;
 	}
+
+	@media screen and (max-width: 790px) {
+		font-size: 4rem !important;
+		letter-spacing: 0;
+	}
+
+	@media screen and (max-width: 390px) {
+		font-size: 3rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+`;
+
+export const CultureInfo = styled.div`
+	background-color: #fff;
+	padding: 0px 0;
 
 	p {
-		font-size: 20px;
-		line-height: 1.5;
-		color: #fff;
-		/* color: var(--primary-color); */
+		max-width: 700px;
+		margin: auto;
+		font-size: 22px;
+		line-height: 30px;
+		color: #000;
+		text-align: center !important;
 	}
 
-	@media screen and (max-width: 450px) {
-		h1 {
-			font-size: 26px !important;
-		}
-
-		p {
-			font-size: 18px;
-			line-height: 1.5;
-		}
+	@media screen and (max-width: 390px) {
+		padding: 0 20px;
 	}
 `;
-export const HaulageServiceListsWrapper = styled.div`
-	width: 100%;
-	padding: 50px 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	gap: 50px;
-	background: url(${bgColor});
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-`;
-export const HaulageServiceList = styled.div`
-	max-width: 500px;
-	width: 100%;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-	padding: 20px;
-	background: linear-gradient(var(--brown), var(--color-medium-blue));
-  background: var(--color2);
-  color: #fff;
-	border-radius: 10px;
+
+export const HaulageContainer = styled.div`
+	background-color: var(--main-color-p);
+	padding: 50px;
+	margin-top: 50px;
 
 	h2 {
-		font-size: 30px !important;
-		text-align: center;
+		max-width: 1000px;
+		width: 100%;
+		text-align: center !important;
+		font-size: 28px !important;
+		margin: auto;
 		color: #fff;
+		line-height: 1.2;
 	}
 
+	@media screen and (max-width: 390px) {
+		padding: 20px;
+
+		h2 {
+			font-size: 20px !important;
+		}
+	}
+`;
+export const HaulageOptionsContainer = styled.div`
+	max-width: 1300px;
+	width: 100%;
+	margin: 50px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+
+	${(props) =>
+		props.primary &&
+		css`
+			flex-direction: row-reverse;
+		`}
+
+	@media screen and (max-width: 750px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+`;
+export const HaulageOptionsImg = styled.div`
+	max-width: 600px;
+	width: 100%;
+	height: 500px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+`;
+
+export const HaulageOptionsInfo = styled.div`
+	max-width: 600px;
+	width: 100%;
+	color: #fff;
+
 	h4 {
-		font-size: 22px;
-		padding: 10px 0;
-		text-align: center;
+		color: #fff;
+		padding-bottom: 10px;
+		font-size: 28px;
+		color: var(--main-color-g);
 	}
 
 	p {
-		font-size: 17px;
-		line-height: 1.4;
+		color: #fff;
+		padding-bottom: 10px;
+		font-size: 20px;
+	}
+
+	ul li {
+		padding: 5px;
+		span {
+			font-weight: bold;
+			color: var(--main-color-g);
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		h4,
+		p,
+		ul li {
+			text-align: center !important;
+		}
+	}
+`;
+
+export const ChooseUs = styled.div`
+	background-color: #555;
+	padding: 50px;
+
+	color: #fff;
+
+	h4 {
+		color: #fff;
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+
+	h2 {
+		color: #fff;
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+
+	p {
+		color: #fff;
+		font-size: 18px;
+		padding-bottom: 10px;
+
+		a {
+			color: var(--main-color-g);
+		}
+	}
+
+	ul {
+		margin: 20px 0 !important;
+
+		li {
+			padding-bottom: 5px;
+		}
+	}
+
+	div {
+		button {
+			padding: 10px 20px;
+			display: block;
+			margin: 20px 0;
+			background-color: var(--main-color-g);
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		h4,
+		p,
+		ul li,
+		h2 {
+			text-align: center !important;
+		}
+
+		button {
+			margin: 20px auto !important;
+		}
+
+		padding: 10px;
 	}
 `;

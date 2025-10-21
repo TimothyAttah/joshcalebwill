@@ -42,18 +42,21 @@ export const HomeServicesTitle = styled.div`
 	@media screen and (max-width: 900px) {
 		h1 {
 			font-size: 6rem;
+			line-height: 7rem;
 		}
 	}
 
 	@media screen and (max-width: 450px) {
 		h1 {
 			font-size: 4rem;
+			line-height: 5rem;
 		}
 	}
 
 	@media screen and (max-width: 320px) {
 		h1 {
 			font-size: 2.5rem;
+			line-height: 3rem;
 		}
 	}
 `;

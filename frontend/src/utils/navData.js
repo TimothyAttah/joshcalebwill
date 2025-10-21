@@ -33,14 +33,14 @@ export const navWithSubmenuData = [
 		id: 2,
 
 		subMenu: [
-			{
-				navTitle: 'energy',
-				navPath: '/what-we-do/energy',
-			},
-			{
-				navTitle: 'technology and innovation',
-				navPath: '/what-we-do/technology-and-innovation',
-			},
+			// {
+			// 	navTitle: 'energy',
+			// 	navPath: '/what-we-do/energy',
+			// },
+			// {
+			// 	navTitle: 'technology and innovation',
+			// 	navPath: '/what-we-do/technology-and-innovation',
+			// },
 			// {
 			// 	navTitle: 'joshcalebwill around the world',
 			// 	navPath: '/what-we-do/joshcalebwill-around-the-world',
