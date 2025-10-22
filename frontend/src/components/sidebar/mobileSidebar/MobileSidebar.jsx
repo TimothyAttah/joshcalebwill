@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Overlay from '../../Overlay';
 import { FadeInAlways } from '../../fadeIn/FadeInAlways';
 import {
-	navWithSubmenuData,
+	mobileNavWithSubmenuData,
 	navWithoutSubmenuData,
 } from '../../../utils/navData';
 import { scrollToTop } from '../../header/Header';
@@ -56,6 +56,8 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 
 	const closeSidebar = (i, isClicked) => {
 		setClicked(isClicked ? null : i);
+
+		setShowMobileSidebar(false);
 		scrollToTop();
 	};
 
@@ -72,38 +74,48 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 			>
 				<Styles.MobileSidebarContainer>
 					<Styles.MobileSidebarList>
-						{navWithSubmenuData.map((nav, i) => {
+						{mobileNavWithSubmenuData.map((nav, i) => {
 							const hasSubMenu = nav.subMenu.length > 0;
-							const isClicked = isOpen === i;
+							const isClicked = clicked === i;
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSidebarListItem>
-										<Link
+										{/* <Link
 											to={nav.navPath}
 											onClick={() => setShowMobileSidebar(false)}
+										>
+											{nav.navTitle} {hasSubMenu && <ChevronDown />}
+										</Link> */}
+										<Link
+											onClick={() => setClicked(isClicked ? null : i)}
+											to={nav.navPath}
 										>
 											{nav.navTitle} {hasSubMenu && <ChevronDown />}
 										</Link>
 
 										{hasSubMenu && (
-											<Styles.MobileSidebarSubMenuList>
-												{nav.subMenu.map((nav, i) => (
+											<Styles.MobileSubMenuListWrapper
+												initial='exit'
+												animate={isClicked ? 'enter' : 'exit'}
+												variants={subMenuDrawer}
+											>
+												{nav.subMenu?.map((nav, i) => (
 													<FadeInAlways
 														key={i}
-														delay={0.2 * i + 0.2}
+														delay={0.1 * i + 0.1}
 														direction='down'
 													>
-														<Styles.MobileSidebarSubMenuListItem>
+														<Styles.MobileSubMenuList>
 															<Link
 																to={nav.navPath}
-																onClick={() => setShowMobileSidebar(false)}
+																onClick={() => closeSidebar(i, isClicked)}
 															>
-																{nav.navTitle}
+																<span>{nav.navTitle}</span>
 															</Link>
-														</Styles.MobileSidebarSubMenuListItem>
+														</Styles.MobileSubMenuList>
 													</FadeInAlways>
 												))}
-											</Styles.MobileSidebarSubMenuList>
+											</Styles.MobileSubMenuListWrapper>
 										)}
 									</Styles.MobileSidebarListItem>
 								</FadeInAlways>

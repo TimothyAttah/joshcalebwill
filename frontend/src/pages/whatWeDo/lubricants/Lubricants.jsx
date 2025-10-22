@@ -56,7 +56,7 @@ const Lubricants = () => {
 				</Styles.LubricantsOptions>
 			</Styles.LubricantsOptionsWrapper>
 
-			<div>
+			<Styles.LubricantsInfo>
 				<h2>a leading global producer of base oils</h2>
 				<p>
 					Formulated to meet some of the world's toughest industry standards.
@@ -65,7 +65,7 @@ const Lubricants = () => {
 					Joshcalenwill base and process oils are characterized by their performance
 					and color stability.
 				</small>
-			</div>
+			</Styles.LubricantsInfo>
 		</Styles.LubricantsContainer>
 	);
 };

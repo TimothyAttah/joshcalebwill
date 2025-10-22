@@ -126,6 +126,58 @@ export const MobileSidebarSubMenuListItem = styled.li`
 	}
 `;
 
+export const MobileSubMenuListWrapper = styled(motion.ul)`
+	padding: 0;
+`;
+export const MobileSubMenuList = styled(motion.li)`
+	background-color: rgb(129 59 1);
+	/* background-color: #444; */
+	/* padding: 10px; */
+
+	a {
+		display: flex;
+		/* align-items: center; */
+		justify-content: flex-start;
+		padding: 15px;
+		gap: 10px;
+		font-size: 16px;
+		transition: all 0.3s;
+
+		/* span:first-child {
+			display: block;
+			width: 25px;
+			height: 25px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			color: #000;
+			border-radius: 10px;
+			transition: all 0.3s;
+
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+		} */
+
+		/* svg {
+			transform: rotate(0deg) !important;
+			font-size: 20px;
+		} */
+
+		&:hover {
+			background-color: #444;
+			background-color: rgb(129 59 1);
+			padding-left: 25px;
+
+			span:first-child {
+				background-color: var(--brown);
+				color: #fff;
+			}
+		}
+	}
+`;
 // export const MobileSidebar = styled(motion.div)``;
 // export const MobileSidebar = styled(motion.div)``;
 // export const MobileSidebar = styled(motion.div)``;

@@ -1,238 +1,258 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-export const ChemicalContainer = styled.div``;
-export const ChemicalHeroContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden !important;
+export const Chemical = styled.div``;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  h1 {
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1000px;
-    width: 100%;
-    color: #fff;
-    z-index: 99;
-    backdrop-filter: blur(40px) opacity(1);
-    -webkit-backdrop-filter: blur(10px) opacity(1);
-    text-align: center;
-    font-size: 6rem !important;
-    border-radius: 20px;
-    padding: 20px;
-  }
-
-  @media screen and (max-width: 1020px) {
-    h1 {
-      font-size: 6rem !important;
-    }
-  }
-
-  @media screen and (max-width: 770px) {
-    h1 {
-      font-size: 4rem !important;
-    }
-  }
-
-  @media screen and (max-width: 550px) {
-    h1 {
-      font-size: 3rem !important;
-    }
-  }
-
-  @media screen and (max-width: 430px) {
-    h1 {
-      font-size: 2rem !important;
-    }
-  }
-
-  @media screen and (max-width: 310px) {
-    h1 {
-      font-size: 1.5rem !important;
-    }
-  }
-
-
-`;
-export const ChemicalHeroOverlay = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  /* background: rgba(0, 0, 0, 0.7); */
-  background: #05050540;
-  z-index: 9;
-  overflow: hidden !important;
-`;
-
-export const ChemicalIntroSection = styled.div`
-	max-width: 1000px;
+export const ChemicalHero = styled.div`
 	width: 100%;
-	margin: 0px auto;
-  margin-top: 90px;
-	padding: 10px;
-  text-align: center;
-
-	h4, h3 {
-		color: var(--color2);
-		font-size: 28px;
-    padding-bottom: 10px;
-	}
-
-  h3 {
-    display: none;
-  }
-
-
-
-	p {
-		font-size: 22px;
-		color: #463636;
-	}
-
-  @media screen and (max-width: 570px) {
-    text-align: center;
-
-    h4 {
-      display: none;
-    }
-
-    h3 {
-      font-size: 22px;
-      display: block;
-    }
-
-    p {
-      font-size: 18px;
-    }
-  }
-`;
-
-export const ChemicalListWrapper = styled.div`
-  max-width: 1400px;
-  width: 100%;
-  margin: 50px auto;
-`;
-export const ChemicalListItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 50px 10px;
-
-  ${props => props.primary && css`
-      flex-direction: row-reverse;
-    `}
-
-  @media screen and (max-width: 900px){
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-`;
-export const ChemicalListItemImgBox = styled.div`
-	max-width: 600px;
-	width: 100%;
-
-	img {
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	img,
+	video {
 		width: 100%;
-	}
-	@media screen and (max-width: 420px) {
-		max-width: 100%;
-	}
-`;
-
-export const ChemicalListItemImg = styled.div`
-	width: 100%;
-  height: 350px;
-
-	img {
-		width: 100%;
-    height: 100%;
-    object-fit: cover;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		transition: 0.5s ease all;
 	}
 `;
-export const ChemicalListItemContent = styled.div`
-	max-width: 700px;
+
+export const BlendModeTitle = styled.h1`
+	font-size: 8rem;
 	width: 100%;
-
-	h4 {
-		color: var(--color2);
-		font-size: 28px;
-		padding-bottom: 10px;
-		letter-spacing: 0;
-	}
-
-	p {
-		font-size: 22px;
-		color: #463636;
-	}
-
-	ul {
-		padding: 0;
-		li {
-			padding: 5px 0;
-			span {
-				font-weight: bold;
-			}
-		}
-	}
+	background-color: #fff;
+	color: #000;
+	position: absolute;
+	bottom: 0px;
+	text-align: center !important;
+	/* padding: 50px 0; */
+	mix-blend-mode: screen;
+	letter-spacing: -5px;
+	/* padding-top: 10px; */
+	padding-bottom: 50px;
 
 	@media screen and (max-width: 900px) {
-		h4,
-		p {
-			text-align: center;
-		}
-	}
-
-	@media screen and (max-width: 420px) {
-		max-width: 100%;
-	}
-`;
-
-export const ChemicalReasonWrapper = styled.div`
-	width: 100%;
-	background-color: #ddd;
-	padding: 50px;
-	margin: auto;
-
-	h4 {
-		color: var(--color2);
-		font-size: 28px;
-		padding-bottom: 10px;
+		font-size: 6rem !important;
 		letter-spacing: 0;
 	}
 
+	@media screen and (max-width: 790px) {
+		font-size: 4rem !important;
+		letter-spacing: 0;
+	}
+
+	@media screen and (max-width: 450px) {
+		font-size: 3rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+
+	@media screen and (max-width: 350px) {
+		font-size: 2.5rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+`;
+
+export const CultureInfo = styled.div`
+	background-color: #fff;
+	padding: 0px 0;
+
+	h4,
+	h3 {
+		color: var(--main-color-o);
+		font-size: 28px !important;
+		padding-bottom: 10px;
+		text-align: center !important;
+	}
+
+	h3 {
+		display: none;
+	}
+
 	p {
+		max-width: 700px;
+		margin: auto;
 		font-size: 22px;
-		color: #463636;
+		line-height: 30px;
+		color: #000;
+		text-align: center !important;
+	}
+
+	@media screen and (max-width: 570px) {
+		text-align: center;
+
+		h4 {
+			display: none;
+		}
+
+		h3 {
+			font-size: 22px !important;
+			display: block;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		padding: 0 20px;
+	}
+`;
+
+export const ChemicalContainer = styled.div`
+	background-color: var(--main-color-p);
+	padding: 50px;
+	margin-top: 50px;
+
+	h2 {
+		max-width: 1000px;
+		width: 100%;
+		text-align: center !important;
+		font-size: 28px !important;
+		margin: auto;
+		color: #fff;
+		line-height: 1.2;
+	}
+
+	@media screen and (max-width: 390px) {
+		padding: 20px;
+
+		h2 {
+			font-size: 20px !important;
+		}
+	}
+`;
+export const ChemicalOptionsContainer = styled.div`
+	max-width: 1300px;
+	width: 100%;
+	margin: 50px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+
+	${(props) =>
+		props.primary &&
+		css`
+			flex-direction: row-reverse;
+		`}
+
+	@media screen and (max-width: 750px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+`;
+export const ChemicalOptionsImg = styled.div`
+	max-width: 600px;
+	width: 100%;
+	height: 500px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+`;
+
+export const ChemicalOptionsInfo = styled.div`
+	max-width: 600px;
+	width: 100%;
+	color: #fff;
+
+	h4 {
+		color: #fff;
+		padding-bottom: 10px;
+		font-size: 28px;
+		color: var(--main-color-g);
+	}
+
+	p {
+		color: #fff;
+		padding-bottom: 10px;
+		font-size: 20px;
+	}
+
+	ul li {
+		padding: 5px;
+		span {
+			font-weight: bold;
+			color: var(--main-color-g);
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		h4,
+		p,
+		ul li {
+			text-align: center !important;
+		}
+	}
+`;
+
+export const ChooseUs = styled.div`
+	background-color: #555;
+	padding: 50px;
+
+	color: #fff;
+
+	h4 {
+		color: #fff;
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+
+	h2 {
+		color: #fff;
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+
+	p {
+		color: #fff;
+		font-size: 18px;
+		padding-bottom: 10px;
+
+		a {
+			color: var(--main-color-g);
+		}
 	}
 
 	ul {
-		padding: 0;
+		margin: 20px 0 !important;
+
 		li {
-			padding: 5px 0;
-			span {
-				font-weight: bold;
+			padding-bottom: 5px;
+		}
+	}
+
+	div {
+		button {
+			padding: 10px 20px;
+			display: block;
+			margin: 20px 0;
+			background-color: var(--main-color-g);
+			a {
+				color: #fff;
 			}
 		}
 	}
 
-	@media screen and (max-width: 720px) {
+	@media screen and (max-width: 450px) {
 		h4,
-		p {
-			text-align: center;
+		p,
+		ul li,
+		h2 {
+			text-align: center !important;
 		}
+
+		button {
+			margin: 20px auto !important;
+		}
+
+		padding: 10px;
 	}
 `;

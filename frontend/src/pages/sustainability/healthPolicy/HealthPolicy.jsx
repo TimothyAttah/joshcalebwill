@@ -23,9 +23,7 @@ const HealthPolicy = () => {
 							</p>
 						</FadeInAlways>
 					</Styles.TitleBox>
-					{/* <FadeInAlways delay={0.4} direction='left'>
-						<img src={hse1} alt='' loading='lazy' />
-					</FadeInAlways> */}
+				
 				</Styles.HealthPolicyTitle>
 			</FadeInAlways>
 			<Styles.HealthPolicyItemWrapper>

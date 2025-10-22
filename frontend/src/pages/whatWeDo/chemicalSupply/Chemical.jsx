@@ -1,69 +1,25 @@
-import pic1 from '../../../assets/newChem1.png';
-import pic2 from '../../../assets/newChem2.png';
-import pic3 from '../../../assets/newChem3.png';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-
-
 import * as Styles from './ChemicalStyles';
-import { useEffect } from 'react';
+import explore1 from '../../../assets/newChem1.png';
+import explore2 from '../../../assets/newChem2.png';
+import explore3 from '../../../assets/newChem3.png';
+import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../../components/header/Header';
 
 const Chemical = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-		gsap.fromTo(
-			'.imgBox1 .img1',
-			{
-				x: -300,
-				opacity: 0,
-			},
-			{
-				x: 0,
-				opacity: 1,
-				duration: 1,
-				scrollTrigger: {
-					trigger: '.item1',
-					start: 200,
-					toggleActions: 'restart none restart none',
-					scrub: 2,
-				},
-			},
-    );
-
-    gsap.fromTo(
-			'.textBox1',
-			{
-				x: 300,
-				opacity: 0,
-			},
-			{
-				x: 0,
-				opacity: 1,
-				duration: 2,
-				scrollTrigger: {
-					trigger: '.item1',
-					start: 200,
-					toggleActions: 'restart none restart none',
-					scrub: 2,
-				},
-			},
-		);
-})
 	return (
-		<Styles.ChemicalContainer>
-			<Styles.ChemicalHeroContainer>
-				<img src={pic1} alt='' loading='lazy' />
-				<h1>CHEMICAL SUPPLY AND TREATMENTS</h1>
-				{/*  */}
-			</Styles.ChemicalHeroContainer>
-			<Styles.ChemicalIntroSection>
+		<>
+			<Styles.ChemicalHero>
+				<img src={explore1} alt='' />
+				<Styles.BlendModeTitle>
+					CHEMICAL SUPPLY AND TREATMENTS
+				</Styles.BlendModeTitle>
+			</Styles.ChemicalHero>
+			<Styles.CultureInfo>
 				<h4>Safe.Reliable.Sustainable</h4>
 				<h3>
 					Safe. <br /> Reliable. <br />
 					Sustainable
 				</h3>
-
 				<p>
 					At Joshcalebwill, we deliver high-quality chemical products and
 					treatment solutions that keep industries running smoothly, safely, and
@@ -71,15 +27,13 @@ const Chemical = () => {
 					quality assurance, and tailored service, ensuring that every product
 					we deliver meets the highest industry standards.
 				</p>
-			</Styles.ChemicalIntroSection>
-			<Styles.ChemicalListWrapper>
-				<Styles.ChemicalListItem className='item1'>
-					<Styles.ChemicalListItemImgBox className='imgBox1'>
-						<Styles.ChemicalListItemImg className='img1'>
-							<img src={pic2} alt='' />
-						</Styles.ChemicalListItemImg>
-					</Styles.ChemicalListItemImgBox>
-					<Styles.ChemicalListItemContent className='textBox1'>
+			</Styles.CultureInfo>
+			<Styles.ChemicalContainer>
+				<Styles.ChemicalOptionsContainer>
+					<Styles.ChemicalOptionsImg>
+						<img src={explore2} alt='' />
+					</Styles.ChemicalOptionsImg>
+					<Styles.ChemicalOptionsInfo>
 						<h4>Our Expertise</h4>
 						<p>
 							We specialize in sourcing, supplying, and applying a wide range of
@@ -104,15 +58,13 @@ const Chemical = () => {
 								crop protection solutions.
 							</li>
 						</ul>
-					</Styles.ChemicalListItemContent>
-				</Styles.ChemicalListItem>
-				<Styles.ChemicalListItem primary='true' className='item1'>
-					<Styles.ChemicalListItemImgBox className='imgBox1'>
-						<Styles.ChemicalListItemImg className='img1'>
-							<img src={pic3} alt='' />
-						</Styles.ChemicalListItemImg>
-					</Styles.ChemicalListItemImgBox>
-					<Styles.ChemicalListItemContent className='textBox1'>
+					</Styles.ChemicalOptionsInfo>
+				</Styles.ChemicalOptionsContainer>
+				<Styles.ChemicalOptionsContainer primary>
+					<Styles.ChemicalOptionsImg>
+						<img src={explore3} alt='' />
+					</Styles.ChemicalOptionsImg>
+					<Styles.ChemicalOptionsInfo>
 						<h4>Treatment Solutions</h4>
 						<p>
 							Beyond supplying chemicals, we provide treatment programs designed
@@ -134,11 +86,11 @@ const Chemical = () => {
 								applications meet regulatory and safety standards.
 							</li>
 						</ul>
-					</Styles.ChemicalListItemContent>
-				</Styles.ChemicalListItem>
-			</Styles.ChemicalListWrapper>
-			<Styles.ChemicalReasonWrapper>
-				<h4> Why Choose Joshcalebwill?</h4>
+					</Styles.ChemicalOptionsInfo>
+				</Styles.ChemicalOptionsContainer>
+			</Styles.ChemicalContainer>
+			<Styles.ChooseUs>
+				<h4>Why Choose Our Chemical Services</h4>
 				<p>
 					We specialize in sourcing, supplying, and applying a wide range of
 					industrial chemicals for sectors including:
@@ -162,17 +114,22 @@ const Chemical = () => {
 						environmental impact.
 					</li>
 				</ul>
-				<p>
-					Whether you need bulk chemical supply, specialty blends, or
-					comprehensive treatment programs, Joshcalebwill is your trusted
-					partner for safe, efficient, and cost-effective solutions.
-				</p>
-				<p>
-					📞 Get in touch today to discuss your chemical supply and treatment
-					needs.
-				</p>
-			</Styles.ChemicalReasonWrapper>
-		</Styles.ChemicalContainer>
+				<div>
+					<p>
+						Whether you need bulk chemical supply, specialty blends, or
+						comprehensive treatment programs, Joshcalebwill is your trusted
+						partner for safe, efficient, and cost-effective solutions.
+					</p>
+					<p>
+						📞 Get in touch today to discuss your chemical supply and treatment
+						needs.
+					</p>
+					<button>
+						<Link to='/who-we-are/contact-us'>Let’s Get Started</Link>
+					</button>
+				</div>
+			</Styles.ChooseUs>
+		</>
 	);
 };
 

@@ -8,12 +8,16 @@ import WhoWeAre from './pages/whoWeAre/WhoWeAre';
 import Contact from './pages/contact/Contact';
 import Sustainability from './pages/sustainability/Sustainability';
 import Environment from './pages/sustainability/environment/Environment';
-import Climate from './pages/sustainability/climate/Climate';
 import Careers from './pages/careers/Careers';
 import Communities from './pages/sustainability/communities/Communities';
 import Exploration from './pages/whatWeDo/exploration/Exploration';
 import Procurement from './pages/whatWeDo/procurement/Procurement';
 import Haulage from './pages/whatWeDo/haulage/Haulage2';
+import Chemical from './pages/whatWeDo/chemicalSupply/Chemical';
+import Pipeline2 from './pages/whatWeDo/pipeline/Pipeline2';
+import Gas from './pages/whatWeDo/gas/Gas';
+import Health2 from './pages/whatWeDo/health/Health2';
+import Lubricants from './pages/whatWeDo/lubricants/Lubricants'
 
 
 const App = () => {
@@ -37,24 +41,30 @@ const App = () => {
 						element={<Procurement />}
 					/>
 					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
-
-					{/* <Route path='/what-we-do/exploration' element={<Exploration />} />
 					<Route
 						path='/what-we-do/chemical-supply&treatments'
-						element={<ChemicalSupply />}
+						element={<Chemical />}
 					/>
 					<Route
 						path='/what-we-do/pipeline-construction-and-maintenance'
-						element={<Pipeline />}
+						element={<Pipeline2 />}
 					/>
 					<Route
 						path='/what-we-do/gas-compression-services'
 						element={<Gas />}
 					/>
+
+					<Route path='/what-we-do/health-and-safety' element={<Health2 />} />
+					<Route path='/what-we-do/lubricants' element={<Lubricants />} />
+
+					{/* <Route path='/what-we-do/exploration' element={<Exploration />} />
+
+
+
 					<Route path='/what-we-do/health-and-safety' element={<Health />} />
 
 
-					<Route path='/what-we-do/lubricants' element={<Lubricants />} />
+
 
 					<Route path='/sustainability' element={<Sustainability />} /> */}
 

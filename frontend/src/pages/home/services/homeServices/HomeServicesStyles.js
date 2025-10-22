@@ -47,6 +47,7 @@ export const HomeServicesTitle = styled.div`
 	}
 
 	@media screen and (max-width: 450px) {
+		padding: 20px;
 		h1 {
 			font-size: 4rem;
 			line-height: 5rem;

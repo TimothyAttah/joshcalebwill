@@ -3,55 +3,12 @@ import pic2 from '../../../assets/pipe3.jpg';
 import pic3 from '../../../assets/pipe5.jpg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import {FaCheckCircle} from 'react-icons/fa'
+import { FaCheckCircle } from 'react-icons/fa';
 
 import * as Styles from './Pipeline2Styles';
 import { useEffect } from 'react';
 
 const Pipeline2 = () => {
-	useEffect(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		gsap.fromTo(
-			'.imgBox1 .img1',
-			{
-				x: -200,
-				opacity: 0,
-				scale: 1,
-			},
-			{
-				x: 0,
-				opacity: 1,
-				duration: 1,
-				scale: 1.1,
-				scrollTrigger: {
-					trigger: '.item1',
-					start: 9,
-					toggleActions: 'restart none restart none',
-					scrub: 2,
-				},
-			},
-		);
-
-		gsap.fromTo(
-			'.textBox1',
-			{
-				x: 200,
-				opacity: 0,
-			},
-			{
-				x: 0,
-				opacity: 1,
-				duration: 2,
-				scrollTrigger: {
-					trigger: '.item1',
-					start: 9,
-					toggleActions: 'restart none restart none',
-					scrub: 2,
-				},
-			},
-		);
-	});
 	return (
 		<Styles.PipelineContainer>
 			<Styles.PipelineHeroContainer>
@@ -137,7 +94,6 @@ const Pipeline2 = () => {
 				</p>
 				<ul>
 					<li>
-						{' '}
 						<span>
 							<FaCheckCircle />
 						</span>
@@ -151,7 +107,6 @@ const Pipeline2 = () => {
 						compliance.
 					</li>
 					<li>
-						{' '}
 						<span>
 							<FaCheckCircle />
 						</span>

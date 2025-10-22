@@ -3,7 +3,7 @@ import pic2 from '../../../assets/newHealth1.png';
 import pic3 from '../../../assets/newGas3.png';
 import servicePix1 from '../../../assets/healthService1.jpg';
 import servicePix2 from '../../../assets/healthService2.jpg';
-import servicePix3 from '../../../assets/healthService3.jpg';
+import servicePix3 from '../../../assets/newExp3.png';
 import servicePix4 from '../../../assets/healthService4.jpg';
 import servicePix5 from '../../../assets/healthService5.jpg';
 import servicePix6 from '../../../assets/healthService6.jpg';
@@ -12,21 +12,20 @@ import servicePix8 from '../../../assets/healthService8.jpg';
 import servicePix9 from '../../../assets/healthService9.jpg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import {FaDotCircle} from 'react-icons/fa'
+import { FaDotCircle } from 'react-icons/fa';
 
 import * as Styles from './Health2Styles';
 import { useEffect } from 'react';
-import HealthPolicy  from '../../sustainability/healthPolicy/HealthPolicy';
+import HealthPolicy from '../../sustainability/healthPolicy/HealthPolicy';
 
 const Health2 = () => {
 	return (
 		<Styles.HealthContainer>
-			<Styles.HealthHeroContainer>
-				<Styles.HealthHeroOverlay />
+			<Styles.HealthHero>
 				<img src={servicePix3} alt='' />
-				<h1>Health and Safety</h1>
-			</Styles.HealthHeroContainer>
-			<Styles.HealthIntroSection>
+				<Styles.BlendModeTitle>Health and Safety</Styles.BlendModeTitle>
+			</Styles.HealthHero>
+			<Styles.CultureInfo>
 				<h4>HEALTH SAFETY AND ENVIRONMENTAL ASSESSMENT CONSULTANCY:</h4>
 				<p>
 					The petroluem environment is a very volatile one, hence the need for
@@ -42,7 +41,8 @@ const Health2 = () => {
 					organizations identify risks, maintain compliance, and foster a
 					culture of safety while protecting the environment.
 				</p>
-			</Styles.HealthIntroSection>
+			</Styles.CultureInfo>
+
 			<Styles.HealthServiceContainer>
 				<h2>Our Services</h2>
 				<Styles.HealthServiceWrapper>
@@ -113,7 +113,6 @@ const Health2 = () => {
 					<h4>Why HSE Matters</h4>
 					<ul>
 						<li>
-							{' '}
 							<span>
 								<FaDotCircle />
 							</span>
@@ -123,18 +122,15 @@ const Health2 = () => {
 							<span>
 								<FaDotCircle />
 							</span>
-							Reduces the risk of accidents, penalties, and reputational
-							damage.
+							Reduces the risk of accidents, penalties, and reputational damage.
 						</li>
 						<li>
-							{' '}
 							<span>
 								<FaDotCircle />
 							</span>
 							Enhances sustainability and corporate responsibility.
 						</li>
 						<li>
-							{' '}
 							<span>
 								<FaDotCircle />
 							</span>
@@ -142,8 +138,8 @@ const Health2 = () => {
 						</li>
 					</ul>
 				</div>
-      </Styles.HealthReasonWrapper>
-      <HealthPolicy/>
+			</Styles.HealthReasonWrapper>
+			<HealthPolicy />
 		</Styles.HealthContainer>
 	);
 };

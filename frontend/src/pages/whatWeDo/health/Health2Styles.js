@@ -1,6 +1,97 @@
 import styled, { css } from 'styled-components';
 
 export const HealthContainer = styled.div``;
+
+export const HealthHero = styled.div`
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	img,
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		transition: 0.5s ease all;
+	}
+`;
+export const BlendModeTitle = styled.h1`
+	font-size: 8rem;
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	position: absolute;
+	bottom: 0px;
+	text-align: center !important;
+	/* padding: 50px 0; */
+	mix-blend-mode: screen;
+	letter-spacing: -5px;
+	/* padding-top: 10px; */
+	padding-bottom: 50px;
+
+	@media screen and (max-width: 900px) {
+		font-size: 6rem !important;
+		letter-spacing: 0;
+	}
+
+	@media screen and (max-width: 790px) {
+		font-size: 4rem !important;
+		letter-spacing: 0;
+	}
+
+	@media screen and (max-width: 450px) {
+		font-size: 3rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+
+	@media screen and (max-width: 350px) {
+		font-size: 2.5rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+`;
+
+export const CultureInfo = styled.div`
+	background-color: #fff;
+	padding: 0px 0;
+
+	h4,
+	h3 {
+		color: var(--main-color-o);
+		font-size: 28px !important;
+		padding-bottom: 10px;
+		text-align: center !important;
+	}
+
+	p {
+		max-width: 700px;
+		margin: auto;
+		font-size: 22px;
+		line-height: 30px;
+		color: #000;
+		text-align: center !important;
+		padding-bottom: 10px;
+	}
+
+	@media screen and (max-width: 570px) {
+		text-align: center;
+		padding: 10px;
+		h3 {
+			font-size: 22px !important;
+			display: block;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		padding: 0 20px;
+	}
+`;
 export const HealthHeroContainer = styled.div`
 	width: 100%;
 	height: 100vh;
@@ -121,12 +212,12 @@ export const HealthIntroSection = styled.div`
 export const HealthServiceContainer = styled.div`
   max-width: 1400px;
 	width: 100%;
-	margin: 90px auto 40px auto;
+	margin: 60px auto 40px auto;
 
 	h2 {
-		color: var(--color2);
-		text-align: center;
-		font-size: 30px !important;
+		color: var(--main-color-o);
+		text-align: center !important;
+		font-size: 40px !important;
 	}
 `;
 export const HealthServiceWrapper = styled.div`
@@ -155,7 +246,19 @@ export const HealthServiceListInfo = styled.div`
 	h4 {
 		text-transform: capitalize;
 		padding-bottom: 10px;
-    letter-spacing: 0;
+		letter-spacing: 0;
+		color: var(--main-color-o);
+	}
+
+	p {
+		color: #000;
+	}
+
+	@media screen and (max-width: 520px) {
+		h4,
+		p {
+			text-align: center !important;
+		}
 	}
 `;
 export const HealthServiceListImg = styled.div`
@@ -167,54 +270,58 @@ export const HealthServiceListImg = styled.div`
 	img {
 		width: 100%;
 		height: 100%;
+		transition: scale 1s ease-in-out;
 	}
 
-	&:hover {
+	&:hover img {
 		scale: 1.12;
 	}
 `;
 
 export const HealthReasonWrapper = styled.div`
 	width: 100%;
-	background-color: #eee;
+	/* background-color: #eee; */
 	padding: 50px;
 	margin: auto;
 
 	div {
-		max-width: 600px;
+		max-width: 900px;
 		width: 100%;
 		margin: auto;
 
 		h4 {
-			color: var(--color2);
+			color: var(--main-color-o);
 			font-size: 28px;
 			padding-bottom: 10px;
 			letter-spacing: 0;
+			text-align: center !important;
 		}
 
 		p {
 			font-size: 22px;
-			color: #463636;
+			color: #000;
 		}
 
 		ul {
 			padding: 0;
 			li {
 				padding: 5px 0;
-        display: flex;
-        gap: 10px;
-        font-size: 20px;
+				display: flex;
+				gap: 10px;
+				font-size: 20px;
+				color: #000;
+
 				span {
 					font-weight: bold;
-					color: var(--main-color);
+					color: var(--main-color-o);
 				}
 			}
 		}
 
-		@media screen and (max-width: 720px) {
+		@media screen and (max-width: 520px) {
 			h4,
 			p {
-				text-align: center;
+				text-align: center !important;
 			}
 		}
 	}

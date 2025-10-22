@@ -67,6 +67,7 @@ export const CultureOptionsListInfo = styled.div`
 		css`
 			/* background-color: var(--base-color-gold); */
 			background-color: #b76e79;
+			background-color: var(--main-color-o);
 
 			h4 {
 				color: var(--base-color-gold-neg);
@@ -79,7 +80,7 @@ export const CultureOptionsListInfo = styled.div`
 		props.second &&
 		css`
 			background-color: var(--base-color-green);
-			background-color: var(--main-color-o);
+			background-color: var(--main-color-g);
 
 			h4 {
 				color: var(--base-color-green-neg);
@@ -92,6 +93,8 @@ export const CultureOptionsListInfo = styled.div`
 		props.third &&
 		css`
 			background-color: var(--color-medium-red);
+			background-color: #b76e79;
+
 			h4 {
 				color: var(--color-light-red);
 				font-size: 3rem;

@@ -24,17 +24,19 @@ export const PipelineHeroContainer = styled.div`
 		z-index: 99;
 		backdrop-filter: blur(40px) opacity(1);
 		-webkit-backdrop-filter: blur(10px) opacity(1);
-		text-align: center;
+		text-align: center !important;
 		font-size: 4rem !important;
 		border-radius: 20px;
 		padding: 20px;
 	}
 
-
-
-	@media screen and (max-width: 770px) {
+	@media screen and (max-width: 900px) {
 		h1 {
 			font-size: 4rem !important;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			bottom: -40%;
 		}
 	}
 
@@ -74,15 +76,16 @@ export const PipelineIntroSection = styled.div`
 	max-width: 1000px;
 	width: 100%;
 	margin: 0px auto;
-	margin-top: 90px;
+	/* margin-top: 90px; */
 	/* padding: 100px; */
 	text-align: center;
 	/* background-color: #ddd; */
+	padding: 50px 20px;
 
 	h4,
 	h3 {
-		color: var(--color2);
-		font-size: 28px;
+		color: #000;
+		font-size: 28px !important;
 		padding-bottom: 10px;
 	}
 
@@ -93,11 +96,12 @@ export const PipelineIntroSection = styled.div`
 	p {
 		font-size: 22px;
 		color: #463636;
+		color: #000;
 	}
 
 	@media screen and (max-width: 570px) {
 		text-align: center;
-		padding: 100px 20px;
+		/* padding: 100px 20px; */
 
 		h4 {
 			display: none;
@@ -115,14 +119,15 @@ export const PipelineIntroSection = styled.div`
 `;
 
 export const PipelineListWrapper = styled.div`
-	max-width: 1400px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 50px auto;
 `;
 export const PipelineListItem = styled.div`
+	width: 100%;
 	display: flex;
 	align-items: center;
-	gap: 50px;
+	gap: 20px;
 	padding: 50px 10px;
 
 	${(props) =>
@@ -145,7 +150,7 @@ export const PipelineListItemImgBox = styled.div`
 	img {
 		width: 100%;
 	}
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 520px) {
 		max-width: 100%;
 	}
 `;
@@ -161,11 +166,11 @@ export const PipelineListItemImg = styled.div`
 	}
 `;
 export const PipelineListItemContent = styled.div`
-	max-width: 700px;
+	max-width: 600px;
 	width: 100%;
 
 	h4 {
-		color: var(--color2);
+		color: var(--main-color-o);
 		font-size: 28px;
 		padding-bottom: 10px;
 		letter-spacing: 0;
@@ -174,12 +179,15 @@ export const PipelineListItemContent = styled.div`
 	p {
 		font-size: 22px;
 		color: #463636;
+		color: #000;
 	}
 
 	ul {
 		padding: 0;
 		li {
 			padding: 5px 0;
+			color: #000;
+
 			span {
 				font-weight: bold;
 			}
@@ -187,14 +195,14 @@ export const PipelineListItemContent = styled.div`
 	}
 
 	@media screen and (max-width: 900px) {
-		h4,
-		p {
-			text-align: center;
-		}
 	}
 
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 520px) {
 		max-width: 100%;
+		h4,
+		p {
+			text-align: center !important;
+		}
 	}
 `;
 
@@ -204,10 +212,10 @@ export const PipelineItemContainer = styled.div`
 	margin: 50px auto;
 
 	h2 {
-		color: var(--color2);
+		color: var(--main-color-o);
 		font-size: 32px !important;
-		padding-bottom: 10px;
-		text-align: center;
+		padding-bottom: 20px;
+		text-align: center !important;
 	}
 `;
 
@@ -224,35 +232,34 @@ export const PipelineItemImg = styled.div`
 	}
 `;
 export const PipelineItemContent = styled.div`
-	max-width: 700px;
+	max-width: 900px;
 	width: 100%;
 	margin: 20px auto;
 	padding: 10px;
+	color: #000;
 
 	p {
 		font-size: 22px;
 		text-align: center;
 	}
 
-	ul {
-		padding: 0;
-		li {
-			padding: 5px 0;
-			span {
-				font-weight: bold;
-			}
+	@media screen and (max-width: 520px){
+		p {
+			text-align: center !important;
 		}
 	}
+
+
 `;
 
 export const PipelineReasonWrapper = styled.div`
 	width: 100%;
-	background-color: #ddd;
+	background-color: var(--main-color-p);
 	padding: 50px;
 	margin: auto;
 
 	h4 {
-		color: var(--color2);
+		color: #fff;
 		font-size: 28px;
 		padding-bottom: 10px;
 		letter-spacing: 0;
@@ -262,21 +269,24 @@ export const PipelineReasonWrapper = styled.div`
 	p {
 		font-size: 22px;
 		color: #463636;
+		color: #fff;
 	}
 
 	ul {
 		max-width: 700px;
 		width: 100%;
-		margin: auto;
-		padding: 0;
+		margin: 0px auto;
+		padding: 20px 0 !important;
 		li {
 			padding: 5px 0;
 			font-weight: bold;
 			display: flex;
 			gap: 10px;
+			color: #fff;
+
 			span {
 				font-weight: bold;
-				color: var(--main-color);
+				color: var(--main-color-g);
 			}
 		}
 	}
@@ -284,13 +294,16 @@ export const PipelineReasonWrapper = styled.div`
 	div {
 		max-width: 700px;
 		width: 100%;
-		margin: auto;
+		/* margin: auto; */
 		padding: 0;
-		margin-top: 50px;
+		margin-top: 10px;
 		/* text-align: center; */
 
-		h1 {
+		h1,
+		h2 {
 			color: var(--main-color);
+			color: #fff;
+			padding-bottom: 10px;
 		}
 	}
 
@@ -299,6 +312,17 @@ export const PipelineReasonWrapper = styled.div`
 		p,
 		div {
 			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: 520px) {
+		padding: 20px;
+		h4,
+		h2,
+		h1,
+		p,
+		div {
+			text-align: center !important;
 		}
 	}
 `;
