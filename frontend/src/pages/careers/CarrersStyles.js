@@ -110,6 +110,10 @@ export const CultureInfo = styled.div`
 		color: #000;
 		text-align: center !important;
 	}
+
+	@media screen and (max-width: 450px) {
+		padding: 20px;
+	}
 `;
 export const CareersInfo = styled.div`
 	background-color: #fff;
@@ -122,6 +126,10 @@ export const CareersInfo = styled.div`
 		line-height: 30px;
 		color: #000;
 		text-align: center !important;
+	}
+
+	@media screen and (max-width: 450px) {
+		padding: 20px;
 	}
 `;
 export const CareersOptions = styled.div``;
@@ -159,6 +167,10 @@ export const CareersOptionsListImg = styled.div`
 
 	@media screen and (max-width: 670px) {
 		max-width: 100%;
+	}
+
+	@media screen and (max-width: 450px) {
+		height: 200px;
 	}
 `;
 export const CareersOptionsListInfo = styled.div`
@@ -233,12 +245,12 @@ export const CareersOptionsListInfo = styled.div`
 	@media screen and (max-width: 420px) {
 		padding: 20px;
 		h4 {
-			font-size: 2rem;
+			font-size: 1.6rem;
 			text-align: center !important;
 		}
 
 		p {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			text-align: center !important;
 		}
 	}

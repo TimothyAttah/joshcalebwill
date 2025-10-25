@@ -116,9 +116,7 @@ export const ApproachContainer = styled.div`
 	padding: 50px;
 
 	@media screen and (max-width: 520px) {
-
-
-		padding: 20px;
+		padding: 10px 20px;
 	}
 `;
 export const ApproachTitle = styled.div`
@@ -170,17 +168,14 @@ export const ApproachTitle = styled.div`
 		h2 {
 			font-size: 2rem;
 		}
-
 	}
 `;
 export const ApproachOptionsContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding-top: 20px;
-
-
+	flex-wrap: wrap;
+	gap: 30px;
+	padding-top: 20px;
 `;
 export const ApproachOptions = styled.div`
 	width: 350px;
@@ -197,7 +192,8 @@ export const ApproachOptions = styled.div`
 	@media screen and (max-width: 520px) {
 		padding: 20px;
 
-		h4, p {
+		h4,
+		p {
 			text-align: center !important;
 		}
 	}
