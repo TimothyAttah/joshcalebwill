@@ -1,10 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import * as Styles from './SplitText2Styles';
-import pix1 from '../../assets/visionLogo.png';
-import pix2 from '../../assets/newGas3.png';
-import pix3 from '../../assets/susEnergy4.png';
-import pix4 from '../../assets/who2.png';
-import pix5 from '../../assets/wg4.png';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -291,27 +286,21 @@ const SplitText2 = () => {
 					<Styles.TextWrap className='text-wrap'>
 						<Styles.Text1 className='text1'>Professionalism</Styles.Text1>
 						<Styles.Text2 className='text2'>integrity</Styles.Text2>
-						<img
+						{/* <img
 							src={pix1}
 							alt=''
 							className='splitPix1'
 							width='300'
 							style={{ marginLeft: '20px' }}
-						/>
+						/> */}
 						<Styles.Text3 className='text3'>quality</Styles.Text3>
 						<Styles.Text2 className='text4'>safety</Styles.Text2>
-						<Styles.ImgSplitWrapper>
-							<img src={pix2} alt='' className='splitPix2' width='300' />
-							<img src={pix3} alt='' className='splitPix3' width='300' />
-						</Styles.ImgSplitWrapper>
+
 						<Styles.Text1 className='text5'>service excellence</Styles.Text1>
 						<Styles.Text2 className='text6'>team work</Styles.Text2>
 
 						<Styles.Text2 className='text7'>innovators</Styles.Text2>
-						<Styles.ImgSplitWrapper>
-							<img src={pix4} alt='' className='splitPix4' width='300' />
-							<img src={pix5} alt='' className='splitPix5' width='300' />
-						</Styles.ImgSplitWrapper>
+
 					</Styles.TextWrap>
 
 					<TextAnimate />

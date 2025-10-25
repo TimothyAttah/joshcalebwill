@@ -1,12 +1,12 @@
 import { services } from '../../../../utils/servicesData';
 import * as Styles from './HomeServicesStyles';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { scrollToTop } from '../../../../components/header/Header';
 import Copy from '../../../../components/copyText/CopyText';
-import { ReactLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Blurhash } from 'react-blurhash';
+import LazyImage from '../../../../components/LazyImage';
 
 const HomeServices = () => {
 	return (
@@ -14,11 +14,9 @@ const HomeServices = () => {
 			<ReactLenis root>
 				<Styles.HomeServicesContainer>
 					<Styles.HomeServicesTitle>
-						<Copy delay={0.8}>
+						<Copy delay={0.5}>
 							<small>what we do</small>
 							<h1>energy that fuels the world</h1>
-						</Copy>
-						<Copy delay={0.9}>
 
 							<p>
 								Our services include upstream and downstream production,
@@ -27,8 +25,6 @@ const HomeServices = () => {
 								supply and treatments, gas compression, engineering, pipeline
 								and construction services consultancy, among others.
 							</p>
-						</Copy>
-						<Copy delay={0.9}>
 
 							<p>
 								We are driven by innovation, strong ethical standard and quality
@@ -43,15 +39,14 @@ const HomeServices = () => {
 								<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
 									<Styles.ServicesListItems>
 										<Styles.ServiceItemImg>
-											{/* <img src={ item.pix } alt='' loading='lazy' /> */}
 											<LazyLoadImage
-												src={ item.pix }
+												src={item.pix}
 												height='100%'
 												width='100%'
 												effect='blur'
 												placeholderSrc={item.pix}
-
 											/>
+											{/* <LazyImage src={item.pix} /> */}
 										</Styles.ServiceItemImg>
 										<h4>{item.title}</h4>
 

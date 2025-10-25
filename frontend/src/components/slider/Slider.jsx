@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { FadeInSlider } from '../fadeIn/FadeInSlider';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import LazyImage from '../LazyImage';
 
 const Slider = () => {
 	const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
@@ -72,7 +73,8 @@ const Slider = () => {
 				{slides.map((slide, i) => (
 					<Styles.Slide className='embla__slide' key={i}>
 						{slide.srcType === 'image' ? (
-							<motion.img src={slide.vic} alt='' />
+							// <motion.img src={ slide.vic } alt='' />
+							<LazyImage src={slide.vic} />
 						) : (
 							<motion.video src={slide.vic} autoPlay muted loop playsInline />
 						)}

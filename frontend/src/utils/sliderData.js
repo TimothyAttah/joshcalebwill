@@ -1,9 +1,8 @@
-
 import picHealth from '../assets/safety2.jpg';
-import vicSlider1 from '../assets/oilRig1.mp4';
-import vicHaulage from '../assets/haulageSlide.jpg';
+import vicSlider1 from '../assets/homeSlider1.mp4';
+import vicHaulage from '../assets/homeSlider3.png';
 import vicGas from '../assets/gasVid.mp4';
-import vicExplore from '../assets/oilSlide1.mp4';
+import vicExplore from '../assets/homeSlider2.png';
 
 export const slides = [
 	{
@@ -21,7 +20,7 @@ export const slides = [
 		desc: 'We provide consultancy services in the area of upstream exploration and operations in crude oil, gas and mineral exploration and extraction and prospecting',
 		// src: pix2,
 		vic: vicExplore,
-		srcType: 'video',
+		srcType: 'image',
 		slidePosition: 'slide2',
 	},
 	{

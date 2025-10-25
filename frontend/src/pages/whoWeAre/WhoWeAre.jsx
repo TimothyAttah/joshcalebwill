@@ -1,19 +1,19 @@
 import * as Styles from './WhoWeAreStyles';
-import whoVic from '../../assets/who1.mp4';
-import wg1 from '../../assets/wg3.png';
-import wg2 from '../../assets/wg4.png';
-import wg3 from '../../assets/newSlide6.png';
-import wg4 from '../../assets/wg8.png';
-import wg5 from '../../assets/wg9.png';
-import wg6 from '../../assets/wg10.png';
+import wg1 from '../../assets/who3.png';
+import wg2 from '../../assets/who4.png';
+import wg3 from '../../assets/who5.png';
+import wg4 from '../../assets/who6.png';
+import wg5 from '../../assets/who7.png';
+import wg6 from '../../assets/who8.png';
 import visionLogo from '../../assets/visionLogo.png';
-import pix1 from '../../assets/who3.png';
-import pix2 from '../../assets/who2.png';
-import pix3 from '../../assets/who4.png';
+import pix1 from '../../assets/who9.png';
+import pix2 from '../../assets/who10.png';
+import pix3 from '../../assets/who11.png';
 import { FadeInAlways } from '../../components/fadeIn/FadeInAlways';
 import { FaCircle } from 'react-icons/fa';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../components/copyText/CopyText';
+import LazyImage from '../../components/LazyImage';
 
 const WhoWeAre = () => {
 	return (
@@ -87,22 +87,28 @@ const WhoWeAre = () => {
 				<Styles.WhoWeAreGallerryContainer>
 					<Styles.WhoWeAreGallerryPixWrapper>
 						<div className='pix pix1'>
-							<img src={wg1} alt='' />
+							{/* <img src={wg1} alt='' /> */}
+							<LazyImage src={wg1} />
 						</div>
 						<div className='pix pix2'>
-							<img src={wg2} alt='' />
+							{/* <img src={wg2} alt='' /> */}
+							<LazyImage src={wg2} />
 						</div>
 						<div className='pix pix3'>
-							<img src={wg3} alt='' />
+							{/* <img src={wg3} alt='' /> */}
+							<LazyImage src={wg3} />
 						</div>
 						<div className='pix pix4'>
-							<img src={wg4} alt='' />
+							{/* <img src={wg4} alt='' /> */}
+							<LazyImage src={wg4} />
 						</div>
 						<div className='pix pix5'>
-							<img src={wg5} alt='' />
+							{/* <img src={wg5} alt='' /> */}
+							<LazyImage src={wg5} />
 						</div>
 						<div className='pix pix6'>
-							<img src={wg6} alt='' />
+							{/* <img src={wg6} alt='' /> */}
+							<LazyImage src={wg6} />
 						</div>
 					</Styles.WhoWeAreGallerryPixWrapper>
 				</Styles.WhoWeAreGallerryContainer>
@@ -110,7 +116,8 @@ const WhoWeAre = () => {
 			<Styles.WhoWeAreValuesContainer>
 				<FadeInAlways delay={0.5} direction='down'>
 					<Styles.WhoWeAreValuesPic>
-						<img src={visionLogo} alt='' loading='lazy' />
+						{/* <img src={visionLogo} alt='' loading='lazy' /> */}
+						<LazyImage src={visionLogo} />
 					</Styles.WhoWeAreValuesPic>
 				</FadeInAlways>
 
@@ -125,7 +132,8 @@ const WhoWeAre = () => {
 
 							<FadeInAlways delay={0.6} direction='up'>
 								<Styles.WhoWeAreValueImg>
-									<img src={pix1} alt='' />
+									{/* <img src={pix1} alt='' /> */}
+									<LazyImage src={pix1} />
 								</Styles.WhoWeAreValueImg>
 							</FadeInAlways>
 
@@ -150,7 +158,7 @@ const WhoWeAre = () => {
 							</FadeInAlways>
 							<FadeInAlways delay={0.6} direction='up'>
 								<Styles.WhoWeAreValueImg>
-									<img src={pix2} alt='' />
+									<LazyImage src={pix2} />
 								</Styles.WhoWeAreValueImg>
 							</FadeInAlways>
 							<FadeInAlways delay={0.7} direction='up'>
@@ -173,7 +181,7 @@ const WhoWeAre = () => {
 							</FadeInAlways>
 							<FadeInAlways delay={0.6} direction='up'>
 								<Styles.WhoWeAreValueImg>
-									<img src={pix3} alt='' />
+									<LazyImage src={pix3} />
 								</Styles.WhoWeAreValueImg>
 							</FadeInAlways>
 

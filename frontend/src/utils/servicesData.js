@@ -1,10 +1,10 @@
-import gas from '../assets/gas3.png';
-import explore from '../assets/susEnergy4.png';
-import chemical from '../assets/newChem3.png';
-import pipe from '../assets/pipe2.jpg';
-import health from '../assets/pipe5.jpg';
+import gas from '../assets/gas1.png';
+import explore from '../assets/explore1.png';
+import chemical from '../assets/chem1.png';
+import pipe from '../assets/pipe1.png';
+import health from '../assets/safety3.png';
 import procurement from '../assets/procurement5.png';
-import haulage from '../assets/haulage5.jpg';
+import haulage from '../assets/haulage5.png';
 import lubricants from '../assets/lub1.png';
 
 export const services = [
