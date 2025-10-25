@@ -4,7 +4,9 @@ import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
 import {Link} from 'react-router-dom'
 import { scrollToTop } from '../../../../components/header/Header';
 import Copy from '../../../../components/copyText/CopyText';
-import {ReactLenis} from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Blurhash } from 'react-blurhash';
 
 const HomeServices = () => {
 	return (
@@ -41,7 +43,15 @@ const HomeServices = () => {
 								<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
 									<Styles.ServicesListItems>
 										<Styles.ServiceItemImg>
-											<img src={item.pix} alt='' loading='lazy' />
+											{/* <img src={ item.pix } alt='' loading='lazy' /> */}
+											<LazyLoadImage
+												src={ item.pix }
+												height='100%'
+												width='100%'
+												effect='blur'
+												placeholderSrc={item.pix}
+
+											/>
 										</Styles.ServiceItemImg>
 										<h4>{item.title}</h4>
 

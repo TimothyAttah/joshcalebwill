@@ -9,6 +9,9 @@ import './index.css';
 import './bootstrap.min.css';
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
+import 'react-lazy-load-image-component/src/effects/blur.css'
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
