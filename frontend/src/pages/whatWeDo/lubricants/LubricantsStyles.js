@@ -5,6 +5,7 @@ export const LubricantsContainer = styled.div`
 	padding-top: 100px;
 	width: 100%;
 	background-color: #f4f4f4;
+	margin-top: 50px;
 `;
 
 export const LubricantsTitle = styled.div`
@@ -12,8 +13,12 @@ export const LubricantsTitle = styled.div`
 	width: 100%;
 	margin: 50px auto;
 	text-align: center;
+	padding: 20px;
 
 	p {
+		color: #000;
+		font-size: 1.2rem !important;
+		line-height: 1.7rem;
 		color: #000;
 	}
 
@@ -63,8 +68,22 @@ export const LubricantsTitle = styled.div`
 		max-width: 100%;
 
 		h4,
-		p, h2, h1 {
+		p,
+		h2,
+		h1 {
 			text-align: center !important;
+		}
+
+		p {
+			font-size: 1.1rem !important;
+			line-height: 1.5rem;
+			color: #000;
+		}
+
+		h1,
+		h2 {
+			font-size: 2.5rem !important;
+			line-height: 3rem;
 		}
 	}
 `;
@@ -132,6 +151,7 @@ export const LubricantsOptions = styled.div`
 	@media screen and (max-width: 520px) {
 		padding: 20px;
 		text-align: center !important;
+		margin: 20px 0;
 	}
 `;
 
@@ -149,6 +169,7 @@ export const LubricantsOptionsImg = styled.div`
 
 	@media screen and (max-width: 520px) {
 		max-width: 100%;
+		height: 250px !important;
 	}
 `;
 
@@ -179,22 +200,30 @@ export const LubricantsOptionsInfo = styled.div`
 
 
 export const LubricantsInfo = styled.div`
-	h2{
+	background-color: var(--main-color-p);
+	padding: 20px;
+
+	h2 {
 		font-size: 22px;
-		color: var(--main-color-o);
+		color: var(--main-color-g);
 		padding-bottom: 10px;
 	}
 
 	p {
 		font-size: 18px;
-		color: #000;
+		color: #fff;
 		padding-bottom: 10px;
+	}
+
+	small {
+		color: #fff;
 	}
 	@media screen and (max-width: 520px) {
 		max-width: 100%;
 
 		h2,
-		p, small {
+		p,
+		small {
 			text-align: center !important;
 			display: block;
 		}

@@ -61,8 +61,8 @@ export const CultureInfo = styled.div`
 		text-align: center !important;
 	}
 
-	@media screen and (max-width: 390px) {
-		padding: 0 20px;
+	@media screen and (max-width: 450px) {
+		padding:0  20px;
 	}
 `;
 
@@ -81,7 +81,7 @@ export const ExplorationContainer = styled.div`
 		line-height: 1.2;
 	}
 
-	@media screen and (max-width: 390px) {
+	@media screen and (max-width: 450px) {
 		padding: 20px;
 
 		h2 {
@@ -120,6 +120,10 @@ export const ExplorationOptionsImg = styled.div`
 		height: 100%;
 		object-fit: cover;
     border-radius: 20px;
+	}
+
+	@media screen and (max-width: 450px){
+		height: 250px !important;
 	}
 `;
 
@@ -193,6 +197,6 @@ export const ChooseUs = styled.div`
 			text-align: center !important;
 		}
 
-		padding: 10px;
+		padding: 20px;
 	}
 `;

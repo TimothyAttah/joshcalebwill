@@ -9,8 +9,9 @@ const OverlayContainer = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-	background: rgba(0, 0, 0, 0.7);
-  z-index: 9;
+	background: rgba(0, 0, 0, 0.6);
+  /* background: red; */
+  z-index: 999;
 `;
 
 const Overlay = ({onClick}) => {

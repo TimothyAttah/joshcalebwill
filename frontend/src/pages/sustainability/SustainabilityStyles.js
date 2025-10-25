@@ -168,6 +168,10 @@ export const SustainabilityListItem = styled.div`
 		align-items: center;
 		gap: 20px;
 	}
+
+	@media screen and (max-width: 450px) {
+	padding: 20px;
+	}
 `;
 export const SustainabilityListItemImgBox = styled.div`
 	max-width: 600px;
@@ -176,8 +180,9 @@ export const SustainabilityListItemImgBox = styled.div`
 	img {
 		width: 100%;
 	}
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 450px) {
 		max-width: 100%;
+
 	}
 `;
 
@@ -190,6 +195,10 @@ export const SustainabilityListItemImg = styled.div`
 		height: 100%;
 		object-fit: cover;
 	}
+
+
+		height: 200px !important;
+
 `;
 export const SustainabilityListItemContent = styled.div`
 	max-width: 700px;

@@ -24,15 +24,15 @@ const SplitText2 = () => {
 				opacity: 0,
 			},
 			{
-				x: -900,
+				x: -1500,
 				opacity: 1,
-				duration: 2000,
+				duration: 1000,
 				delay: 1,
 				scrollTrigger: {
 					trigger: '.text1',
-					start: 0,
-					toggleActions: 'restart none restart none',
-					scrub: 1,
+					start: 1,
+					toggleActions: 'none restart restart none',
+					scrub: 10,
 				},
 			},
 		);
@@ -46,13 +46,13 @@ const SplitText2 = () => {
 			{
 				x: 1500,
 				opacity: 1,
-				duration: 2000,
+				duration: 1000,
 				delay: 1,
 				scrollTrigger: {
 					trigger: '.text2',
-					start: 0,
-					toggleActions: 'restart none restart none',
-					scrub: 1,
+					start: 1,
+					toggleActions: 'none restart restart none',
+					scrub: 10,
 				},
 			},
 		);
@@ -64,15 +64,15 @@ const SplitText2 = () => {
 				opacity: 0,
 			},
 			{
-				x: -900,
+				x: -1500,
 				opacity: 1,
-				duration: 2000,
-				delay: 1,
+				duration: 15000,
+				delay: 10,
 				scrollTrigger: {
 					trigger: '.text3',
 					start: 0,
 					toggleActions: 'restart none restart none',
-					scrub: 1,
+					scrub: 2,
 				},
 			},
 		);
@@ -86,13 +86,13 @@ const SplitText2 = () => {
 			{
 				x: 1500,
 				opacity: 1,
-				duration: 2000,
-				delay: 1,
+				duration: 20000,
+				delay: 10,
 				scrollTrigger: {
 					trigger: '.text4',
 					start: 0,
 					toggleActions: 'restart none restart none',
-					scrub: 1,
+					scrub: 2,
 				},
 			},
 		);
@@ -282,11 +282,11 @@ const SplitText2 = () => {
 	});
 
 	return (
-		<Styles.IntroContainer>
+		<>
 			<Styles.IntroContainer>
 				<Styles.ContentTitle>
 					<FadeInAlways delay={0.2} direction='down'>
-						<small>Welcome to Joshcalebwill Petroluem Limited</small>
+						<small>Who we are</small>
 					</FadeInAlways>
 					<Styles.TextWrap className='text-wrap'>
 						<Styles.Text1 className='text1'>Professionalism</Styles.Text1>
@@ -317,7 +317,7 @@ const SplitText2 = () => {
 					<TextAnimate />
 				</Styles.ContentTitle>
 			</Styles.IntroContainer>
-		</Styles.IntroContainer>
+		</>
 	);
 };
 

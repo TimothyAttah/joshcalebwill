@@ -17,8 +17,9 @@ import Chemical from './pages/whatWeDo/chemicalSupply/Chemical';
 import Pipeline2 from './pages/whatWeDo/pipeline/Pipeline2';
 import Gas from './pages/whatWeDo/gas/Gas';
 import Health2 from './pages/whatWeDo/health/Health2';
-import Lubricants from './pages/whatWeDo/lubricants/Lubricants'
-
+import Lubricants from './pages/whatWeDo/lubricants/Lubricants';
+import LeaderProfile from './pages/whoWeAre/modules/leaders/LeaderProfile';
+import History from './pages/whoWeAre/modules/history/History';
 
 const App = () => {
 	return (
@@ -29,7 +30,14 @@ const App = () => {
 					<Route path='/' element={<Home />} />
 					<Route path='/who-we-are' element={<WhoWeAre />} />
 					<Route path='/who-we-are/our-culture' element={<Culture />} />
+					<Route path='/who-we-are/our-history' element={<History />} />
+
 					<Route path='/who-we-are/leadership' element={<Leaders />} />
+					<Route
+						path='/who-we-are/leadership/leader/:name'
+						element={<LeaderProfile />}
+					/>
+
 					<Route path='/who-we-are/contact-us' element={<Contact />} />
 					<Route path='/sustainability' element={<Sustainability />} />
 					<Route path='/sustainability/environment' element={<Environment />} />

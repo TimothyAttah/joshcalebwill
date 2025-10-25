@@ -100,11 +100,8 @@ export const LeadersListItem = styled.div`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	transition: all .5s ease-in-out;
-
-	&:hover {
-		transform: scale(1.1);
-	}
+	transition: all 0.5s ease-in-out;
+	overflow: hidden;
 
 	/* h4 {
 		text-align: center;
@@ -148,8 +145,10 @@ export const LeadersListItem = styled.div`
 			}
 		`}; */
 
-	@media screen and (max-width: 350px) {
+	@media screen and (max-width: 300px) {
 		width: 100%;
+
+
 	}
 `;
 
@@ -161,6 +160,10 @@ export const LeadersListName = styled.h4`
 	/* color: ${(props) => props.leaderColor}; */
 	/* background-color: ${(props) => props.leaderColor}; */
 	font-size: 15px;
+
+	@media screen and (max-width: 350px){
+		text-align: center !important;
+	}
 `;
 export const LeadersListImg = styled.div`
 	width: 100%;
@@ -168,11 +171,17 @@ export const LeadersListImg = styled.div`
 	background-color: #555;
 	overflow: hidden;
 	border-radius: 50%;
+	transition: all 0.5s ease-in-out;
 
 	img {
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 `;
 export const LeadersListInfo = styled.div`
@@ -220,6 +229,12 @@ export const LeadersListInfo = styled.div`
 		css`
 			background-color: var(--color-dark-blue);
 		`}; */
+
+	@media screen and (max-width: 350px) {
+		h4, p {
+			text-align: center !important;
+		}
+	}
 `;
 
 export const LeaderModelContainer = styled.div`
@@ -328,6 +343,64 @@ export const LeaderModelInfo = styled.div`
 			font-size: 16px !important;
 			line-height: 25px;
 			margin-top: 50px;
+		}
+	}
+`;
+
+export const TeamModal = styled.div`
+	position: relative;
+`;
+
+export const CloseBtn = styled.div`
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+
+	svg {
+		color: var(--main-color-p);
+		font-size: 25px;
+	}
+`;
+export const TeamModalImg = styled.div`
+	max-width: 500px;
+	width: 100%;
+	height: 400px;
+	margin: 50px auto;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	@media screen and (max-width: 420px) {
+		max-width: 100%;
+		height: 300px;
+		/* height: 100%; */
+	}
+`;
+export const TeamModalInfo = styled.div`
+	h1 {
+		text-align: center !important;
+		padding-bottom: 10px;
+		color: var(--main-color-p);
+		font-weight: bold;
+	}
+	h4 {
+		text-align: center !important;
+		padding-bottom: 10px;
+		color: var(--main-color-p);
+	}
+
+	p {
+		font-size: 22px;
+		color: #000;
+		padding-bottom: 10px;
+	}
+
+	@media screen and (max-width: 420px) {
+		p {
+			font-size: 14px;
 		}
 	}
 `;

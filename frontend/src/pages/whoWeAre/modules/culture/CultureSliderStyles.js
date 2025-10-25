@@ -307,7 +307,7 @@ export const BlendModeTitle = styled.h1`
 	background-color: #fff;
 	color: #000;
 	position: absolute;
-	bottom: 0;
+	bottom: 0px;
 	text-align: center !important;
 	/* padding: 20px 0; */
 	mix-blend-mode: screen;
@@ -329,6 +329,6 @@ export const BlendModeTitle = styled.h1`
 	@media screen and (max-width: 390px) {
 		font-size: 3rem !important;
 		letter-spacing: 0;
-    padding: 30px 0;
+    padding: 29px 0;
 	}
 `;

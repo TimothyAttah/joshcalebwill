@@ -54,6 +54,7 @@ export const MobileSidebarListItem = styled(motion.li)`
 		transition: all 1s;
 		text-transform: capitalize;
 		transition: all 0.3s ease;
+		position: relative;
 
 		${(props) =>
 			props.clicked &&
@@ -69,21 +70,48 @@ export const MobileSidebarListItem = styled(motion.li)`
 			background-color: var(--base-color-gold-neg);
 
 			cursor: pointer;
-			/* border-radius: 10px; */
+			border-radius: 10px;
 			svg {
 				transform: rotate(180deg);
 			}
 		}
+
+		/* &::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: var(--base-color-gold-neg);
+			background-color: red;
+			width: 0;
+			transition: all 0.8s ease;
+			z-index: -1;
+			border-radius: 10px;
+		}
+
+		&:hover::before {
+			width: 100%;
+			left: 0;
+			right: auto;
+			z-index: 1;
+		}
+
+		&:hover {
+			color: var(--main-color-g);
+			color: #fff;
+			z-index: 1;
+		} */
 	}
 
-	&:hover {
+	/* &:hover {
 		> ul {
 			display: flex;
 			flex-direction: column;
 			z-index: 99;
 			height: 100%;
 		}
-	}
+	} */
 `;
 
 export const MobileSidebarSubMenuList = styled(motion.ul)`
@@ -105,6 +133,7 @@ export const MobileSidebarSubMenuListItem = styled.li`
 		color: #fff;
 		transition: all 1s;
 		text-transform: capitalize;
+		position: relative;
 
 		${(props) =>
 			props.clicked &&
@@ -118,11 +147,35 @@ export const MobileSidebarSubMenuListItem = styled.li`
 		&:hover {
 			background-color: var(--base-color-gold-neg);
 			cursor: pointer;
-			/* border-radius: 10px; */
+			border-radius: 10px;
 			svg {
 				transform: rotate(180deg);
 			}
 		}
+
+		/* &::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: var(--base-color-gold-neg);
+			background-color: red;
+			width: 0;
+			transition: all 0.8s ease;
+			z-index: -1;
+			border-radius: 10px;
+		} */
+
+		/* &:hover::before {
+			width: 100%;
+			left: 0;
+			right: auto;
+		} */
+
+		/* &:hover {
+			color: var(--main-color-g);
+		} */
 	}
 `;
 

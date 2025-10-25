@@ -34,15 +34,7 @@ const WelcomeGallery = () => {
 				<div className='pix pix6'>
 					<img src={wg6} alt='' />
 				</div>
-				{/* <div className='pix pix7'>
-					<img src={wg7} alt='' />
-				</div>
-				<div className='pix pix8'>
-					<img src={wg8} alt='' />
-				</div>
-				<div className='pix pix9'>
-					<img src={wg9} alt='' />
-				</div> */}
+			
 			</Styles.GallerryPixWrapper>
 		</Styles.GallerryContainer>
 	);

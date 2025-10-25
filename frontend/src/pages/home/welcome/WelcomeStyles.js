@@ -8,6 +8,7 @@ export const WelcomeText = styled.div`
 	max-width: 800px;
 	margin: 100%;
 	margin: auto;
+	padding: 0 20px;
 
 	small {
 		color: var(--base-color-green-neg);
@@ -31,7 +32,7 @@ export const WelcomeText = styled.div`
 		padding-top: 10px;
 	}
 
-	@media screen and (max-width: 520px) {
+	@media screen and (max-width: 560px) {
 		padding: 10px;
 		small {
 			text-align: center !important;

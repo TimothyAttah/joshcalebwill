@@ -21,11 +21,12 @@ export const DesktopNavListWrapper = styled.div`
 	height: 100%;
 	gap: 20px;
 	transition: all 0.5s ease-in-out;
-	/* border: 2px solid #fff; */
 
 	.tabBg {
-		background-color: var(--base-color-gold-neg);
+		/* background-color: var(--base-color-gold-neg);
+		background-color: red; */
 		color: #fff;
+		/* border: 1px solid var(--base-color-gold-neg); */
 
 		a {
 			/* height: 50px; */
@@ -49,6 +50,40 @@ export const DesktopNavList = styled.ul`
 
 	li a {
 		color: #fff;
+
+		/* border: 1px solid var(--base-color-gold-neg); */
+		position: relative;
+		padding: 12px 40px;
+		transition: all 0.8s ease;
+		border-radius: 10px;
+		background-color: var(--main-color-g);
+		font-weight: bold !important;
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: var(--base-color-gold-neg);
+			width: 0;
+			transition: all 0.8s ease;
+			z-index: -1;
+			border-radius: 10px;
+		}
+
+		&:hover::before {
+			width: 100%;
+			left: 0;
+			right: auto;
+		}
+
+		&:hover {
+			color: var(--main-color-g);
+			font-weight: bold !important;
+
+			background-color: transparent;
+		}
 	}
 
 	@media screen and (max-width: 950px) {
@@ -65,12 +100,41 @@ export const DesktopNavTabButton = styled.button`
 	background: transparent;
 	color: var(--color-light-gray);
 	transition: 0.5s ease all;
-
-	/* border: 2px solid #fff; */
+	/* border: 1px solid var(--base-color-gold-neg); */
+	position: relative;
+	background-color: var(--main-color-g);
 
 	a {
 		color: var(--color-light-gray);
 		font-weight: 200px;
+		font-weight: bold !important;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: var(--base-color-gold-neg);
+		width: 0;
+		transition: all 0.8s ease;
+		z-index: -1;
+		border-radius: 10px;
+	}
+
+	&:hover::before {
+		width: 100%;
+		left: 0;
+		right: auto;
+	}
+
+	&:hover {
+		background-color: transparent;
+		a {
+			color: var(--main-color-g);
+			font-weight: bold !important;
+		}
 	}
 `;
 
@@ -81,7 +145,9 @@ export const DesktopNavTabContent = styled(motion.div)`
 	width: 35rem;
 	border-radius: 8px;
 	border: 1px solid var(--base-color-gold-plus);
-	background-image: linear-gradient(to bottom, var(--base-color-gold-neg));
+	/* background-image: linear-gradient(to bottom, var(--base-color-gold-neg)); */
+	background-color: var(--base-color-gold-neg);
+
 	padding: 16px;
 `;
 

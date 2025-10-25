@@ -103,6 +103,8 @@ export const PipelineIntroSection = styled.div`
 		text-align: center;
 		/* padding: 100px 20px; */
 
+		padding: 20px;
+
 		h4 {
 			display: none;
 		}
@@ -122,6 +124,10 @@ export const PipelineListWrapper = styled.div`
 	max-width: 1200px;
 	width: 100%;
 	margin: 50px auto;
+
+	@media screen and (max-width: 520px) {
+		margin: 20px auto;
+	}
 `;
 export const PipelineListItem = styled.div`
 	width: 100%;
@@ -141,6 +147,11 @@ export const PipelineListItem = styled.div`
 		justify-content: center;
 		align-items: center;
 		gap: 20px;
+	}
+
+	@media screen and (max-width: 520px) {
+
+		padding: 20px;
 	}
 `;
 export const PipelineListItemImgBox = styled.div`
@@ -163,6 +174,10 @@ export const PipelineListItemImg = styled.div`
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	@media screen and (max-width: 450px){
+		height: 250px !important;
 	}
 `;
 export const PipelineListItemContent = styled.div`
@@ -305,14 +320,18 @@ export const PipelineReasonWrapper = styled.div`
 			color: #fff;
 			padding-bottom: 10px;
 		}
+
+		a h1{
+			color: var(--main-color-g);
+		}
 	}
 
 	@media screen and (max-width: 720px) {
-		h4,
+		/* h4,
 		p,
 		div {
 			text-align: center;
-		}
+		} */
 	}
 
 	@media screen and (max-width: 520px) {
@@ -323,6 +342,10 @@ export const PipelineReasonWrapper = styled.div`
 		p,
 		div {
 			text-align: center !important;
+		}
+
+		p {
+			font-size: 1rem;
 		}
 	}
 `;

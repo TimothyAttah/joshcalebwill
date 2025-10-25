@@ -30,10 +30,12 @@ export const CultureOptionsList = styled.div`
 			flex-direction: row-reverse;
 		`}
 
-	@media screen and (max-width: 670px) {
+	@media screen and (max-width: 900px) {
 		flex-direction: column;
 		max-width: 100%;
 		height: 100%;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 export const CultureOptionsListImg = styled.div`
@@ -47,7 +49,7 @@ export const CultureOptionsListImg = styled.div`
 		object-fit: cover;
 	}
 
-	@media screen and (max-width: 670px) {
+	@media screen and (max-width: 600px) {
 		max-width: 100%;
 	}
 `;
@@ -106,7 +108,7 @@ export const CultureOptionsListInfo = styled.div`
 		padding: 50px;
 	}
 
-	@media screen and (max-width: 670px) {
+	@media screen and (max-width: 600px) {
 		max-width: 100%;
 	}
 

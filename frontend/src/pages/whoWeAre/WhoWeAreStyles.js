@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import lead2 from '../../assets/lead2.png';
 
-
 export const WhoWeAre = styled.div``;
 
 export const WhoWeAreHero = styled.div`
@@ -20,7 +19,6 @@ export const WhoWeAreHero = styled.div`
 	}
 `;
 
-
 export const BlendModeTitle = styled.h1`
 	font-size: 10rem;
 	width: 100%;
@@ -33,23 +31,19 @@ export const BlendModeTitle = styled.h1`
 	mix-blend-mode: screen;
 	letter-spacing: -5px;
 	/* padding-top: 10px; */
-  padding-bottom: 50px;
+	padding: 50px 0;
 
 	@media screen and (max-width: 900px) {
-		font-size: 8rem !important;
+		font-size: 7rem !important;
 		letter-spacing: 0;
+		padding: 40px 0;
 	}
 
-	/* @media screen and (max-width: 590px) {
+	@media screen and (max-width: 550px) {
 		font-size: 4rem !important;
+		padding: 30px 0;
 		letter-spacing: 0;
 	}
-
-	@media screen and (max-width: 390px) {
-		font-size: 3rem !important;
-		letter-spacing: 0;
-		padding: 30px 0;
-	} */
 `;
 
 export const CultureInfo = styled.div`
@@ -67,24 +61,6 @@ export const CultureInfo = styled.div`
 `;
 
 export const WhoWeAreContainer = styled.div`
-	/* background-color: var(--color-light-red);
-	background-color: gold;
-	background-color: goldenrod;
-	background-color: orange;
-	background: #f07537;
-	background: linear-gradient(
-		184deg,
-		rgba(240, 117, 55, 1) 20%,
-		rgba(252, 176, 69, 1) 78%
-	); */
-
-	/* background: #f07537;
-	background: linear-gradient(
-		180deg,
-		rgba(240, 117, 55, 1) 49%,
-		rgba(69, 154, 252, 1) 77%
-	); */
-	background-color: rgba(69, 154, 252, 1);
 	background-color: #b76e79;
 	padding: 20px 0;
 	margin-top: 20px;
@@ -98,6 +74,7 @@ export const WhoWeAreInfoContainer = styled.div`
 	h1 {
 		font-size: 8rem;
 		color: #fff;
+		color: var(--main-color-g);
 		text-align: center !important;
 		line-height: 1;
 		max-width: 900px;
@@ -108,18 +85,27 @@ export const WhoWeAreInfoContainer = styled.div`
 	p {
 		font-size: 1.2rem;
 		color: #fff;
-		/* text-align: center !important; */
 		padding-bottom: 10px;
 	}
 
-	@media screen and (max-width: 570px) {
+	@media screen and (max-width: 900px) {
 		padding: 10px;
 		h1 {
 			font-size: 4rem;
 		}
 
 		p {
-			font-size: 1rem;
+			font-size: 1.5rem;
+			/* text-align: center !important; */
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		h1 {
+			font-size: 3rem;
+		}
+
+		p {
 			text-align: center !important;
 		}
 	}
@@ -146,8 +132,6 @@ export const WhoWeAreGallerryPixWrapper = styled.div`
 		position: relative;
 		height: 100%;
 		width: 100%;
-		/* width: 350px;
-		height: 350px; */
 		overflow: hidden !important;
 		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
 		border-radius: 20px;
@@ -162,7 +146,6 @@ export const WhoWeAreGallerryPixWrapper = styled.div`
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			/* filter: brightness(0.5) grayscale(100); */
 			transition: 0.3s ease-in all;
 		}
 
@@ -211,6 +194,11 @@ export const WhoWeAreGallerryPixWrapper = styled.div`
       width: 300px;
       height: 300px;
     } */
+
+		.pix5,
+		.pix6 {
+			display: none;
+		}
 	}
 
 	@media screen and (max-width: 430px) {
@@ -220,12 +208,19 @@ export const WhoWeAreGallerryPixWrapper = styled.div`
 
 		.pix {
 			margin: 20px 0;
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.pix1 {
+			display: none;
 		}
 	}
 `;
 
 export const WhoWeAreValuesContainer = styled.div`
-  margin-top: 50px;
+	margin-top: 50px;
 `;
 
 export const WhoWeAreValuesPic = styled.div`
@@ -248,13 +243,17 @@ export const WhoWeAreValuesPic = styled.div`
 			transform: rotate(360deg);
 		}
 	}
+
+	@media screen and (max-width: 550px){
+		max-width: 250px;
+	}
 `;
 
 export const WhoWeAreValuesBox = styled.div`
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	padding-top: 50px;
+	padding: 50px 0;
 	gap: 20px;
 
 	.box {
@@ -263,7 +262,7 @@ export const WhoWeAreValuesBox = styled.div`
 `;
 
 export const WhoWeAreValuesItem = styled.div`
-	max-width: 500px;
+	max-width: 400px;
 	width: 100%;
 	border-radius: 10px;
 	border: 1px solid #ccc;
@@ -355,5 +354,9 @@ export const WhoWeAreValueImg = styled.div`
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	@media screen and (max-width: 550px){
+		height: 200px;
 	}
 `;

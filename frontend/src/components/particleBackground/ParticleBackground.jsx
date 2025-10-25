@@ -21,7 +21,7 @@ const ParticleBackground = () => {
 	 const ParticleConfig = useMemo(() => ({
 	  particles: {
 	    number: {
-	      value: 315,
+	      value: 415,
 	      density: {
 	        enable: true,
 	        value_area: 800,
@@ -31,7 +31,7 @@ const ParticleBackground = () => {
 	      value: '#ffffff',
 	    },
 	    shape: {
-	      type: 'circle',
+	      type: 'star',
 	      stroke: {
 	        width: 0,
 	        color: '#000000',
@@ -59,14 +59,14 @@ const ParticleBackground = () => {
 	      value: 3,
 	      random: true,
 	      anim: {
-	        enable: false,
+	        enable: true,
 	        speed: 4,
 	        size_min: 0.3,
 	        sync: false,
 	      },
 	    },
 	    line_linked: {
-	      enable: false,
+	      enable: true,
 	      distance: 150,
 	      color: '#ffffff',
 	      opacity: 0.4,
@@ -89,7 +89,7 @@ const ParticleBackground = () => {
 	  },
 	  interactivity: {
       detect_on: 'canvas',
-      
+
 	    events: {
 	      onhover: {
 	        enable: true,
@@ -109,7 +109,7 @@ const ParticleBackground = () => {
 	        },
 	      },
 	      bubble: {
-	        distance: 250,
+	        distance: 200,
 	        size: 0,
 	        duration: 2,
 	        opacity: 0,

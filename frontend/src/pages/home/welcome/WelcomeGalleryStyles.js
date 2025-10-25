@@ -87,6 +87,10 @@ export const GallerryPixWrapper = styled.div`
       width: 300px;
       height: 300px;
     } */
+
+			.pix5, .pix6 {
+				display: none;
+			}
 	}
 
 	@media screen and (max-width: 430px) {
@@ -95,7 +99,14 @@ export const GallerryPixWrapper = styled.div`
     padding: 20px;
 
     .pix {
+			width: 100%;
+			height: 300px;
+			object-fit: contain;
       margin: 20px 0;
     }
+
+		.pix3 {
+			display: none;
+		}
 	}
 `;

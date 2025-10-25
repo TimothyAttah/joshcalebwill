@@ -91,7 +91,7 @@ export const CultureInfo = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 390px) {
+	@media screen and (max-width: 450px) {
 		padding: 0 20px;
 	}
 `;
@@ -111,7 +111,7 @@ export const GasContainer = styled.div`
 		line-height: 1.2;
 	}
 
-	@media screen and (max-width: 390px) {
+	@media screen and (max-width: 450px) {
 		padding: 20px;
 
 		h2 {
@@ -150,6 +150,11 @@ export const GasOptionsImg = styled.div`
 		height: 100%;
 		object-fit: cover;
 		border-radius: 20px;
+	}
+
+	@media screen and (max-width: 450px) {
+		max-width: 100%;
+		height: 250px !important;
 	}
 `;
 
@@ -248,6 +253,6 @@ export const ChooseUs = styled.div`
 			margin: 20px auto !important;
 		}
 
-		padding: 10px;
+		padding: 20px;
 	}
 `;

@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 export const Slide = styled(motion.div)`
 	width: 100%;
-	background-color: var(--base-color-green-neg);
+	/* background-color: var(--base-color-green-neg); */
+	/* background: var(--base-color-gold); */
 	position: relative;
 	overflow: hidden !important;
 	/* margin-top: 50px; */
@@ -99,7 +100,7 @@ export const SlideContent = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 570px) {
+	@media screen and (max-width: 900px) {
 		bottom: 40px;
 		text-align: center;
 		max-width: 100% !important;
@@ -142,9 +143,10 @@ export const SlideContentWrapper = styled.div`
 	-webkit-backdrop-filter: blur(10px) opacity(1);
 
 	/* transform: translateX(0); */
-	background-color: #0b2d7180;
-	background: #00813299;
+	/* background-color: #0b2d7180; */
+	/* background: #00813299; */
 	background: var(--base-color-gold);
+	background: hsl(35deg 100% 50% / 41%);
 	opacity: 1;
 	/* z-index: 3; */
 	pointer-events: all;
@@ -156,7 +158,7 @@ export const SlideContentWrapper = styled.div`
 		padding: 20px;
 	}
 
-	@media screen and (max-width: 570px) {
+	@media screen and (max-width: 900px) {
 		/* padding:  20px 10px; */
 		/* height: 390px; */
 		display: flex;

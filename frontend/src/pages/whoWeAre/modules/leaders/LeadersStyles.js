@@ -18,44 +18,60 @@ export const BlendModeSubTitle = styled.h4`
 	background-color: #fff;
 	color: var(--base-color-gold);
 	position: absolute;
-	bottom: 160px;
+	bottom: 200px;
+	/* bottom: 481px; */
 	text-align: center !important;
 	/* padding: 20px 0; */
 	padding-top: 30px;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 990px) {
 		font-size: 1.5rem !important;
 		bottom: 120px;
+		bottom: 165px;
 	}
 
-	@media screen and (max-width: 735px) {
+	@media screen and (max-width: 790px) {
 		font-size: 1.5rem !important;
-		bottom: 236px;
+		bottom: 126px;
 	}
 
-	@media screen and (max-width: 590px) {
+	@media screen and (max-width: 530px) {
+		font-size: 1.5rem !important;
+		bottom: 200px;
+	}
+
+	@media screen and (max-width: 450px) {
 		font-size: 1.5rem !important;
 		letter-spacing: 0;
-		bottom: 80px;
-	}
-
-	@media screen and (max-width: 490px) {
-		font-size: 1.5rem !important;
-		letter-spacing: 0;
-		bottom: 162px;
+		bottom: 111px;
+		/* bottom: 104px;
+		bottom: 121px; */
+		display: none;
 	}
 
 	@media screen and (max-width: 390px) {
-		font-size: 1.2rem !important;
-		bottom: 115px;
-		/* padding: 30px 0; */
+		font-size: 1.5rem !important;
+		letter-spacing: 0;
+		bottom: 170px;
 	}
 
-	@media screen and (max-width: 367px) {
+	@media screen and (max-width: 350px) {
+		font-size: 1.5rem !important;
+		letter-spacing: 0;
+		bottom: 107px;
+	}
+
+	@media screen and (max-width: 328px) {
+		font-size: 1.5rem !important;
+		letter-spacing: 0;
+		bottom: 154px;
+	}
+
+	/* @media screen and (max-width: 367px) {
 		font-size: 1.2rem !important;
 		bottom: 173px;
-		/* padding: 30px 0; */
-	}
+		bottom: 103px;
+	} */
 `;
 
 export const BlendModeTitle = styled.h1`
@@ -64,25 +80,32 @@ export const BlendModeTitle = styled.h1`
 	background-color: #fff;
 	color: #000;
 	position: absolute;
-	bottom: -2px;
+	bottom: 0px;
 	text-align: center !important;
-	/* padding: 20px 0; */
+	/* padding: 50px 0; */
 	mix-blend-mode: screen;
 	letter-spacing: -5px;
-	padding-top: 10px;
+	/* padding-top: 10px; */
+	padding-bottom: 50px;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 990px) {
 		font-size: 6rem !important;
 		letter-spacing: 0;
 	}
 
-	@media screen and (max-width: 590px) {
+	@media screen and (max-width: 790px) {
 		font-size: 4rem !important;
 		letter-spacing: 0;
 	}
 
-	@media screen and (max-width: 390px) {
+	@media screen and (max-width: 450px) {
 		font-size: 3rem !important;
+		letter-spacing: 0;
+		padding: 30px 0;
+	}
+
+	@media screen and (max-width: 350px) {
+		font-size: 2.5rem !important;
 		letter-spacing: 0;
 		padding: 30px 0;
 	}
@@ -90,7 +113,7 @@ export const BlendModeTitle = styled.h1`
 
 export const CultureInfo = styled.div`
 	background-color: #fff;
-	padding: 50px 0;
+	/* padding: 50px 0; */
 
 	p {
 		max-width: 700px;
@@ -106,7 +129,14 @@ export const LeadersContainer = styled.div`
 	background-color: var(--base-color-gold-neg);
 	background-color: var(--main-color-p);
 	color: #fff;
-  padding: 50px 0;
+	padding: 50px 0;
+	margin-top: 30px;
+
+	svg {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
 `;
 
 export const LeadersInfoContainer = styled.div`
@@ -132,7 +162,19 @@ export const LeadersInfoContainer = styled.div`
 		width: 100%;
 		margin: 30px auto;
 		text-align: center !important;
-    font-size: 18px;
+		font-size: 18px;
+	}
+
+	@media screen and (max-width: 790px) {
+		h1 {
+			font-size: 4rem !important ;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		h1 {
+			font-size: 3rem !important;
+		}
 	}
 `;
 

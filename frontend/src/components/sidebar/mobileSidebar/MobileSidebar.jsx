@@ -54,8 +54,8 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 		},
 	};
 
-	const closeSidebar = (i, isClicked) => {
-		setClicked(isClicked ? null : i);
+	const closeSidebar = () => {
+		// setClicked(isClicked ? null : i);
 
 		setShowMobileSidebar(false);
 		scrollToTop();
@@ -80,16 +80,7 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSidebarListItem>
-										{/* <Link
-											to={nav.navPath}
-											onClick={() => setShowMobileSidebar(false)}
-										>
-											{nav.navTitle} {hasSubMenu && <ChevronDown />}
-										</Link> */}
-										<Link
-											onClick={() => setClicked(isClicked ? null : i)}
-											to={nav.navPath}
-										>
+										<Link onClick={() => setClicked(isClicked ? null : i)}>
 											{nav.navTitle} {hasSubMenu && <ChevronDown />}
 										</Link>
 
@@ -108,7 +99,7 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 														<Styles.MobileSubMenuList>
 															<Link
 																to={nav.navPath}
-																onClick={() => closeSidebar(i, isClicked)}
+																onClick={() => closeSidebar()}
 															>
 																<span>{nav.navTitle}</span>
 															</Link>
@@ -127,10 +118,7 @@ const MobileSidebar = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							return (
 								<FadeInAlways key={i} delay={0.2 * i + 0.2} direction='down'>
 									<Styles.MobileSidebarListItem>
-										<Link
-											to={nav.navPath}
-											onClick={() => setShowMobileSidebar(false)}
-										>
+										<Link to={nav.navPath} onClick={() => closeSidebar()}>
 											{nav.navTitle}
 										</Link>
 									</Styles.MobileSidebarListItem>

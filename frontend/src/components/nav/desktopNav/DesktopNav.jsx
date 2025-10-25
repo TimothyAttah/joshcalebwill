@@ -23,8 +23,6 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 		setSelected(val);
 	};
 
-	//
-
 	return (
 		<>
 			<Styles.DesktopNav>

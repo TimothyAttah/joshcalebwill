@@ -68,7 +68,7 @@ export const CultureInfo = styled.div`
 		text-align: center !important;
 	}
 
-	@media screen and (max-width: 390px) {
+	@media screen and (max-width: 450px) {
 		padding: 0 20px;
 	}
 `;
@@ -171,7 +171,7 @@ export const HaulageIntroSection = styled.div`
 
 	p {
 		font-size: 22px;
-		color: #463636;
+		color: #000;
 		/* color: #fff; */
 		padding-bottom: 10px;
 	}
@@ -214,6 +214,12 @@ export const HaulageIntroGalleryContainer = styled.div`
 			&:hover {
 				scale: 1.1;
 			}
+		}
+	}
+
+	@media screen and (max-width: 450px){
+		div {
+			height: 220px !important;
 		}
 	}
 `;

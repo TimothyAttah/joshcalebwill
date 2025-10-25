@@ -7,10 +7,10 @@ export const IntroContainer = styled.div`
 	/* background: var(--primary-color);
 	background: rgb(9, 255, 0); */
 	/* background: #fff; */
-	background: var(--main-color-o);
-	background-position: center;
+	background: var(--main-color-p);
+	/* background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
 	/* background-attachment: fixed; */
 	position: relative;
 	padding: 20px 0;
@@ -19,15 +19,19 @@ export const IntroContainer = styled.div`
 
 export const ContentTitle = styled.div`
 	max-width: 1500px;
+	/* border: 3px solid red; */
 	width: 100%;
 	margin: 0px auto;
 	padding-top: 100px;
 	/* text-align: center; */
 	overflow: hidden !important;
 	small {
-		font-size: 18px !important;
+		font-size: 24px !important;
 		color: #fff;
+		text-align: center !important;
+		display: block;
 		/* color: var(--color2); */
+		text-transform: lowercase;
 	}
 
 	h2 {
@@ -112,7 +116,17 @@ export const IntroContent = styled.div`
 `;
 
 export const TextWrap = styled.div`
-	padding: 50px 0;
+	/* padding: 50px 0; */
+
+	.text1,
+	.text2,
+	.text3,
+	.text4,
+	.text5,
+	.text6,
+	.text7 {
+		color: #ffff;
+	}
 
 	@media screen and (max-width: 420px) {
 		h1 {

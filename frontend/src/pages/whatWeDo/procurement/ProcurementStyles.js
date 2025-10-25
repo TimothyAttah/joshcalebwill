@@ -39,6 +39,7 @@ export const BlendModeTitle = styled.h1`
   @media screen and (max-width: 790px) {
     font-size: 4rem !important;
     letter-spacing: 0;
+    padding-top: 30px;
   }
 
   @media screen and (max-width: 390px) {
@@ -120,6 +121,10 @@ export const ProcurementOptionsImg = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+  }
+
+  @media screen and (max-width: 450px){
+    height: 250px !important;
   }
 `;
 
@@ -215,6 +220,6 @@ export const ChooseUs = styled.div`
       margin: 20px auto !important;
     }
 
-		padding: 10px;
+		padding: 20px;
 	}
 `;

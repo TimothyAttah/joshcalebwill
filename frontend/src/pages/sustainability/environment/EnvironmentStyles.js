@@ -109,6 +109,10 @@ export const CultureInfo = styled.div`
 		color: #000;
 		text-align: center !important;
 	}
+
+	@media screen and (max-width: 450px){
+		padding: 20px;
+	}
 `;
 
 export const StragegyContainer = styled.div`
@@ -191,10 +195,18 @@ export const StragegyPix = styled.div`
 			font-size: 1.4rem;
 		}
 	}
+
+	@media screen and (max-width: 450px){
+		height: auto;
+		padding-bottom: 40px;
+		img {
+			height: 200px;
+		}
+	}
 `;
 
 export const EnvironmentOptionsContainer = styled.div`
-	background-color: var(--base-color-gold-neg);
+	background-color: var(--main-color-p);
 	padding: 50px;
 	color: #fff;
 
@@ -207,7 +219,7 @@ export const EnvironmentOptionsContainer = styled.div`
 	}
 
 	@media screen and (max-width: 470px) {
-		padding: 10px;
+		padding: 20px;
 		p , h4{
 			text-align: center !important;
 		}
