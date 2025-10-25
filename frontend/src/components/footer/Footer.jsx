@@ -32,7 +32,7 @@ const Footer = () => {
 					</FadeInAlways>
 				))}
 			</Styles.FooterWrapper>
-			<Styles.Josh>joshcalebwill &copy; 2025</Styles.Josh>
+			{/* <Styles.Josh>joshcalebwill &copy; 2025</Styles.Josh> */}
 		</Styles.FooterContainer>
 	);
 };

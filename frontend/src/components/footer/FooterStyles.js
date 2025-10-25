@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-	background-color: var(--base-color-gold-neg);
+	background-color: var(--main-color-o);
 	width: 100%;
 `;
 export const FooterWrapper = styled.div`
@@ -14,7 +14,7 @@ export const FooterWrapper = styled.div`
 	@media screen and (max-width: 420px){
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		/* align-items: center; */
 	}
 `;
 export const FooterLists = styled.div`
@@ -22,8 +22,8 @@ export const FooterLists = styled.div`
 
 	h4 {
 		padding-bottom: 24px;
-    color: #fff;
-    font-weight: bolder;
+		color: #fff;
+		font-weight: bolder;
 		font-size: 22px;
 	}
 
@@ -36,6 +36,7 @@ export const FooterListsItem = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	gap: 15px;
 
 	a {
@@ -45,6 +46,7 @@ export const FooterListsItem = styled.div`
 
 		display: flex;
 		align-items: center;
+		width: 100%;
 
 		svg {
 			font-size: 30px;

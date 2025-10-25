@@ -31,17 +31,17 @@ export const footerData = [
 		navSubmenu: [
 			{
 				navIcon: FaFacebook,
-				navPath: '/contact',
+				navPath: '/who-we-are/contact-us',
 				target: true,
 			},
 			{
 				navIcon: FaInstagram,
-				navPath: '/contact',
+				navPath: '/who-we-are/contact-us',
 				target: true,
 			},
 			{
 				navIcon: FaLinkedin,
-				navPath: '/contact',
+				navPath: '/who-we-are/contact-us',
 				target: true,
 			},
 			{
@@ -91,11 +91,11 @@ export const footerData = [
 		navSubmenu: [
 			{
 				navTitle: 'customer care',
-				navPath: '/contact',
+				navPath: '/who-we-are/contact-us',
 			},
 			{
 				navTitle: 'contact us',
-				navPath: '/contact',
+				navPath: '/who-we-are/contact-us',
 			},
 		],
 	},
