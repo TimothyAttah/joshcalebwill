@@ -39,14 +39,14 @@ const HomeServices = () => {
 								<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
 									<Styles.ServicesListItems>
 										<Styles.ServiceItemImg>
-											<LazyLoadImage
+											{/* <LazyLoadImage
 												src={item.pix}
 												height='100%'
 												width='100%'
 												effect='blur'
 												placeholderSrc={item.pix}
-											/>
-											{/* <LazyImage src={item.pix} /> */}
+											/> */}
+											<LazyImage src={item.pix} />
 										</Styles.ServiceItemImg>
 										<h4>{item.title}</h4>
 

@@ -158,6 +158,7 @@ const WhoWeAre = () => {
 							</FadeInAlways>
 							<FadeInAlways delay={0.6} direction='up'>
 								<Styles.WhoWeAreValueImg>
+									{/* <img src={pix2} alt='' /> */}
 									<LazyImage src={pix2} />
 								</Styles.WhoWeAreValueImg>
 							</FadeInAlways>
@@ -181,6 +182,7 @@ const WhoWeAre = () => {
 							</FadeInAlways>
 							<FadeInAlways delay={0.6} direction='up'>
 								<Styles.WhoWeAreValueImg>
+									{/* <img src={pix3} alt='' /> */}
 									<LazyImage src={pix3} />
 								</Styles.WhoWeAreValueImg>
 							</FadeInAlways>

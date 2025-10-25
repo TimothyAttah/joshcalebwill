@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Twirl as Hamburger } from 'hamburger-react';
+import { scrollToTop } from '../../header/Header';
 
 const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 	const [selected, setSelected] = useState();
@@ -34,7 +35,9 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							handleSelected={handleSelected}
 							tab={nav.id}
 						>
-							<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
+							<NavLink to={nav.navPath} onClick={scrollToTop}>
+								{nav.navTitle}
+							</NavLink>
 						</Tab>
 					))}
 					<AnimatePresence>
@@ -45,7 +48,9 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 				<Styles.DesktopNavList>
 					{navWithoutSubmenuData.map((nav, i) => (
 						<li key={i}>
-							<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
+							<NavLink to={nav.navPath} onClick={scrollToTop}>
+								{nav.navTitle}
+							</NavLink>
 						</li>
 					))}
 				</Styles.DesktopNavList>
@@ -102,7 +107,9 @@ export const Content = ({ selected, dir }) => {
 						>
 							{nav.subMenu.map((nav, i) => (
 								<Styles.SubmenuListItem key={i}>
-									<NavLink to={nav.navPath}>{nav.navTitle}</NavLink>
+									<NavLink to={nav.navPath} onClick={scrollToTop}>
+										{nav.navTitle}
+									</NavLink>
 								</Styles.SubmenuListItem>
 							))}
 						</Styles.SubmenuList>

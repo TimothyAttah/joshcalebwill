@@ -28,15 +28,15 @@ const LazyImage = ({ src }) => {
 		};
 	}, []);
 	return inView ? (
-		// <img src={ src } />
-		<LazyLoadImage
-			src={src}
-			height='100%'
-			width='100%'
-			// effect='blur'
-			placeholderSrc={src}
-		/>
+		<img src={src} />
 	) : (
+		// <LazyLoadImage
+		// 	src={src}
+		// 	height='100%'
+		// 	width='100%'
+		// 	// effect='blur'
+		// 	placeholderSrc={src}
+		// />
 		<img
 			ref={ref}
 			alt=''
