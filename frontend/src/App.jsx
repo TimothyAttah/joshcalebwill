@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
 import Layout from './components/Layout';
@@ -25,39 +25,141 @@ import Layout from './components/Layout';
 
 const Home = lazy(() => import('./pages/home/Home'));
 const WhoWeAre = lazy(() => import('./pages/whoWeAre/WhoWeAre'));
-
-
+const Culture = lazy(() => import('./pages/whoWeAre/modules/culture/Culture'));
+const Leaders = lazy(() => import('./pages/whoWeAre/modules/leaders/Leaders'));
+const LeaderProfile = lazy(() =>
+	import('./pages/whoWeAre/modules/leaders/LeaderProfile'),
+);
+const History = lazy(() => import('./pages/whoWeAre/modules/history/History'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
 
 const App = () => {
-	 const router = createBrowserRouter([
-			{
-				path: '/',
-				element: <Layout />,
-				children: [
-					{
-						path: '/',
-						element: (
-							<Suspense fallback={<div>Loading...</div>}>
-								<Home />
-							</Suspense>
-						),
-					},
-					{
-						path: '/who-we-are',
-						element: (
-							<Suspense fallback={<div>Loading...</div>}>
-								<WhoWeAre />
-							</Suspense>
-						),
-					},
-				],
-			},
-		]);
 	return (
 		<>
 			{/* <Cookie/> */}
-			<RouterProvider router={router} />
+			<Routes>
+				<Route element={<Layout />}>
+					<Route
+						path='/'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Home />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='/who-we-are'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<WhoWeAre />
+							</Suspense>
+						}
+					/>
 
+					<Route
+						path='/who-we-are/our-culture'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Culture />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/who-we-are/leadership'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Leaders />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='/who-we-are/leadership/leader/:name'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<LeaderProfile />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/who-we-are/our-history'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<History />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/who-we-are/contact-us'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Contact />
+							</Suspense>
+						}
+					/>
+
+					{/* <Route path='/who-we-are/contact-us' element={<Contact />} />
+					<Route path='/sustainability' element={<Sustainability />} />
+					<Route path='/sustainability/environment' element={<Environment />} />
+					<Route path='/sustainability/communities' element={<Communities />} />
+					<Route path='/who-we-are/jobs' element={<Careers />} />
+					<Route path='/what-we-do/exploration' element={<Exploration />} />
+					<Route
+						path='/what-we-do/procurement-solutions'
+						element={<Procurement />}
+					/>
+					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
+					<Route
+						path='/what-we-do/chemical-supply&treatments'
+						element={<Chemical />}
+					/>
+					<Route
+						path='/what-we-do/pipeline-construction-and-maintenance'
+						element={<Pipeline2 />}
+					/>
+					<Route
+						path='/what-we-do/gas-compression-services'
+						element={<Gas />}
+					/>
+
+					<Route path='/what-we-do/health-and-safety' element={<Health2 />} />
+					<Route path='/what-we-do/lubricants' element={<Lubricants />} /> */}
+
+					{/* <Route path='/what-we-do/exploration' element={<Exploration />} />
+
+
+
+					<Route path='/what-we-do/health-and-safety' element={<Health />} />
+
+
+
+
+					<Route path='/sustainability' element={<Sustainability />} /> */}
+
+					{/* <Route
+						path='/sustainability/quality-policy-statement'
+						element={<QualityPolicy />}
+					/>
+					<Route
+						path='/sustainability/health-safety-environment-hse-policy'
+						element={<HealthPolicy />}
+					/> */}
+
+					{/* <Route path='/contact' element={<Contact />} />
+					<Route path='/market' element={<Market />} />
+					<Route path='/product/:id' element={<ProductItem />} />
+					<Route path='/cart/:id?' element={<Cart />} />
+					<Route path='/login' element={<Login />} />
+					<Route path='/register' element={<Register />} />
+					<Route path='/profile' element={<Profile />} />
+					<Route path='/login/shipping' element={<Shipping />} />
+					<Route path='/payment' element={<Payment />} />
+					<Route path='/placeorder' element={<PlaceOrder />} />
+					<Route path='/order/:id' element={<Order />} /> */}
+				</Route>
+			</Routes>
 			<ToastContainer />
 		</>
 	);

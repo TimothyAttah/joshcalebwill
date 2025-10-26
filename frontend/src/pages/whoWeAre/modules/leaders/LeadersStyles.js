@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import lead1 from '../../../../assets/lead1.png';
-import lead2 from '../../../../assets/lead2.png';
 
 export const Leaders = styled.div``;
 

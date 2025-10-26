@@ -69,9 +69,9 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     margin: 0 auto;
     /* border: 2px solid red; */
-    height: 100vh;
+    /* height: 100vh; */
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
 
     &::-webkit-scrollbar {
       display: none;

@@ -1,8 +1,8 @@
 import * as Styles from './CultureStyles'
 import LastestSlider from './CultureSlider';
-import cultPix1 from '../../../../assets/sus4.png';
-import cultPix2 from '../../../../assets/sus3.png';
-import cultPix3 from '../../../../assets/cul4.png';
+import cultPix1 from '../../../../assets/cut4.png';
+import cultPix2 from '../../../../assets/cut6.png';
+import cultPix3 from '../../../../assets/cut5.png';
 import Copy from '../../../../components/copyText/CopyText';
 import {ReactLenis} from 'lenis/react'
 

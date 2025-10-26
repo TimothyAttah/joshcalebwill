@@ -17,7 +17,9 @@ const HomeServices = () => {
 						<Copy delay={0.5}>
 							<small>what we do</small>
 							<h1>energy that fuels the world</h1>
+						</Copy>
 
+						<Copy>
 							<p>
 								Our services include upstream and downstream production,
 								instrumentation, installation, construction and maintenance. Our
@@ -25,7 +27,9 @@ const HomeServices = () => {
 								supply and treatments, gas compression, engineering, pipeline
 								and construction services consultancy, among others.
 							</p>
+						</Copy>
 
+						<Copy>
 							<p>
 								We are driven by innovation, strong ethical standard and quality
 								service using the latest technologies and innovations in
@@ -47,6 +51,7 @@ const HomeServices = () => {
 												placeholderSrc={item.pix}
 											/> */}
 											<LazyImage src={item.pix} />
+											{/* <img src={item.pix} alt='' /> */}
 										</Styles.ServiceItemImg>
 										<h4>{item.title}</h4>
 

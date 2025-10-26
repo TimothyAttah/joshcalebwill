@@ -21,7 +21,7 @@ const ParticleBackground = () => {
 	 const ParticleConfig = useMemo(() => ({
 	  particles: {
 	    number: {
-	      value: 415,
+	      value: 115,
 	      density: {
 	        enable: true,
 	        value_area: 800,

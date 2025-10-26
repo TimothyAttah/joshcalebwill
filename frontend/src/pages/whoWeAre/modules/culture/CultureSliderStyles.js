@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import pix1 from '../../../../assets/culSlider1.png';
-import pix2 from '../../../../assets/culSlider2.png';
-import pix3 from '../../../../assets/culSlider3.png';
+import pix1 from '../../../../assets/cut1.png';
+import pix2 from '../../../../assets/cut3.png';
+import pix3 from '../../../../assets/cut2.png';
 import { motion } from 'framer-motion';
 
 export const LastestSliderContainer = styled(motion.div)`
