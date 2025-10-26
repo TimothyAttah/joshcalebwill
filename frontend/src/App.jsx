@@ -100,7 +100,7 @@ const App = () => {
 						}
 					/>
 
-					{/* <Route path='/who-we-are/contact-us' element={<Contact />} />
+					{/*
 					<Route path='/sustainability' element={<Sustainability />} />
 					<Route path='/sustainability/environment' element={<Environment />} />
 					<Route path='/sustainability/communities' element={<Communities />} />
