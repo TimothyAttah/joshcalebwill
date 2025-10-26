@@ -1,7 +1,7 @@
 import * as Styles from './LubricantsStyles';
-import lubPix1 from '../../../assets/lub2.png'
-import lubPix2 from '../../../assets/lub4.png';
-import lubPix3 from '../../../assets/lub3.png';
+import lubPix1 from '../../../assets/lub5.png'
+import lubPix2 from '../../../assets/lub6.png';
+import lubPix3 from '../../../assets/lub7.png';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 

@@ -1,11 +1,12 @@
 import * as Styles from './ExplorationStyles';
 import explore1 from '../../../assets/explore3.png';
-import explore2 from '../../../assets/explore1.png';
+import explore2 from '../../../assets/explore5.png';
 import explore3 from '../../../assets/explore4.png';
 import { Link } from 'react-router-dom';
 import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 
 const Exploration = () => {
@@ -13,7 +14,8 @@ const Exploration = () => {
 		<>
 			<ReactLenis root>
 				<Styles.ExplorationHero>
-					<img src={explore1} alt='' />
+					{/* <img alt='' /> */}
+					<LazyImage src={explore1} />
 					<Styles.BlendModeTitle>exploration</Styles.BlendModeTitle>
 				</Styles.ExplorationHero>
 				<Styles.CultureInfo>
@@ -38,7 +40,8 @@ const Exploration = () => {
 
 					<Styles.ExplorationOptionsContainer>
 						<Styles.ExplorationOptionsImg>
-							<img src={explore2} alt='' />
+							{/* <img src={explore2} alt='' /> */}
+							<LazyImage src={explore2} />
 						</Styles.ExplorationOptionsImg>
 						<Styles.ExplorationOptionsInfo>
 							<Copy delay={0.5}>
@@ -74,7 +77,8 @@ const Exploration = () => {
 					</Styles.ExplorationOptionsContainer>
 					<Styles.ExplorationOptionsContainer primary>
 						<Styles.ExplorationOptionsImg>
-							<img src={explore3} alt='' />
+							{/* <img src={explore3} alt='' /> */}
+							<LazyImage src={explore3} />
 						</Styles.ExplorationOptionsImg>
 						<Styles.ExplorationOptionsInfo>
 							<Copy delay={0.5}>

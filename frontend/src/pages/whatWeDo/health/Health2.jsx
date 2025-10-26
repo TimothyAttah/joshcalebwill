@@ -1,15 +1,12 @@
-import pic1 from '../../../assets/safety1.jpg';
-import pic2 from '../../../assets/newHealth1.png';
-import pic3 from '../../../assets/newGas3.png';
-import servicePix1 from '../../../assets/healthService1.jpg';
-import servicePix2 from '../../../assets/healthService2.jpg';
-import servicePix3 from '../../../assets/newExp3.png';
-import servicePix4 from '../../../assets/healthService4.jpg';
-import servicePix5 from '../../../assets/healthService5.jpg';
-import servicePix6 from '../../../assets/healthService6.jpg';
-import servicePix7 from '../../../assets/healthService7.jpg';
-import servicePix8 from '../../../assets/healthService8.jpg';
-import servicePix9 from '../../../assets/healthService9.jpg';
+import pic1 from '../../../assets/safety4.png';
+import pic2 from '../../../assets/safety5.png';
+import pic3 from '../../../assets/safety6.png';
+import pic4 from '../../../assets/safety7.png';
+import pic5 from '../../../assets/safety8.png';
+import pic6 from '../../../assets/safety9.png';
+import pic7 from '../../../assets/safety4.png';
+
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { FaDotCircle } from 'react-icons/fa';
@@ -19,6 +16,7 @@ import { useEffect } from 'react';
 import HealthPolicy from '../../sustainability/healthPolicy/HealthPolicy';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Health2 = () => {
 	return (
@@ -26,7 +24,8 @@ const Health2 = () => {
 			<ReactLenis root>
 				<Styles.HealthContainer>
 					<Styles.HealthHero>
-						<img src={servicePix3} alt='' />
+						{/* <img src={servicePix3} alt='' /> */}
+						<LazyImage src={pic1} />
 						<Styles.BlendModeTitle>Health and Safety</Styles.BlendModeTitle>
 					</Styles.HealthHero>
 					<Styles.CultureInfo>
@@ -66,9 +65,11 @@ const Health2 = () => {
 									</Copy>
 								</Styles.HealthServiceListInfo>
 								<Styles.HealthServiceListImg>
-									<img src={pic2} alt='' />
+									{/* <img src={pic2} alt='' /> */}
+									<LazyImage src={pic2} />
 								</Styles.HealthServiceListImg>
 							</Styles.HealthServiceList>
+
 							<Styles.HealthServiceList>
 								<Styles.HealthServiceListInfo>
 									<Copy delay={0.5}>
@@ -80,9 +81,11 @@ const Health2 = () => {
 									</Copy>
 								</Styles.HealthServiceListInfo>
 								<Styles.HealthServiceListImg>
-									<img src={servicePix2} alt='' />
+									{/* <img src={servicePix2} alt='' /> */}
+									<LazyImage src={pic3} />
 								</Styles.HealthServiceListImg>
 							</Styles.HealthServiceList>
+
 							<Styles.HealthServiceList>
 								<Styles.HealthServiceListInfo>
 									<Copy delay={0.5}>
@@ -94,9 +97,11 @@ const Health2 = () => {
 									</Copy>
 								</Styles.HealthServiceListInfo>
 								<Styles.HealthServiceListImg>
-									<img src={pic1} alt='' />
+									{/* <img src={pic1} alt='' /> */}
+									<LazyImage src={pic4} />
 								</Styles.HealthServiceListImg>
 							</Styles.HealthServiceList>
+
 							<Styles.HealthServiceList>
 								<Styles.HealthServiceListInfo>
 									<Copy delay={0.5}>
@@ -108,9 +113,11 @@ const Health2 = () => {
 									</Copy>
 								</Styles.HealthServiceListInfo>
 								<Styles.HealthServiceListImg>
-									<img src={servicePix4} alt='' />
+									{/* <img src={servicePix4} alt='' /> */}
+									<LazyImage src={pic5} />
 								</Styles.HealthServiceListImg>
 							</Styles.HealthServiceList>
+
 							<Styles.HealthServiceList>
 								<Styles.HealthServiceListInfo>
 									<Copy delay={0.5}>
@@ -122,7 +129,8 @@ const Health2 = () => {
 									</Copy>
 								</Styles.HealthServiceListInfo>
 								<Styles.HealthServiceListImg>
-									<img src={servicePix5} alt='' />
+									{/* <img src={servicePix5} alt='' /> */}
+									<LazyImage src={pic6} />
 								</Styles.HealthServiceListImg>
 							</Styles.HealthServiceList>
 						</Styles.HealthServiceWrapper>

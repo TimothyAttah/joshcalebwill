@@ -1,5 +1,4 @@
 import * as Styles from './HealthPolicyStyles';
-import hse1 from '../../../assets/hse3.jpg';
 import { FaCheckCircle } from 'react-icons/fa';
 import { healthPolicyData } from './healthPolicyData';
 import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
@@ -23,7 +22,7 @@ const HealthPolicy = () => {
 							</p>
 						</FadeInAlways>
 					</Styles.TitleBox>
-				
+
 				</Styles.HealthPolicyTitle>
 			</FadeInAlways>
 			<Styles.HealthPolicyItemWrapper>

@@ -32,6 +32,29 @@ const LeaderProfile = lazy(() =>
 );
 const History = lazy(() => import('./pages/whoWeAre/modules/history/History'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
+const Sustainability = lazy(() =>
+	import('./pages/sustainability/Sustainability'),
+);
+const Environment = lazy(() =>
+	import('./pages/sustainability/environment/Environment'),
+);
+const Communities = lazy(() =>
+	import('./pages/sustainability/communities/Communities'),
+);
+const Careers = lazy(() => import('./pages/careers/Careers'));
+const Chemical = lazy(() => import('./pages/whatWeDo/chemicalSupply/Chemical'));
+const Exploration = lazy(() =>
+	import('./pages/whatWeDo/exploration/Exploration'),
+);
+const Gas = lazy(() => import('./pages/whatWeDo/gas/Gas'));
+const Haulage = lazy(() => import('./pages/whatWeDo/haulage/Haulage2'));
+const Health = lazy(() => import('./pages/whatWeDo/health/Health2'));
+const Procurement = lazy(() =>
+	import('./pages/whatWeDo/procurement/Procurement'),
+);
+const Pipeline = lazy(() => import('./pages/whatWeDo/pipeline/Pipeline2'));
+const Lubricants = lazy(() => import('./pages/whatWeDo/lubricants/Lubricants'));
+
 
 const App = () => {
 	return (
@@ -96,6 +119,113 @@ const App = () => {
 						element={
 							<Suspense fallback={<div>loading...</div>}>
 								<Contact />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/sustainability'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Sustainability />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/sustainability/environment'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Environment />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/sustainability/communities'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Communities />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/who-we-are/jobs'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Careers />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/chemical-supply&treatments'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Chemical />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='/what-we-do/exploration'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Exploration />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/gas-compression-services'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Gas />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/haulage-services'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Haulage />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/health-and-safety'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Health />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/procurement-solutions'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Procurement />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/pipeline-construction-and-maintenance'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Pipeline />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/what-we-do/lubricants'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Lubricants />
 							</Suspense>
 						}
 					/>

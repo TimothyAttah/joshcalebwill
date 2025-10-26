@@ -154,7 +154,7 @@ export const mobileNavWithSubmenuData = [
 
 		subMenu: [
 			{
-				navTitle: 'Go to: Who are are',
+				navTitle: 'Go to: Who we are',
 				navPath: '/who-we-are',
 			},
 			{

@@ -1,20 +1,19 @@
 import * as Styles from './CommunitiesStyles';
-import com1 from '../../../assets/com9.png';
+import com1 from '../../../assets/com1.png';
 import com2 from '../../../assets/com2.png';
-import com3 from '../../../assets/com3.png';
-import com4 from '../../../assets/com4.png';
-import com5 from '../../../assets/com6.png';
-import com6 from '../../../assets/com7.png';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
-
+import LazyImage from '../../../components/LazyImage';
 
 const Communities = () => {
 	return (
 		<>
 			<ReactLenis root>
 				<Styles.CommunitiesHero>
-					<img src={com1} alt='' />
+					{/* <img src={com1} alt='' /> */}
+					{/* <LazyImage src={com1} /> */ }
+					<LazyImage src={com1} />
+
 					<Styles.BlendModeTitle>Cummunities</Styles.BlendModeTitle>
 				</Styles.CommunitiesHero>
 				<Styles.CultureInfo>
@@ -86,7 +85,9 @@ const Communities = () => {
 					<Copy>
 						<h2>Our Commitment</h2>
 						<div>
-							<img src={com6} alt='' />
+							<img src={ com2 } alt='' />
+
+						
 						</div>
 						<p>
 							Through collaboration, innovation, and respect, we partner with

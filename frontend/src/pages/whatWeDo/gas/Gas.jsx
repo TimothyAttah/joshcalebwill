@@ -1,18 +1,20 @@
 import * as Styles from './GasStyles';
-import explore1 from '../../../assets/newGas1.png';
-import explore2 from '../../../assets/newGas2.png';
-import explore3 from '../../../assets/newGas3.png';
+import explore1 from '../../../assets/gas2.png';
+import explore2 from '../../../assets/gas3.png';
+import explore3 from '../../../assets/gas4.png';
 import { Link } from 'react-router-dom';
 import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Gas = () => {
 	return (
 		<>
 			<ReactLenis root>
 				<Styles.GasHero>
-					<img src={explore1} alt='' />
+					{/* <img alt='' /> */}
+					<LazyImage src={explore1} />
 					<Styles.BlendModeTitle>
 						GAS COMPRESSION SERVICES
 					</Styles.BlendModeTitle>
@@ -38,7 +40,8 @@ const Gas = () => {
 
 					<Styles.GasOptionsContainer>
 						<Styles.GasOptionsImg>
-							<img src={explore2} alt='' />
+							{/* <img src={explore2} alt='' /> */}
+							<LazyImage src={explore2} />
 						</Styles.GasOptionsImg>
 						<Styles.GasOptionsInfo>
 							<Copy delay={0.5}>
@@ -68,7 +71,8 @@ const Gas = () => {
 					</Styles.GasOptionsContainer>
 					<Styles.GasOptionsContainer primary>
 						<Styles.GasOptionsImg>
-							<img src={explore3} alt='' />
+							{/* <img src={explore3} alt='' /> */}
+							<LazyImage src={explore3} />
 						</Styles.GasOptionsImg>
 						<Styles.GasOptionsInfo>
 							<Copy delay={0.5}>

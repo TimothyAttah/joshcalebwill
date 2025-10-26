@@ -1,7 +1,7 @@
 import picHealth from '../assets/safety2.jpg';
-import vicSlider1 from '../assets/homeSlider1.mp4';
+import vicSlider1 from '../assets/off2.png';
 import vicHaulage from '../assets/homeSlider3.png';
-import vicGas from '../assets/gasVid.mp4';
+import vicGas from '../assets/gas.png';
 import vicExplore from '../assets/homeSlider2.png';
 
 export const slides = [
@@ -11,7 +11,7 @@ export const slides = [
 		desc: ' we specialize in supporting offshore oil and gas operations with safe, efficient, and reliable services.',
 		// src: pix1,
 		vic: vicSlider1,
-		srcType: 'video',
+		srcType: 'image',
 		slidePosition: 'slide1',
 	},
 	{
@@ -28,7 +28,7 @@ export const slides = [
 		subtitle: 'Powering Efficiency. Driving Efficiency. Ensuring Flow.',
 		desc: '	Our Gas Compression Services ensure optimal pressure levels for the safe and efficient transport of natural gas.',
 		// src: vicGas,
-		srcType: 'video',
+		srcType: 'image',
 		vic: vicGas,
 		slidePosition: 'slide3',
 	},

@@ -188,16 +188,13 @@ export const SustainabilityListItemImgBox = styled.div`
 
 export const SustainabilityListItemImg = styled.div`
 	width: 100%;
-	height: 350px;
+	height: 350px !important;
 
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
-
-
-		height: 200px !important;
 
 `;
 export const SustainabilityListItemContent = styled.div`

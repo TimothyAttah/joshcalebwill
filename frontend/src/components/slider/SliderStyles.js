@@ -146,7 +146,7 @@ export const SlideContentWrapper = styled.div`
 	/* background-color: #0b2d7180; */
 	/* background: #00813299; */
 	background: var(--base-color-gold);
-	background: hsl(35deg 100% 50% / 41%);
+	background: hsl(35deg 100% 50% / 71%);
 	opacity: 1;
 	/* z-index: 3; */
 	pointer-events: all;

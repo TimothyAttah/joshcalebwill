@@ -1,5 +1,4 @@
 import * as Styles from './CarrersStyles';
-import LastestSlider from './CarrersSlider';
 import cultPix1 from '../../assets/car5.png';
 import cultPix2 from '../../assets/car7.png';
 import cultPix3 from '../../assets/car11.png';
@@ -9,6 +8,7 @@ import pix1 from '../../assets/car1.png';
 
 import Copy from '../../components/copyText/CopyText';
 import { ReactLenis } from 'lenis/react';
+import LazyImage from '../../components/LazyImage';
 
 const Careers = () => {
 	return (
@@ -16,7 +16,8 @@ const Careers = () => {
 			<ReactLenis root>
 				<Styles.Careers>
 					<Styles.CareersHero>
-						<img src={pix1} alt='' />
+						{/* <img alt='' /> */}
+						<LazyImage src={pix1} />
 						<Styles.BlendModeTitle>Careers</Styles.BlendModeTitle>
 					</Styles.CareersHero>
 					<Styles.CareersInfo>
@@ -31,7 +32,8 @@ const Careers = () => {
 					<Styles.CareersOptions>
 						<Styles.CareersOptionsList>
 							<Styles.CareersOptionsListImg>
-								<img src={cultPix1} alt='' />
+								{/* <img alt='' /> */}
+								<LazyImage src={cultPix1} />
 							</Styles.CareersOptionsListImg>
 							<Styles.CareersOptionsListInfo first>
 								<Copy delay={0.5}>
@@ -47,7 +49,8 @@ const Careers = () => {
 
 						<Styles.CareersOptionsList second>
 							<Styles.CareersOptionsListImg>
-								<img src={cultPix2} alt='' />
+								{/* <img src={cultPix2} alt='' /> */}
+								<LazyImage src={cultPix2} />
 							</Styles.CareersOptionsListImg>
 							<Styles.CareersOptionsListInfo second>
 								<Copy delay={0.5}>
@@ -62,7 +65,8 @@ const Careers = () => {
 
 						<Styles.CareersOptionsList>
 							<Styles.CareersOptionsListImg>
-								<img src={cultPix3} alt='' />
+								{/* <img src={cultPix3} alt='' /> */}
+								<LazyImage src={cultPix3} />
 							</Styles.CareersOptionsListImg>
 							<Styles.CareersOptionsListInfo third>
 								<Copy delay={0.5}>
@@ -77,7 +81,8 @@ const Careers = () => {
 
 						<Styles.CareersOptionsList second>
 							<Styles.CareersOptionsListImg>
-								<img src={cultPix4} alt='' />
+								{/* <img src={cultPix4} alt='' /> */}
+								<LazyImage src={cultPix4} />
 							</Styles.CareersOptionsListImg>
 							<Styles.CareersOptionsListInfo fourth>
 								<Copy delay={0.5}>

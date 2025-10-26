@@ -199,6 +199,7 @@ export const MenuBtn = styled.button`
 	background-color: transparent;
 	color: #fff;
 	z-index: 9999;
+	background-color: var(--main-color-g);
 
 	svg {
 		color: #fff;

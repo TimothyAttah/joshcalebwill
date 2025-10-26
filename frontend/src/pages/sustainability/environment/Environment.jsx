@@ -1,7 +1,7 @@
 import * as Styles from './EnvironmentStyles';
-import env1 from '../../../assets/env7.png';
-import env2 from '../../../assets/water2.jpg';
-import env3 from '../../../assets/newSlide4.png';
+import env1 from '../../../assets/env1.png';
+import env2 from '../../../assets/env2.png';
+import env3 from '../../../assets/env3.png';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
@@ -9,13 +9,14 @@ import { useEffect } from 'react';
 import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Environment = () => {
 	return (
 		<>
 			<ReactLenis root>
 				<Styles.EnvironmentHero>
-					<img src={env1} alt='' />
+					<LazyImage src={env1} />
 					<Styles.BlendModeTitle>Environment</Styles.BlendModeTitle>
 				</Styles.EnvironmentHero>
 				<Styles.CultureInfo>
@@ -48,13 +49,17 @@ const Environment = () => {
 					</Styles.StragegyTitleContainer>
 					<Styles.StragegyPixContainer>
 						<Styles.StragegyPix>
-							<img src={env2} alt='' />
+							{/* <img src={env2} alt='' /> */}
+							<LazyImage src={env2} />
+
 							<Copy>
 								<p>working to lower the carbon intensity of our operations</p>
 							</Copy>
 						</Styles.StragegyPix>
 						<Styles.StragegyPix>
-							<img src={env3} alt='' />
+							{/* <img src={env3} alt='' /> */}
+							<LazyImage src={env3} />
+
 							<Copy>
 								<p>investing to grow capabilities in new energies</p>
 							</Copy>

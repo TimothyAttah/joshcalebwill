@@ -1,5 +1,5 @@
 import * as Styles from './SustainabilityStyles';
-import susVic from '../../assets/susVic.mp4';
+import susPix from '../../assets/sus2.png';
 import susPix1 from '../../assets/sus3.png';
 import susPix2 from '../../assets/sus4.png';
 import susPix3 from '../../assets/sus5.png';
@@ -12,6 +12,7 @@ import Copy from '../../components/copyText/CopyText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { useEffect } from 'react';
+import LazyImage from '../../components/LazyImage';
 
 const Sustainability = () =>
 {
@@ -60,7 +61,7 @@ const Sustainability = () =>
 		<>
 			<ReactLenis root>
 				<Styles.SustainabilityHero>
-					<video src={susVic} autoPlay muted loop playsInline />
+					<LazyImage src={susPix} />
 					<Styles.BlendModeTitle>Sustainability</Styles.BlendModeTitle>
 				</Styles.SustainabilityHero>
 				<Styles.CultureInfo>
@@ -84,7 +85,8 @@ const Sustainability = () =>
 					<Styles.SustainabilityListItem className='item1'>
 						<Styles.SustainabilityListItemImgBox className='imgBox1'>
 							<Styles.SustainabilityListItemImg className='img1'>
-								<img src={susPix4} alt='' />
+								{/* <img src={susPix1} alt='' /> */}
+								<LazyImage src={susPix1} />
 							</Styles.SustainabilityListItemImg>
 						</Styles.SustainabilityListItemImgBox>
 						<Styles.SustainabilityListItemContent className='textBox1'>
@@ -103,7 +105,8 @@ const Sustainability = () =>
 					<Styles.SustainabilityListItem primary='true' className='item1'>
 						<Styles.SustainabilityListItemImgBox className='imgBox1'>
 							<Styles.SustainabilityListItemImg className='img1'>
-								<img src={susPix3} alt='' />
+								{/* <img src={susPix2} alt='' /> */}
+								<LazyImage src={susPix2} />
 							</Styles.SustainabilityListItemImg>
 						</Styles.SustainabilityListItemImgBox>
 						<Styles.SustainabilityListItemContent className='textBox1'>
@@ -121,7 +124,8 @@ const Sustainability = () =>
 					<Styles.SustainabilityListItem className='item1'>
 						<Styles.SustainabilityListItemImgBox className='imgBox1'>
 							<Styles.SustainabilityListItemImg className='img1'>
-								<img src={susPix2} alt='' />
+								{/* <img src={susPix3} alt='' /> */}
+								<LazyImage src={susPix3} />
 							</Styles.SustainabilityListItemImg>
 						</Styles.SustainabilityListItemImgBox>
 						<Styles.SustainabilityListItemContent className='textBox1'>
@@ -140,7 +144,8 @@ const Sustainability = () =>
 					<Styles.SustainabilityListItem primary='true' className='item1'>
 						<Styles.SustainabilityListItemImgBox className='imgBox1'>
 							<Styles.SustainabilityListItemImg className='img1'>
-								<img src={susPix1} alt='' />
+								{/* <img src={susPix4} alt='' /> */}
+								<LazyImage src={susPix4} />
 							</Styles.SustainabilityListItemImg>
 						</Styles.SustainabilityListItemImgBox>
 						<Styles.SustainabilityListItemContent className='textBox1'>

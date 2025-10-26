@@ -1,13 +1,14 @@
-import pic1 from '../../../assets/haulage5.png';
-import pic2 from '../../../assets/welcome-2.jpg';
-import pic3 from '../../../assets/welcome-1.jpg';
-import pic4 from '../../../assets/haulage5.jpg';
-import pic6 from '../../../assets/hau1.png';
-import pic7 from '../../../assets/newHaulage1.png';
+import pic1 from '../../../assets/haulage1.png';
+import pic2 from '../../../assets/haulage2.png';
+import pic3 from '../../../assets/haulage3.png';
+import pic4 from '../../../assets/haulage4.png';
+import pic5 from '../../../assets/haulage6.png';
+import pic6 from '../../../assets/newHaulage1.png';
 
 import * as Styles from './Haulage2Styles';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Haulage2 = () => {
 	return (
@@ -15,7 +16,8 @@ const Haulage2 = () => {
 			<ReactLenis root>
 				<Styles.HaulageContainer>
 					<Styles.HaulageHero>
-						<img src={pic1} alt='' />
+						{/* <img alt='' /> */}
+						<LazyImage src={pic1} />
 						<Styles.BlendModeTitle>Haulage</Styles.BlendModeTitle>
 					</Styles.HaulageHero>
 					<Styles.CultureInfo>
@@ -53,20 +55,25 @@ const Haulage2 = () => {
 						</Copy>
 						<Styles.HaulageIntroGalleryContainer>
 							<div>
-								<img src={pic7} alt='' loading='lazy' />
+								{/* <img src={pic7} alt='' loading='lazy' /> */}
+								<LazyImage src={pic2} />
 							</div>
 							<div>
-								<img src={pic2} alt='' loading='lazy' />
+								{/* <img src={pic2} alt='' loading='lazy' /> */}
+								<LazyImage src={pic3} />
 							</div>
 							<div>
-								<img src={pic4} alt='' loading='lazy' />
+								{/* <img src={pic4} alt='' loading='lazy' /> */}
+								<LazyImage src={pic4} />
 							</div>
 							<div>
-								<img src={pic3} alt='' loading='lazy' />
+								{/* <img src={pic3} alt='' loading='lazy' /> */}
+								<LazyImage src={pic5} />
 							</div>
 
 							<div>
-								<img src={pic6} alt='' loading='lazy' />
+								{/* <img src={pic6} alt='' loading='lazy' /> */}
+								<LazyImage src={pic6} />
 							</div>
 						</Styles.HaulageIntroGalleryContainer>
 					</Styles.HaulageIntroSection>

@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom';
 import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Chemical = () => {
 	return (
 		<>
 			<ReactLenis root>
 				<Styles.ChemicalHero>
-					<img src={explore1} alt='' />
+					{/* <img alt='' /> */}
+					<LazyImage src={explore1} />
+
 					<Styles.BlendModeTitle>
 						CHEMICAL SUPPLY AND TREATMENTS
 					</Styles.BlendModeTitle>
@@ -42,7 +45,8 @@ const Chemical = () => {
 				<Styles.ChemicalContainer>
 					<Styles.ChemicalOptionsContainer>
 						<Styles.ChemicalOptionsImg>
-							<img src={explore2} alt='' />
+							{/* <img src={explore2} alt='' /> */}
+							<LazyImage src={explore2} />
 						</Styles.ChemicalOptionsImg>
 						<Styles.ChemicalOptionsInfo>
 							<Copy delay={0.5}>
@@ -80,7 +84,8 @@ const Chemical = () => {
 					</Styles.ChemicalOptionsContainer>
 					<Styles.ChemicalOptionsContainer primary>
 						<Styles.ChemicalOptionsImg>
-							<img src={explore3} alt='' />
+							{/* <img src={explore3} alt='' /> */}
+							<LazyImage src={explore3} />
 						</Styles.ChemicalOptionsImg>
 						<Styles.ChemicalOptionsInfo>
 							<Copy delay={0.5}>

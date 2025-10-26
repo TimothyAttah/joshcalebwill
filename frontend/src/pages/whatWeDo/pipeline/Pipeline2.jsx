@@ -1,6 +1,6 @@
-import pic1 from '../../../assets/pipe2.jpg';
-import pic2 from '../../../assets/pipe3.jpg';
-import pic3 from '../../../assets/pipe5.jpg';
+import pic1 from '../../../assets/pipe2.png';
+import pic2 from '../../../assets/pipe3.png';
+import pic3 from '../../../assets/pipe4.png';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FadeInAlways } from '../../../components/fadeIn/FadeInAlways';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import { scrollToTop } from '../../../components/header/Header';
+import LazyImage from '../../../components/LazyImage';
 
 const Pipeline2 = () => {
 	return (
@@ -18,7 +19,8 @@ const Pipeline2 = () => {
 				<Styles.PipelineContainer>
 					<Styles.PipelineHeroContainer>
 						<Styles.PipelineHeroOverlay />
-						<img src={pic1} alt='' loading='lazy' />
+						{/* <img alt='' loading='lazy' /> */}
+						<LazyImage src={pic1} />
 						<Copy>
 							<h1>PIPELINE CONSTRUCTION AND MAINTENANCE</h1>
 						</Copy>
@@ -44,7 +46,8 @@ const Pipeline2 = () => {
 						<Styles.PipelineListItem className='item1'>
 							<Styles.PipelineListItemImgBox className='imgBox1'>
 								<Styles.PipelineListItemImg className='img1'>
-									<img src={pic2} alt='' />
+									{/* <img src={pic2} alt='' /> */}
+									<LazyImage src={pic2} />
 								</Styles.PipelineListItemImg>
 							</Styles.PipelineListItemImgBox>
 							<Styles.PipelineListItemContent className='textBox1'>
@@ -88,7 +91,8 @@ const Pipeline2 = () => {
 							<h2>Why Pipeline Integrity Matters</h2>
 						</Copy>
 						<Styles.PipelineItemImg>
-							<img src={pic3} alt='' loading='lazy' />
+							{/* <img src={pic3} alt='' loading='lazy' /> */}
+							<LazyImage src={pic3} />
 						</Styles.PipelineItemImg>
 						<Styles.PipelineItemContent>
 							<Copy>

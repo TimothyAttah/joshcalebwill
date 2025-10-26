@@ -1,18 +1,20 @@
 import * as Styles from './ProcurementStyles';
-import explore1 from '../../../assets/pro2.png';
-import explore2 from '../../../assets/pro4.png';
-import explore3 from '../../../assets/pro5.png';
+import explore1 from '../../../assets/pro1.mp4';
+import explore2 from '../../../assets/pro2.png';
+import explore3 from '../../../assets/pro3.png';
 import { Link } from 'react-router-dom';
 import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import LazyImage from '../../../components/LazyImage';
 
 const Procurement = () => {
 	return (
 		<>
 			<ReactLenis root>
 				<Styles.ProcurementHero>
-					<img src={explore1} alt='' />
+					{/* <img alt='' /> */}
+					<video src={explore1} autoPlay muted loop playsInline />
 					<Styles.BlendModeTitle>Procurement</Styles.BlendModeTitle>
 				</Styles.ProcurementHero>
 				<Styles.CultureInfo>
@@ -32,7 +34,8 @@ const Procurement = () => {
 
 					<Styles.ProcurementOptionsContainer>
 						<Styles.ProcurementOptionsImg>
-							<img src={explore2} alt='' />
+							{/* <img alt='' /> */}
+							<LazyImage src={explore2} />
 						</Styles.ProcurementOptionsImg>
 						<Styles.ProcurementOptionsInfo>
 							<Copy>
@@ -61,7 +64,8 @@ const Procurement = () => {
 					</Styles.ProcurementOptionsContainer>
 					<Styles.ProcurementOptionsContainer primary>
 						<Styles.ProcurementOptionsImg>
-							<img src={explore3} alt='' />
+							{/* <img src={explore3} alt='' /> */}
+							<LazyImage src={explore3} />
 						</Styles.ProcurementOptionsImg>
 						<Styles.ProcurementOptionsInfo>
 							<Copy>

@@ -7,7 +7,7 @@ export const IntroContainer = styled.div`
 	/* background: var(--primary-color);
 	background: rgb(9, 255, 0); */
 	/* background: #fff; */
-	background: var(--main-color-o);
+	background: var(--main-color);
 	/* background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover; */

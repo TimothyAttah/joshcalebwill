@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     --main-color-p: #b76e79;
     --main-color-g: #fdb515;
     --main-color-o: #f07537;
+    --main-color: #ff7300;
 
     --base-color-green: hsl(128, 47%, 26%);
     --base-color-green-neg: hsl(from var(--base-color-green) h s calc(l - 10));
