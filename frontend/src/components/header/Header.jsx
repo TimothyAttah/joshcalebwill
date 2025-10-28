@@ -19,22 +19,22 @@ const Header = () => {
 	// const [showSidebar, setShowSidebar] = useState(false);
 	const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
-	 const [navbar, setNavbar] = useState(false);
-			const changeBackground = () => {
-				if (window.scrollY >= 85) {
-					setNavbar(true);
-				} else {
-					setNavbar(false);
-				}
-			};
+	const [navbar, setNavbar] = useState(false);
+	const changeBackground = () => {
+		if (window.scrollY >= 85) {
+			setNavbar(true);
+		} else {
+			setNavbar(false);
+		}
+	};
 
-			window.addEventListener('scroll', changeBackground);
+	window.addEventListener('scroll', changeBackground);
 
 	return (
 		<Styles.Header className={navbar ? 'activeHeader' : ''}>
 			<Styles.HeaderContainer>
 				<Styles.HeaderLogo>
-					<Link to='/'>
+					<Link to='/' onClick={scrollToTop}>
 						<img src={logo} alt='' />
 						<h6>
 							joshcalebwill <br /> <span>petroleum</span> <span>limited</span>
