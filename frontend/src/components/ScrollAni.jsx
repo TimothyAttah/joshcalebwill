@@ -8,6 +8,11 @@ import {
 	useTransform,
 } from 'framer-motion';
 import TextAnimate from './textAnimate/TextAnimate';
+import introPix1 from '../assets/intro1.png';
+import introPix2 from '../assets/intro2.png';
+import introPix3 from '../assets/intro3.png';
+import introPix4 from '../assets/intro4.png';
+import LazyImage from './LazyImage';
 
 const ScrollContainer = styled(motion.div)`
 	/* background-color: var(--main-color-o); */
@@ -22,6 +27,7 @@ const ScrollContainer = styled(motion.div)`
 		color: #fff;
 		font-size: 8rem !important;
 		padding: 50px 0;
+		z-index: 999 !important;
 	}
 
 	h4 {
@@ -59,15 +65,124 @@ const Box = styled(motion.div)`
 
 const Box1 = styled(motion.div)`
 	background-color: blue;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	position: absolute;
+	top: 800px;
+	left: 500px;
+	z-index: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media screen and (max-width: 900px) {
+		left: 0%;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+	}
+
+	@media screen and (max-width: 420px) {
+		left: 0%;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+		top: 500px;
+	}
 `;
 
 const Box2 = styled(motion.div)`
-	background-color: ghostwhite;
-	width: 200px;
-	height: 200px;
+	background-color: blue;
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	position: absolute;
+	top: 1200px;
+	right: 300px;
+	z-index: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media screen and (max-width: 900px) {
+		left: 0%;
+		right: 0;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+	}
+
+	@media screen and (max-width: 420px) {
+		left: 0%;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+		top: 800px;
+	}
 `;
+
+const Box3 = styled(motion.div)`
+	background-color: blue;
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	position: absolute;
+	top: 1900px;
+	right: 800px;
+	z-index: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media screen and (max-width: 900px) {
+		left: 0%;
+		right: 0;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+	}
+
+	@media screen and (max-width: 420px) {
+		display: none;
+	}
+`;
+
+const Box4 = styled(motion.div)`
+	background-color: blue;
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	left: 200px;
+	z-index: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media screen and (max-width: 900px) {
+		left: 0%;
+		transform: translateX(-50%);
+		width: 170px;
+		height: 170px;
+	}
+`;
+
+// const Box2 = styled(motion.div)`
+// 	background-color: ghostwhite;
+// 	width: 200px;
+// 	height: 200px;
+// `;
 
 const ScrollAni = () => {
 	const [item1, setItem1] = useState(0);
@@ -177,8 +292,6 @@ const ScrollAni = () => {
 
 	const x7 = useTransform(scrollY, [0, 3800], [-4000, 3000]);
 
-
-
 	const y1 = useTransform(scrollY, [0, 3000], [100, -1500]);
 
 	const text1 = useRef(null);
@@ -213,6 +326,10 @@ const ScrollAni = () => {
 
 				<motion.h1 style={{ x: x3, transition: 'all' }}>quality</motion.h1>
 
+				<Box1 style={{ y: y1 }}>
+					<LazyImage src={introPix1} />
+				</Box1>
+
 				<motion.h1 style={{ x: x4, transition: 'all' }} className='textSafety'>
 					safety
 				</motion.h1>
@@ -221,14 +338,27 @@ const ScrollAni = () => {
 					service excellence
 				</motion.h1>
 
+				<Box2 style={{ y: y1 }}>
+					<LazyImage src={introPix2} />
+				</Box2>
 				<motion.h1 style={{ x: x6, transition: 'all' }} className='textTeam'>
 					team work
 				</motion.h1>
 
-				<motion.h1 style={{ x: x7, transition: 'all' }} className='textInno'>innovators</motion.h1>
+				<Box3 style={{ y: y1 }}>
+					<LazyImage src={introPix3} />
+				</Box3>
+
+				<motion.h1 style={{ x: x7, transition: 'all' }} className='textInno'>
+					innovators
+				</motion.h1>
+
+				<Box4 style={{ y: y1 }}>
+					<LazyImage src={introPix4} />
+				</Box4>
 
 				<TextAnimate />
-				{/* <Box1 style={{ y: y1 }}></Box1> */}
+				{/*  */}
 
 				{/* <Box2
 					className='conBox'
