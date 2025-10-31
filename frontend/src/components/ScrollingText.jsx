@@ -38,7 +38,7 @@ const Text = styled(motion.h1)`
 
 	@media screen and (max-width: 450px) {
 		font-size: clamp(2rem, 6vw, 5rem);
-		margin: 30px 0;
+		margin: 18px 0;
 	}
 `;
 

@@ -30,9 +30,10 @@ const Paragrapgh = styled.p`
 		padding: 10px;
 	}
 
-	/* @media screen and (max-width: 450px) {
-		font-size: 20px !important;
-	} */
+	@media screen and (max-width: 450px) {
+		font-size: 26px !important;
+		text-align: center !important;
+	}
 `;
 
 const Character = ({ value }) => {
