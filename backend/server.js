@@ -1,13 +1,14 @@
+import path from 'path';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import products from './data/products.js';
 import connectDB from './config/db.js';
 import productRouter from './routes/productRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
+import uploadRoutes from './routes/uploadRoutes.js';
 
 const app = express();
 connectDB();
@@ -25,9 +26,10 @@ app.use('/api/auth', authRoutes);
 
 app.use('/api/orders', orderRoutes);
 
-app.get('/api/config/paypal', (req, res) => {
-	res.send(process.env.PAYPAL_CLIENT_ID);
-});
+app.use('/api/upload', uploadRoutes);
+
+
+const __dirname = path.resolve();
 
 app.use((req, res, next) => {
 	const error = new Error(`Not Found - ${req.originalUrl}`);

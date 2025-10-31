@@ -19,13 +19,18 @@ export const HeaderContainer = styled.div`
 `;
 
 export const MarketHeaderBox = styled.div`
-	background: var(--color-medium-blue);
+	background: var(--main-color-p);
 	color: #fff;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 100px;
+	margin-top: 120px;
+
+	h4 {
+		color: #fff;
+	}
 `;
 
 export const MarketHeaderNav = styled.div`

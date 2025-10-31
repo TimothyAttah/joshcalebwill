@@ -5,6 +5,8 @@ import Message from '../../components/Message';
 import CheckoutSteps from '../../components/CheckoutSteps';
 import { createOrder } from '../../redux/actions/orderActions';
 import { useEffect } from 'react';
+import { proBaseURL } from '../../redux/api';
+import MarketHeader from '../market/marketHeader/MarketHeader';
 
 const PlaceOrder = () => {
 	const dispatch = useDispatch();
@@ -25,12 +27,18 @@ const PlaceOrder = () => {
 
 	cart.shippingPrice = addDecimals(cart?.itemsPrice > 100 ? 0 : 100);
 
-	cart.taxPrice = addDecimals(Number((0.15 * cart?.itemsPrice).toFixed(2)));
+	// cart.taxPrice = addDecimals(Number((0.15 * cart?.itemsPrice).toFixed(2)));
+
+	// cart.totalPrice = (
+	// 	Number(cart.itemsPrice) +
+	// 	Number(cart.shippingPrice) +
+	// 	Number(cart.taxPrice)
+	// ).toFixed(2);
 
 	cart.totalPrice = (
 		Number(cart.itemsPrice) +
-		Number(cart.shippingPrice) +
-		Number(cart.taxPrice)
+		Number(cart.shippingPrice)
+		// Number(cart.taxPrice)
 	).toFixed(2);
 
 	const orderCreate = useSelector(state => state.orderCreate);
@@ -53,7 +61,7 @@ const PlaceOrder = () => {
 				paymentMethod: cart.paymentMethod,
 				itemsPrice: cart?.itemsPrice,
 				shippingPrice: cart.shippingPrice,
-				taxPrice: cart.taxPrice,
+				// taxPrice: cart.taxPrice,
 				totalPrice: cart.totalPrice,
 			}),
 		);
@@ -61,6 +69,7 @@ const PlaceOrder = () => {
 
 	return (
 		<>
+			<MarketHeader />
 			<CheckoutSteps step1 step2 step3 step4 />
 			<Row>
 				<Col md={8}>
@@ -68,10 +77,17 @@ const PlaceOrder = () => {
 						<ListGroup.Item>
 							<h2>Shipping</h2>
 							<p>
+								<strong>Name:</strong>
+								{cart?.shippingAddress?.fullName}
+							</p>
+							<p>
+								<strong>Email:</strong>
+								{cart?.shippingAddress?.email}
+							</p>
+							<p>
 								<strong>Address:</strong>
 								{cart?.shippingAddress?.address}, {cart?.shippingAddress?.city}{' '}
-								{cart?.shippingAddress?.postalCode},{' '}
-								{cart?.shippingAddress?.country}
+								{cart?.shippingAddress?.state}, {cart?.shippingAddress?.country}
 							</p>
 						</ListGroup.Item>
 						<ListGroup.Item>
@@ -90,7 +106,7 @@ const PlaceOrder = () => {
 											<Row>
 												<Col md={1}>
 													<Image
-														src={item?.image}
+														src={`${item?.image}`}
 														alt={item?.name}
 														fluid
 														rounded
@@ -103,7 +119,7 @@ const PlaceOrder = () => {
 													</Link>
 												</Col>
 												<Col md={4}>
-													{item?.qty} x ${item?.price} = ₦
+													{item?.qty} x ₦{item?.price} = ₦
 													{item?.qty * item?.price}
 												</Col>
 											</Row>
@@ -132,12 +148,12 @@ const PlaceOrder = () => {
 									<Col>₦{cart?.shippingPrice}</Col>
 								</Row>
 							</ListGroup.Item>
-							<ListGroup.Item>
+							{/* <ListGroup.Item>
 								<Row>
 									<Col>Tax</Col>
 									<Col>₦{cart?.taxPrice}</Col>
 								</Row>
-							</ListGroup.Item>
+							</ListGroup.Item> */}
 							<ListGroup.Item>
 								<Row>
 									<Col>Total</Col>
@@ -152,7 +168,8 @@ const PlaceOrder = () => {
 									type='button'
 									className='btn-block'
 									disabled={cart?.cartItems === 0}
-									onClick={placeOrderHandler}>
+									onClick={placeOrderHandler}
+								>
 									Place Order
 								</Button>
 							</ListGroup.Item>

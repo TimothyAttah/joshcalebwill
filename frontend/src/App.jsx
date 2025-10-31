@@ -3,25 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
 import Layout from './components/Layout';
-// import Home from './pages/home/Home';
-// import Culture from './pages/whoWeAre/modules/culture/Culture';
-// import Leaders from './pages/whoWeAre/modules/leaders/Leaders';
-// import WhoWeAre from './pages/whoWeAre/WhoWeAre';
-// import Contact from './pages/contact/Contact';
-// import Sustainability from './pages/sustainability/Sustainability';
-// import Environment from './pages/sustainability/environment/Environment';
-// import Careers from './pages/careers/Careers';
-// import Communities from './pages/sustainability/communities/Communities';
-// import Exploration from './pages/whatWeDo/exploration/Exploration';
-// import Procurement from './pages/whatWeDo/procurement/Procurement';
-// import Haulage from './pages/whatWeDo/haulage/Haulage2';
-// import Chemical from './pages/whatWeDo/chemicalSupply/Chemical';
-// import Pipeline2 from './pages/whatWeDo/pipeline/Pipeline2';
-// import Gas from './pages/whatWeDo/gas/Gas';
-// import Health2 from './pages/whatWeDo/health/Health2';
-// import Lubricants from './pages/whatWeDo/lubricants/Lubricants';
-// import LeaderProfile from './pages/whoWeAre/modules/leaders/LeaderProfile';
-// import History from './pages/whoWeAre/modules/history/History';
+
 
 const Home = lazy(() => import('./pages/home/Home'));
 const WhoWeAre = lazy(() => import('./pages/whoWeAre/WhoWeAre'));
@@ -54,6 +36,35 @@ const Procurement = lazy(() =>
 );
 const Pipeline = lazy(() => import('./pages/whatWeDo/pipeline/Pipeline2'));
 const Lubricants = lazy(() => import('./pages/whatWeDo/lubricants/Lubricants'));
+const Market = lazy(() => import('./pages/market/Market'));
+const ProductItem = lazy(() => import('./pages/products/ProductItem'));
+const Cart = lazy(() => import('./pages/cart/Cart'));
+const Login = lazy(() => import('./pages/login/Login'));
+const Register = lazy(() => import('./pages/register/Register'));
+const Profile = lazy(() => import('./pages/profile/Profile'));
+const Shipping = lazy(() => import('./pages/shipping/Shipping'));
+const Payment = lazy(() => import('./pages/payment/Payment'));
+const PlaceOrder = lazy(() => import('./pages/placeOrder/PlaceOrder'));
+const Order = lazy(() => import('./pages/order/Order'));
+const UserList = lazy(() => import('./pages/userList/UserList'));
+const UserEdit = lazy(() => import('./pages/userEdit/UserEdit'));
+const ProductLists = lazy(() => import('./pages/productLists/ProductLists'));
+const ProductEdit = lazy(() => import('./pages/productEdit/ProductEdit'));
+const OrderList = lazy(() => import('./pages/orderList/OrderList'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const App = () => {
@@ -226,6 +237,188 @@ const App = () => {
 						element={
 							<Suspense fallback={<div>loading...</div>}>
 								<Lubricants />
+							</Suspense>
+						}
+					/>
+
+					
+
+					<Route
+						path='/market'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Market />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/search/:keyword'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Market />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/page/:pageNumber'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Market />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/search/:keyword/page/:pageNumber'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Market />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/product/:id'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<ProductItem />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/productlist/'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<ProductLists />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/productlist/:pageNumber'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<ProductLists />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/product/:id/edit'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<ProductEdit />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/orderlist'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<OrderList />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/cart/:id?'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Cart />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/login'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Login />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/register'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Register />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/profile'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Profile />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/userlist'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<UserList />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/admin/user/:id/edit'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<UserEdit />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/shipping'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Shipping />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/register/shipping'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Shipping />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/payment'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Payment />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/placeorder'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<PlaceOrder />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path='/order/:id'
+						element={
+							<Suspense fallback={<div>loading...</div>}>
+								<Order />
 							</Suspense>
 						}
 					/>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
@@ -8,6 +8,8 @@ import {
 	getUserDetails,
 	updateUserProfile,
 } from '../../redux/actions/userActions';
+import { listMyOrders } from '../../redux/actions/orderActions';
+import MarketHeader from '../market/marketHeader/MarketHeader';
 
 
 const Profile = () => {
@@ -22,18 +24,20 @@ const Profile = () => {
 	const navigate = useNavigate();
 
 	const userDetails = useSelector((state) => state.userDetails);
-
 	console.log('user details >>>>>', userDetails);
-  const { loading, error, user } = userDetails;
+	const { loading, error, user } = userDetails;
+
 
   const loginUser = useSelector((state) => state.loginUser);
 	const {  users } = loginUser;
 
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
-	// console.log('user update details >>>>>', userUpdateProfile);
-
-
 	const { success } = userUpdateProfile;
+
+	const orderMyLists = useSelector((state) => state.orderMyLists);
+	console.log('user orders >>>>>', orderMyLists);
+	const { loading: loadingOrders, error: errorOrders, orders } = orderMyLists;
+
 
 
 
@@ -42,7 +46,8 @@ const Profile = () => {
 			navigate('/login');
     } else {
       if (!user?.name) {
-        dispatch(getUserDetails('profile'))
+				dispatch(getUserDetails('profile'))
+				dispatch(listMyOrders())
       } else {
         setName(user?.name)
         setEmail(user?.email)
@@ -63,34 +68,38 @@ const Profile = () => {
 	};
 
 	return (
-		<Row>
-			<Col md={3}>
-				<h2>User Profile</h2>
-				{/* {message && <Message variant='danger'>{message}</Message>} */}
-				{error && <Message variant='danger'>{error}</Message>}
-				{success && <Message variant='success'>Profile Updated</Message>}
+		<>
+			<MarketHeader />
+			<Row>
+				<Col md={3}>
+					<h2>User Profile</h2>
+					{/* {message && <Message variant='danger'>{message}</Message>} */}
+					{error && <Message variant='danger'>{error}</Message>}
+					{success && <Message variant='success'>Profile Updated</Message>}
 
-				{loading && <Loader />}
-				<Form onSubmit={submitHandler}>
-					<Form.Group controlId='email'>
-						<Form.Label>Name</Form.Label>
-						<Form.Control
-							type='name'
-							placeholder='Enter name'
-							value={name}
-							onChange={(e) => setName(e.target.value)}></Form.Control>
-					</Form.Group>
+					{loading && <Loader />}
+					<Form onSubmit={submitHandler}>
+						<Form.Group controlId='email'>
+							<Form.Label>Name</Form.Label>
+							<Form.Control
+								type='name'
+								placeholder='Enter name'
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+							></Form.Control>
+						</Form.Group>
 
-					<Form.Group controlId='email'>
-						<Form.Label>Email Address</Form.Label>
-						<Form.Control
-							type='email'
-							placeholder='Enter email'
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}></Form.Control>
-					</Form.Group>
+						<Form.Group controlId='email'>
+							<Form.Label>Email Address</Form.Label>
+							<Form.Control
+								type='email'
+								placeholder='Enter email'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							></Form.Control>
+						</Form.Group>
 
-					{/* <Form.Group controlId='password'>
+						{/* <Form.Group controlId='password'>
 						<Form.Label>Password</Form.Label>
 						<Form.Control
 							type='password'
@@ -109,15 +118,69 @@ const Profile = () => {
 								setConfirmPassword(e.target.value)
 							}></Form.Control>
 					</Form.Group> */}
-					<Button type='submit' variant='primary'>
-						Update
-					</Button>
-				</Form>
-			</Col>
-			<Col md={9}>
-				<h2>My Orders</h2>
-			</Col>
-		</Row>
+						<Button type='submit' variant='primary'>
+							Update
+						</Button>
+					</Form>
+				</Col>
+				<Col md={9}>
+					<h2>My Orders</h2>
+					{loadingOrders ? (
+						<Loader />
+					) : errorOrders ? (
+						<Message variant='danger'>{errorOrders}</Message>
+					) : (
+						<Table striped bordered hover responsive className='table-sm'>
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>DATE</th>
+									<th>TOTAL</th>
+									<th>PAID</th>
+									<th>DELIVERED</th>
+								</tr>
+							</thead>
+							<tbody>
+								{orders?.map((order) => (
+									<tr key={order._id}>
+										<td>{order._id}</td>
+										<td>{order.createdAt.substring(0, 10)}</td>
+										<td>{order.totalPrice}</td>
+										<td>
+											{order.isPaid ? (
+												order.paidAt.substring(0.1)
+											) : (
+												<i
+													className='fas fa-times'
+													style={{ color: 'red' }}
+												></i>
+											)}
+										</td>
+										<td>
+											{order.isDelivered ? (
+												order.deliveredAt.substring(0.1)
+											) : (
+												<i
+													className='fas fa-times'
+													style={{ color: 'red' }}
+												></i>
+											)}
+										</td>
+										<td>
+											<Link to={`/order/${order._id}`}>
+												<Button className='btn-sm' variant='light'>
+													Details
+												</Button>
+											</Link>
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</Table>
+					)}
+				</Col>
+			</Row>
+		</>
 	);
 };
 

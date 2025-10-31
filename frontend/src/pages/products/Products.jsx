@@ -2,28 +2,40 @@ import { Link } from 'react-router-dom';
 import Rating from '../../components/rating/Rating';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
+import { proBaseURL } from '../../redux/api';
+// import {} from 'req'
+
+console.log(proBaseURL);
+
 
 const ButtonBuy = styled.button`
 	width: 200px;
 	height: 40px;
 	border-radius: 10px;
 	background-color: var(--teniColor);
-	color: #fff;
+	color:#fff;
 	font-size: 20px;
 	font-weight: bold;
-`;
+`
 
 export const CardWrapper = styled.div`
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 	border-radius: 5px;
-`;
+
+`
 
 const Products = ({ product }) => {
 	return (
 		<CardWrapper>
 			<Card className='my-3 p-3 rounded'>
 				<Link to={`/product/${product?._id}`}>
-					<Card.Img src={product?.image} variant='top' />
+					<Card.Img
+						// src={`${product?.image}`}
+						src={product?.image}
+						// src={require(`../../images/${product.image}`).default}
+						// src={require('../../images/Golden Dusk.png}').default}
+						variant='top'
+					/>
 				</Link>
 
 				<Card.Body>

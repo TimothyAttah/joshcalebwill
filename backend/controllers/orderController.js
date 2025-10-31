@@ -11,20 +11,19 @@ export const orderControllers = {
 				shippingAddress,
 				paymentMethod,
 				itemsPrice,
-				taxPrice,
+				// taxPrice,
 				shippingPrice,
 				totalPrice,
 			} = req.body;
 			if (orderItems && orderItems.length === 0) {
 				return res.status(400).json({ msg: 'No order items' });
 			} else {
+
 				const order = new Order({
 					orderItems,
-					user: req.user._id,
 					shippingAddress,
 					paymentMethod,
 					itemsPrice,
-					taxPrice,
 					shippingPrice,
 					totalPrice,
 				});
@@ -70,7 +69,6 @@ export const orderControllers = {
 					id: req.body.id,
 					status: req.body.status,
 					update_time: req.body.update_time,
-					email_address: req.body.payer.email_address,
 				};
 				const updatedOrder = await order.save();
 
@@ -78,6 +76,54 @@ export const orderControllers = {
 			} else {
 				return res.status(400).json({ msg: 'Your order was not found' });
 			}
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	// @desc Update order to delivered
+	// @route GET /api/orders/:id/deliver
+	// @access PRIVATE/ADMIN
+	updateOrderToDelivered: async (req, res) => {
+		try {
+			const order = await Order.findById(req.params.id);
+
+			if (order) {
+				order.isDelivered = true;
+				order.deliveredAt = Date.now();
+
+				const updatedOrder = await order.save();
+
+				return res.status(200).json({ msg: 'Your order is delivered', data: updatedOrder });
+			} else {
+				return res.status(400).json({ msg: 'Your order was not found' });
+			}
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	// @desc GET logged in user orders
+	// @route GET /api/orders/myOrders
+	// @access PRIVATE
+	getMyOrders: async (req, res) => {
+		try {
+			const orders = await Order.find({});
+
+			return res.status(200).json({ msg: 'My orders', data: orders });
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	// @desc GET all orders
+	// @route GET /api/orders
+	// @access PRIVATE/ADMIN
+	getOrders: async (req, res) => {
+		try {
+			const orders = await Order.find({}).populate('user', 'id name');
+
+			return res.status(200).json({ msg: ' All orders', data: orders });
 		} catch (err) {
 			return res.status(500).json({ msg: err.message });
 		}

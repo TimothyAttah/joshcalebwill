@@ -135,4 +135,94 @@ export const authControllers = {
 			return res.status(500).json({ msg: err.message });
 		}
 	},
+
+	// @desc Get all users
+	// @route GET /api/auth/users
+	// @access Private/Admin
+	getAllUsers: async (req, res) => {
+		try {
+			const users = await User.find({});
+
+			return res
+				.status(200)
+				.json({ msg: 'User updated successfully!!!', data: users });
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	// @desc Delete user
+	// @route DELETE /api/auth/users/:id/delete
+	// @access Private/Admin
+	deleteUser: async (req, res) => {
+		try {
+			const user = await User.findByIdAndDelete(req.params.id);
+
+			if (user) {
+				// await user.remove();
+				return res
+					.status(200)
+					.json({ msg: 'User deleted successfully!!!', data: user });
+			} else {
+				return res.status(404).json({ msg: 'User not found' });
+			}
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+	// @desc Get user by id
+	// @route GET /api/auth/users/:id
+	// @access Private/Admin
+	getUserById: async (req, res) => {
+		try {
+			const user = await User.findById(req.params.id).select('-password');
+
+			if (user) {
+				// await user.remove();
+				return res
+					.status(200)
+					.json({ msg: 'A user gotten successfully!!!', data: user });
+			} else {
+				return res.status(404).json({ msg: 'User not found' });
+			}
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	// @desc Update user
+	// @route PUT /api/auth/users/:id
+	// @access Private/Admin
+	updateUser: async (req, res) => {
+		try {
+			const user = await User.findById(req.params.id);
+
+			if (user) {
+				user.name = req.body.name || user.name;
+				user.email = req.body.email || user.email;
+				user.isAdmin = req.body.isAdmin || user.isAdmin
+
+				const updatedUser = await user.save();
+
+
+
+				const newUpdatedUser = {
+					_id: updatedUser._id,
+					name: updatedUser.name,
+					email: updatedUser.email,
+					isAdmin: updatedUser.isAdmin,
+
+				};
+
+				return res
+					.status(200)
+					.json({ msg: 'User updated successfully!!!', data: newUpdatedUser });
+			} else {
+				return res.status(400).json({ msg: 'User not found' });
+			}
+		} catch (err) {
+			return res.status(500).json({ msg: err.message });
+		}
+	},
 };
+

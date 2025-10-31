@@ -1,17 +1,20 @@
-import { USER_TYPES } from '../types';
-import axios from 'axios';
+import { USER_TYPES, ORDER_TYPES, CART_TYPES } from '../types';
+// import axios from 'axios';
 
-const API = axios.create({
-	baseURL: 'https://joshcalebwill-jehi.vercel.app/api/auth',
-});
+// // const baseURL = 'http://localhost:5000/api/auth';
+// const baseURL = 'https://scentsmiths-backend.vercel.app/api/auth';
 
-API.interceptors.request.use((req) => {
-	if (localStorage.getItem('jwt')) {
-		req.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
-	}
+// const API = axios.create({ baseURL: baseURL });
 
-	return req;
-});
+// API.interceptors.request.use((req) => {
+// 	if (localStorage.getItem('jwt')) {
+// 		req.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+// 	}
+
+// 	return req;
+// });
+
+import * as api from '../api';
 
 export const login = (email, password) => async (dispatch) => {
 	try {
@@ -25,11 +28,9 @@ export const login = (email, password) => async (dispatch) => {
 			},
 		};
 
-		const { data } = await axios.post(
-			'https://joshcalebwill-jehi.vercel.app/api/auth/login',
-			{ email, password },
-			config,
-		);
+		// const { data } = await API.post('/login', { email, password }, config);
+
+		const { data } = await api.loginUser(email, password);
 
 		console.log('login>>>', data);
 
@@ -54,6 +55,9 @@ export const login = (email, password) => async (dispatch) => {
 export const logoutUser = () => (dispatch) => {
 	localStorage.removeItem('users');
 	dispatch({ type: USER_TYPES.USER_LOGOUT });
+	dispatch({ type: USER_TYPES.USER_DETAILS_RESET });
+	dispatch({ type: ORDER_TYPES.ORDER_LIST_MY_ORDER_RESET });
+	dispatch({ type: USER_TYPES.USER_LIST_RESET });
 };
 
 export const register = (name, email, password) => async (dispatch) => {
@@ -68,12 +72,13 @@ export const register = (name, email, password) => async (dispatch) => {
 			},
 		};
 
-		const { data } = await axios.post(
-			'https://joshcalebwill-jehi.vercel.app/api/auth/register',
-			{ name, email, password },
-			config,
-		);
+		// const { data } = await API.post(
+		// 	'register',
+		// 	{ name, email, password },
+		// 	config,
+		// );
 
+		const { data } = await api.registerUser({ name, email, password });
 		console.log('register>>>', data);
 
 		dispatch({
@@ -86,6 +91,7 @@ export const register = (name, email, password) => async (dispatch) => {
 			payload: data.data,
 		});
 
+		localStorage.setItem('jwt', data.token);
 		localStorage.setItem('users', JSON.stringify(data.data));
 	} catch (err) {
 		dispatch({
@@ -115,7 +121,8 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
 			},
 		};
 
-		const { data } = await API.get(`/users/${id}`);
+		// const { data } = await API.get(`/users/${id}`);
+		const { data } = await api.getUserDetails(id);
 
 		console.log('user profile>>>', data);
 
@@ -151,7 +158,9 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 		// 	},
 		// };
 
-		const { data } = await API.put(`/users/profile`, user);
+		// const { data } = await API.put(`/users/profile`, user);
+
+		const { data } = await api.updateUserProfile(user);
 
 		console.log('user profile update>>>', data);
 
@@ -162,6 +171,83 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 	} catch (err) {
 		dispatch({
 			type: USER_TYPES.USER_UPDATE_PROFILE_FAIL,
+			payload:
+				err.response && err.response.data.msg
+					? err.response.data.msg
+					: err.message,
+		});
+	}
+};
+
+export const listUsers = () => async (dispatch) => {
+	try {
+		dispatch({
+			type: USER_TYPES.USER_LIST_REQUEST,
+		});
+
+		const { data } = await API.get(`/users`);
+
+		console.log('user profile LIST >>>>>>>>', data);
+
+		dispatch({
+			type: USER_TYPES.USER_LIST_SUCCESS,
+			payload: data.data,
+		});
+	} catch (err) {
+		dispatch({
+			type: USER_TYPES.USER_LIST_FAIL,
+			payload:
+				err.response && err.response.data.msg
+					? err.response.data.msg
+					: err.message,
+		});
+	}
+};
+
+export const deleteUser = (id) => async (dispatch) => {
+	try {
+		dispatch({
+			type: USER_TYPES.USER_DELETE_REQUEST,
+		});
+
+		// const { data } = await API.delete(`/users/${id}/delete`);
+
+		const { data } = await api.deleteUser(id);
+
+		console.log('user delete action >>>>>>>>', data);
+
+		dispatch({
+			type: USER_TYPES.USER_DELETE_SUCCESS,
+		});
+	} catch (err) {
+		dispatch({
+			type: USER_TYPES.USER_DELETE_FAIL,
+			payload:
+				err.response && err.response.data.msg
+					? err.response.data.msg
+					: err.message,
+		});
+	}
+};
+
+export const getUserByIdDetails = (id) => async (dispatch) => {
+	try {
+		dispatch({
+			type: USER_TYPES.USER_GET_BY_ID_REQUEST,
+		});
+
+		// const { data } = await API.get(`/users/${id}`);
+		const { data } = await api.getUserByIdDetails(id);
+
+		console.log('user by id details>>>', data);
+
+		dispatch({
+			type: USER_TYPES.USER_GET_BY_ID_SUCCESS,
+			payload: data.data,
+		});
+	} catch (err) {
+		dispatch({
+			type: USER_TYPES.USER_GET_BY_ID_FAIL,
 			payload:
 				err.response && err.response.data.msg
 					? err.response.data.msg

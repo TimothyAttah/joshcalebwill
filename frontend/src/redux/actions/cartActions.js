@@ -1,10 +1,29 @@
-import axios from 'axios';
 import { CART_TYPES } from '../types';
 
+// import axios from 'axios';
+
+// // const baseURL = 'http://localhost:5000/api/products';
+// const baseURL = 'https://scentsmiths-backend.vercel.app/api/products';
+
+// const API = axios.create({ baseURL: baseURL });
+
+// API.interceptors.request.use((req) => {
+// 	if (localStorage.getItem('jwt')) {
+// 		req.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt')}`;
+// 	}
+
+// 	return req;
+// });
+
+import * as api from '../api';
+
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-	const { data } = await axios.get(
-		`https://joshcalebwill-jehi.vercel.app/api/products/${id}`,
-	);
+	// const { data } = await axios.get(
+	// 	`https://scentsmiths-backend.vercel.app/api/products/${id}`,
+	// );
+
+	// const { data } = await API.get(	`/${id}`);
+	const { data } = await api.addTocart(id);
 
 	dispatch({
 		type: CART_TYPES.CART_ADD_ITEM,
@@ -21,8 +40,6 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
 	console.log('cart items >>>>>', data.data);
 
 	localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
-
-	// localStorage.setItem('cartItems', JSON.stringify(data.data));
 };
 
 export const removeFromCart = (id) => (dispatch, getState) => {
@@ -35,13 +52,24 @@ export const removeFromCart = (id) => (dispatch, getState) => {
 };
 
 export const saveShippingAddress = (data) => (dispatch) => {
-
 	dispatch({
 		type: CART_TYPES.CART_SAVE_SHIPPING_ADDRESS,
 		payload: data,
 	});
 
 	localStorage.setItem('shippingAddress', JSON.stringify(data));
+};
+
+export const saveShippingPrice = (data) => (dispatch) => {
+	dispatch({
+		type: CART_TYPES.CART_SAVE_SHIPPING_PRICE,
+		payload: data,
+	});
+
+	console.log(data);
+	
+
+	localStorage.setItem('shippingPrice', JSON.stringify(data));
 };
 
 export const savePaymentMethod = (data) => (dispatch) => {
@@ -52,4 +80,3 @@ export const savePaymentMethod = (data) => (dispatch) => {
 
 	localStorage.setItem('paymentMethod', JSON.stringify(data));
 };
-
