@@ -94,7 +94,7 @@ export const BlendModeTitle = styled.h1`
 
 export const CultureInfo = styled.div`
 	background-color: #fff;
-	padding: 50px 0;
+	padding: 20px 0;
 
 	h4 {
 		text-align: center !important;
@@ -134,18 +134,24 @@ export const CareersInfo = styled.div`
 `;
 export const CareersOptions = styled.div``;
 export const CareersOptionsList = styled.div`
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 50px auto;
 	width: 100%;
-	height: 500px;
+	height: 600px;
+	/* height: 100%; */
 	display: flex;
 	border-radius: 20px;
 	overflow: hidden;
+	border: 3px dashed blue;
 
 	${(props) =>
 		props.second &&
 		css`
 			flex-direction: row-reverse;
+			/* max-width: 1500px;
+			margin: 50px auto; */
+			width: 100%;
+			/* height: 500px; */
 		`}
 
 	@media screen and (max-width: 670px) {
@@ -155,7 +161,7 @@ export const CareersOptionsList = styled.div`
 	}
 `;
 export const CareersOptionsListImg = styled.div`
-	max-width: 600px;
+	max-width: 700px;
 	width: 100%;
 	height: 100%;
 
@@ -174,10 +180,10 @@ export const CareersOptionsListImg = styled.div`
 	}
 `;
 export const CareersOptionsListInfo = styled.div`
-	max-width: 600px;
+	max-width: 700px;
 	width: 100%;
 	height: 100%;
-	padding: 70px;
+	padding: 30px;
 
 	p {
 		color: #fff;

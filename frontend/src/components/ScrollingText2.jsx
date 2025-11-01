@@ -1,96 +1,92 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import styled from 'styled-components';
+import pix4 from '../assets/intro4.png';
+
 
 const Section = styled.section`
 	position: relative;
-	height: 160vh; /* a bit taller for the stagger effect */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
+	height: 160vh; /* extra height to give scroll space */
 	background: #000;
 	color: #fff;
-`;
-
-const LineWrapper = styled.div`
 	overflow: hidden;
-	width: 100%;
-	margin: 0.8rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 
-const Text = styled(motion.h1)`
-	font-size: clamp(2rem, 6vw, 5rem);
+const ContentWrapper = styled.div`
+	position: relative;
+	z-index: 2;
+	text-align: center;
+`;
+
+const Title = styled(motion.h1)`
+	font-size: clamp(2.5rem, 7vw, 6rem);
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0;
-	text-align: center;
-	color: ${(props) => props.color || '#fff'};
+	letter-spacing: 0.2em;
+	margin: 0;
 `;
 
-export default function ScrollTextEffect2() {
+const Subtitle = styled(motion.p)`
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	color: #aaa;
+	margin-top: 1rem;
+`;
+
+const ImageWrapper = styled(motion.div)`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+	overflow: hidden;
+`;
+
+const MovingImage = styled(motion.img)`
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+`;
+
+export default function ImageOverText() {
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		offset: ['start 0.9', 'end 0.1'],
+		offset: ['start end', 'end start'],
 	});
 
-	// Each line has slightly different timing for a staggered reveal
-	// const line1X = useTransform(
-	// 	scrollYProgress,
-	// 	[0, 0.3, 0.45, 1],
-	// 	['-60%', '0%', '0%', '0%'],
-  // );
+	// Image moves vertically (can also do horizontally)
+	const imageY = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
 
-  const line1X = useTransform(
+	// Optional fade for text as image crosses
+	const textOpacity = useTransform(
 		scrollYProgress,
-		[0, 0.3, 0.45, 1],
-		['-60%', '80%', '50%', '0%'],
-	);
-	const line2X = useTransform(
-		scrollYProgress,
-		[0.1, 0.4, 0.55, 1],
-		['60%', '0%', '0%', '0%'],
-	);
-	const line3X = useTransform(
-		scrollYProgress,
-		[0.2, 0.5, 0.65, 1],
-		['-60%', '0%', '0%', '0%'],
-	);
-	const line4X = useTransform(
-		scrollYProgress,
-		[0.3, 0.6, 0.75, 1],
-		['60%', '0%', '0%', '0%'],
-	);
-
-	// Fade in / fade out for all lines
-	const opacity = useTransform(
-		scrollYProgress,
-		[0, 0.2, 0.5, 0.8, 1],
-		[0, 1, 1, 0.8, 0],
+		[0.1, 0.5, 0.9],
+		[1, 0.5, 1],
 	);
 
 	return (
 		<Section ref={ref}>
-			<LineWrapper>
-				<Text style={{ x: line1X, opacity }}>WHO WE ARE</Text>
-			</LineWrapper>
-			<LineWrapper>
-				<Text style={{ x: line2X, opacity }} color='#aaa'>
-					SCENTSMITH
-				</Text>
-			</LineWrapper>
-			<LineWrapper>
-				<Text style={{ x: line3X, opacity }} color='#999'>
-					ELEGANCE IN EVERY NOTE
-				</Text>
-			</LineWrapper>
-			<LineWrapper>
-				<Text style={{ x: line4X, opacity }} color='#666'>
-					INSPIRED BY YOU
-				</Text>
-			</LineWrapper>
+			{/* Moving image */}
+			<ImageWrapper>
+				<MovingImage
+					src={pix4} // replace with your perfume image or scent visual
+					alt='Scentsmith visual'
+					style={{ y: imageY }}
+				/>
+			</ImageWrapper>
+
+			{/* Text content */}
+			<ContentWrapper>
+				<Title style={{ opacity: textOpacity }}>Who We Are</Title>
+				<Subtitle style={{ opacity: textOpacity }}>
+					Discover the artistry of fragrance at Scentsmith
+				</Subtitle>
+			</ContentWrapper>
 		</Section>
 	);
 }

@@ -3,7 +3,9 @@ import { useScroll, motion, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 const Paragrapgh = styled.p`
-	font-size: 50px !important;
+	/* font-size: 50px !important; */
+	font-size: clamp(1.5rem, 3.5vw, 4rem);
+
 	max-width: 1000px;
 	margin: auto;
 	text-align: center;
@@ -13,6 +15,7 @@ const Paragrapgh = styled.p`
 	flex-wrap: wrap;
 	line-height: 1.1;
 	font-weight: bold;
+	text-align: center !important;
 	color: #fff;
 	.word {
 		margin-right: 12px;
@@ -26,12 +29,14 @@ const Paragrapgh = styled.p`
 	}
 
 	@media screen and (max-width: 720px) {
-		font-size: 30px !important;
+		/* font-size: 30px !important; */
 		padding: 10px;
+		font-size: clamp(2rem, 4vw, 5rem);
+		font-size: clamp(2rem, 3vw, 3.7rem);
 	}
 
 	@media screen and (max-width: 450px) {
-		font-size: 26px !important;
+		/* font-size: 26px !important; */
 		text-align: center !important;
 	}
 `;
