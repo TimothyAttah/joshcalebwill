@@ -9,7 +9,7 @@ import * as Styles from './TextAnimateStyles';
 // `;
 
 const value = `
-We belive that no challenge is beyond a people under the Lord God.
+We belive that no challenge is beyond a people under the LORD GOD.
 Our people remains our great strength, guided by responsibilty, spirit of excellence, trust and integrity.
 We drive prosperous  and a sustainable prosperous future for all concerned
 `;
