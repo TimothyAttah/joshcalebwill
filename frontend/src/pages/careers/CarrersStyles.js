@@ -142,7 +142,7 @@ export const CareersOptionsList = styled.div`
 	display: flex;
 	border-radius: 20px;
 	overflow: hidden;
-	border: 3px dashed blue;
+	/* border: 3px dashed blue; */
 
 	${(props) =>
 		props.second &&

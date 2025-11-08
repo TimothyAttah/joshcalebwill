@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import lead2 from '../../assets/who12.png';
+import lead2 from '../../assets/who13.png';
 
 export const WhoWeAre = styled.div``;
 

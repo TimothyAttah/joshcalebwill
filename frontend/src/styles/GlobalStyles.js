@@ -29,6 +29,8 @@ export const GlobalStyles = createGlobalStyle`
     --base-color-gold-neg: hsl(from var(--base-color-gold) h s calc(l - 10));
     --base-color-gold-plus: hsl(from var(--base-color-gold) h s calc(l + 10));
 
+    --base-color-p: hsla(20, 100%, 50%, 1.00);
+
     --color-black: #000000;
     --color-light-blue: #009dd9;
     --color-medium-blue: #0066b2;

@@ -29,7 +29,7 @@ export const navWithSubmenuData = [
 	},
 	{
 		navTitle: 'what we do',
-		navPath: '/what-we-do',
+		navPath: '#',
 		id: 2,
 
 		subMenu: [

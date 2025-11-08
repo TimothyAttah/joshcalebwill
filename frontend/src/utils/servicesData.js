@@ -2,7 +2,7 @@ import gas from '../assets/gas1.png';
 import explore from '../assets/explore1.png';
 import chemical from '../assets/chem1.png';
 import pipe from '../assets/pipe1.png';
-import health from '../assets/safety3.png';
+import health from '../assets/safety10.png';
 import procurement from '../assets/procurement5.png';
 import haulage from '../assets/haulage5.png';
 import lubricants from '../assets/lub1.png';

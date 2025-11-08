@@ -6,6 +6,15 @@ import pix1 from '../assets/intro1.png';
 import pix2 from '../assets/intro2.png';
 import pix3 from '../assets/intro3.png';
 import pix4 from '../assets/intro4.png';
+import textBg1 from '../assets/textBg1.png';
+import textBg2 from '../assets/textBg2.png';
+import textBg3 from '../assets/textBg3.png';
+import textBg4 from '../assets/textBg4.png';
+
+
+
+
+
 
 
 
@@ -98,6 +107,48 @@ const LineWrapper = styled.div`
 			transform: translateX(-50%);
 		}
 	}
+
+	.text1 {
+		font-weight: bold;
+		background-image: url(${textBg1}); /* Replace with your image path */
+		background-size: cover;
+		background-position: center;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.text2 {
+		font-weight: bold;
+		background-image: url(${textBg2}); /* Replace with your image path */
+		background-size: cover;
+		background-position: center;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+	.text3 {
+		font-weight: bold;
+		background-image: url(${textBg3}); /* Replace with your image path */
+		background-size: cover;
+		background-position: center;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+	.text4 {
+		font-weight: bold;
+		background-image: url(${textBg4}); /* Replace with your image path */
+		background-size: cover;
+		background-position: center;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
 `;
 
 const Text = styled(motion.h1)`
@@ -106,10 +157,11 @@ const Text = styled(motion.h1)`
 	text-transform: uppercase;
 	letter-spacing: 0;
 	text-align: center;
-	color: ${(props) => props.color || '#fff'};
+	color: ${(props) => props.color || '#817c4c'};
 	margin: 30px auto;
 	position: relative;
 	z-index: 99;
+
 
 	@media screen and (max-width: 450px) {
 		font-size: clamp(2rem, 6vw, 5rem);
@@ -158,11 +210,13 @@ const ScrollTextEffect = () => {
 		<Section ref={ref}>
 			<Title>Who we are</Title>
 			<LineWrapper>
-				<Text style={{ x: text1 }}>Professionalism</Text>
+				<Text style={{ x: text1 }} className='text1'>
+					Professionalism
+				</Text>
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text2 }} color='#ccc'>
+				<Text style={{ x: text2 }} color='#d75e70' className='text2'>
 					integrity
 				</Text>
 			</LineWrapper>
@@ -172,12 +226,12 @@ const ScrollTextEffect = () => {
 					src={pix1}
 					alt=''
 					className='pix1Img'
-					style={{ y: topY, opacity:fade }}
+					style={{ y: topY, opacity: fade }}
 				/>
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text3 }} color='#c5c3c3'>
+				<Text style={{ x: text3 }} color='#c5c3c3' className='text3'>
 					quality
 				</Text>
 			</LineWrapper>
@@ -187,7 +241,7 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text4 }} color='#e5e5e5'>
+				<Text style={{ x: text4 }} color='#e5e5e5' className='text1'>
 					safety
 				</Text>
 			</LineWrapper>
@@ -197,13 +251,13 @@ const ScrollTextEffect = () => {
 			</LineWrapper> */}
 
 			<LineWrapper>
-				<Text style={{ x: text5 }} color='#e2e2e2'>
+				<Text style={{ x: text5 }} color='#e2e2e2' className='text4'>
 					service excellence
 				</Text>
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text6 }} color='#eee'>
+				<Text style={{ x: text6 }} color='#eee' className='text3'>
 					team work
 				</Text>
 			</LineWrapper>
@@ -213,7 +267,7 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text7 }} color='#ccc'>
+				<Text style={{ x: text7 }} color='#ccc' className='text2'>
 					innovators
 				</Text>
 			</LineWrapper>
