@@ -1,4 +1,4 @@
-import picHealth from '../assets/safety2.jpg';
+import picHealth from '../assets/safety13.png';
 import vicSlider1 from '../assets/off2.png';
 import vicHaulage from '../assets/homeSlider3.png';
 import vicGas from '../assets/gas.png';
