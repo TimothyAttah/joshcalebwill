@@ -11,7 +11,7 @@ import * as Styles from './TextAnimateStyles';
 const value = `
 We belive that no challenge is beyond a people under the LORD GOD.
 Our people remains our great strength, guided by responsibilty, spirit of excellence, trust and integrity.
-We drive prosperous  and a sustainable prosperous future for all concerned
+We drive progress and a sustainable prosperous future for our stakeholders
 `;
 
 const TextAnimate = () => {
