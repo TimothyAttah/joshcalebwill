@@ -11,6 +11,8 @@ import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import { scrollToTop } from '../../../components/header/Header';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
+
 
 const Pipeline2 = () => {
 	return (
@@ -170,4 +172,4 @@ const Pipeline2 = () => {
 	);
 };
 
-export default Pipeline2;
+export default Transition( Pipeline2);

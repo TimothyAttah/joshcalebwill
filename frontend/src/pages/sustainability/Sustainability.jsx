@@ -13,6 +13,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { useEffect } from 'react';
 import LazyImage from '../../components/LazyImage';
+import Transition from '../../components/Transition';
+
+
 
 const Sustainability = () =>
 {
@@ -166,4 +169,4 @@ const Sustainability = () =>
 	);
 };
 
-export default Sustainability;
+export default Transition( Sustainability);

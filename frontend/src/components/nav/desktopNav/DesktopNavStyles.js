@@ -9,7 +9,7 @@ export const DesktopNav = styled.nav`
 	align-items: center;
 	/* border: 2px solid yellow; */
 
-	@media screen and (max-width: 950px) {
+	@media screen and (max-width: 1070px) {
 		justify-content: end;
 	}
 `;
@@ -38,7 +38,7 @@ export const DesktopNavListWrapper = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 950px) {
+	@media screen and (max-width: 1070px) {
 		display: none;
 	}
 `;
@@ -86,7 +86,7 @@ export const DesktopNavList = styled.ul`
 		}
 	}
 
-	@media screen and (max-width: 950px) {
+	@media screen and (max-width: 1070px) {
 		display: none;
 	}
 `;
@@ -199,7 +199,9 @@ export const MenuBtn = styled.button`
 	background-color: transparent;
 	color: #fff;
 	z-index: 9999;
-	background-color: var(--main-color-g);
+	background-color: var(--main-color-p);
+	background-color: transparent;
+	margin-top: -10px;
 
 	svg {
 		color: #fff;

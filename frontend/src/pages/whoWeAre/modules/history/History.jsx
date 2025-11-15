@@ -4,6 +4,7 @@ import pix1 from '../../../../assets/newSlide6.png';
 import { FadeInAlways } from '../../../../components/fadeIn/FadeInAlways';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../../components/copyText/CopyText';
+import Transition from '../../../../components/Transition';
 
 const History = () => {
 	return (
@@ -38,7 +39,7 @@ const History = () => {
 							company’s expertise across various disciplines in the oil and gas
 							industry.
 						</p>
-					
+
 					<div>
 						<FadeInAlways delay={0.6} direction='right'>
 							<h2>Areas of Expertise and Services</h2>
@@ -147,4 +148,4 @@ const History = () => {
 	);
 };
 
-export default History;
+export default Transition(History);

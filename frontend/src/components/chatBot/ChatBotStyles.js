@@ -7,17 +7,33 @@ export const ChatBotContainer = styled.div`
 	justify-content: center;
 	min-height: 100vh;
 	background: linear-gradient(#f4f0ff, #dacdff);
+	background: transparent;
+	z-index: 99999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: all;
+
 `;
 export const ChatBotPopup = styled.div`
 	position: relative;
+	position: fixed;
+	opacity: 0;
+	/* pointer-events: none; */
+	bottom: 90px;
+	right: 35px;
 	width: 420px;
 	overflow: hidden;
+	overflow-y: auto;
 	background: #fff;
+	background: var(--main-color-g);
 	border-radius: 15px;
 	box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
 		0 32px 64px -48px rgba(0, 0, 0, 0.5);
-
-	@media screen and (max-width: 450px){
+	pointer-events: auto !important;
+	@media screen and (max-width: 450px) {
 		width: 100%;
 	}
 `;
@@ -27,7 +43,7 @@ export const ChatBotHeader = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	background: #6d4fc2;
-	background: var(--brown);
+	/* background: var(--brown); */
 
 	button {
 		height: 40px;
@@ -69,6 +85,8 @@ export const ChatBotInfo = styled.div`
 	}
 `;
 
+export const ChatbotHeaderInfo = styled.div``
+
 export const ChatbotIcon = styled.div`
 	width: 30px;
 	height: 30px;
@@ -94,7 +112,7 @@ export const ChatbotIcon = styled.div`
 
 export const ChatBotLogoText = styled.h2`
 	color: #fff;
-	font-size: 1.31rem;
+	font-size: 1.31rem !important;
 	font-weight: 600;
 `;
 
@@ -104,10 +122,11 @@ export const ChatBody = styled.div`
 	gap: 20px;
 	height: 460px;
 	margin-bottom: 82px;
-	overflow-y: auto;
+	overflow-y: auto !important;
 	padding: 25px 22px;
 	scrollbar-width: thin;
 	scrollbar-color: #ddd3f9 transparent;
+	pointer-events: auto;
 `;
 export const ChatBotMessage = styled.div`
 	display: flex;
@@ -126,7 +145,7 @@ export const ChatBotMessage = styled.div`
 				margin-bottom: 2px;
 				fill: #fff;
 				background: #6d4fc2;
-				background: var(--brown);
+				/* background: var(--brown); */
 				border-radius: 50%;
 			}
 
@@ -144,8 +163,8 @@ export const ChatBotMessage = styled.div`
 
 			p {
 				color: #fff;
-				/* background: #6d4fc2; */
-				background: var(--brown);
+				background: #6d4fc2;
+				/* background: var(--brown); */
 				border-radius: 13px 13px 3px 13px;
 			}
 		`}
@@ -163,6 +182,7 @@ export const ChatBotFooter = styled.div`
 	bottom: 0;
 	width: 100%;
 	background: #fff;
+	background: var(--main-color-g);
 	padding: 15px 22px 20px;
 
 	@media screen and (max-width: 520px) {

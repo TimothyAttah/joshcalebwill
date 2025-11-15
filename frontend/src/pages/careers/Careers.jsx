@@ -3,12 +3,11 @@ import cultPix1 from '../../assets/car5.png';
 import cultPix2 from '../../assets/car7.png';
 import cultPix3 from '../../assets/car11.png';
 import cultPix4 from '../../assets/car10.png';
-
 import pix1 from '../../assets/car1.png';
-
 import Copy from '../../components/copyText/CopyText';
 import { ReactLenis } from 'lenis/react';
 import LazyImage from '../../components/LazyImage';
+import Transition from '../../components/Transition';
 
 const Careers = () => {
 	return (
@@ -212,4 +211,4 @@ const Careers = () => {
 	);
 };
 
-export default Careers;
+export default Transition(Careers);

@@ -14,6 +14,7 @@ import { FaCircle } from 'react-icons/fa';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../components/copyText/CopyText';
 import LazyImage from '../../components/LazyImage';
+import Transition from '../../components/Transition'
 
 const WhoWeAre = () => {
 	return (
@@ -232,4 +233,4 @@ const WhoWeAre = () => {
 	);
 };
 
-export default WhoWeAre;
+export default Transition(WhoWeAre);

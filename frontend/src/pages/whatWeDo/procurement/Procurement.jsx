@@ -7,6 +7,7 @@ import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
 
 const Procurement = () => {
 	return (
@@ -115,4 +116,4 @@ const Procurement = () => {
 	);
 };
 
-export default Procurement;
+export default Transition(Procurement);

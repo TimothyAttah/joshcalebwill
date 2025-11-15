@@ -4,7 +4,8 @@ import cultPix1 from '../../../../assets/cut4.png';
 import cultPix2 from '../../../../assets/cut6.png';
 import cultPix3 from '../../../../assets/cut5.png';
 import Copy from '../../../../components/copyText/CopyText';
-import {ReactLenis} from 'lenis/react'
+import { ReactLenis } from 'lenis/react';
+import Transition from '../../../../components/Transition';
 
 
 const Culture = () => {
@@ -86,4 +87,4 @@ const Culture = () => {
 	);
 }
 
-export default Culture
+export default Transition(Culture);

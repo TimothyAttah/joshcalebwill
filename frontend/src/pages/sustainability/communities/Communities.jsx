@@ -4,6 +4,7 @@ import com2 from '../../../assets/com2.png';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
 
 const Communities = () => {
 	return (
@@ -87,7 +88,7 @@ const Communities = () => {
 						<div>
 							<img src={ com2 } alt='' />
 
-						
+
 						</div>
 						<p>
 							Through collaboration, innovation, and respect, we partner with
@@ -106,4 +107,4 @@ const Communities = () => {
 	);
 };
 
-export default Communities;
+export default Transition( Communities);

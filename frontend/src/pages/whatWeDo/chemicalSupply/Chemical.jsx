@@ -7,6 +7,7 @@ import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
 
 const Chemical = () => {
 	return (
@@ -174,4 +175,4 @@ const Chemical = () => {
 	);
 };
 
-export default Chemical;
+export default Transition(Chemical);

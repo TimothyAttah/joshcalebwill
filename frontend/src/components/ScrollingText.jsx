@@ -216,7 +216,7 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text2 }} color='#d75e70' className='text2'>
+				<Text style={{ x: text2 }} color='#d75e70' className='text4'>
 					integrity
 				</Text>
 			</LineWrapper>
@@ -267,7 +267,7 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text7 }} color='#ccc' className='text2'>
+				<Text style={{ x: text7 }} color='#ccc' className='text1'>
 					innovators
 				</Text>
 			</LineWrapper>

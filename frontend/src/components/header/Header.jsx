@@ -6,6 +6,7 @@ import MobileSidebar from '../sidebar/mobileSidebar/MobileSidebar';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Chatbot from '../chatBot/NewChatbot';
 
 export const scrollToTop = () => {
 	window.scrollTo({
@@ -55,6 +56,7 @@ const Header = () => {
 					/>
 				)}
 			</AnimatePresence>
+			<Chatbot />
 		</Styles.Header>
 	);
 };

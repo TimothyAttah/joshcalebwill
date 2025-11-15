@@ -10,6 +10,7 @@ import { scrollToTop } from '../../../components/header/Header';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
 
 const Environment = () => {
 	return (
@@ -158,4 +159,4 @@ const Environment = () => {
 	);
 };
 
-export default Environment;
+export default Transition( Environment);

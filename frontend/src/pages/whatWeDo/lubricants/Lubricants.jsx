@@ -4,6 +4,8 @@ import lubPix2 from '../../../assets/lub6.png';
 import lubPix3 from '../../../assets/lub7.png';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
+import Transition from '../../../components/Transition';
+
 
 const Lubricants = () => {
   return (
@@ -89,4 +91,4 @@ const Lubricants = () => {
 	);
 };
 
-export default Lubricants;
+export default Transition( Lubricants);

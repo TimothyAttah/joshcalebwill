@@ -8,7 +8,7 @@ import {
 import * as Styles from './ContactStyles';
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-
+import Transition from '../../components/Transition';
 import { toast } from 'react-toastify';
 
 const Contact = () => {
@@ -124,7 +124,8 @@ const Contact = () => {
 							</Link>
 							<Link
 								to='https://wa.me/2347077077529?text=Hello,%20welcome%20to%20Joshcalebwill'
-								target='_blank'>
+								target='_blank'
+							>
 								<FaWhatsapp />
 							</Link>
 						</Styles.ContactInfoLinksWrapper>
@@ -185,10 +186,11 @@ const Contact = () => {
 					style={{ border: '0', width: '100%' }}
 					allowfullscreen=''
 					loading='lazy'
-					referrerpolicy='no-referrer-when-downgrade'></iframe>
+					referrerpolicy='no-referrer-when-downgrade'
+				></iframe>
 			</div>
 		</Styles.ContactContainer>
 	);
 };
 
-export default Contact;
+export default Transition(Contact);

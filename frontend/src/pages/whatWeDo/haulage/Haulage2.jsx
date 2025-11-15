@@ -9,6 +9,8 @@ import * as Styles from './Haulage2Styles';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
+
 
 const Haulage2 = () => {
 	return (
@@ -211,4 +213,4 @@ const Haulage2 = () => {
 	);
 };
 
-export default Haulage2;
+export default Transition(Haulage2);

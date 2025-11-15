@@ -1,14 +1,25 @@
 import styled from 'styled-components';
-import lead1 from '../../../../assets/lead3.png';
+import lead1 from '../../../../assets/lead4.png';
 
 export const Leaders = styled.div``;
 
 export const LeadersHero = styled.div`
 	width: 100%;
 	height: 100vh;
+	/* padding-top: 42%; */
 	background: url(${lead1});
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+
+	@media screen and (max-width: 790px) {
+		height: 100%;
+		padding-top: 82%;
+	}
+
+	@media screen and (max-width: 420px) {
+		padding-top: 92%;
+	}
 `;
 
 export const BlendModeSubTitle = styled.h4`
@@ -32,6 +43,7 @@ export const BlendModeSubTitle = styled.h4`
 	@media screen and (max-width: 790px) {
 		font-size: 1.5rem !important;
 		bottom: 126px;
+		display: none;
 	}
 
 	@media screen and (max-width: 530px) {

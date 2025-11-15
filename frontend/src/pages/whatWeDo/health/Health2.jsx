@@ -17,6 +17,8 @@ import HealthPolicy from '../../sustainability/healthPolicy/HealthPolicy';
 import { ReactLenis } from 'lenis/react';
 import Copy from '../../../components/copyText/CopyText';
 import LazyImage from '../../../components/LazyImage';
+import Transition from '../../../components/Transition';
+
 
 const Health2 = () => {
 	return (
@@ -178,4 +180,4 @@ const Health2 = () => {
 	);
 };
 
-export default Health2;
+export default Transition( Health2);

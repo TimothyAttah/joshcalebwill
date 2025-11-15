@@ -1,7 +1,8 @@
 import * as Styles from './LeadersStyles';
 import TheTeam from './TheTeam';
 import Copy from '../../../../components/copyText/CopyText';
-import {ReactLenis} from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
+import Transition from '../../../../components/Transition';
 
 const Leaders = () => {
 	return (
@@ -53,4 +54,4 @@ const Leaders = () => {
 	);
 };
 
-export default Leaders;
+export default Transition(Leaders);
