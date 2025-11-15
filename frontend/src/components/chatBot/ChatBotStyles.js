@@ -2,19 +2,20 @@ import styled, { css } from 'styled-components';
 
 export const ChatBotContainer = styled.div`
 	width: 100%;
-	display: flex;
+	/* display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 	background: linear-gradient(#f4f0ff, #dacdff);
 	background: transparent;
-	z-index: 99999999;
-	position: fixed;
+	z-index: -1; */
+	/* z-index: 99999999; */
+	/* position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	pointer-events: all;
+	pointer-events: all; */
 
 `;
 export const ChatBotPopup = styled.div`

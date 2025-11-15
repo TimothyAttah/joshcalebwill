@@ -61,67 +61,69 @@ const NewChatbot = ({ close, setOpenChatbot }) => {
 	};
 
 	useEffect(() => {
-		chatBodyRef.current.scrollTo({
-			top: chatBodyRef.current.scrollHeight,
+		chatBodyRef?.current.scrollTo({
+			top: chatBodyRef?.current.scrollHeight,
 			behavior: 'smooth',
 		});
 	}, [chatHistory]);
 
 	return (
-		<Styles.ChatBotContainer
-			className={`chat-body-container ${showChatbot ? 'show-chatbot' : ''}`}
-		>
-			<button
-				onClick={() => setShowChatbot((prev) => !prev)}
-				id='chatbot-toggler'
+		<>
+			<Styles.ChatBotContainer
+				className={`chat-body-container ${showChatbot ? 'show-chatbot' : ''}`}
 			>
-				<span>
-					<BiComment />
-				</span>
-				<span>
-					<FaTimes />
-				</span>
-			</button>
-			<Styles.ChatBotPopup className='chatbot-popup'>
-				<Styles.ChatBotHeader className='chat-header'>
-					<Styles.ChatBotInfo className='header-info'>
-						<Styles.ChatbotIcon>
-							<img src={AiPic} alt='' />
-						</Styles.ChatbotIcon>
-						<Styles.ChatBotLogoText className='logo-text'>
-							Chatbot
-						</Styles.ChatBotLogoText>
-					</Styles.ChatBotInfo>
-					<button onClick={() => setOpenChatbot((prev) => !prev)}>
-						<BiChevronDown />
-					</button>
-				</Styles.ChatBotHeader>
-				<Styles.ChatBody ref={chatBodyRef} className='chat-body'>
-					<Styles.ChatBotMessage
-						botMessage='true'
-						className='message bot-message'
-					>
-						{/* <BiBot /> */}
-						<Styles.ChatbotIcon>
-							<img src={AiPic} alt='' />
-						</Styles.ChatbotIcon>
-						<Styles.ChatBotMessageText className='message-text'>
-							Hey there <br /> How can I help you today?
-						</Styles.ChatBotMessageText>
-					</Styles.ChatBotMessage>
-					{chatHistory.map((chat, i) => (
-						<ChatBotMessage key={i} chat={chat} />
-					))}
-				</Styles.ChatBody>
-				<Styles.ChatBotFooter>
-					<ChatBotForm
-						setChatHistory={setChatHistory}
-						chatHistory={chatHistory}
-						generateBotResponse={generateBotResponse}
-					/>
-				</Styles.ChatBotFooter>
-			</Styles.ChatBotPopup>
-		</Styles.ChatBotContainer>
+				<button
+					onClick={() => setShowChatbot((prev) => !prev)}
+					id='chatbot-toggler'
+				>
+					<span>
+						<BiComment />
+					</span>
+					<span>
+						<FaTimes />
+					</span>
+				</button>
+				<Styles.ChatBotPopup className='chatbot-popup'>
+					<Styles.ChatBotHeader className='chat-header'>
+						<Styles.ChatBotInfo className='header-info'>
+							<Styles.ChatbotIcon>
+								<img src={AiPic} alt='' />
+							</Styles.ChatbotIcon>
+							<Styles.ChatBotLogoText className='logo-text'>
+								Chatbot
+							</Styles.ChatBotLogoText>
+						</Styles.ChatBotInfo>
+						<button onClick={() => setOpenChatbot((prev) => !prev)}>
+							<BiChevronDown />
+						</button>
+					</Styles.ChatBotHeader>
+					<Styles.ChatBody ref={chatBodyRef} className='chat-body'>
+						<Styles.ChatBotMessage
+							botMessage='true'
+							className='message bot-message'
+						>
+							{/* <BiBot /> */}
+							<Styles.ChatbotIcon>
+								<img src={AiPic} alt='' />
+							</Styles.ChatbotIcon>
+							<Styles.ChatBotMessageText className='message-text'>
+								Hey there <br /> How can I help you today?
+							</Styles.ChatBotMessageText>
+						</Styles.ChatBotMessage>
+						{chatHistory.map((chat, i) => (
+							<ChatBotMessage key={i} chat={chat} />
+						))}
+					</Styles.ChatBody>
+					<Styles.ChatBotFooter>
+						<ChatBotForm
+							setChatHistory={setChatHistory}
+							chatHistory={chatHistory}
+							generateBotResponse={generateBotResponse}
+						/>
+					</Styles.ChatBotFooter>
+				</Styles.ChatBotPopup>
+			</Styles.ChatBotContainer>
+		</>
 	);
 };
 

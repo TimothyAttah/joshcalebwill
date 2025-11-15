@@ -20,7 +20,7 @@ const CookiesWrapper = styled.div`
 	background: #fff;
 	border-radius: 8px;
 	padding: 15px 25px 22px;
-	z-index: 999;
+	z-index: 9999999;
 	transition: all 0.3s ease;
 `;
 const CookiesHeader = styled.div`
@@ -93,7 +93,9 @@ const Cookies = () => {
 
 	const handleAcceptCookie = () => {
 		//set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
-		document.cookie = 'cookieBy= codinglab; max-age=' + 60 * 60 * 24 * 30;
+		// document.cookie = 'cookieBy= codinglab; max-age=' + 60 * 60 * 24 * 30;
+		document.cookie = 'cookieBy= codinglab; max-age=' + 60 * 60 * 24;
+
 
 		setOpenCookie(false);
 	};

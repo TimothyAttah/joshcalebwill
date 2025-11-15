@@ -45,9 +45,9 @@
 	/* display: flex;
 	align-items: center;
 	justify-content: center; */
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	/* background: linear-gradient(#f4f0ff, #dacdff); */
-	pointer-events: auto;
+	/* pointer-events: auto; */
 }
 
 .chatbot-popup {
