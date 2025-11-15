@@ -81,7 +81,7 @@ const Cookies = () => {
 
 		window.addEventListener('load', executeCodes);
 
-		if (document.cookie.includes('codinglab')) {
+		if (document.cookie.includes('joshcalebwill')) {
 			setOpenCookie(false);
 			return;
 		}
