@@ -96,6 +96,7 @@
 
 .embla__dot.is-selected:after {
   /* background-color: #1bcacd; */
-  background-color: #00813299;
+  /* background-color: #00813299; */
+  background: var(--main-color-g);
   opacity: 1;
 }

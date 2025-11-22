@@ -109,62 +109,54 @@ const LineWrapper = styled.div`
 	}
 
 	.text1 {
-		font-weight: bold;
-		background-image: url(${textBg1}); /* Replace with your image path */
+		/* font-weight: bold;
+		background-image: url(${textBg1});
 		background-size: cover;
 		background-position: center;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		color: transparent;
+		color: transparent; */
+		color: hsl(50 90% 50%);
+		color: hsl(14.39deg 93.44% 46.47%);
 	}
 
 	.text2 {
-		font-weight: bold;
-		background-image: url(${textBg2}); /* Replace with your image path */
-		background-size: cover;
-		background-position: center;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
+		color: hsl(14.39deg 93.44% 38.47%);
+		font-weight: 900 !important;
 	}
 	.text3 {
-		font-weight: bold;
-		background-image: url(${textBg3}); /* Replace with your image path */
-		background-size: cover;
-		background-position: center;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
+		color: hsl(1.39deg 90.44% 30.47%);
 	}
 	.text4 {
-		font-weight: bold;
-		background-image: url(${textBg4}); /* Replace with your image path */
-		background-size: cover;
-		background-position: center;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
+		color: hsl(48deg 100% 51.37%);
+	}
+
+	.text5 {
+		color: hsl(55deg 100% 55.47%);
+	}
+
+	.text6 {
+		color: hsl(42deg 100% 50.37%);
 	}
 `;
 
 const Text = styled(motion.h1)`
 	font-size: clamp(3rem, 8vw, 7rem);
+	font-size: clamp(8rem, 10vw, 14rem);
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	letter-spacing: 0;
 	text-align: center;
 	color: ${(props) => props.color || '#817c4c'};
-	margin: 30px auto;
+	margin: 0px 30px auto;
 	position: relative;
 	z-index: 99;
-
+	/* font-family: 'EMprint', sans-serif !important;
+	font-family: 'Poppins' serif !important; */
 
 	@media screen and (max-width: 450px) {
-		font-size: clamp(2rem, 6vw, 5rem);
+		font-size: clamp(3rem, 6vw, 5rem);
 		margin: 18px 0;
 	}
 `;
@@ -173,7 +165,7 @@ const ScrollTextEffect = () => {
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		offset: ['start 1.9', 'end 0.5'],
+		offset: ['start 2.7', 'end 0.8'],
 	});
 
 	// const text1 = useTransform(scrollYProgress, [0, 1], ['-150%', '250%']);
@@ -184,13 +176,13 @@ const ScrollTextEffect = () => {
 	// const text6 = useTransform(scrollYProgress, [0, 1], ['610%', '-280%']);
 	// const text7 = useTransform(scrollYProgress, [0, 1], ['-450%', '220%']);
 
-	const text1 = useTransform(scrollYProgress, [0, 1], ['-200%', '250%']);
+	const text1 = useTransform(scrollYProgress, [0, 1], ['-320%', '300%']);
 	const text2 = useTransform(scrollYProgress, [0, 1], ['250%', '-190%']);
-	const text3 = useTransform(scrollYProgress, [0, 1], ['-260%', '350%']);
-	const text4 = useTransform(scrollYProgress, [0, 1], ['400%', '-270%']);
-	const text5 = useTransform(scrollYProgress, [0, 1], ['-380%', '310%']);
-	const text6 = useTransform(scrollYProgress, [0, 1], ['610%', '-280%']);
-	const text7 = useTransform(scrollYProgress, [0, 1], ['-450%', '220%']);
+	const text3 = useTransform(scrollYProgress, [0, 1], ['-440%', '320%']);
+	const text4 = useTransform(scrollYProgress, [0, 1], ['420%', '-220%']);
+	const text5 = useTransform(scrollYProgress, [0, 1], ['-500%', '180%']);
+	const text6 = useTransform(scrollYProgress, [0, 1], ['660%', '-140%']);
+	const text7 = useTransform(scrollYProgress, [0, 1], ['-550%', '80%']);
 
 
 	const topY = useTransform(
@@ -210,13 +202,13 @@ const ScrollTextEffect = () => {
 		<Section ref={ref}>
 			<Title>Who we are</Title>
 			<LineWrapper>
-				<Text style={{ x: text1 }} className='text1'>
+				<Text style={{ x: text1 }} color='#e2e2e2' className='text1'>
 					Professionalism
 				</Text>
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text2 }} color='#d75e70' className='text4'>
+				<Text style={{ x: text2 }} color='#c5c3c3' className='text2'>
 					integrity
 				</Text>
 			</LineWrapper>
@@ -251,13 +243,13 @@ const ScrollTextEffect = () => {
 			</LineWrapper> */}
 
 			<LineWrapper>
-				<Text style={{ x: text5 }} color='#e2e2e2' className='text4'>
+				<Text style={{ x: text5 }} color='#e2e2e2' className='text5'>
 					service excellence
 				</Text>
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text6 }} color='#eee' className='text3'>
+				<Text style={{ x: text6 }} color='#eee' className='text4'>
 					team work
 				</Text>
 			</LineWrapper>
@@ -267,7 +259,7 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<LineWrapper>
-				<Text style={{ x: text7 }} color='#ccc' className='text1'>
+				<Text style={{ x: text7 }} color='#ccc' className='text6'>
 					innovators
 				</Text>
 			</LineWrapper>

@@ -40,7 +40,7 @@ const HomeServices = () => {
 					<Styles.ServicesListContainerWrapper>
 						<Styles.ServicesListContainer>
 							{services.map((item, i) => (
-								<FadeInAlways key={i} delay={0.1 * i + 1} direction='up'>
+								<FadeInAlways key={i} delay={(i + 1) * 0.2} direction='down'>
 									<Styles.ServicesListItems>
 										<Styles.ServiceItemImg>
 											{/* <LazyLoadImage

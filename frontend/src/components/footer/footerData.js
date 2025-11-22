@@ -31,12 +31,12 @@ export const footerData = [
 		navSubmenu: [
 			{
 				navIcon: FaFacebook,
-				navPath: '/who-we-are/contact-us',
+				navPath: 'https://web.facebook.com/profile.php?id=61581410524694',
 				target: true,
 			},
 			{
 				navIcon: FaInstagram,
-				navPath: '/who-we-are/contact-us',
+				navPath: 'https://www.instagram.com/joshcalebwillpetroluem/',
 				target: true,
 			},
 			{

@@ -71,34 +71,13 @@ const CookiesButtons = styled.div`
 	}
 `;
 
-const Cookies = () => {
-	const [openCookie, setOpenCookie] = useState(true);
-	useEffect(() => {
-
-		const executeCodes = () => {
-			setOpenCookie(true);
-		};
-
-		window.addEventListener('load', executeCodes);
-
-		if (document.cookie.includes('joshcalebwill')) {
-			setOpenCookie(false);
-			return;
-		}
-	}, []);
-
-	const handleDeclineCookie = () => {
-		setOpenCookie(false);
-	};
-
-	const handleAcceptCookie = () => {
-		//set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
-		// document.cookie = 'cookieBy= codinglab; max-age=' + 60 * 60 * 24 * 30;
-		document.cookie = 'cookieBy= joshcalebwill; max-age=' + 60 * 60 * 24;
-
-
-		setOpenCookie(false);
-	};
+const Cookies = ({
+	openCookie,
+	setOpenCookie,
+	handleAcceptCookie,
+	handleDeclineCookie,
+}) => {
+	// const [openCookie, setOpenCookie] = useState(true);
 
 	return (
 		<>

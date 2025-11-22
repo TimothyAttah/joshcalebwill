@@ -10,7 +10,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Twirl as Hamburger } from 'hamburger-react';
 import { scrollToTop } from '../../header/Header';
 
-const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
+const DesktopNav = ({
+	showMobileSidebar,
+	setShowMobileSidebar,
+	openCookie,
+	setOpenCookie,
+}) => {
 	const [selected, setSelected] = useState();
 	const [dir, setDir] = useState('l' | 'r');
 
@@ -24,6 +29,11 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 		setSelected(val);
 	};
 
+	const handleACtions = () => {
+		scrollToTop();
+		setOpenCookie(true);
+	};
+
 	return (
 		<>
 			<Styles.DesktopNav>
@@ -35,7 +45,7 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 							handleSelected={handleSelected}
 							tab={nav.id}
 						>
-							<NavLink to={nav.navPath} onClick={scrollToTop}>
+							<NavLink to={nav.navPath} onClick={handleACtions}>
 								{nav.navTitle}
 							</NavLink>
 						</Tab>
@@ -48,7 +58,7 @@ const DesktopNav = ({ showMobileSidebar, setShowMobileSidebar }) => {
 				<Styles.DesktopNavList>
 					{navWithoutSubmenuData.map((nav, i) => (
 						<li key={i}>
-							<NavLink to={nav.navPath} onClick={scrollToTop}>
+							<NavLink to={nav.navPath} onClick={handleACtions}>
 								{nav.navTitle}
 							</NavLink>
 						</li>

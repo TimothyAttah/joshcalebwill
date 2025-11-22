@@ -1,6 +1,6 @@
 import { lazy, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import {AnimatePresence} from 'framer-motion'
+import { AnimatePresence } from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import Layout from './components/Layout';
 import Preloader from './components/Preloader';
@@ -37,21 +37,43 @@ const Procurement = lazy(() =>
 );
 const Pipeline = lazy(() => import('./pages/whatWeDo/pipeline/Pipeline2'));
 const Lubricants = lazy(() => import('./pages/whatWeDo/lubricants/Lubricants'));
-const Market = lazy(() => import('./pages/market/Market'));
-const ProductItem = lazy(() => import('./pages/products/ProductItem'));
-const Cart = lazy(() => import('./pages/cart/Cart'));
-const Login = lazy(() => import('./pages/login/Login'));
-const Register = lazy(() => import('./pages/register/Register'));
-const Profile = lazy(() => import('./pages/profile/Profile'));
-const Shipping = lazy(() => import('./pages/shipping/Shipping'));
-const Payment = lazy(() => import('./pages/payment/Payment'));
-const PlaceOrder = lazy(() => import('./pages/placeOrder/PlaceOrder'));
-const Order = lazy(() => import('./pages/order/Order'));
-const UserList = lazy(() => import('./pages/userList/UserList'));
-const UserEdit = lazy(() => import('./pages/userEdit/UserEdit'));
-const ProductLists = lazy(() => import('./pages/productLists/ProductLists'));
-const ProductEdit = lazy(() => import('./pages/productEdit/ProductEdit'));
-const OrderList = lazy(() => import('./pages/orderList/OrderList'));
+
+//Market Links
+const Market = lazy(() => import('./pages/marketPlace/Market'));
+const MarketHome = lazy(() =>
+	import('./pages/marketPlace/pages/home/MarketHome'),
+);
+const Categories = lazy(() =>
+	import('./pages/marketPlace/pages/categories/Categories'),
+);
+const Search = lazy(() => import('./pages/marketPlace/pages/search/Search'));
+const Shop = lazy(() => import('./pages/marketPlace/pages/shop/Shop'));
+
+const SingleProduct = lazy(() =>
+	import(
+		'./pages/marketPlace/pages/shop/modules/productDetails/SingleProducts'
+	),
+);
+
+const Login = lazy(() => import('./pages/marketPlace/pages/login/Login'));
+const Register = lazy(() =>
+	import('./pages/marketPlace/pages/register/Register'),
+);
+
+// const ProductItem = lazy(() => import('./pages/products/ProductItem'));
+// const Cart = lazy(() => import('./pages/cart/Cart'));
+// const Login = lazy(() => import('./pages/login/Login'));
+// const Register = lazy(() => import('./pages/register/Register'));
+// const Profile = lazy(() => import('./pages/profile/Profile'));
+// const Shipping = lazy(() => import('./pages/shipping/Shipping'));
+// const Payment = lazy(() => import('./pages/payment/Payment'));
+// const PlaceOrder = lazy(() => import('./pages/placeOrder/PlaceOrder'));
+// const Order = lazy(() => import('./pages/order/Order'));
+// const UserList = lazy(() => import('./pages/userList/UserList'));
+// const UserEdit = lazy(() => import('./pages/userEdit/UserEdit'));
+// const ProductLists = lazy(() => import('./pages/productLists/ProductLists'));
+// const ProductEdit = lazy(() => import('./pages/productEdit/ProductEdit'));
+// const OrderList = lazy(() => import('./pages/orderList/OrderList'));
 
 const App = () => {
 	const [preloader, setPreloader] = useState(true);
@@ -62,8 +84,8 @@ const App = () => {
 			{preloader ? (
 				<Preloader preloader={preloader} setPreloader={setPreloader} />
 			) : (
-					<>
-						<Cookies />
+				<>
+					{/* <Cookies /> */}
 					<AnimatePresence mode='wait'>
 						<Routes>
 							<Route element={<Layout />}>
@@ -132,9 +154,20 @@ const App = () => {
 
 								<Route path='/what-we-do/lubricants' element={<Lubricants />} />
 
-								<Route path='/market' element={<Market />} />
+								<Route path='/market' element={<Market />}>
+									<Route path='/market' element={<MarketHome />} />
+									<Route
+										path='categories/:categoryName'
+										element={<Categories />}
+									/>
+									<Route path='search' element={<Search />} />
+									<Route path='shop' element={<Shop />} />
+									<Route path='shop/:id' element={<SingleProduct />} />
+									<Route path='login' element={<Login />} />
+									<Route path='register' element={<Register />} />
+								</Route>
 
-								<Route path='/search/:keyword' element={<Market />} />
+								{/* <Route path='/search/:keyword' element={<Market />} />
 
 								<Route path='/page/:pageNumber' element={<Market />} />
 
@@ -179,7 +212,7 @@ const App = () => {
 
 								<Route path='/placeorder' element={<PlaceOrder />} />
 
-								<Route path='/order/:id' element={<Order />} />
+								<Route path='/order/:id' element={<Order />} /> */}
 
 								{/*
 					<Route path='/sustainability' element={<Sustainability />} />

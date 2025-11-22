@@ -1,19 +1,16 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import { BrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './index.css';
-import './bootstrap.min.css';
 import { Provider } from 'react-redux';
-import store from './redux/store.js';
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import {store} from './reduxMarket/store.js';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
-import { router } from './components/Router';
-
-
+import './index.css';
+import './MarketPlace.css';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
@@ -23,6 +20,5 @@ createRoot(document.getElementById('root')).render(
 				<App />
 			</Provider>
 		</BrowserRouter>
-
 	</StrictMode>,
 );

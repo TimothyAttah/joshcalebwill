@@ -2,13 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;500;600;700&display=swap");
+
 @font-face {
   font-family: 'EMprint';
   src: url('fonts/EMprint Bold.woff2') format('woff2');
   src: url('fonts/EMprint Light.woff2') format('woff2');
   src: url('fonts/EMprint Regular.woff2') format('woff2');
   src: url('fonts/EMprint Semibold.woff2') format('woff2');
-
 }
 
 @font-face {
@@ -55,14 +56,27 @@ export const GlobalStyles = createGlobalStyle`
     --color-dark-teal: #003653;
     --color-white: #ffffff;
     --color-offwhite: #f4f4f4;
+
+    /* Market Styles */
+    --primary-color: #ed3849;
+  --primary-color-dark: #d23141;
+  --primary-color-light: #f4e5ec;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --max-width-1400: 1400px;
+  --max-width-1200: 1200px;
+  --max-width-900: 900px;
+  --header-font: "Playfair Display", serif;
   }
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "EMprint", sans-serif !important;
-    font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "EMprint", sans-serif !important; */
+    /* font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif; */
     letter-spacing: normal;
 
   }
@@ -82,15 +96,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, li {
-    text-transform: none;
+    /* text-transform: none; */
     letter-spacing: normal;
     margin: 0;
     padding: 0;
-    font-family: "EMprint", sans-serif !important;
-    font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "EMprint", sans-serif !important; */
+    /* font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif; */
 
     font-weight: 900 !important;
-    text-align: left !important;
+    /* text-align: left !important; */
 }
 
 a {
@@ -268,7 +282,5 @@ button {
   .transition-out .block-trans {
     transform-origin: bottom;
   }
-
- 
 
 `;
