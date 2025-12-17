@@ -107,229 +107,227 @@ const App = () => {
 
 	return (
 		<>
-			{/* <Cookie/> */}
-			{preloader ? (
+			{/* {preloader ? (
 				<Preloader preloader={preloader} setPreloader={setPreloader} />
 			) : (
-				<>
-					{/* <Cookies /> */}
-					<AnimatePresence mode='wait'>
-						<Routes>
-							<Route element={<Layout />}>
-								<Route path='/' element={<Home />} />
-								<Route path='/who-we-are' element={<WhoWeAre />} />
 
-								<Route path='/who-we-are/our-culture' element={<Culture />} />
 
-								<Route path='/who-we-are/leadership' element={<Leaders />} />
+			)} */}
+
+			<>
+				<AnimatePresence mode='wait'>
+					<Routes>
+						<Route element={<Layout />}>
+							<Route path='/' element={<Home />} />
+							<Route path='/who-we-are' element={<WhoWeAre />} />
+
+							<Route path='/who-we-are/our-culture' element={<Culture />} />
+
+							<Route path='/who-we-are/leadership' element={<Leaders />} />
+							<Route
+								path='/who-we-are/leadership/leader/:name'
+								element={<LeaderProfile />}
+							/>
+
+							<Route path='/who-we-are/our-history' element={<History />} />
+
+							<Route path='/who-we-are/contact-us' element={<Contact />} />
+
+							<Route path='/sustainability' element={<Sustainability />} />
+
+							<Route
+								path='/sustainability/environment'
+								element={<Environment />}
+							/>
+
+							<Route
+								path='/sustainability/communities'
+								element={<Communities />}
+							/>
+
+							<Route path='/who-we-are/jobs' element={<Careers />} />
+
+							<Route
+								path='/what-we-do/chemical-supply&treatments'
+								element={<Chemical />}
+							/>
+							<Route path='/what-we-do/exploration' element={<Exploration />} />
+
+							<Route
+								path='/what-we-do/gas-compression-services'
+								element={<Gas />}
+							/>
+
+							<Route
+								path='/what-we-do/haulage-services'
+								element={<Haulage />}
+							/>
+
+							<Route
+								path='/what-we-do/health-and-safety'
+								element={<Health />}
+							/>
+
+							<Route
+								path='/what-we-do/procurement-solutions'
+								element={<Procurement />}
+							/>
+
+							<Route
+								path='/what-we-do/pipeline-construction-and-maintenance'
+								element={<Pipeline />}
+							/>
+
+							<Route path='/what-we-do/lubricants' element={<Lubricants />} />
+
+							<Route path='/market' element={<Market />}>
+								<Route path='/market' element={<MarketHome />} />
 								<Route
-									path='/who-we-are/leadership/leader/:name'
-									element={<LeaderProfile />}
+									path='categories/:categoryName'
+									element={<Categories />}
 								/>
-
-								<Route path='/who-we-are/our-history' element={<History />} />
-
-								<Route path='/who-we-are/contact-us' element={<Contact />} />
-
-								<Route path='/sustainability' element={<Sustainability />} />
-
+								<Route path='search' element={<Search />} />
+								<Route path='shop' element={<Shop />} />
+								<Route path='shop/:id' element={<SingleProduct />} />
+								<Route path='login' element={<Login />} />
+								<Route path='register' element={<Register />} />
+								<Route path='dashboard/profile' element={<Profile />} />
+								<Route path='shipping' element={<Shipping />} />
+								<Route path='payment' element={<Payment />} />
+								<Route path='order' element={<PlaceOrder />} />
+								<Route path='order/:id' element={<Order />} />
+								<Route path='dashboard/orders' element={<MyOrders />} />
+								<Route path='dashboard/admin' element={<AllUsers />} />
+								<Route path='admin/user/:id/edit' element={<UserEdit />} />
 								<Route
-									path='/sustainability/environment'
-									element={<Environment />}
-								/>
-
-								<Route
-									path='/sustainability/communities'
-									element={<Communities />}
-								/>
-
-								<Route path='/who-we-are/jobs' element={<Careers />} />
-
-								<Route
-									path='/what-we-do/chemical-supply&treatments'
-									element={<Chemical />}
+									path='dashboard/manage-products'
+									element={<ProductsAdmin />}
 								/>
 								<Route
-									path='/what-we-do/exploration'
-									element={<Exploration />}
-								/>
-
-								<Route
-									path='/what-we-do/gas-compression-services'
-									element={<Gas />}
-								/>
-
-								<Route
-									path='/what-we-do/haulage-services'
-									element={<Haulage />}
-								/>
-
-								<Route
-									path='/what-we-do/health-and-safety'
-									element={<Health />}
-								/>
-
-								<Route
-									path='/what-we-do/procurement-solutions'
-									element={<Procurement />}
-								/>
-
-								<Route
-									path='/what-we-do/pipeline-construction-and-maintenance'
-									element={<Pipeline />}
-								/>
-
-								<Route path='/what-we-do/lubricants' element={<Lubricants />} />
-
-								<Route path='/market' element={<Market />}>
-									<Route path='/market' element={<MarketHome />} />
-									<Route
-										path='categories/:categoryName'
-										element={<Categories />}
-									/>
-									<Route path='search' element={<Search />} />
-									<Route path='shop' element={<Shop />} />
-									<Route path='shop/:id' element={<SingleProduct />} />
-									<Route path='login' element={<Login />} />
-									<Route path='register' element={<Register />} />
-									<Route path='dashboard/profile' element={<Profile />} />
-									<Route path='shipping' element={<Shipping />} />
-									<Route path='payment' element={<Payment />} />
-									<Route path='order' element={<PlaceOrder />} />
-									<Route path='order/:id' element={<Order />} />
-									<Route path='dashboard/orders' element={<MyOrders />} />
-									<Route path='dashboard/admin' element={<AllUsers />} />
-									<Route path='admin/user/:id/edit' element={<UserEdit />} />
-									<Route
-										path='dashboard/manage-products'
-										element={<ProductsAdmin />}
-									/>
-									<Route
-										path='admin/product/:id/edit'
-										element={<EditProductsAdmin />}
-									/>
-
-									<Route
-										path='dashboard/add-new-post'
-										element={<CreateProductsAdmin />}
-									/>
-
-									<Route
-										path='dashboard/manage-orders'
-										element={<ListOrdersAdmin />}
-									/>
-								</Route>
-
-								{/* <Route path='/search/:keyword' element={<Market />} />
-
-								<Route path='/page/:pageNumber' element={<Market />} />
-
-								<Route
-									path='/search/:keyword/page/:pageNumber'
-									element={<Market />}
-								/>
-
-								<Route path='/product/:id' element={<ProductItem />} />
-
-								<Route path='/admin/productlist/' element={<ProductLists />} />
-
-								<Route
-									path='/admin/productlist/:pageNumber'
-									element={<ProductLists />}
+									path='admin/product/:id/edit'
+									element={<EditProductsAdmin />}
 								/>
 
 								<Route
-									path='/admin/product/:id/edit'
-									element={<ProductEdit />}
+									path='dashboard/add-new-post'
+									element={<CreateProductsAdmin />}
 								/>
 
-								<Route path='/admin/orderlist' element={<OrderList />} />
-
-								<Route path='/cart/:id?' element={<Cart />} />
-
-								<Route path='/login' element={<Login />} />
-
-								<Route path='/register' element={<Register />} />
-
-								<Route path='/profile' element={<Profile />} />
-
-								<Route path='/admin/userlist' element={<UserList />} />
-
-								<Route path='/admin/user/:id/edit' element={<UserEdit />} />
-
-								<Route path='/shipping' element={<Shipping />} />
-
-								<Route path='/register/shipping' element={<Shipping />} />
-
-								<Route path='/payment' element={<Payment />} />
-
-								<Route path='/placeorder' element={<PlaceOrder />} />
-
-								<Route path='/order/:id' element={<Order />} /> */}
-
-								{/*
-					<Route path='/sustainability' element={<Sustainability />} />
-					<Route path='/sustainability/environment' element={<Environment />} />
-					<Route path='/sustainability/communities' element={<Communities />} />
-					<Route path='/who-we-are/jobs' element={<Careers />} />
-					<Route path='/what-we-do/exploration' element={<Exploration />} />
-					<Route
-						path='/what-we-do/procurement-solutions'
-						element={<Procurement />}
-					/>
-					<Route path='/what-we-do/haulage-services' element={<Haulage />} />
-					<Route
-						path='/what-we-do/chemical-supply&treatments'
-						element={<Chemical />}
-					/>
-					<Route
-						path='/what-we-do/pipeline-construction-and-maintenance'
-						element={<Pipeline2 />}
-					/>
-					<Route
-						path='/what-we-do/gas-compression-services'
-						element={<Gas />}
-					/>
-
-					<Route path='/what-we-do/health-and-safety' element={<Health2 />} />
-					<Route path='/what-we-do/lubricants' element={<Lubricants />} /> */}
-
-								{/* <Route path='/what-we-do/exploration' element={<Exploration />} />
-
-
-
-					<Route path='/what-we-do/health-and-safety' element={<Health />} />
-
-
-
-
-					<Route path='/sustainability' element={<Sustainability />} /> */}
-
-								{/* <Route
-						path='/sustainability/quality-policy-statement'
-						element={<QualityPolicy />}
-					/>
-					<Route
-						path='/sustainability/health-safety-environment-hse-policy'
-						element={<HealthPolicy />}
-					/> */}
-
-								{/* <Route path='/contact' element={<Contact />} />
-					<Route path='/market' element={<Market />} />
-					<Route path='/product/:id' element={<ProductItem />} />
-					<Route path='/cart/:id?' element={<Cart />} />
-					<Route path='/login' element={<Login />} />
-					<Route path='/register' element={<Register />} />
-					<Route path='/profile' element={<Profile />} />
-					<Route path='/login/shipping' element={<Shipping />} />
-					<Route path='/payment' element={<Payment />} />
-					<Route path='/placeorder' element={<PlaceOrder />} />
-					<Route path='/order/:id' element={<Order />} /> */}
+								<Route
+									path='dashboard/manage-orders'
+									element={<ListOrdersAdmin />}
+								/>
 							</Route>
-						</Routes>
-					</AnimatePresence>
-				</>
-			)}
+
+							{/* <Route path='/search/:keyword' element={<Market />} />
+
+							<Route path='/page/:pageNumber' element={<Market />} />
+
+							<Route
+								path='/search/:keyword/page/:pageNumber'
+								element={<Market />}
+							/>
+
+							<Route path='/product/:id' element={<ProductItem />} />
+
+							<Route path='/admin/productlist/' element={<ProductLists />} />
+
+							<Route
+								path='/admin/productlist/:pageNumber'
+								element={<ProductLists />}
+							/>
+
+							<Route
+								path='/admin/product/:id/edit'
+								element={<ProductEdit />}
+							/>
+
+							<Route path='/admin/orderlist' element={<OrderList />} />
+
+							<Route path='/cart/:id?' element={<Cart />} />
+
+							<Route path='/login' element={<Login />} />
+
+							<Route path='/register' element={<Register />} />
+
+							<Route path='/profile' element={<Profile />} />
+
+							<Route path='/admin/userlist' element={<UserList />} />
+
+							<Route path='/admin/user/:id/edit' element={<UserEdit />} />
+
+							<Route path='/shipping' element={<Shipping />} />
+
+							<Route path='/register/shipping' element={<Shipping />} />
+
+							<Route path='/payment' element={<Payment />} />
+
+							<Route path='/placeorder' element={<PlaceOrder />} />
+
+							<Route path='/order/:id' element={<Order />} /> */}
+
+							{/*
+				<Route path='/sustainability' element={<Sustainability />} />
+				<Route path='/sustainability/environment' element={<Environment />} />
+				<Route path='/sustainability/communities' element={<Communities />} />
+				<Route path='/who-we-are/jobs' element={<Careers />} />
+				<Route path='/what-we-do/exploration' element={<Exploration />} />
+				<Route
+					path='/what-we-do/procurement-solutions'
+					element={<Procurement />}
+				/>
+				<Route path='/what-we-do/haulage-services' element={<Haulage />} />
+				<Route
+					path='/what-we-do/chemical-supply&treatments'
+					element={<Chemical />}
+				/>
+				<Route
+					path='/what-we-do/pipeline-construction-and-maintenance'
+					element={<Pipeline2 />}
+				/>
+				<Route
+					path='/what-we-do/gas-compression-services'
+					element={<Gas />}
+				/>
+
+				<Route path='/what-we-do/health-and-safety' element={<Health2 />} />
+				<Route path='/what-we-do/lubricants' element={<Lubricants />} /> */}
+
+							{/* <Route path='/what-we-do/exploration' element={<Exploration />} />
+
+
+
+				<Route path='/what-we-do/health-and-safety' element={<Health />} />
+
+
+
+
+				<Route path='/sustainability' element={<Sustainability />} /> */}
+
+							{/* <Route
+					path='/sustainability/quality-policy-statement'
+					element={<QualityPolicy />}
+				/>
+				<Route
+					path='/sustainability/health-safety-environment-hse-policy'
+					element={<HealthPolicy />}
+				/> */}
+
+							{/* <Route path='/contact' element={<Contact />} />
+				<Route path='/market' element={<Market />} />
+				<Route path='/product/:id' element={<ProductItem />} />
+				<Route path='/cart/:id?' element={<Cart />} />
+				<Route path='/login' element={<Login />} />
+				<Route path='/register' element={<Register />} />
+				<Route path='/profile' element={<Profile />} />
+				<Route path='/login/shipping' element={<Shipping />} />
+				<Route path='/payment' element={<Payment />} />
+				<Route path='/placeorder' element={<PlaceOrder />} />
+				<Route path='/order/:id' element={<Order />} /> */}
+						</Route>
+					</Routes>
+				</AnimatePresence>
+			</>
 			<ToastContainer />
 		</>
 	);
