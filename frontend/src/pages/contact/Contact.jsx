@@ -41,6 +41,28 @@ const Contact = () => {
 			);
 	};
 
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		await fetch('https://joshcalebwill-jehi.vercel.app/api/contact', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				name,
+				subject,
+				email,
+				message,
+			}),
+		});
+
+		alert('Message sent successfully!');
+		setName('');
+		sendEmail('');
+		setSubject('');
+		setMessage('');
+	};
+
+
 	return (
 		<Styles.ContactContainer>
 			<Styles.ContactHero>
@@ -141,7 +163,7 @@ const Contact = () => {
 						Have a question? Send us a message, and our team will get back to
 						you shortly.
 					</p>
-					<form ref={form} onSubmit={sendEmail}>
+					<form ref={form} onSubmit={handleSubmit}>
 						<div>
 							<label htmlFor=''>Name</label>
 							<input

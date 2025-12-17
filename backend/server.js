@@ -4,6 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import { Resend } from 'resend';
 
 import connectDB from './config/db.js';
 // import authRoutes from './src/users/user.route.js'
@@ -39,6 +40,56 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/reviews', reviewRoutes);
+
+app.post('/api/contact', async (req, res) =>
+{
+	// try {
+	// 	const resend = new Resend(process.env.RESEND_API_KEY);
+	// 	const { name, email, subject, message } = req.body;
+
+	// 	await resend.emails.send({
+	// 		from: 'joshcalebwill.com <william@joshcalebwill.com>',
+	// 		to: ['william@joshcalebwill.com'],
+	// 		subject: 'New Contact Form Submission',
+	// 		html: `
+  //       <h3>New Message</h3>
+  //       <p><strong>Name:</strong> ${name}</p>
+  //       <p><strong>Subject:</strong> ${subject}</p>
+  //       <p><strong>Email:</strong> ${email}</p>
+  //       <p>${message}</p>
+  //     `,
+	// 	});
+
+	// 	return res.status(200).json({msg:'Message sent successfully'})
+
+	// } catch (err) {
+	// 	return res.json({ success: false, err });
+	// }
+
+	try {
+		const resend = new Resend(process.env.RESEND_API_KEY);
+		const { name, email, subject, message } = req.body;
+
+		await resend.emails.send({
+			from: 'Josh Caleb Will <info@joshcalebwill.com>', // YOUR VERIFIED DOMAIN EMAIL
+			to: ['info@joshcalebwill.com'], // YOU RECEIVE IT
+			replyTo: email, // USER EMAIL
+			subject: subject || 'New Contact Form Submission',
+			html: `
+				<h3>New Message</h3>
+				<p><strong>Name:</strong> ${name}</p>
+				<p><strong>Email:</strong> ${email}</p>
+				<p><strong>Subject:</strong> ${subject}</p>
+				<p>${message}</p>
+			`,
+		});
+
+		return res.status(200).json({ msg: 'Message sent successfully' });
+	} catch (err) {
+		console.error(err);
+		return res.status(500).json({ success: false });
+	}
+})
 
 const PORT = process.env.PORT || 5000;
 
