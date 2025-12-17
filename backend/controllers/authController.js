@@ -1,7 +1,7 @@
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { generateToken } from '../utils/generateToken.js';
+import { generateToken } from '../middleware/generateToken.js';
 
 export const authControllers = {
 	registerUser: async (req, res) => {
@@ -25,15 +25,23 @@ export const authControllers = {
 				email,
 				password: hashedPassword,
 			});
-			const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
-				expiresIn: '30d',
+			// const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+			// 	expiresIn: '30d',
+			// });
+
+			const token = await generateToken(user._id);
+
+			res.cookie('token', token, {
+				httpOnly: true,
+				secure: true,
+				sameSite: 'none',
 			});
 
 			await user.save();
 			user.password = undefined;
 			res
 				.status(200)
-				.json({ msg: 'User successfully signed up.', data: user, token });
+				.json({ msg: 'User successfully signed up.', user, token });
 		} catch (err) {
 			res.status(500).json({ err: err.message });
 		}
@@ -57,19 +65,23 @@ export const authControllers = {
 			if (!confirmPassword)
 				return res.status(400).json({ msg: 'Incorrect password' });
 
-			const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
-				expiresIn: '30d',
+			// const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+			// 	expiresIn: '30d',
+			// });
+
+			const token = await generateToken(user._id);
+
+			res.cookie('token', token, {
+				httpOnly: true,
+				secure: true,
+				sameSite: 'none',
 			});
+
 			user.password = undefined;
-
-			// const dataDetails = {
-			// 	user,
-
-			// }
 
 			return res
 				.status(200)
-				.json({ msg: 'Login successfully!!!', data: user, token });
+				.json({ msg: 'Login successfully!!!', user, token });
 		} catch (err) {
 			return res.status(500).json({ msg: err.message });
 		}
@@ -82,19 +94,18 @@ export const authControllers = {
 			user.password = undefined;
 
 			if (user) {
-				return res
-					.status(200)
-					.json({ msg: 'User profile successfull!!!', data: user });
+				return res.status(200).json({ user });
 			} else {
 				return res.status(400).json({ msg: 'User not found' });
 			}
+			// res.send('success')
 		} catch (err) {
 			return res.status(500).json({ msg: err.message });
 		}
 	},
 
 	// @desc Update user profile
-	// @route PUT /api/auth/profile/id
+	// @route PUT /api/auth/profile
 	// @access Private
 	updateUserProfile: async (req, res) => {
 		try {
@@ -103,19 +114,29 @@ export const authControllers = {
 			if (user) {
 				user.name = req.body.name || user.name;
 				user.email = req.body.email || user.email;
-				if (req.body.password) {
-					user.password = req.body.password;
-				}
+				// if (req.body.password) {
+				// 	user.password = req.body.password;
+				// }
 
 				const updatedUser = await user.save();
 
-				const token = jwt.sign(
-					{ _id: updatedUser._id },
-					process.env.JWT_SECRET,
-					{
-						expiresIn: '30d',
-					},
-				);
+				// const token = jwt.sign(
+				// 	{ _id: updatedUser._id },
+				// 	process.env.JWT_SECRET,
+				// 	{
+				// 		expiresIn: '30d',
+				// 	},
+				// );
+
+				const token = await generateToken(updatedUser._id);
+
+				res.cookie('token', token, {
+					httpOnly: true,
+					secure: true,
+					sameSite: 'none',
+				});
+
+				user.password = undefined;
 
 				const newUpdatedUser = {
 					_id: updatedUser._id,
@@ -127,7 +148,11 @@ export const authControllers = {
 
 				return res
 					.status(200)
-					.json({ msg: 'User updated successfully!!!', data: newUpdatedUser });
+					.json({
+						msg: 'User updated successfully!!!',
+						data: updatedUser,
+						token,
+					});
 			} else {
 				return res.status(400).json({ msg: 'User not found' });
 			}
@@ -141,12 +166,14 @@ export const authControllers = {
 	// @access Private/Admin
 	getAllUsers: async (req, res) => {
 		try {
-			const users = await User.find({});
+			// const users = await User.find({}, 'id email role').sort({ createdAt: -1 });
+			const users = await User.find({})
+				.sort({ createdAt: -1 })
+				.select('-password');
 
-			return res
-				.status(200)
-				.json({ msg: 'User updated successfully!!!', data: users });
+			return res.status(200).json({ msg: 'All users', users });
 		} catch (err) {
+			console.log(' Error fetching users', err);
 			return res.status(500).json({ msg: err.message });
 		}
 	},
@@ -200,18 +227,18 @@ export const authControllers = {
 			if (user) {
 				user.name = req.body.name || user.name;
 				user.email = req.body.email || user.email;
-				user.isAdmin = req.body.isAdmin || user.isAdmin
+				user.isAdmin = req.body.isAdmin || user.isAdmin;
+				user.role = req.body.role || user.role;
+
 
 				const updatedUser = await user.save();
-
-
 
 				const newUpdatedUser = {
 					_id: updatedUser._id,
 					name: updatedUser.name,
 					email: updatedUser.email,
 					isAdmin: updatedUser.isAdmin,
-
+					role: updatedUser.role
 				};
 
 				return res
@@ -224,5 +251,33 @@ export const authControllers = {
 			return res.status(500).json({ msg: err.message });
 		}
 	},
-};
 
+	updateUserRole: async (req, res) => {
+		try {
+			const { id } = req.params;
+			const { role} = req.body;
+			const user = await User.findByIdAndUpdate(id, { role}, { new: true });
+			if (!user) {
+				return res.status(404).json({ msg: 'User not found' });
+			}
+
+			user.password = undefined;
+			return res
+				.status(200)
+				.json({ msg: 'User role updated successfully', user });
+		} catch (err) {
+			console.log(' Error updating user role ', err);
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+
+	logoutUser: async (req, res) => {
+		try {
+			res.clearCookie('token');
+			return res.status(200).json({ msg: 'Logged out successfully' });
+		} catch (err) {
+			console.log(' Error login out user', err);
+			return res.status(500).json({ msg: err.message });
+		}
+	},
+};

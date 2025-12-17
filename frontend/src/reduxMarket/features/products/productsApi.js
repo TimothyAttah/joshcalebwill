@@ -9,6 +9,11 @@ const productsApi = createApi({
 	}),
 	tagTypes: ['Products'],
 	endpoints: (builder) => ({
+		fetchAllTrendingProducts: builder.query({
+			query: () => '/',
+			providesTags: ['Products'],
+		}),
+
 		fetchAllProducts: builder.query({
 			query: ({
 				category,
@@ -77,6 +82,7 @@ export const {
 	useUpdateProductMutation,
 	useDeleteProductMutation,
 	useFetchRelatedProductsQuery,
+	useFetchAllTrendingProductsQuery
 } = productsApi;
 
 export default productsApi;

@@ -39,7 +39,7 @@ export const login = (email, password) => async (dispatch) => {
 			payload: data.data,
 		});
 
-		localStorage.setItem('jwt', data.token);
+		localStorage.setItem('token', data.token);
 		localStorage.setItem('users', JSON.stringify(data.data));
 	} catch (err) {
 		dispatch({

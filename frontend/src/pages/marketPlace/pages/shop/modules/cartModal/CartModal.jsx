@@ -3,109 +3,64 @@ import * as Styles from './CartModalStyles';
 import Overlay from '../../../../components/Overlay';
 import { RiXrpFill } from 'react-icons/ri';
 import OrderSummary from '../orderSummary/OrderSummary';
-import { useDispatch } from 'react-redux';
-import {
-	removeFromCart,
-	updateQuantity,
-} from '../../../../../../reduxMarket/features/cart/cartSlice';
 
-const CartModal = ({ products, isOpen, onClose }) => {
-	const dispatch = useDispatch();
+import CartModalItem from './CartModalItem';
 
-	const handleQuality = (type, id) => {
-		const payload = { type, id };
-		dispatch(updateQuantity(payload));
-	};
-
-	const handleRemove = (e, id) => {
-		e.preventDefault();
-		dispatch(removeFromCart({ id }));
-	};
+const CartModal = ({
+	products,
+	isOpen,
+	onClose,
+	totalItems,
+	shippingFee,
+	subtotal,
+	orderTotal,
+}) => {
 	return (
 		<>
 			{isOpen && <Overlay onClick={onClose} />}
-			<div>
-				<div
-					className={`fixed right-0 top-0 md:w-1/3 w-full bg-white h-full overflow-y-auto transition-transform z-999999 ${
-						isOpen ? 'translate-x-0' : ' translate-x-full'
-					}`}
-					style={{
-						transition: ' transform 300ms cubic-bezier(0.25,0.46, 0.45, 0.94)',
-						zIndex: '999999999',
-					}}
-				>
-					<div className='p-4 mt-4'>
-						<div className=' flex justify-between items-center mb-4'>
-							<h4 className=' text-xl font-semibold'>Your Cart</h4>
-							<button
-								onClick={onClose}
-								className=' text-gray-600 hover:text-gray-900'
-							>
-								<RiXrpFill className=' bg-black p-1 text-white' />
-							</button>
-						</div>
 
-						<div className='cart-items'>
-							{products.length === 0 ? (
-								<div>Your cart is empty</div>
-							) : (
-								products.map((item, index) => (
-									<div
-										key={index}
-										className=' flex flex-col md:flex-row md:items-center md:justify-between shadow-md md:p-5 p-2 mb-4'
-									>
-										<div className=' flex items-center'>
-											<span className=' mr-4 px-1 bg-red-500 text-white rounded-full '>
-												0{index + 1}
-											</span>
-											<img
-												src={item.image}
-												alt=''
-												className=' size-12 object-cover mr-4'
-											/>
-											<div>
-												<h5 className=' text-lg font-medium'>{item.name}</h5>
-												<p className=' text-gray-600 text-sm'>
-													${Number(item.price).toFixed(2)}
-												</p>
-											</div>
+			<div
+				className={`flex flex-col justify-between gap-5 bg-zinc-100 fixed top-0  right-0 bottom-0 left-auto  md:w-1/2 w-full border border-zinc-300 py-7 transition-transform duration-300 z-999999  ${
+					isOpen ? 'transform translate-x-0' : 'transform translate-x-full'
+				}`}
+				style={{ padding: '20px 0' }}
+			>
+				<>
+					<div
+						className=' flex justify-between items-center mb-4'
+						style={{ margin: '20px' }}
+					>
+						<h4 className=' text-xl font-bold text-zinc-800'>Your Cart</h4>
 
-											<div className=' flex flex-row md:justify-start justify-end items-center mt-2 '>
-												<button
-													onClick={() => handleQuality('decrement', item._id)}
-													className=' size-6 flex items-center justify-center px-1.5 rounded-full bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white ml-8
-													'
-												>
-													-
-												</button>
-												<span className=' px-2 text-center mx-1'>
-													{item.quantity}
-												</span>
-												<button
-													onClick={() => handleQuality('increment', item._id)}
-													className=' size-6 flex items-center justify-center px-1.5 rounded-full bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white
-													'
-												>
-													+
-												</button>
-												<div className='ml-5'>
-													<button
-														onClick={(e) => handleRemove(e, item._id)}
-														className=' text-red-500 hover:text-red-800 mr-4'
-													>
-														Remove
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								))
-							)}
-						</div>
-
-						{products.length > 0 && <OrderSummary />}
+						<button
+							onClick={onClose}
+							className=' text-gray-600 hover:text-gray-900'
+						>
+							<RiXrpFill className=' bg-black p-1 text-white' />
+						</button>
 					</div>
-				</div>
+
+					<div className='cart-items flex-1 flex flex-col gap-2 overflow-y-auto scroll'>
+						{products.length === 0 ? (
+							<p className=' text-zinc-800 text-center'>Your cart is empty</p>
+						) : (
+							products.map((item, index) => (
+								<CartModalItem product={item} key={index} index={index} />
+							))
+						)}
+					</div>
+
+					{products.length > 0 && (
+						<OrderSummary
+							onClose={onClose}
+							products={products}
+							totalItems={totalItems}
+							subtotal={subtotal}
+							shippingFee={shippingFee}
+							orderTotal={orderTotal}
+						/>
+					)}
+				</>
 			</div>
 		</>
 	);

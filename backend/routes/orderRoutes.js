@@ -4,13 +4,16 @@ import { protect, admin } from '../middleware/auth.js';
 
 const orderRoutes = express.Router();
 
-orderRoutes.post('/create', orderControllers.addOrderItems);
+orderRoutes.post('/create', protect, orderControllers.addOrderItems);
 
-orderRoutes.get('/myorders', orderControllers.getMyOrders);
+orderRoutes.get('/myorders', protect, orderControllers.getMyOrders);
 
-orderRoutes.get('/:id', orderControllers.getOrderItems);
+// orderRoutes.get('/',protect, orderControllers.getOrders);
 
-orderRoutes.put('/:id/pay', orderControllers.updateOrderToPaid);
+
+orderRoutes.get('/:id', protect, orderControllers.getOrderItems);
+
+orderRoutes.put('/:id/pay', protect, orderControllers.updateOrderToPaid);
 
 orderRoutes.put(
 	'/:id/deliver',

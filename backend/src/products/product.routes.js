@@ -69,7 +69,7 @@ productRoutes.get('/', async (req, res) => {
 		const products = await Products.find(filter)
 			.skip(skip)
 			.limit(parseInt(limit))
-			.populate('author', 'email')
+			// .populate('author', 'email')
 			.sort({ createdAt: -1 });
 
 		return res

@@ -1,5 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const loadShippingAddressFromLocalStorage = () => {
+	try {
+		const serializedState = localStorage.getItem('shippingAddress');
+		if (serializedState === null) return null;
+		return { shippingAddress: JSON.parse(serializedState) };
+	} catch (err) {
+		return null;
+	}
+};
+
+
+const initialPaymentMethod = localStorage.getItem('paymentMethod') || null;
+
 const initialState = {
 	products: [],
 	selectedItems: 0,
@@ -7,6 +20,8 @@ const initialState = {
 	tax: 0,
 	taxRate: 0.05,
 	grandTotal: 0,
+	shippingAddress: loadShippingAddressFromLocalStorage(),
+	paymentMethod: initialPaymentMethod,
 };
 
 const cartSlice = createSlice({
@@ -64,6 +79,15 @@ const cartSlice = createSlice({
 			// state.taxRate = 0.05;
 			state.grandTotal = 0;
 		},
+
+		saveShippingAddress: (state, action) => {
+			state.shippingAddress = loadShippingAddressFromLocalStorage();
+			localStorage.setItem('shippingAddress', JSON.stringify(action.payload));
+		},
+		savePaymentMethod: (state, action) => {
+			state.paymentMethod = initialPaymentMethod;
+			localStorage.setItem('paymentMethod', action.payload);
+		},
 	},
 });
 
@@ -84,5 +108,12 @@ export const setGrandTotal = (state) => {
 	return setTotalPrice(state) + setTotalPrice(state) * state.taxRate;
 };
 
-export const { addToCart, updateQuantity, removeFromCart, clearCart } = cartSlice.actions;
+export const {
+	addToCart,
+	updateQuantity,
+	removeFromCart,
+	clearCart,
+	saveShippingAddress,
+	savePaymentMethod,
+} = cartSlice.actions;
 export default cartSlice.reducer;

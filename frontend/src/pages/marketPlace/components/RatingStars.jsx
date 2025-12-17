@@ -1,4 +1,7 @@
 import { RiStarLine, RiStarFill } from 'react-icons/ri';
+import styled from 'styled-components';
+
+const RatingBox =styled.div``
 
 const RatingStars = ({ rating }) => {
 	const stars = [];

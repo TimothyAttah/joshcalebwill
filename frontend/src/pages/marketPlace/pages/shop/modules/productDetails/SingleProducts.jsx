@@ -1,21 +1,31 @@
 import { RiArrowRightSLine } from 'react-icons/ri';
-import { Link, useParams } from 'react-router-dom';
+import { data, Link, useParams } from 'react-router-dom';
 import RatingStars from '../../../../components/RatingStars';
-import { useDispatch } from 'react-redux';
-import { useFetchProductByIdQuery } from '../../../../../../reduxMarket/features/products/productsApi';
-import { addToCart } from '../../../../../../reduxMarket/features/cart/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductDetails } from '../../../../../../reduxMarketNew/actions/productAction';
+import { addToCart } from '../../../../../../reduxMarketNew/actions/cartActions';
 import ReviewsCard from '../reviews/ReviewsCard';
+
+import { useEffect } from 'react';
 
 const SingleProducts = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
-	const { data, error, isLoading } = useFetchProductByIdQuery(id);
 
-	const singleProduct = data?.product || {};
-	const productReviews = data?.reviews || [];
+	useEffect(() => {
+		dispatch(getProductDetails(id));
+	}, [dispatch]);
 
-	if (isLoading) return <p>Loading...</p>;
-	if (error) return <p>Error loading product details.</p>;
+	const { product } = useSelector((state) => state.products);
+	const  reviews  = useSelector((state) => state.products.product);
+
+	console.log(product);
+	console.log(reviews);
+
+	// const productReviews = [];
+
+	const productReviews = reviews?.reviews;
+	console.log('pro', productReviews);
 
 	const handleAddToCart = (product) => {
 		dispatch(addToCart(product));
@@ -34,7 +44,7 @@ const SingleProducts = () => {
 						<Link to='/market/shop'>shop</Link>
 					</span>
 					<RiArrowRightSLine />
-					<span className=' hover:text-red-500'>{singleProduct?.name}</span>
+					<span className=' hover:text-red-500'>{product?.product?.name}</span>
 				</div>
 			</section>
 
@@ -42,7 +52,7 @@ const SingleProducts = () => {
 				<div className='flex flex-col items-center md:flex-row gap-8 '>
 					<div className=' md:w-1/2 w-full'>
 						<img
-							src={singleProduct?.image}
+							src={product?.product?.image}
 							alt=''
 							className='rounded-md w-full h-auto'
 						/>
@@ -50,31 +60,33 @@ const SingleProducts = () => {
 
 					<div className=' md:w-1/2 w-full'>
 						<h3 className=' text-2xl font-semibold mb-4'>
-							{singleProduct?.name}
+							{product?.product?.name}
 						</h3>
 						<p className=' text-xl text-red-500 mb-4 space-x-1'>
-							${singleProduct?.price}
-							{singleProduct?.oldPrice && (
-								<s className=' ml-1'> ${singleProduct?.oldPrice}</s>
+							${product?.product?.price}
+							{product?.product?.oldPrice && (
+								<s className=' ml-1'> ${product?.product?.oldPrice}</s>
 							)}
 						</p>
-						<p className=' text-gray-400 mb-4'>{singleProduct?.description}</p>
+						<p className=' text-gray-400 mb-4'>
+							{product?.product?.description}
+						</p>
 
 						<div className=' flex flex-col space-y-2'>
 							<p>
-								<strong>Category:</strong> {singleProduct?.category}
+								<strong>Category:</strong> {product?.product?.category}
 							</p>
 							<p>
-								<strong>Color:</strong> {singleProduct?.color}
+								<strong>Color:</strong> {product?.product?.color}
 							</p>
 							<div className=' flex gap-1 items-center'>
 								<strong>Rating:</strong>
-								<RatingStars rating={singleProduct?.rating} />
+								<RatingStars rating={product?.product?.rating} />
 							</div>
 							<button
 								onClick={(e) => {
 									e.stopPropagation();
-									handleAddToCart(singleProduct);
+									handleAddToCart(product);
 								}}
 								className=' mt-6 px-6 py-3 bg-red-500 text-white rounded-md'
 							>

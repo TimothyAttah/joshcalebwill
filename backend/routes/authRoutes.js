@@ -1,6 +1,7 @@
 import express from 'express';
 import { authControllers } from '../controllers/authController.js';
-import { protect, admin } from '../middleware/auth.js';
+import { protect, admin, verifyAdmin } from '../middleware/auth.js';
+import { verifyToken } from '../middleware/verifyToken.js';
 
 const authRoutes = express.Router();
 
@@ -10,9 +11,9 @@ authRoutes.post('/login', authControllers.loginUser);
 
 authRoutes.get('/users/profile', protect, authControllers.getUserProfile);
 
-authRoutes.put('/users/profile', protect, authControllers.updateUserProfile);
+authRoutes.put('/users/edit-profile', protect, authControllers.updateUserProfile);
 
-authRoutes.get('/users', protect, admin, authControllers.getAllUsers);
+authRoutes.get('/users',protect, admin, authControllers.getAllUsers);
 
 authRoutes.delete(
 	'/users/:id/delete',
@@ -21,9 +22,13 @@ authRoutes.delete(
 	authControllers.deleteUser,
 );
 
-authRoutes.get('/users/:id', protect, admin, authControllers.getUserById);
+authRoutes.get('/users/:id', protect,admin, authControllers.getUserById);
 
 authRoutes.put('/users/:id', protect, admin, authControllers.updateUser);
 
+authRoutes.put('/users/role/:id',  authControllers.updateUserRole);
+
+
+authRoutes.post('/logout', authControllers.logoutUser);
 
 export default authRoutes;

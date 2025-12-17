@@ -5,6 +5,8 @@ import { protect, admin } from '../middleware/auth.js';
 const productRouter = express.Router();
 
 productRouter.get('/', productControllers.getAllProducts);
+productRouter.get('/shop', productControllers.getShopProducts);
+
 
 productRouter.get('/top', productControllers.getTopProducts);
 
@@ -18,16 +20,24 @@ productRouter.delete(
 );
 
 productRouter.post('/create', protect, admin, productControllers.createProduct);
+productRouter.post(
+	'/create-product',
+	protect,
+	admin,
+	productControllers.createNewProduct,
+);
 
 productRouter.put(
 	'/:id/update',
 	protect,
 	admin,
-	productControllers.updateProduct,
+	productControllers.editProduct,
 );
 
 productRouter.post(
-	'/:id/reviews', protect, productControllers.createProductReview,
+	'/:id/reviews',
+	protect,
+	productControllers.createProductReview,
 );
 
 export default productRouter;

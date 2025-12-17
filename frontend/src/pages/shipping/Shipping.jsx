@@ -51,13 +51,6 @@ const Shipping = () => {
 				city,
 			}),
 		);
-
-		// dispatch(
-		// 	saveShippingPrice({
-		// 		price: setShippingPriceValue.price,
-		// 	}),
-		// );
-		// setOpenShippingAddress(false);
 		navigate('/payment');
 	};
 

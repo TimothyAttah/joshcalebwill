@@ -5,8 +5,11 @@ import * as Styles from './MarketNavStyles';
 import { useDispatch, useSelector } from 'react-redux';
 import CartModal from '../../pages/shop/modules/cartModal/CartModal';
 import avatarImg from '../../../../assets/avatar.png';
-import { useLogoutUserMutation } from '../../../../reduxMarket/features/auth/authApi';
-import { logout } from '../../../../reduxMarket/features/auth/authSlice';
+import { logoutUser } from '../../../../reduxMarketNew/actions/userActions';
+
+export const { user } = localStorage.getItem('user')
+	? JSON.parse(localStorage.getItem('user'))
+	: {};
 
 const MarketNav = () => {
 	const products = useSelector((state) => state.cart.products);
@@ -16,14 +19,26 @@ const MarketNav = () => {
 		setIsCartOpen((prev) => !prev);
 	};
 
+	//Total calculations
+	const subtotal = products?.reduce(
+		(acc, item) => acc + item.price * item.quantity,
+		0,
+	);
+	const totalItems = products?.reduce((acc, item) => acc + item.quantity, 0);
+	const shippingFee = totalItems * 0.05;
+	const orderTotal = subtotal + shippingFee;
+
 	// show user if logged in
 	const dispatch = useDispatch();
-	const { user } = useSelector((state) => state.auth);
-	const [logoutUser] = useLogoutUserMutation();
+	// const { user } = useSelector((state) => state?.user);
+
+	console.log(user);
+
 	const navigate = useNavigate();
 
 	//dropdown menus
 	const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
 	const handleDropDownToggle = () => {
 		setIsDropDownOpen((prev) => !prev);
 	};
@@ -38,9 +53,9 @@ const MarketNav = () => {
 
 	//user dropdown menus
 	const userDropDownMenus = [
-		{ label: 'Dashboard', path: '/market/dashboard' },
+		// { label: 'Dashboard', path: '/market/dashboard' },
 		{ label: 'Profile', path: '/market/dashboard/profile' },
-		{ label: 'Payments', path: '/market/dashboard/payments' },
+		// { label: 'Payments', path: '/market/dashboard/payments' },
 		{ label: 'Orders', path: '/market/dashboard/orders' },
 	];
 
@@ -48,14 +63,13 @@ const MarketNav = () => {
 		user?.role === 'admin' ? [...adminDropDownMenus] : [...userDropDownMenus];
 
 	const handleLogout = async () => {
-		try {
-			await logoutUser().unwrap();
-			dispatch(logout());
-			navigate('/market');
-		} catch (err) {
-			console.error('Failed to log out', err);
-		}
+		// dispatch(logoutUser());
+		localStorage.removeItem('token');
+		localStorage.removeItem('user');
+
+		navigate('/market');
 	};
+
 	return (
 		<div className=' fixeed-nav-bar w-nav' style={{ paddingTop: '120px' }}>
 			<div className=' market__nav max-w-screen-2x1 mx-auto px-4 justify-between items-center'>
@@ -65,9 +79,6 @@ const MarketNav = () => {
 					</li>
 					<li className='link'>
 						<Link to='/market/shop'>Shop</Link>
-					</li>
-					<li className='link'>
-						<Link to='/market'>Pages</Link>
 					</li>
 					<li className='link'>
 						<Link to='/market'>Contact</Link>
@@ -92,13 +103,15 @@ const MarketNav = () => {
 							className=' hover:text-red-500'
 						>
 							<RiShoppingBagLine />
-							<sup className=' text-sm inline-block px-1.5 text-white rounded-full bg-red-500 text-center'>
-								{products.length}
-							</sup>
+							{totalItems > 0 && (
+								<sup className=' text-sm inline-block px-1.5 text-white rounded-full bg-red-500 text-center'>
+									{totalItems}
+								</sup>
+							)}
 						</Styles.ShoppingBag>
 					</span>
 					<span>
-						{user && user ? (
+						{user ? (
 							<>
 								<img
 									onClick={handleDropDownToggle}
@@ -114,7 +127,7 @@ const MarketNav = () => {
 												<li key={index}>
 													<Link
 														to={menu.path}
-														onClick={() => setIsDropDownOpen(false)}
+														onClick={() => handleDropDownToggle()}
 														className=' dropdown-items'
 													>
 														{menu.label}
@@ -122,12 +135,12 @@ const MarketNav = () => {
 												</li>
 											))}
 											<li>
-												<Link
-													onClick={handleLogout}
-													className=' dropdown-items'
+												<div
+													onClick={() => handleLogout()}
+													className=' dropdown-items cursor-pointer'
 												>
 													Logout
-												</Link>
+												</div>
 											</li>
 										</ul>
 									</div>
@@ -145,6 +158,10 @@ const MarketNav = () => {
 			{isCartOpen && (
 				<CartModal
 					products={products}
+					totalItems={totalItems}
+					subtotal={subtotal}
+					shippingFee={shippingFee}
+					orderTotal={orderTotal}
 					isOpen={isCartOpen}
 					onClose={() => setIsCartOpen(false)}
 				/>

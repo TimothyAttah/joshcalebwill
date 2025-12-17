@@ -4,6 +4,44 @@ export const orderControllers = {
 	// @desc CREATE NEW ORDER
 	// @route POST /api/orders
 	// @access PRIVATE
+	// addOrderItems: async (req, res) => {
+	// 	try {
+	// 		const {
+	// 			orderItems,
+	// 			shippingAddress,
+	// 			paymentMethod,
+	// 			itemsPrice,
+	// 			taxPrice,
+	// 			shippingPrice,
+	// 			totalPrice,
+	// 		} = req.body;
+
+	// 		if (orderItems && orderItems.length === 0) {
+	// 			return res.status(400).json({ msg: 'No order items' });
+	// 		} else {
+	// 			const order = new Order({
+	// 				// user: req.user._id,
+	// 				user: req.user,
+	// 				orderItems,
+	// 				shippingAddress,
+	// 				paymentMethod,
+	// 				itemsPrice,
+	// 				taxPrice,
+	// 				shippingPrice,
+	// 				totalPrice,
+	// 			}).populate('user', '-password');
+
+	// 			await order.save();
+
+	// 			return res
+	// 				.status(201)
+	// 				.json({ msg: 'New order created successfully', data: order });
+	// 		}
+	// 	} catch (err) {
+	// 		return res.status(500).json({ msg: err.message });
+	// 	}
+	// },
+
 	addOrderItems: async (req, res) => {
 		try {
 			const {
@@ -11,28 +49,28 @@ export const orderControllers = {
 				shippingAddress,
 				paymentMethod,
 				itemsPrice,
-				// taxPrice,
 				shippingPrice,
 				totalPrice,
 			} = req.body;
+
 			if (orderItems && orderItems.length === 0) {
 				return res.status(400).json({ msg: 'No order items' });
-			} else {
-
-				const order = new Order({
-					orderItems,
-					shippingAddress,
-					paymentMethod,
-					itemsPrice,
-					shippingPrice,
-					totalPrice,
-				});
-
-				const createdOrder = await order.save();
-				return res
-					.status(201)
-					.json({ msg: 'New order created successfully', data: createdOrder });
 			}
+
+			const newOrder = await Order({
+				orderItems,
+				shippingAddress,
+				paymentMethod,
+				itemsPrice,
+				shippingPrice,
+				totalPrice,
+				user: req.user,
+			});
+
+			await (await newOrder.save()).populate('user', '-password');
+			return res
+				.status(201)
+				.json({ msg: 'New order added succefully', data: newOrder });
 		} catch (err) {
 			return res.status(500).json({ msg: err.message });
 		}
@@ -58,9 +96,29 @@ export const orderControllers = {
 		}
 	},
 
+	// // @desc GET ORDER BY ID
+	// // @route GET /api/orders:id
+	// // @access PRIVATE
+	// getOrders: async (req, res) => {
+	// 	try {
+	// 		const orders = await Order.find().populate('user', '-password');
+
+	// 		if (orders) {
+	// 			return res.status(200).json({ msg: 'All orders', data: orders});
+	// 		} else {
+	// 			return res.status(400).json({ msg: 'Your order was not found' });
+	// 		}
+	// 	} catch (err) {
+	// 		return res.status(500).json({ msg: err.message });
+	// 	}
+	// },
+
 	updateOrderToPaid: async (req, res) => {
 		try {
-			const order = await Order.findById(req.params.id);
+			const order = await Order.findById(req.params.id).populate(
+				'user',
+				'-password',
+			);
 
 			if (order) {
 				order.isPaid = true;
@@ -72,7 +130,7 @@ export const orderControllers = {
 				};
 				const updatedOrder = await order.save();
 
-				return res.status(200).json({ msg: 'Your order', data: updatedOrder });
+				return res.status(200).json({ msg: 'Your paid order', data: updatedOrder });
 			} else {
 				return res.status(400).json({ msg: 'Your order was not found' });
 			}
@@ -94,7 +152,9 @@ export const orderControllers = {
 
 				const updatedOrder = await order.save();
 
-				return res.status(200).json({ msg: 'Your order is delivered', data: updatedOrder });
+				return res
+					.status(200)
+					.json({ msg: 'Your order is delivered', data: updatedOrder });
 			} else {
 				return res.status(400).json({ msg: 'Your order was not found' });
 			}
@@ -108,7 +168,10 @@ export const orderControllers = {
 	// @access PRIVATE
 	getMyOrders: async (req, res) => {
 		try {
-			const orders = await Order.find({});
+			const orders = await Order.find({ user: req.user._id }).populate(
+				'user',
+				'-password',
+			);
 
 			return res.status(200).json({ msg: 'My orders', data: orders });
 		} catch (err) {
@@ -121,7 +184,7 @@ export const orderControllers = {
 	// @access PRIVATE/ADMIN
 	getOrders: async (req, res) => {
 		try {
-			const orders = await Order.find({}).populate('user', 'id name');
+			const orders = await Order.find({}).populate('user', '-password');
 
 			return res.status(200).json({ msg: ' All orders', data: orders });
 		} catch (err) {

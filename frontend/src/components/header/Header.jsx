@@ -23,20 +23,23 @@ const Header = () => {
 	const [openCookie, setOpenCookie] = useState(true);
 
 	const [navbar, setNavbar] = useState(false);
-	const changeBackground = () => {
-		if (window.scrollY >= 85) {
-			setNavbar(true);
-		} else {
-			setNavbar(false);
-		}
-	};
-
-	const location = useLocation()
-
-let market = location.pathname;
 
 
-	window.addEventListener('scroll', changeBackground);
+	const location = useLocation();
+
+	let market = location.pathname;
+
+	useEffect(() =>
+	{
+		const changeBackground = () => {
+			if (window.scrollY >= 85) {
+				setNavbar(true);
+			} else {
+				setNavbar(false);
+			}
+		};
+		window.addEventListener('scroll', changeBackground);
+	}, []);
 
 	useEffect(() => {
 		const executeCodes = () => {
@@ -59,13 +62,18 @@ let market = location.pathname;
 		//set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
 		// document.cookie = 'cookieBy= codinglab; max-age=' + 60 * 60 * 24 * 30;
 		document.cookie = 'cookieBy= joshcalebwill; max-age=' + 60 * 60 * 24;
-
 		setOpenCookie(false);
 	};
 
 	return (
 		<>
-			<Styles.Header className={navbar || market === '/market' ? 'activeHeader ' : ''}>
+			<Styles.Header
+				className={
+					navbar || market === '/market' || 'categories/:categoryName'
+						? 'activeHeader '
+						: ''
+				}
+			>
 				<Styles.HeaderContainer>
 					<Styles.HeaderLogo>
 						<Link to='/' onClick={scrollToTop}>

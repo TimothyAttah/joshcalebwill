@@ -18,10 +18,12 @@ const Categories = () => {
 				<Link
 					to={`/market/categories/${category.path}`}
 					key={category.name}
-					className='categories__card'
+					className='categories__card text-white'
 				>
-					<img src={category.image} alt={category.name} />
-					<h4>{category.name}</h4>
+					{/* <img src={category.image} alt={category.name} /> */}
+					<h4 className='px-8 py-3 rounded-full text-lg cursor-pointer bg-blue-600 text-white' style={{color:'#fff', padding:'10px 0px'}}>
+						{category.name}
+					</h4>
 				</Link>
 			))}
 		</div>

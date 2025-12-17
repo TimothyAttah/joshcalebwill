@@ -1,10 +1,10 @@
 import { RiMapPin2Fill, RiMailFill, RiPhoneFill } from 'react-icons/ri';
-import instagram1 from '../../../assets/instagram-1.jpg';
-import instagram2 from '../../../assets/instagram-2.jpg';
-import instagram3 from '../../../assets/instagram-3.jpg';
-import instagram4 from '../../../assets/instagram-4.jpg';
-import instagram5 from '../../../assets/instagram-5.jpg';
-import instagram6 from '../../../assets/instagram-6.jpg';
+import instagram1 from '../../../assets/who8.png';
+import instagram2 from '../../../assets/who10.png';
+import instagram3 from '../../../assets/who11.png';
+import instagram4 from '../../../assets/who12.png';
+import instagram5 from '../../../assets/who13.png';
+import instagram6 from '../../../assets/who9.png';
 
 const Footer = () => {
 	return (
@@ -28,7 +28,7 @@ const Footer = () => {
 						<span>
 							<RiPhoneFill />
 						</span>
-						(+234) 123 456 789
+						 +2347077077529
 					</p>
 				</div>
 

@@ -6,7 +6,7 @@ import { GlobalStyles } from './styles/GlobalStyles.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Provider } from 'react-redux';
-import {store} from './reduxMarket/store.js';
+import {store} from './reduxMarketNew/store.js';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import './index.css';

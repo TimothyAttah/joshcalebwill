@@ -1,31 +1,32 @@
 import mongoose from 'mongoose';
 
-const reviewsSchema = new mongoose.Schema(
-	{
-		name: {
-			type: String,
-			required: true,
-		},
-		rating: {
-			type: Number,
-			required: true,
-		},
-		comment: {
-			type: String,
-			required: true,
-		},
-		user: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
-		},
-	},
-	{ timestamps: true },
-);
+// const reviewsSchema = new mongoose.Schema(
+// 	{
+// 		name: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		rating: {
+// 			type: Number,
+// 			required: true,
+// 		},
+// 		comment: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		user: {
+// 			type: mongoose.Schema.Types.ObjectId,
+// 			ref: 'User',
+// 		},
+// 	},
+// 	{ timestamps: true },
+// );
 
 const productSchema = new mongoose.Schema(
 	{
 		user: {
 			type: mongoose.Schema.Types.ObjectId,
+			required: true,
 			ref: 'User',
 		},
 		name: {
@@ -33,18 +34,6 @@ const productSchema = new mongoose.Schema(
 			required: true,
 		},
 		image: {
-			type: String,
-			required: true,
-			// path: {
-			// 	type: String,
-			// 	required: true,
-			// },
-			// filename: {
-			// 	type: String,
-			// 	required: true,
-			// },
-		},
-		brand: {
 			type: String,
 			required: true,
 		},
@@ -56,15 +45,15 @@ const productSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		reviews: [reviewsSchema],
+		// reviews: [reviewsSchema],
 		rating: {
 			type: Number,
-			required: true,
+			// required: true,
 			default: 0,
 		},
 		numReviews: {
 			type: Number,
-			required: true,
+			// required: true,
 			default: 0,
 		},
 		price: {
@@ -72,11 +61,17 @@ const productSchema = new mongoose.Schema(
 			required: true,
 			default: 0,
 		},
-		countInStock: {
+		oldPrice: {
 			type: Number,
-			required: true,
 			default: 0,
 		},
+
+		color: { type: String },
+		// countInStock: {
+		// 	type: Number,
+		// 	required: true,
+		// 	default: 0,
+		// },
 	},
 	{ timestamps: true },
 );

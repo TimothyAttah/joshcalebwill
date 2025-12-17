@@ -60,20 +60,47 @@ const Register = lazy(() =>
 	import('./pages/marketPlace/pages/register/Register'),
 );
 
-// const ProductItem = lazy(() => import('./pages/products/ProductItem'));
-// const Cart = lazy(() => import('./pages/cart/Cart'));
-// const Login = lazy(() => import('./pages/login/Login'));
-// const Register = lazy(() => import('./pages/register/Register'));
-// const Profile = lazy(() => import('./pages/profile/Profile'));
-// const Shipping = lazy(() => import('./pages/shipping/Shipping'));
-// const Payment = lazy(() => import('./pages/payment/Payment'));
-// const PlaceOrder = lazy(() => import('./pages/placeOrder/PlaceOrder'));
-// const Order = lazy(() => import('./pages/order/Order'));
-// const UserList = lazy(() => import('./pages/userList/UserList'));
-// const UserEdit = lazy(() => import('./pages/userEdit/UserEdit'));
-// const ProductLists = lazy(() => import('./pages/productLists/ProductLists'));
-// const ProductEdit = lazy(() => import('./pages/productEdit/ProductEdit'));
-// const OrderList = lazy(() => import('./pages/orderList/OrderList'));
+const Profile = lazy(() =>
+	import('./pages/marketPlace/pages/userProfile/UserProfile'),
+);
+const Shipping = lazy(() =>
+	import('./pages/marketPlace/pages/shipping/Shipping'),
+);
+
+const Payment = lazy(() => import('./pages/marketPlace/pages/payment/Payment'));
+const PlaceOrder = lazy(() =>
+	import('./pages/marketPlace/pages/placeOrder/PlaceOrder'),
+);
+const PlaceOrderItems = lazy(() =>
+	import('./pages/marketPlace/pages/placeOrder/PlaceOrderItems'),
+);
+const Order = lazy(() => import('./pages/marketPlace/pages/order/Order'));
+const MyOrders = lazy(() =>
+	import('./pages/marketPlace/pages/userProfile/myOrders/MyOrders'),
+);
+const AllUsers = lazy(() =>
+	import('./pages/marketPlace/pages/admin/userList/UserList'),
+);
+
+const UserEdit = lazy(() =>
+	import('./pages/marketPlace/pages/admin/userEdit/UserEdit'),
+);
+
+const ProductsAdmin = lazy(() =>
+	import('./pages/marketPlace/pages/admin/products/Products'),
+);
+
+const EditProductsAdmin = lazy(() =>
+	import('./pages/marketPlace/pages/admin/editProduct/EditProduct'),
+);
+
+const CreateProductsAdmin = lazy(() =>
+	import('./pages/marketPlace/pages/admin/createProduct/CreateProduct'),
+);
+
+const ListOrdersAdmin = lazy(() =>
+	import('./pages/marketPlace/pages/admin/orderLists/OrderLists'),
+);
 
 const App = () => {
 	const [preloader, setPreloader] = useState(true);
@@ -165,6 +192,32 @@ const App = () => {
 									<Route path='shop/:id' element={<SingleProduct />} />
 									<Route path='login' element={<Login />} />
 									<Route path='register' element={<Register />} />
+									<Route path='dashboard/profile' element={<Profile />} />
+									<Route path='shipping' element={<Shipping />} />
+									<Route path='payment' element={<Payment />} />
+									<Route path='order' element={<PlaceOrder />} />
+									<Route path='order/:id' element={<Order />} />
+									<Route path='dashboard/orders' element={<MyOrders />} />
+									<Route path='dashboard/admin' element={<AllUsers />} />
+									<Route path='admin/user/:id/edit' element={<UserEdit />} />
+									<Route
+										path='dashboard/manage-products'
+										element={<ProductsAdmin />}
+									/>
+									<Route
+										path='admin/product/:id/edit'
+										element={<EditProductsAdmin />}
+									/>
+
+									<Route
+										path='dashboard/add-new-post'
+										element={<CreateProductsAdmin />}
+									/>
+
+									<Route
+										path='dashboard/manage-orders'
+										element={<ListOrdersAdmin />}
+									/>
 								</Route>
 
 								{/* <Route path='/search/:keyword' element={<Market />} />

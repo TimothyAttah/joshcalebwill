@@ -22,3 +22,85 @@ const ProductSchema = new mongoose.Schema(
 const Products = mongoose.model('Products', ProductSchema);
 
 export default Products;
+
+// import mongoose from 'mongoose';
+
+// const reviewsSchema = new mongoose.Schema(
+// 	{
+// 		name: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		rating: {
+// 			type: Number,
+// 			required: true,
+// 		},
+// 		comment: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		user: {
+// 			type: mongoose.Schema.Types.ObjectId,
+// 			ref: 'User',
+// 		},
+// 	},
+// 	{ timestamps: true },
+// );
+
+// const productSchema = new mongoose.Schema(
+// 	{
+// 		user: {
+// 			type: mongoose.Schema.Types.ObjectId,
+// 			required: true,
+// 			ref: 'User',
+// 		},
+// 		name: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		image: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		category: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		description: {
+// 			type: String,
+// 			required: true,
+// 		},
+// 		reviews: [reviewsSchema],
+// 		rating: {
+// 			type: Number,
+// 			required: true,
+// 			default: 0,
+// 		},
+// 		numReviews: {
+// 			type: Number,
+// 			required: true,
+// 			default: 0,
+// 		},
+// 		price: {
+// 			type: Number,
+// 			required: true,
+// 			default: 0,
+// 		},
+// 		oldPrice: {
+// 			type: Number,
+// 			default: 0,
+// 		},
+
+// 		color: { type: String },
+// 		// countInStock: {
+// 		// 	type: Number,
+// 		// 	required: true,
+// 		// 	default: 0,
+// 		// },
+// 	},
+// 	{ timestamps: true },
+// );
+
+// const Products = mongoose.model('Products', productSchema);
+
+// export default Products;
