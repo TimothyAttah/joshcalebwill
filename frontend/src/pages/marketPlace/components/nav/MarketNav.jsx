@@ -63,7 +63,7 @@ const MarketNav = () => {
 		user?.role === 'admin' ? [...adminDropDownMenus] : [...userDropDownMenus];
 
 	const handleLogout = async () => {
-		// dispatch(logoutUser());
+		dispatch(logoutUser());
 		localStorage.removeItem('token');
 		localStorage.removeItem('user');
 

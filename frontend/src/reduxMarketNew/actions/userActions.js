@@ -18,6 +18,7 @@ export const login = (userData) => async (dispatch, getState) => {
 
 		localStorage.setItem('user', JSON.stringify(getState().user));
 		toast.success(data.msg);
+		window.location.href = '/market'
 	} catch (err) {
 		console.log(err.message);
 		toast.error(
