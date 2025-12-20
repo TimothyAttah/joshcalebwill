@@ -110,9 +110,7 @@ const Contact = () => {
 					<h2>Get in Touch</h2>
 					<Styles.ContactInfoList>
 						<h4>📍 Head Office:</h4>
-						<p>
-							Plot 20B Close United Estate <br /> Alagbole, Ogun State
-						</p>
+						<p>Plot 20B Close, United Estate, Alagbole, Ogun State, Nigeria</p>
 					</Styles.ContactInfoList>
 					<Styles.ContactInfoList>
 						<h4>📞 Phone:</h4>
@@ -141,10 +139,16 @@ const Contact = () => {
 							>
 								<FaFacebook />
 							</Link>
-							<Link to='https://www.instagram.com/joshcalebwillpetroluem/' target='_blank'>
+							<Link
+								to='https://www.instagram.com/joshcalebwillpetroluem/'
+								target='_blank'
+							>
 								<FaInstagram />
 							</Link>
-							<Link>
+							<Link
+								to='https://www.linkedin.com/in/joshcalebwill-petroluem-930b6139a'
+								target='_blank'
+							>
 								<FaLinkedin />
 							</Link>
 							<Link

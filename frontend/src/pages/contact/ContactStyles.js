@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
 	padding-top: 200px;
+	background: var(--main-color);
+  color: aliceblue;
 
 	h2 {
 		color: crimson;
@@ -58,7 +60,7 @@ export const ContactSubLinks = styled.div`
     flex-direction: column;
     gap: 20px;
     li {
-      color: #333;
+      color: #fff;
 
       a {
         font-weight: bold;
@@ -86,20 +88,22 @@ export const ContactWrapper = styled.div`
 `;
 
 export const ContactInfo = styled.div`
-  max-width: 600px;
-  width: 100%;
+	max-width: 600px;
+	width: 100%;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+	padding: 20px;
 
-  h2 {
-    font-size: 30px;
-    padding-bottom: 20px;
-    text-align: center;
-    color: crimson;
-  }
+	h2 {
+		font-size: 30px;
+		padding-bottom: 20px;
+		text-align: center;
+		color: crimson;
+	}
 `;
 
 export const ContactInfoList = styled.div`
-  padding: 10px;
   width: 100%;
+  padding: 10px;
   h4 {
     padding-bottom: 5px;
   }
@@ -114,6 +118,7 @@ export const ContactInfoLinks = styled.div`
 	width: 100%;
   padding-top: 20px;
 
+
   p {
     text-align: center;
   }
@@ -127,59 +132,61 @@ export const ContactInfoLinksWrapper = styled.div`
 
   a {
     font-size: 25px;
+    color: #fff;
   }
 `;
 export const ContactForm = styled.div`
 	max-width: 600px;
 	width: 100%;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
 
 	h2 {
 		font-size: 30px;
 		padding-bottom: 20px;
 		text-align: center;
-
 	}
 
-  p {
-    text-align: center;
-    font-size: 20px;
-  }
+	p {
+		text-align: center;
+		font-size: 20px;
+	}
 
-  form {
-    width: 100%;
-    padding-top: 20px;
+	form {
+		width: 100%;
+		padding-top: 20px;
 
-    div {
-      margin-bottom: 30px;
+		div {
+			margin-bottom: 30px;
 
-      label {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
+			label {
+				display: block;
+				margin-top: 10px;
+				margin-bottom: 5px;
+				font-weight: bold;
+			}
 
-      input, textarea {
-        width: 100%;
-        padding: 15px 20px;
-        /* margin-top: 5px; */
-        border: none;
-        border: 2px solid var(--crimson);
-        border-radius: 5px;
-        outline: none;
-      }
+			input,
+			textarea {
+				width: 100%;
+				padding: 15px 20px;
+				border: none;
+				border: 2px solid #fff;
+				border-radius: 5px;
+				outline: none;
+			}
 
-      textarea {
-        height: 200px;
-      }
-    }
+			textarea {
+				height: 200px;
+			}
+		}
 
-    button {
-      width: 250px;
-      height: 50px;
-      background-color: crimson;
-      color: #fff;
-      border-radius: 10px;
-    }
-  }
+		button {
+			width: 250px;
+			height: 50px;
+			background-color: crimson;
+			color: #fff;
+			border-radius: 10px;
+		}
+	}
 `;

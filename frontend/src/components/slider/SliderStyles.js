@@ -33,10 +33,10 @@ export const SlideContent = styled.div`
 		color: #fff;
 		text-align: center;
 		font-size: 6.4rem !important;
-		font-size: 3.5rem !important;
+		/* font-size: 3.5rem !important; */
 
 		line-height: 6.8rem !important;
-		line-height: 4rem !important;
+		/* line-height: 4rem !important; */
 
 		letter-spacing: -0.013em !important;
 		text-transform: lowercase;
@@ -52,8 +52,8 @@ export const SlideContent = styled.div`
 	}
 
 	p {
-		font-size: 18px !important;
-		line-height: 1.2;
+		font-size: 20px !important;
+		line-height: 1.4;
 		padding-top: 10px;
 		font-weight: bold;
 		color: #fff;
@@ -63,7 +63,7 @@ export const SlideContent = styled.div`
 
 	div a {
 		width: 180px;
-		height: 40px;
+		height: 50px;
 		margin: auto;
 		background-color: #fff;
 		color: var(--primary-color);
@@ -72,11 +72,18 @@ export const SlideContent = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 20px 0;
+		margin: 20px auto;
 		text-transform: uppercase;
 		font-weight: bold;
 		border-radius: 10px;
 		animation: text 4s ease forwards;
+		transition: all 0.5s ease;
+
+		&:hover {
+			background-color: var(--base-color-gold);
+			color: #fff;
+			border: 1px solid var(--base-color-gold);
+		}
 	}
 
 	@media screen and (max-width: 950px) {

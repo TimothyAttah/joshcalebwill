@@ -16,7 +16,7 @@ const MarketHome = () => {
 			<TrendingProducts />
 			<DealsSelection />
 			<PromoBanner />
-			<Blogs />
+			{/* <Blogs /> */}
 		</>
 	);
 };

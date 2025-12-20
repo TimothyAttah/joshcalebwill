@@ -1,4 +1,9 @@
-import {FaFacebook, FaInstagram, FaWhatsapp,  FaLinkedin} from 'react-icons/fa'
+import {
+	FaFacebook,
+	FaInstagram,
+	FaWhatsapp,
+	FaLinkedin,
+} from 'react-icons/fa';
 
 export const footerData = [
 	// {
@@ -41,7 +46,8 @@ export const footerData = [
 			},
 			{
 				navIcon: FaLinkedin,
-				navPath: '/who-we-are/contact-us',
+				navPath:
+					'https://www.linkedin.com/in/joshcalebwill-petroluem-930b6139a',
 				target: true,
 			},
 			{

@@ -4,23 +4,11 @@ import styled from 'styled-components';
 import TextAnimate from './textAnimate/TextAnimate';
 import pix1 from '../assets/intro1.png';
 import pix2 from '../assets/intro2.png';
-import pix3 from '../assets/intro3.png';
 import pix4 from '../assets/intro4.png';
-import textBg1 from '../assets/textBg1.png';
-import textBg2 from '../assets/textBg2.png';
-import textBg3 from '../assets/textBg3.png';
-import textBg4 from '../assets/textBg4.png';
-
-
-
-
-
-
 
 
 const Section = styled.section`
 	position: relative;
-	/* height: 200vh; */
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -69,13 +57,6 @@ const LineWrapper = styled.div`
 		transform: translateX(-50%);
 	}
 
-	/* .pix3Img {
-		position: absolute;
-		top: 100px;
-		left: 50%;
-		transform: translateX(-50%);
-	} */
-
 	.pix4Img {
 		position: absolute;
 		top: -250px;
@@ -109,14 +90,7 @@ const LineWrapper = styled.div`
 	}
 
 	.text1 {
-		/* font-weight: bold;
-		background-image: url(${textBg1});
-		background-size: cover;
-		background-position: center;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent; */
+
 		color: hsl(50 90% 50%);
 		color: hsl(14.39deg 93.44% 46.47%);
 	}
@@ -152,8 +126,7 @@ const Text = styled(motion.h1)`
 	margin: 0px 30px auto;
 	position: relative;
 	z-index: 99;
-	/* font-family: 'EMprint', sans-serif !important;
-	font-family: 'Poppins' serif !important; */
+
 
 	@media screen and (max-width: 450px) {
 		font-size: clamp(3rem, 6vw, 5rem);
@@ -167,14 +140,6 @@ const ScrollTextEffect = () => {
 		target: ref,
 		offset: ['start 2.7', 'end 0.8'],
 	});
-
-	// const text1 = useTransform(scrollYProgress, [0, 1], ['-150%', '250%']);
-	// const text2 = useTransform(scrollYProgress, [0, 1], ['200%', '-180%']);
-	// const text3 = useTransform(scrollYProgress, [0, 1], ['-250%', '410%']);
-	// const text4 = useTransform(scrollYProgress, [0, 1], ['400%', '-270%']);
-	// const text5 = useTransform(scrollYProgress, [0, 1], ['-380%', '310%']);
-	// const text6 = useTransform(scrollYProgress, [0, 1], ['610%', '-280%']);
-	// const text7 = useTransform(scrollYProgress, [0, 1], ['-450%', '220%']);
 
 	const text1 = useTransform(scrollYProgress, [0, 1], ['-320%', '300%']);
 	const text2 = useTransform(scrollYProgress, [0, 1], ['250%', '-190%']);
@@ -238,9 +203,7 @@ const ScrollTextEffect = () => {
 				</Text>
 			</LineWrapper>
 
-			{/* <LineWrapper>
-				<img src={pix3} alt='' className='pix3Img' />
-			</LineWrapper> */}
+
 
 			<LineWrapper>
 				<Text style={{ x: text5 }} color='#e2e2e2' className='text5'>
@@ -265,31 +228,6 @@ const ScrollTextEffect = () => {
 			</LineWrapper>
 
 			<TextAnimate />
-
-			{/* <LineWrapper>
-				<Text style={{ x: leftX, opacity }}>WHO WE ARE</Text>
-			</LineWrapper>
-
-
-			<LineWrapper>
-				<Text style={{ x: rightX, opacity }} color='#aaa'>
-					SCENTSMITH
-				</Text>
-			</LineWrapper>
-
-
-			<LineWrapper>
-				<Text style={{ x: leftX, opacity }} color='#999'>
-					ELEGANCE IN EVERY NOTE
-				</Text>
-			</LineWrapper>
-
-
-			<LineWrapper>
-				<Text style={{ x: rightX, opacity }} color='#666'>
-					INSPIRED BY YOU
-				</Text>
-			</LineWrapper> */}
 		</Section>
 	);
 };

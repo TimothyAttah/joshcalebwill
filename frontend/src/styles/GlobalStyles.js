@@ -96,7 +96,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, li {
-    /* text-transform: none; */
     letter-spacing: normal;
     margin: 0;
     padding: 0;
@@ -104,7 +103,6 @@ export const GlobalStyles = createGlobalStyle`
     /* font-family: "GothamBlack", "Helvetica Neue", Helvetica, Arial, sans-serif; */
 
     font-weight: 900 !important;
-    /* text-align: left !important; */
 }
 
 a {

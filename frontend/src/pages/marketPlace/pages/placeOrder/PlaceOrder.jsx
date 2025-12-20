@@ -15,9 +15,6 @@ const PlaceOrder = () => {
 
 	const { order } = useSelector((state) => state.order);
 
-	console.log('cart place order>>>', order?._id);
-	console.log(products);
-
 	//Total calculations
 	const subtotal = products?.reduce(
 		(acc, item) => acc + item.price * item.quantity,
@@ -38,7 +35,7 @@ const PlaceOrder = () => {
 				totalPrice: orderTotal,
 			}),
 		);
-		// navigate(`/market/order/${order._id}`);
+		navigate(`/market/order/${order._id}`);
 	};
 
 	return (

@@ -60,7 +60,7 @@ const MarketNav = () => {
 	];
 
 	const dropdownMenus =
-		user?.role === 'admin' ? [...adminDropDownMenus] : [...userDropDownMenus];
+		user?.isAdmin ? [...adminDropDownMenus] : [...userDropDownMenus];
 
 	const handleLogout = async () => {
 		dispatch(logoutUser());

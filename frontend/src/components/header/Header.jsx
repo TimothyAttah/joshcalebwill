@@ -18,7 +18,7 @@ export const scrollToTop = () => {
 };
 
 const Header = () => {
-	// const [showSidebar, setShowSidebar] = useState(false);
+	
 	const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 	const [openCookie, setOpenCookie] = useState(true);
 

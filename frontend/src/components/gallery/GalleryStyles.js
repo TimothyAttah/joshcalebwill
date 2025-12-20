@@ -60,9 +60,6 @@ export const GalleryContainer = styled.div`
 		}
 	}
 
-  @container div (width > 20rem){
-
-  }
 `;
 export const GalleryImg = styled.div``;
 // export const GalleryContainer = styled.div``;

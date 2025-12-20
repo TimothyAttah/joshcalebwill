@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import lead1 from '../../../../assets/lead4.png';
+import lead2 from '../../../../assets/lead5.png';
+
 
 export const Leaders = styled.div``;
 
@@ -17,8 +19,11 @@ export const LeadersHero = styled.div`
 		padding-top: 82%;
 	}
 
-	@media screen and (max-width: 420px) {
-		padding-top: 92%;
+	@media screen and (max-width: 490px) {
+		/* padding-top: 52%; */
+		height: 50vh;
+
+		background: url(${lead2});
 	}
 `;
 

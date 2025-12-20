@@ -73,7 +73,6 @@ const Slider = () => {
 				{slides.map((slide, i) => (
 					<Styles.Slide className='embla__slide' key={i}>
 						{slide.srcType === 'image' ? (
-							// <motion.img src={ slide.vic } alt='' />
 							<LazyImage src={slide.vic} />
 						) : (
 							<motion.video src={slide.vic} autoPlay muted loop playsInline />
@@ -93,7 +92,7 @@ const Slider = () => {
 								<Styles.SlideContentWrapper>
 									<h2>{slide.title}</h2>
 									<p>{slide.desc}</p>
-									<Link>Who we are</Link>
+									<Link to='/who-we-are/contact-us'>Who we are</Link>
 								</Styles.SlideContentWrapper>
 							</FadeInSlider>
 						</Styles.SlideContent>

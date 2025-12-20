@@ -3,7 +3,7 @@ import {
 	navWithSubmenuData,
 	navWithoutSubmenuData,
 } from '../../../utils/navData';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,8 +13,7 @@ import { scrollToTop } from '../../header/Header';
 const DesktopNav = ({
 	showMobileSidebar,
 	setShowMobileSidebar,
-	openCookie,
-	setOpenCookie,
+
 }) => {
 	const [selected, setSelected] = useState();
 	const [dir, setDir] = useState('l' | 'r');
@@ -31,7 +30,7 @@ const DesktopNav = ({
 
 	const handleACtions = () => {
 		scrollToTop();
-		setOpenCookie(true);
+
 	};
 
 	return (

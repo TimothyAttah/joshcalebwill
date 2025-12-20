@@ -90,9 +90,8 @@ const Cookies = ({
 						</CookiesHeader>
 						<CookiesData>
 							<p>
-								This website use cookies to help you have a superior and more
-								relevant browsing experience on the website.{' '}
-								<Link to='#'>Read more</Link>
+								This website uses cookies to help you have a superior and more
+								relevant browsing experience on the website.
 							</p>
 						</CookiesData>
 						<CookiesButtons>

@@ -55,7 +55,7 @@ const UserList = () => {
 		if (user && user.role === 'admin') {
 			dispatch(listUsers());
 		} else {
-			navigate('/market/login');
+			// navigate('/market/login');
 		}
 	}, [dispatch, navigate]);
 

@@ -1,6 +1,6 @@
-import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect} from 'react';
 import PaystackPop from '@paystack/inline-js';
 import {
 	getOrderDetails,
@@ -9,8 +9,6 @@ import {
 } from '../../../../reduxMarketNew/actions/orderAction';
 import { user } from '../../components/nav/MarketNav';
 import * as Styles from './OrderStyles';
-
-//https://paystack.shop/pay/n0c1pwwa7x
 
 const Order = () => {
 	const dispatch = useDispatch();
@@ -23,27 +21,19 @@ const Order = () => {
 
 	const order = useSelector((state) => state.order.orderDetails);
 
-	console.log(order);
-
-	// const orderDeliver = useSelector((state) => state.orderDeliver);
-	// const { loading: loadingDeliver, success: successDeliver } = orderDeliver;
-
-	// const order = {};
-
 	const payWithPaystack = () => {
 		// e.preventDefault();
 		const paystack = new PaystackPop();
 
 		paystack.newTransaction({
-			key: 'pk_test_d2fdd83059f4346941d44f730d55cea9a35a17e4',
+			key: 'pk_test_5ac12d1a9181f61644e1d426d02d60ab4efe04bd',
+
 			amount: order?.totalPrice * 100,
 			name: order?.user?.name,
 			email: order?.user?.email,
 			phone: order?.shippingAddress?.phoneNumber,
 
 			onSuccess(transaction) {
-				console.log('This is payment>>>>>', transaction);
-				// dispatch(updatePayOrder(id, transaction));
 				dispatch(payOrder(id, transaction));
 				if (transaction.success) {
 					dispatch({ type: ORDER_TYPES.ORDER_PAY_RESET });
@@ -55,22 +45,6 @@ const Order = () => {
 			},
 		});
 	};
-
-	// useEffect(() => {
-	// 	if (!order || successPay || successDeliver) {
-	// 		dispatch({ type: ORDER_TYPES.ORDER_PAY_RESET });
-	// 		dispatch({ type: ORDER_TYPES.ORDER_DELIVER_RESET });
-
-	// 		dispatch(getOrderDetails(id));
-	// 	}
-	// }, [dispatch, order, id, successDeliver, successPay]);
-
-	// const successPaymentHandler = (paymentResult) => {
-	// 	console.log(paymentResult);
-	// 	payWithPaystack(paymentResult);
-
-	// 	// dispatch(payOrder(id, paymentResult));
-	// };
 
 	const deliverHandler = () => {
 		dispatch(deliverOrder(order));
@@ -216,16 +190,6 @@ const Order = () => {
 								</button>
 							)}
 
-							{/* <div div className=' list-group-item'>
-								<button
-									type='button'
-									className='btn btn-block'
-									onClick={deliverHandler}
-								>
-									Mark As Delived
-								</button>
-							</div> */}
-
 							{user &&
 								user?.isAdmin &&
 								order?.isPaid &&
@@ -241,22 +205,6 @@ const Order = () => {
 										</button>
 									</div>
 								)}
-
-							{/* <div ref={paypal}>Payment</div> */}
-							{/* {!order.isPaid && (
-					<ListGroup.Item>
-						{loadingPay && <Loader />}
-						{!sdkReady ? (
-							<Loader />
-						) : (
-							// <PayPalButton
-							// 	amount={order.totalPrice}
-							// 	onSuccess={successPaymentHandler}
-							// />
-							<button onClick={() => payWithPaystack()}>Pay</button>
-						)}
-					</ListGroup.Item>
-				)} */}
 						</div>
 					</div>
 				</Styles.PlaceOrderSummaryContainer>

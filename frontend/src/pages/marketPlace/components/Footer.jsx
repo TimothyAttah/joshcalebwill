@@ -16,7 +16,7 @@ const Footer = () => {
 						<span>
 							<RiMapPin2Fill />
 						</span>
-						123, Ojodu Berger, Lagos, Nigeria
+						Plot 20B Close, United Estate, Alagbole, Ogun State, Nigeria
 					</p>
 					<p>
 						<span>
@@ -28,7 +28,7 @@ const Footer = () => {
 						<span>
 							<RiPhoneFill />
 						</span>
-						 +2347077077529
+						+2347077077529
 					</p>
 				</div>
 
@@ -43,11 +43,11 @@ const Footer = () => {
 
 				<div className='footer__col'>
 					<h4>USEFUL LINK</h4>
-					<a href='/'>Help</a>
-					<a href='/'>Track your order</a>
-					<a href='/'>Men</a>
-					<a href='/'>Women</a>
-					<a href='/'>Dresses</a>
+					<a href='#'>Help</a>
+					<a href='/what-we-do/health-and-safety'>Health</a>
+					<a href='/who-we-are'>Who We Are</a>
+					<a href='/who-we-are/jobs'>Careers</a>
+					<a href='/who-we-are/leadership'>Our Leaders</a>
 				</div>
 
 				<div className='footer__col'>
