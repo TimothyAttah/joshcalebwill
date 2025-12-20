@@ -1,6 +1,5 @@
-import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import CheckoutSteps from '../../components/CheckoutSteps';
 import CartModalItem from '../shop/modules/cartModal/CartModalItem';
 import { createOrder } from '../../../../reduxMarketNew/actions/orderAction';

@@ -5,8 +5,6 @@ import CheckoutSteps from '../../components/CheckoutSteps';
 import { savePaymentMethod } from '../../../../reduxMarketNew/actions/cartActions';
 import styled from 'styled-components';
 
-const PaymentContainer = styled.div``
-
 const PaymentTitle = styled.h2`
 	text-transform: uppercase;
 	margin-bottom: 30px;
@@ -29,7 +27,7 @@ export const ShippingForm = styled.form`
 		margin-bottom: 10px;
 
 		input {
-			
+
 			border: 1px solid #ccc;
 			padding: 10px;
 		}
