@@ -1,5 +1,4 @@
 import DesktopNav from '../nav/desktopNav/DesktopNav';
-
 import logo from '../../assets/logo.jpeg';
 import * as Styles from './HeaderStyles';
 import MobileSidebar from '../sidebar/mobileSidebar/MobileSidebar';
@@ -18,7 +17,7 @@ export const scrollToTop = () => {
 };
 
 const Header = () => {
-	
+
 	const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 	const [openCookie, setOpenCookie] = useState(true);
 
